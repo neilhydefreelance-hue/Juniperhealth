@@ -13,6 +13,7 @@ export const SITE = {
   email: settings.email,
   postalAddress: settings.postalAddress.trim(),
   donationUrl: settings.donationUrl.trim(),
+  facebookGroupUrl: (settings.facebookGroupUrl ?? '').trim(),
   icoNumber: settings.icoNumber.trim(),
   analyticsToken: (settings.analyticsToken ?? '').trim(),
   authorSlug: '/about/neil-hyde/',

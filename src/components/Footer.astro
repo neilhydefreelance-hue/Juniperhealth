@@ -9,6 +9,7 @@ const year = new Date().getFullYear();
       <div class="stack" style="--stack-space: var(--space-s)">
         <p class="footer-brand"><Plant /> Juniper Health</p>
         <p>{SITE.tagline}. Free, plain-English guides for people in England and Wales.</p>
+        {SITE.facebookGroupUrl && <p><a href={SITE.facebookGroupUrl} rel="noopener">Join our Facebook community</a></p>}
         {SITE.donationUrl && <p><a href="/support-us/">Support our work</a></p>}
       </div>
       <nav aria-labelledby="f-conditions">

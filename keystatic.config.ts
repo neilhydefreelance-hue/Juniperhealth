@@ -322,6 +322,10 @@ export default config({
           multiline: true,
         }),
         donationUrl: fields.url({ label: 'Donation link (Ko-fi or Stripe)' }),
+        facebookGroupUrl: fields.url({
+          label: 'Facebook community group link',
+          description: 'Shown in the footer. Leave empty to hide it.',
+        }),
         icoNumber: fields.text({ label: 'ICO registration number (if registered)' }),
         analyticsToken: fields.text({
           label: 'Cloudflare Web Analytics token',
