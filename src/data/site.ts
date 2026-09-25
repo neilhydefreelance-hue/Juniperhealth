@@ -31,8 +31,8 @@ export const NAV = [
     label: 'Conditions',
     href: '/conditions/',
     children: [
-      { label: 'Physical conditions', href: '/conditions/physical/' },
       { label: 'Mental health conditions', href: '/conditions/mental-health/' },
+      { label: 'Physical conditions', href: '/conditions/physical/' },
     ],
   },
   {

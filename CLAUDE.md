@@ -7,3 +7,4 @@
 - Self-check answers must never leave the browser. Do not add network calls to `src/lib/checker/`.
 - PIP points must match Schedule 1 of the PIP Regulations 2013. Update `tests/scoring.test.ts` with any change.
 - Before committing: `npm run build && npm run lint:copy && npm test && npm run check`, and ideally the browser tests (see README).
+- **Conditions are always listed A to Z**, and so are the condition groups. Sorting is automatic (`aToZ` in `src/lib/topics.ts`). When adding a condition, also renumber the `order:` field of every condition main page in that group so it follows A to Z, and keep any hand-written lists (footer, menu, Keystatic options) A to Z. `npm run lint:copy` fails if a condition list is out of order.

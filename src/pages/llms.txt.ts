@@ -5,6 +5,7 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { SITE, TOOLS } from '../data/site';
+import { aToZ } from '../lib/topics';
 
 export const prerender = true;
 
@@ -18,7 +19,7 @@ export const GET: APIRoute = async () => {
     `> ${SITE.description} Juniper Health is independent and is not part of the DWP or the NHS. Information is general, not advice. Benefit rates shown are for 2026 to 2027.`,
     '',
     '## Health conditions',
-    ...conditions.sort(byId).map((e) => line(e.data.title, `/conditions/${e.id}/`, e.data.description)),
+    ...conditions.sort((a, b) => aToZ(a.data.title, b.data.title)).map((e) => line(e.data.title, `/conditions/${e.id}/`, e.data.description)),
     '',
     '## Disability benefits (England and Wales)',
     ...benefits.sort(byId).map((e) => line(e.data.title, `/benefits/${e.id}/`, e.data.description)),

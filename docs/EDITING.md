@@ -40,7 +40,7 @@ The website rebuilds itself automatically. Your change will be live in about 2 m
 2. Set the **Web address** to the group and the condition name, for example `physical/me-cfs`. This becomes its main page.
 3. Fill in the **Condition name** box (for example "ME/CFS").
 4. Add pages inside it as above, for example `physical/me-cfs/treatment`.
-5. It appears automatically on the Physical conditions page, the A to Z list and the home page.
+5. It appears automatically, in A to Z order, on its group page, the A to Z list and the home page. Set **Position in the topic menu** on the main page to match its place in the A to Z list, so the editor list stays in order too.
 
 ## Adding a new group of conditions
 

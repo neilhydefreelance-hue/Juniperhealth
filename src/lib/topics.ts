@@ -17,6 +17,9 @@ export const shortId = (id: string) => id.split('/').pop() ?? id;
 
 const conditionName = (e: Entry) => (e.data as CollectionEntry<'conditions'>['data']).conditionName || e.data.title;
 
+/** A to Z, ignoring capital letters, with numbers in natural order (Type 1 before Type 2). */
+export const aToZ = (a: string, b: string) => a.localeCompare(b, 'en-GB', { sensitivity: 'base', numeric: true });
+
 export async function topicPaths(kind: Kind) {
   const all = (await getCollection(kind)) as Entry[];
   return all
@@ -40,7 +43,8 @@ export async function topicPaths(kind: Kind) {
 /** Condition categories, such as "physical". They have one-part addresses. */
 export async function categories(): Promise<CollectionEntry<'conditions'>[]> {
   const all = await getCollection('conditions');
-  return all.filter((e) => depth(e.id) === 1).sort((a, b) => a.data.order - b.data.order || a.data.title.localeCompare(b.data.title));
+  // Groups are listed A to Z by their title.
+  return all.filter((e) => depth(e.id) === 1).sort((a, b) => aToZ(a.data.title, b.data.title));
 }
 
 /** The main page of every topic, A to Z for conditions. Optionally only one condition category. */
@@ -48,5 +52,5 @@ export async function hubs<K extends Kind>(kind: K, category?: string): Promise<
   const all = (await getCollection(kind)) as CollectionEntry<K>[];
   return all
     .filter((e) => depth(e.id) === HUB_DEPTH[kind] && (!category || e.id.startsWith(`${category}/`)))
-    .sort((a, b) => (kind === 'conditions' ? conditionName(a).localeCompare(conditionName(b)) : a.data.order - b.data.order));
+    .sort((a, b) => (kind === 'conditions' ? aToZ(conditionName(a), conditionName(b)) : a.data.order - b.data.order));
 }

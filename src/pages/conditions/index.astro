@@ -1,13 +1,14 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Icon from '../../components/Icon.astro';
-import { categories, hubs } from '../../lib/topics';
+import { aToZ, categories, hubs } from '../../lib/topics';
 import { abs, SITE_ID } from '../../lib/schema';
 
 const cats = await categories();
 const groups = await Promise.all(cats.map(async (c) => ({ category: c, conditions: await hubs('conditions', c.id) })));
-const all = groups.flatMap((g) => g.conditions);
-const name = (c: (typeof all)[number]) => c.data.conditionName || c.data.title;
+const name = (c: (typeof groups)[number]['conditions'][number]) => c.data.conditionName || c.data.title;
+// One list of every condition in every group, A to Z.
+const all = groups.flatMap((g) => g.conditions).sort((a, b) => aToZ(name(a), name(b)));
 
 const schema = [
   {
