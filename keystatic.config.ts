@@ -1,7 +1,7 @@
 /**
  * Keystatic editor setup.
  *
- * This file decides what you see at juniperhealth.app/keystatic: which kinds of page
+ * This file decides what you see at juniperhealth.info/keystatic: which kinds of page
  * you can create, and which boxes each page has. Every page is saved as a file
  * in this repository, so nothing is locked away in a database.
  *

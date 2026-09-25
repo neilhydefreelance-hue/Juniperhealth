@@ -185,7 +185,7 @@ tr:nth-child(even) td { background: #FBF9FE; }
     <span class="badge">Checklist before you send</span>
   </div>
   <div class="cover__plant">${plant}</div>
-  <div class="cover__foot"><span>For England and Wales &middot; Updated ${updated}</span><span>juniperhealth.app</span></div>
+  <div class="cover__foot"><span>For England and Wales &middot; Updated ${updated}</span><span>juniperhealth.info</span></div>
 </section>
 
 <section class="page">
@@ -208,7 +208,7 @@ tr:nth-child(even) td { background: #FBF9FE; }
   <div class="box">
     <h3>About this guide</h3>
     <p>This guide is written by Juniper Health, an independent website. We are <strong>not</strong> part of the DWP, and only the DWP can decide your claim. It is general information, not legal advice. It is based on advice from Citizens Advice, the DWP’s own guide for PIP assessors, and the PIP law.</p>
-    <p>You can also use our free, private <strong>PIP points self-check</strong> at <a href="https://juniperhealth.app/benefits/pip/points-checker/">juniperhealth.app/benefits/pip/points-checker</a>. It works through the same 12 activities as the form.</p>
+    <p>You can also use our free, private <strong>PIP points self-check</strong> at <a href="https://juniperhealth.info/benefits/pip/points-checker/">juniperhealth.info/benefits/pip/points-checker</a>. It works through the same 12 activities as the form.</p>
   </div>
 </section>
 
@@ -445,10 +445,10 @@ ${ACTIVITIES.map(activityPage).join('\n')}
     <li><strong>If you disagree,</strong> ask the DWP to look again. This is called a <strong>mandatory reconsideration</strong>. You have <strong>one month</strong> from the date on the letter. If they do not change their decision, you can appeal to an independent tribunal. Many decisions are changed on appeal.</li>
   </ol>
   <div class="box">
-    <p>Read our guides to <strong>the PIP assessment</strong> and <strong>how to challenge a PIP decision</strong> at <a href="https://juniperhealth.app/benefits/pip/">juniperhealth.app/benefits/pip</a>.</p>
+    <p>Read our guides to <strong>the PIP assessment</strong> and <strong>how to challenge a PIP decision</strong> at <a href="https://juniperhealth.info/benefits/pip/">juniperhealth.info/benefits/pip</a>.</p>
   </div>
   <h3>Getting PIP can lead to more help</h3>
-  <p>For example a Blue Badge, a Disabled Persons Railcard, the Motability Scheme, Carer’s Allowance for someone who cares for you, and extra money in some other benefits. See <a href="https://juniperhealth.app/support/">juniperhealth.app/support</a>.</p>
+  <p>For example a Blue Badge, a Disabled Persons Railcard, the Motability Scheme, Carer’s Allowance for someone who cares for you, and extra money in some other benefits. See <a href="https://juniperhealth.info/support/">juniperhealth.info/support</a>.</p>
 </section>
 
 <section class="page" id="help">
@@ -468,7 +468,7 @@ ${ACTIVITIES.map(activityPage).join('\n')}
   <div class="back">
     <h3 style="margin-top:0">About Juniper Health</h3>
     <p>Juniper Health gives clear, kind help with health conditions and disability benefits in England and Wales. It is run by ${settings.ownerName}, trading as ${settings.tradingName}. We are independent and are not part of the DWP or the NHS. This guide is general information, not legal or financial advice. Rules and rates can change, so check GOV.UK or ask an adviser.</p>
-    <p style="margin-bottom:0">Find more guides and free self-checks at <a href="https://juniperhealth.app">juniperhealth.app</a> &middot; ${settings.email} &middot; Updated ${updated}</p>
+    <p style="margin-bottom:0">Find more guides and free self-checks at <a href="https://juniperhealth.info">juniperhealth.info</a> &middot; ${settings.email} &middot; Updated ${updated}</p>
   </div>
 </section>
 

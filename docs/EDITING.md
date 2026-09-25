@@ -4,7 +4,7 @@ You do not need to know any code to edit the website. Everything is done in the 
 
 ## Opening the editor
 
-Go to **juniperhealth.app/keystatic** and sign in. (Before the site is live, see "Setting up editing" at the bottom of this page.)
+Go to **juniperhealth.info/keystatic** and sign in. (Before the site is live, see "Setting up editing" at the bottom of this page.)
 
 On the left you will see:
 
@@ -92,4 +92,4 @@ Online editing uses **Keystatic Cloud**, which has a free plan for small teams.
 2. Create a team (for example "juniper-health") and a project (for example "juniperhealth").
 3. Connect the project to the GitHub repository **juniperhealth**.
 4. In Cloudflare, add a build variable called `PUBLIC_KEYSTATIC_CLOUD_PROJECT` with the value `team-name/project-name` (for example `juniper-health/juniperhealth`).
-5. Redeploy. You can now sign in at juniperhealth.app/keystatic.
+5. Redeploy. You can now sign in at juniperhealth.info/keystatic.

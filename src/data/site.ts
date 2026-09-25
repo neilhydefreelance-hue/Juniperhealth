@@ -2,7 +2,7 @@ import settings from './settings.json';
 
 export const SITE = {
   name: 'Juniper Health',
-  url: 'https://juniperhealth.app',
+  url: 'https://juniperhealth.info',
   tagline: 'Clear, kind help with health conditions and disability benefits',
   description:
     'Plain-English guides to health conditions and disability benefits in England and Wales, with free PIP, Attendance Allowance and DLA self-checks.',

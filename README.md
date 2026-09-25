@@ -1,6 +1,6 @@
 # Juniper Health
 
-The website for **juniperhealth.app**: plain-English guides to health conditions and UK disability benefits (PIP, Attendance Allowance and DLA), with free self-checks that run entirely in the visitor's browser.
+The website for **juniperhealth.info**: plain-English guides to health conditions and UK disability benefits (PIP, Attendance Allowance and DLA), with free self-checks that run entirely in the visitor's browser.
 
 Run by Neil Hyde, trading as Juniper Health.
 
