@@ -60,8 +60,9 @@ const toc = headings.filter((h) => h.depth === 2);
 // Which self-check goes with this topic.
 const benefitTool: Record<string, ToolKey> = { pip: 'pip', 'attendance-allowance': 'aa', dla: 'dla' };
 const tool: ToolKey = kind === 'benefits' ? (benefitTool[hub.id] ?? 'pip') : kind === 'support' && hub.id === 'health-costs' ? 'nhs' : 'pip';
-// Phones get a sticky self-check button on benefit pages and the NHS health costs pages.
-const showSticky = kind === 'benefits' || (kind === 'support' && hub.id === 'health-costs');
+// Phones get a sticky self-check button on pages that have their own self-check.
+// ESA and the Universal Credit health element have no self-check, so they only show the PIP box.
+const showSticky = (kind === 'benefits' && hub.id in benefitTool) || (kind === 'support' && hub.id === 'health-costs');
 const rates = kind === 'benefits' ? (entry as CollectionEntry<'benefits'>).data.showRates : 'none';
 
 // Structured data

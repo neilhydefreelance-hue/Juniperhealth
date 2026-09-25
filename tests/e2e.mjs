@@ -137,6 +137,15 @@ ok((await page.locator('.grid > .card').count()) === 7, 'Support: index shows 7 
 await page.goto(`${BASE}/support/travel/blue-badge/`);
 ok((await page.locator('.breadcrumbs li').count()) === 4, 'Support: breadcrumbs on a support page');
 
+/* ESA and Universal Credit guides have no self-check of their own */
+await page.goto(`${BASE}/benefits/universal-credit-health/`);
+ok((await page.locator('.sticky-cta').count()) === 0, 'UC health element: no sticky self-check button');
+ok((await page.locator('table').first().innerText()).includes('£217.26'), 'UC health element: shows the lower rate');
+await page.goto(`${BASE}/benefits/esa/`);
+ok((await page.locator('.sticky-cta').count()) === 0, 'ESA: no sticky self-check button');
+await page.goto(`${BASE}/benefits/pip/`);
+ok((await page.locator('.sticky-cta').count()) === 1, 'PIP: sticky self-check button still shows');
+
 /* Mobile menu */
 await page.goto(`${BASE}/`);
 await page.locator('.site-header__inner .menu-button').click();
@@ -145,7 +154,7 @@ ok(await page.locator('#site-menu').isVisible(), 'Menu: opens on mobile');
 ok(errors.length === 0, `No JavaScript errors${errors.length ? ': ' + errors.join(' | ') : ''}`);
 
 /* Accessibility scan with axe-core, in light and dark mode */
-const pages = ['/', '/conditions/', '/conditions/physical/', '/conditions/physical/asthma/', '/conditions/mental-health/', '/support/', '/support/health-costs/', '/support/health-costs/checker/', '/support/leisure/cea-card/', '/conditions/mental-health/bipolar-1/', '/conditions/mental-health/eating-disorders/benefits-and-work/', '/conditions/physical/type-2-diabetes/benefits-and-work/', '/conditions/physical/fibromyalgia/', '/benefits/', '/benefits/pip/', '/benefits/pip/activities/', '/benefits/pip/points-checker/', '/privacy-policy/', '/cookie-policy/', '/tools/'];
+const pages = ['/', '/conditions/', '/conditions/physical/', '/conditions/physical/asthma/', '/conditions/mental-health/', '/support/', '/support/health-costs/', '/support/health-costs/checker/', '/support/leisure/cea-card/', '/conditions/mental-health/bipolar-1/', '/conditions/mental-health/eating-disorders/benefits-and-work/', '/conditions/physical/type-2-diabetes/benefits-and-work/', '/conditions/physical/fibromyalgia/', '/benefits/', '/benefits/pip/', '/benefits/pip/activities/', '/benefits/pip/points-checker/', '/benefits/esa/', '/benefits/esa/work-capability-assessment/', '/benefits/universal-credit-health/', '/privacy-policy/', '/cookie-policy/', '/tools/'];
 for (const theme of ['light', 'dark']) {
   const tctx = await browser.newContext({ viewport: { width: 390, height: 844 }, colorScheme: theme });
   const p = await tctx.newPage();

@@ -42,6 +42,8 @@ export const NAV = [
       { label: 'PIP', href: '/benefits/pip/' },
       { label: 'Attendance Allowance', href: '/benefits/attendance-allowance/' },
       { label: 'DLA for children', href: '/benefits/dla/' },
+      { label: 'ESA', href: '/benefits/esa/' },
+      { label: 'Universal Credit health element', href: '/benefits/universal-credit-health/' },
     ],
   },
   {
