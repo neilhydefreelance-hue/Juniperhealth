@@ -101,6 +101,17 @@ ok((await page.locator('[data-filter-status]').innerText()).includes('No conditi
 await page.goto(`${BASE}/conditions/physical/asthma/treatment/`);
 ok((await page.locator('.breadcrumbs li').count()) === 5, 'Conditions: breadcrumbs include the category');
 
+/* Mental health: group page and crisis banner */
+await page.goto(`${BASE}/conditions/mental-health/`);
+const mhCount = await page.locator('[data-conditions] > .card').count();
+ok(mhCount >= 13, `Mental health: group lists ${mhCount} conditions`);
+await page.locator('#condition-filter').fill('bipolar');
+ok((await page.locator('[data-conditions] > .card:visible').count()) === 2, 'Mental health: filter "bipolar" shows bipolar 1 and 2');
+await page.goto(`${BASE}/conditions/mental-health/ptsd/treatment/`);
+ok(await page.getByText('If you need help now').first().isVisible(), 'Mental health: crisis help shows on condition pages');
+await page.goto(`${BASE}/conditions/physical/asthma/`);
+ok((await page.getByText('If you need help now').count()) === 0, 'Physical condition pages do not show the mental health crisis banner');
+
 /* Mobile menu */
 await page.goto(`${BASE}/`);
 await page.locator('.site-header__inner .menu-button').click();
@@ -109,7 +120,7 @@ ok(await page.locator('#site-menu').isVisible(), 'Menu: opens on mobile');
 ok(errors.length === 0, `No JavaScript errors${errors.length ? ': ' + errors.join(' | ') : ''}`);
 
 /* Accessibility scan with axe-core, in light and dark mode */
-const pages = ['/', '/conditions/', '/conditions/physical/', '/conditions/physical/asthma/', '/conditions/physical/type-2-diabetes/benefits-and-work/', '/conditions/physical/fibromyalgia/', '/benefits/', '/benefits/pip/', '/benefits/pip/activities/', '/benefits/pip/points-checker/', '/privacy-policy/', '/cookie-policy/', '/tools/'];
+const pages = ['/', '/conditions/', '/conditions/physical/', '/conditions/physical/asthma/', '/conditions/mental-health/', '/conditions/mental-health/bipolar-1/', '/conditions/mental-health/eating-disorders/benefits-and-work/', '/conditions/physical/type-2-diabetes/benefits-and-work/', '/conditions/physical/fibromyalgia/', '/benefits/', '/benefits/pip/', '/benefits/pip/activities/', '/benefits/pip/points-checker/', '/privacy-policy/', '/cookie-policy/', '/tools/'];
 for (const theme of ['light', 'dark']) {
   const tctx = await browser.newContext({ viewport: { width: 390, height: 844 }, colorScheme: theme });
   const p = await tctx.newPage();

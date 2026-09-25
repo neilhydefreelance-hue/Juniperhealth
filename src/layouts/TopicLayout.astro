@@ -136,6 +136,12 @@ const schema = [pageSchema, ...(d.faqs.length ? [faqPage(url, d.faqs)] : [])];
 
     <div class="article-layout">
       <article>
+        {kind === 'conditions' && hub.id.startsWith('mental-health/') && (
+          <aside class="callout callout--danger" aria-label="Urgent help" style="margin-bottom:var(--space-xl);max-width:var(--measure)">
+            <p class="callout__title">If you need help now</p>
+            <p>If you feel you might act on thoughts of suicide or harm yourself, or you are in danger, call <a href="tel:999">999</a> or go to A&amp;E. For urgent mental health help, call <a href="tel:111">NHS 111</a> and choose the mental health option. To talk to someone at any time, call Samaritans free on <a href="tel:116123">116 123</a>, or text SHOUT to 85258.</p>
+          </aside>
+        )}
         {toc.length >= 4 && (
           <details class="toc" style="margin-bottom:var(--space-xl)">
             <summary>On this page</summary>
