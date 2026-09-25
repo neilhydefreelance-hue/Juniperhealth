@@ -1,6 +1,6 @@
 ---
 /**
- * A group of health conditions, such as Physical conditions. Lists every
+ * A group of health conditions, such as Skin conditions. Lists every
  * condition in the group A to Z, with a quick filter box on phones and computers.
  */
 import type { CollectionEntry } from 'astro:content';
@@ -48,7 +48,7 @@ const schema = [
 
     <div class="field condition-filter" data-filter hidden>
       <label for="condition-filter">Find a condition</label>
-      <input id="condition-filter" type="search" autocomplete="off" placeholder="For example, asthma" />
+      <input id="condition-filter" type="search" autocomplete="off" placeholder={`For example, ${conditions[0] ? name(conditions[0]) : "asthma"}`} />
     </div>
     <p class="small muted" data-filter-status role="status" aria-live="polite"></p>
 

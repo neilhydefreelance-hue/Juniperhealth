@@ -147,7 +147,7 @@ export default config({
           slug: {
             label: 'Web address',
             description:
-              'Start with the category, then the condition. A category page is just its name, for example "physical". A condition main page is "physical/asthma". A page inside it is "physical/asthma/treatment".',
+              'Start with the category, then the condition. A category page is just its name, for example "skin". A condition main page is "skin/eczema". A page inside it is "skin/eczema/treatment".',
           },
         }),
         ...sharedPageFields,
@@ -180,6 +180,13 @@ export default config({
             { label: 'Pill', value: 'pill' },
             { label: 'Loop', value: 'loop' },
             { label: 'Lightning bolt', value: 'bolt' },
+            { label: 'Eye', value: 'eye' },
+            { label: 'Bone', value: 'bone' },
+            { label: 'Gut (digestion)', value: 'gut' },
+            { label: 'Kidney', value: 'kidney' },
+            { label: 'Hand (skin)', value: 'skin' },
+            { label: 'Moon (sleep)', value: 'moon' },
+            { label: 'Flower (allergy)', value: 'flower' },
           ],
           defaultValue: 'leaf',
         }),

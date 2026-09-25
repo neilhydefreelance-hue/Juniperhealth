@@ -31,8 +31,15 @@ export const NAV = [
     label: 'Conditions',
     href: '/conditions/',
     children: [
-      { label: 'Mental health conditions', href: '/conditions/mental-health/' },
-      { label: 'Physical conditions', href: '/conditions/physical/' },
+      { label: 'Brain, nerves and senses', href: '/conditions/brain-nerves-and-senses/' },
+      { label: 'Digestive and liver', href: '/conditions/digestive-and-liver/' },
+      { label: 'Heart and circulation', href: '/conditions/heart-and-circulation/' },
+      { label: 'Kidney, bladder and reproductive', href: '/conditions/kidney-bladder-and-reproductive/' },
+      { label: 'Mental health', href: '/conditions/mental-health/' },
+      { label: 'Metabolic and hormonal', href: '/conditions/metabolic-and-hormonal/' },
+      { label: 'Musculoskeletal', href: '/conditions/musculoskeletal/' },
+      { label: 'Respiratory and allergy', href: '/conditions/respiratory-and-allergy/' },
+      { label: 'Skin', href: '/conditions/skin/' },
     ],
   },
   {

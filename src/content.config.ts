@@ -22,7 +22,7 @@ const conditions = defineCollection({
     conditionName: z.string().default(''),
     alternateNames: z.array(z.string()).default([]),
     icd10: z.string().default(''),
-    cardIcon: z.enum(['leaf', 'heart', 'brain', 'body', 'lungs', 'ear', 'joint', 'drop', 'pulse', 'thyroid', 'shield', 'people', 'wave', 'cup', 'pill', 'loop', 'bolt']).default('leaf'),
+    cardIcon: z.enum(['leaf', 'heart', 'brain', 'body', 'lungs', 'ear', 'joint', 'drop', 'pulse', 'thyroid', 'shield', 'people', 'wave', 'cup', 'pill', 'loop', 'bolt', 'eye', 'bone', 'gut', 'kidney', 'skin', 'moon', 'flower']).default('leaf'),
   }),
 });
 

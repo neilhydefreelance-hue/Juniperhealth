@@ -29,7 +29,7 @@ The website rebuilds itself automatically. Your change will be live in about 2 m
 
 1. Open **Health condition pages** (or **Benefit pages**) and click **Add**.
 2. Type the **Page title**.
-3. Set the **Web address**. Conditions have three parts: the group, the condition and the page. For a page inside fibromyalgia, write `physical/fibromyalgia/your-page-name`, using small letters and hyphens between words.
+3. Set the **Web address**. Conditions have three parts: the group, the condition and the page. For a page inside fibromyalgia, write `musculoskeletal/fibromyalgia/your-page-name`, using small letters and hyphens between words.
 4. Fill in the **Short menu name**, **Search result description** and **Opening summary**.
 5. Set **Position in the topic menu** (1 is first).
 6. Write the page and add your sources at the bottom.
@@ -38,9 +38,9 @@ The website rebuilds itself automatically. Your change will be live in about 2 m
 ## Adding a new condition
 
 1. Open **Health condition pages** and click **Add**.
-2. Set the **Web address** to the group and the condition name, for example `physical/me-cfs`. This becomes its main page.
+2. Set the **Web address** to the group and the condition name, for example `brain-nerves-and-senses/me-cfs`. This becomes its main page.
 3. Fill in the **Condition name** box (for example "ME/CFS").
-4. Add pages inside it as above, for example `physical/me-cfs/treatment`.
+4. Add pages inside it as above, for example `brain-nerves-and-senses/me-cfs/treatment`.
 5. It appears automatically, in A to Z order, on its group page, the A to Z list and the home page. Set **Position in the topic menu** on the main page to match its place in the A to Z list, so the editor list stays in order too.
 
 ## Adding a new group of conditions

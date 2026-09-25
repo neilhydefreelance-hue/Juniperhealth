@@ -5,7 +5,7 @@ type Entry = CollectionEntry<'conditions'> | CollectionEntry<'benefits'> | Colle
 
 /**
  * How many parts the web address of a topic's main page has.
- *   Conditions sit inside a category:  physical / fibromyalgia / symptoms
+ *   Conditions sit inside a category:  musculoskeletal / fibromyalgia / symptoms
  *   Benefits do not:                   pip / how-to-claim
  */
 const HUB_DEPTH: Record<Kind, number> = { conditions: 2, benefits: 1, support: 1 };
@@ -40,7 +40,7 @@ export async function topicPaths(kind: Kind) {
     });
 }
 
-/** Condition categories, such as "physical". They have one-part addresses. */
+/** Condition categories, such as "skin". They have one-part addresses. */
 export async function categories(): Promise<CollectionEntry<'conditions'>[]> {
   const all = await getCollection('conditions');
   // Groups are listed A to Z by their title.
