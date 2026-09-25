@@ -1,0 +1,21 @@
+{
+  "taxYear": "2026 to 2027",
+  "from": "April 2026",
+  "pip": {
+    "dailyStandard": 76.7,
+    "dailyEnhanced": 114.6,
+    "mobilityStandard": 30.3,
+    "mobilityEnhanced": 80
+  },
+  "aa": {
+    "lower": 76.7,
+    "higher": 114.6
+  },
+  "dla": {
+    "careLowest": 30.3,
+    "careMiddle": 76.7,
+    "careHighest": 114.6,
+    "mobilityLower": 30.3,
+    "mobilityHigher": 80
+  }
+}

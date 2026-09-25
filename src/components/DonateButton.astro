@@ -1,0 +1,9 @@
+---
+import { SITE } from '../data/site';
+import Icon from './Icon.astro';
+---
+{SITE.donationUrl ? (
+  <p><a class="btn btn--accent" href={SITE.donationUrl} rel="noopener" target="_blank"><Icon name="gift" /> Make a donation<span class="visually-hidden"> (opens in a new tab)</span></a></p>
+) : (
+  <p class="callout">Online donations are coming soon. Thank you for thinking of us.</p>
+)}

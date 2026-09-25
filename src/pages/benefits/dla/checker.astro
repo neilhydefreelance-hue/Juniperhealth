@@ -1,0 +1,28 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import Checker from '../../../components/Checker.astro';
+import { dlaChecker } from '../../../lib/checker/dla';
+---
+<ToolLayout
+  title="DLA for children check"
+  eyebrow="Free self-check"
+  description="Free Disability Living Allowance (DLA) checker for children under 16. See which parts and rates of DLA your child may qualify for. Private and quick."
+  lead="For parents and carers of children under 16. See whether the care part, the mobility part, or both may apply to your child."
+  crumbs={[
+    { name: 'Home', href: '/' },
+    { name: 'Benefits', href: '/benefits/' },
+    { name: 'DLA for children', href: '/benefits/dla/' },
+    { name: 'Check', href: '/benefits/dla/checker/' },
+  ]}
+>
+  <Checker def={dlaChecker}>
+    <p>This check takes about 5 minutes. It asks about the <strong>extra</strong> help your child needs compared with other children of the same age.</p>
+    <p>Think about a typical week, including bad days and nights.</p>
+  </Checker>
+</ToolLayout>
+
+<script>
+  import { initChecker } from '../../../lib/checker/engine';
+  import { scoreDla } from '../../../lib/checker/dla';
+  initChecker('dla', scoreDla);
+</script>

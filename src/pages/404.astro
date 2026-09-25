@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Page not found" description="Sorry, we could not find that page. Try our guides to health conditions, disability benefits and free self-checks." noindex>
+  <div class="wrap--narrow" style="padding-block:var(--space-3xl)">
+    <h1>Sorry, we cannot find that page</h1>
+    <p class="lead" style="margin-top:var(--space-m)">If you typed the web address, check it is correct. The page may also have moved.</p>
+    <ul class="stack" style="margin-top:var(--space-l);padding-left:1.2em">
+      <li><a href="/">Go to the home page</a></li>
+      <li><a href="/conditions/">Health conditions</a></li>
+      <li><a href="/benefits/">Disability benefits</a></li>
+      <li><a href="/tools/">Free self-checks</a></li>
+    </ul>
+  </div>
+</BaseLayout>

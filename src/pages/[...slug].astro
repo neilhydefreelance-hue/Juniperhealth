@@ -1,0 +1,54 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../data/site';
+import { abs, AUTHOR_ID, ORG_ID, SITE_ID, iso, type Crumb } from '../lib/schema';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('pages');
+  return pages.map((entry) => ({ params: { slug: entry.id }, props: { entry, all: pages } }));
+}
+
+const { entry, all } = Astro.props as { entry: CollectionEntry<'pages'>; all: CollectionEntry<'pages'>[] };
+const { Content } = await render(entry);
+const d = entry.data;
+const url = `/${entry.id}/`;
+
+const crumbs: Crumb[] = [{ name: 'Home', href: '/' }];
+const parts = entry.id.split('/');
+parts.forEach((_, i) => {
+  const id = parts.slice(0, i + 1).join('/');
+  const match = all.find((p) => p.id === id);
+  crumbs.push({ name: match?.data.title ?? id, href: `/${id}/` });
+});
+
+const typeFor: Record<string, string> = { about: 'AboutPage', contact: 'ContactPage', 'about/neil-hyde': 'ProfilePage' };
+const pageSchema: Record<string, unknown> = {
+  '@type': typeFor[entry.id] ?? 'WebPage',
+  '@id': `${abs(url)}#webpage`,
+  url: abs(url),
+  name: d.title,
+  description: d.description,
+  inLanguage: SITE.lang,
+  isPartOf: { '@id': SITE_ID },
+  publisher: { '@id': ORG_ID },
+  dateModified: iso(d.lastUpdated),
+  breadcrumb: { '@id': `${abs(url)}#breadcrumb` },
+};
+if (entry.id === 'about/neil-hyde') pageSchema.mainEntity = { '@id': AUTHOR_ID };
+if (entry.id === 'about') pageSchema.about = { '@id': ORG_ID };
+const updated = d.lastUpdated.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+const isLegal = ['privacy-policy', 'cookie-policy', 'terms', 'accessibility', 'complaints'].includes(entry.id);
+---
+<BaseLayout title={d.title} description={d.description} crumbs={crumbs} schema={[pageSchema]} modified={d.lastUpdated}>
+  <div class="wrap--narrow" style="padding-bottom:var(--space-3xl)">
+    <header class="page-head">
+      <h1>{d.title}</h1>
+      {d.summary && <p class="lead">{d.summary}</p>}
+      {isLegal && <p class="meta-line">Last updated <time datetime={iso(d.lastUpdated)}>{updated}</time></p>}
+    </header>
+    <div class="prose">
+      <Content />
+    </div>
+  </div>
+</BaseLayout>

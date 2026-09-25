@@ -1,0 +1,23 @@
+---
+/** The Juniper Health plant mark, redrawn from the logo as a vector. */
+import plant from '../assets/plant.svg?raw';
+interface Props {
+  class?: string;
+  label?: string;
+}
+const { class: className, label } = Astro.props;
+const inner = plant.replace(/<svg[^>]*>/, '').replace('</svg>', '');
+---
+<svg
+  class={className}
+  viewBox="0 0 100 100"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="4.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  role={label ? 'img' : undefined}
+  aria-label={label}
+  aria-hidden={label ? undefined : 'true'}
+  set:html={inner}
+/>

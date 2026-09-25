@@ -1,0 +1,13 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import TopicLayout from '../../layouts/TopicLayout.astro';
+import { topicPaths } from '../../lib/topics';
+
+export const getStaticPaths = () => topicPaths('conditions');
+type Entry = CollectionEntry<'conditions'>;
+const { entry, hub, pages } = Astro.props as { entry: Entry; hub: Entry; pages: Entry[] };
+const { Content, headings } = await render(entry);
+---
+<TopicLayout kind="conditions" entry={entry} hub={hub} pages={pages} headings={headings}>
+  <Content />
+</TopicLayout>

@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import { TOOLS } from '../data/site';
+---
+<BaseLayout
+  title="Free benefit self-checks"
+  description="Free, private self-checks for PIP, Attendance Allowance and DLA for children. Answer simple questions and see what you may be able to get. Answers stay on your device."
+  crumbs={[{ name: 'Home', href: '/' }, { name: 'Self-checks', href: '/tools/' }]}
+>
+  <div class="wrap" style="padding-bottom:var(--space-3xl)">
+    <header class="page-head">
+      <h1>Free benefit self-checks</h1>
+      <p class="lead">Answer simple questions, one at a time, and see what you may be able to get. Your answers never leave your device.</p>
+    </header>
+    <div class="grid">
+      {Object.values(TOOLS).map((t) => (
+        <article class="card card--tool">
+          <span class="card__icon"><Icon name="calculator" /></span>
+          <h2><a class="card__link" href={t.href}>{t.name}</a></h2>
+          <p>{t.blurb}</p>
+          <p class="small muted"><Icon name="clock" size={16} class="inline-icon" />{t.time}</p>
+          <span class="card__more" aria-hidden="true">Start now &rarr;</span>
+        </article>
+      ))}
+    </div>
+    <p class="checker__privacy" style="max-width:44rem"><Icon name="lock" /><span>Our self-checks give an estimate only. Only the DWP can decide whether you get a benefit. <a href="/privacy-policy/">How we protect your privacy</a>.</span></p>
+  </div>
+</BaseLayout>

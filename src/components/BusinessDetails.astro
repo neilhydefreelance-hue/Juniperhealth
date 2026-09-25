@@ -1,0 +1,12 @@
+---
+import { SITE, addressLines } from '../data/site';
+---
+<div class="box" style="margin-block:var(--space-m)">
+  <dl class="stack" style="--stack-space:var(--space-xs)">
+    <div><dt class="muted small">Owner</dt><dd>{SITE.ownerName}, a sole trader</dd></div>
+    <div><dt class="muted small">Trading name</dt><dd>{SITE.tradingName}</dd></div>
+    <div><dt class="muted small">Address</dt><dd>{addressLines().map((l, i) => <>{i > 0 && <br />}{l}</>)}</dd></div>
+    <div><dt class="muted small">Email</dt><dd><a href={`mailto:${SITE.email}`}>{SITE.email}</a></dd></div>
+    {SITE.icoNumber && <div><dt class="muted small">ICO registration number</dt><dd>{SITE.icoNumber}</dd></div>}
+  </dl>
+</div>

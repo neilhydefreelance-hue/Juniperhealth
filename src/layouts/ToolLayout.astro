@@ -1,0 +1,55 @@
+---
+/** Layout for the self-check tools. */
+import BaseLayout from './BaseLayout.astro';
+import { SITE } from '../data/site';
+import { abs, ORG_ID, SITE_ID, AUTHOR_ID, type Crumb } from '../lib/schema';
+
+interface Props {
+  title: string;
+  description: string;
+  lead: string;
+  crumbs: Crumb[];
+  eyebrow: string;
+}
+const { title, description, lead, crumbs, eyebrow } = Astro.props;
+const url = Astro.url.pathname;
+const schema = [
+  {
+    '@type': 'WebApplication',
+    '@id': `${abs(url)}#app`,
+    name: title,
+    url: abs(url),
+    description,
+    applicationCategory: 'UtilitiesApplication',
+    operatingSystem: 'Any (runs in a web browser)',
+    browserRequirements: 'Requires JavaScript',
+    inLanguage: SITE.lang,
+    isAccessibleForFree: true,
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'GBP' },
+    publisher: { '@id': ORG_ID },
+    author: { '@id': AUTHOR_ID },
+  },
+  {
+    '@type': 'WebPage',
+    '@id': `${abs(url)}#webpage`,
+    url: abs(url),
+    name: title,
+    description,
+    isPartOf: { '@id': SITE_ID },
+    mainEntity: { '@id': `${abs(url)}#app` },
+    breadcrumb: { '@id': `${abs(url)}#breadcrumb` },
+    inLanguage: SITE.lang,
+  },
+];
+---
+<BaseLayout title={title} description={description} crumbs={crumbs} schema={schema}>
+  <div class="wrap--narrow">
+    <header class="page-head" style="padding-bottom:0">
+      <p class="eyebrow">{eyebrow}</p>
+      <h1>{title}</h1>
+      <p class="lead">{lead}</p>
+    </header>
+    <slot />
+    <slot name="after" />
+  </div>
+</BaseLayout>

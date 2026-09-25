@@ -1,0 +1,27 @@
+---
+/**
+ * Lists all 12 PIP activities with every statement and its points.
+ * Built from the same data as the PIP self-check, so the two always match.
+ */
+import { pipChecker } from '../lib/checker/pip';
+const activities = pipChecker.steps.filter((s) => /^a\d+$/.test(s.id));
+---
+{activities.map((a) => (
+  <section aria-labelledby={`act-${a.id}`}>
+    <h2 id={`act-${a.id}`}>{a.kicker?.replace(' of 12', '')}: {a.title}</h2>
+    {a.hint && <p>{a.hint}</p>}
+    <table>
+      <thead>
+        <tr><th scope="col">Statement</th><th scope="col">Points</th></tr>
+      </thead>
+      <tbody>
+        {a.options.map((o) => (
+          <tr>
+            <td>{o.label}{o.detail && <><br /><span class="muted">{o.detail}</span></>}</td>
+            <td>{o.points}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </section>
+))}

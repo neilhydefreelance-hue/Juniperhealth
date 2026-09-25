@@ -1,0 +1,39 @@
+---
+import rates from '../data/rates.json';
+import { money } from '../data/site';
+interface Props {
+  benefit: 'pip' | 'aa' | 'dla';
+}
+const { benefit } = Astro.props;
+const groups =
+  benefit === 'pip'
+    ? [
+        { heading: 'Daily living part', items: [['Standard rate', rates.pip.dailyStandard], ['Enhanced rate', rates.pip.dailyEnhanced]] },
+        { heading: 'Mobility part', items: [['Standard rate', rates.pip.mobilityStandard], ['Enhanced rate', rates.pip.mobilityEnhanced]] },
+      ]
+    : benefit === 'aa'
+      ? [{ heading: 'Attendance Allowance', items: [['Lower rate', rates.aa.lower], ['Higher rate', rates.aa.higher]] }]
+      : [
+          { heading: 'Care part', items: [['Lowest rate', rates.dla.careLowest], ['Middle rate', rates.dla.careMiddle], ['Highest rate', rates.dla.careHighest]] },
+          { heading: 'Mobility part', items: [['Lower rate', rates.dla.mobilityLower], ['Higher rate', rates.dla.mobilityHigher]] },
+        ];
+---
+<section class="box" aria-labelledby={`rates-${benefit}`} style="max-width:var(--measure)">
+  <h2 id={`rates-${benefit}`}>How much you could get ({rates.taxYear})</h2>
+  <div class="stack" style="--stack-space:var(--space-m)">
+    {groups.map((g) => (
+      <div>
+        <h3 class="small" style="font-size:1rem;margin-bottom:var(--space-xs)">{g.heading}</h3>
+        <div class="rates">
+          {g.items.map(([label, amount]) => (
+            <div class="rate">
+              <div class="rate__label">{label}</div>
+              <div class="rate__value">{money(amount as number)} <small>a week</small></div>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+  <p class="small muted" style="margin-top:var(--space-m)">Rates from {rates.from}. Payments are usually made every 4 weeks, straight into your bank account.</p>
+</section>

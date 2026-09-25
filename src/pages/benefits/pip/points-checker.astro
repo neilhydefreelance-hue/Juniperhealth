@@ -1,0 +1,39 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import Checker from '../../../components/Checker.astro';
+import { pipChecker } from '../../../lib/checker/pip';
+---
+<ToolLayout
+  title="PIP points self-check"
+  eyebrow="Free self-check"
+  description="Free PIP points calculator. Go through all 12 PIP activities in plain English and see how many points may apply to you. Private: answers stay on your device."
+  lead="Go through the 12 PIP activities one at a time and see roughly how many points may apply to you, and how much PIP that could mean."
+  crumbs={[
+    { name: 'Home', href: '/' },
+    { name: 'Benefits', href: '/benefits/' },
+    { name: 'PIP', href: '/benefits/pip/' },
+    { name: 'Points self-check', href: '/benefits/pip/points-checker/' },
+  ]}
+>
+  <Checker def={pipChecker} showPoints>
+    <p>This check takes about 10 minutes. There are 3 quick questions about you, then one question for each PIP activity.</p>
+    <h3>Two rules to keep in mind</h3>
+    <ul>
+      <li><strong>Think about most days.</strong> If your condition changes from day to day, pick the answer that is true on more than half of days.</li>
+      <li><strong>Think about doing it reliably.</strong> Only say you can do something if you can do it safely, well enough, again and again, and in a reasonable time. Pain, tiredness and the effect on you afterwards all count.</li>
+    </ul>
+    <p>At the end you can print or save your answers as a PDF to help you fill in the PIP form.</p>
+  </Checker>
+  <section class="prose" slot="after" style="padding-bottom:var(--space-3xl)">
+    <h2>How PIP points work</h2>
+    <p>PIP has two parts. The <strong>daily living</strong> part looks at 10 activities, and the <strong>mobility</strong> part looks at 2. Each activity has a list of statements worth between 0 and 12 points. Only the highest statement that applies in each activity counts.</p>
+    <p>You need <strong>8 points</strong> in a part to get the standard rate, and <strong>12 points</strong> to get the enhanced rate. You can get one part, both parts, or neither.</p>
+    <p>Read <a href="/benefits/pip/activities/">the 12 activities explained</a> for more detail and examples.</p>
+  </section>
+</ToolLayout>
+
+<script>
+  import { initChecker } from '../../../lib/checker/engine';
+  import { scorePip } from '../../../lib/checker/pip';
+  initChecker('pip', scorePip);
+</script>

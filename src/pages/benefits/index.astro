@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { hubs } from '../../lib/topics';
+import { abs, SITE_ID } from '../../lib/schema';
+import { TOOLS } from '../../data/site';
+
+const benefits = await hubs('benefits');
+const schema = [
+  {
+    '@type': 'CollectionPage',
+    '@id': `${abs('/benefits/')}#webpage`,
+    url: abs('/benefits/'),
+    name: 'Disability benefits',
+    isPartOf: { '@id': SITE_ID },
+    breadcrumb: { '@id': `${abs('/benefits/')}#breadcrumb` },
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: benefits.map((b, i) => ({ '@type': 'ListItem', position: i + 1, name: b.data.title, url: abs(`/benefits/${b.id}/`) })),
+    },
+  },
+];
+---
+<BaseLayout
+  title="PIP, Attendance Allowance and DLA explained"
+  description="Find out which disability benefit is right for you. Plain-English guides to PIP, Attendance Allowance and DLA for children in England and Wales, with free self-checks."
+  crumbs={[{ name: 'Home', href: '/' }, { name: 'Benefits', href: '/benefits/' }]}
+  schema={schema}
+>
+  <div class="wrap" style="padding-bottom:var(--space-3xl)">
+    <header class="page-head">
+      <h1>Disability benefits</h1>
+      <p class="lead">Extra money to help with the costs of a long-term health condition or disability. None of these benefits depend on your income or savings, and you can get them whether or not you work.</p>
+    </header>
+
+    <section class="prose" aria-labelledby="which" style="margin-bottom:var(--space-2xl)">
+      <h2 id="which">Which benefit is right for me?</h2>
+      <p>It mostly depends on age:</p>
+      <table>
+        <thead><tr><th scope="col">Age</th><th scope="col">Benefit</th><th scope="col">Self-check</th></tr></thead>
+        <tbody>
+          <tr><td>Under 16</td><td><a href="/benefits/dla/">DLA for children</a></td><td><a href={TOOLS.dla.href}>DLA check</a></td></tr>
+          <tr><td>16 to State Pension age</td><td><a href="/benefits/pip/">Personal Independence Payment (PIP)</a></td><td><a href={TOOLS.pip.href}>PIP points self-check</a></td></tr>
+          <tr><td>State Pension age or over</td><td><a href="/benefits/attendance-allowance/">Attendance Allowance</a></td><td><a href={TOOLS.aa.href}>Attendance Allowance check</a></td></tr>
+        </tbody>
+      </table>
+      <p class="small muted">If you already get PIP or DLA when you reach State Pension age, you can usually keep it. In Scotland, these benefits are being replaced by payments from Social Security Scotland.</p>
+    </section>
+
+    <div class="grid">
+      {benefits.map((b) => (
+        <article class="card">
+          <h2><a class="card__link" href={`/benefits/${b.id}/`}>{b.data.title}</a></h2>
+          <p>{b.data.summary}</p>
+          <span class="card__more" aria-hidden="true">Read the guide &rarr;</span>
+        </article>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

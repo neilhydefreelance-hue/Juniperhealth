@@ -1,0 +1,69 @@
+---
+import { NAV } from '../data/site';
+import Icon from './Icon.astro';
+import Plant from './Plant.astro';
+
+const path = Astro.url.pathname;
+const inSection = (href: string) => href !== '/' && (path.startsWith(href) || (href === '/tools/' && path.includes('checker')));
+---
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="/" aria-label="Juniper Health home">
+      <Plant class="brand__mark" />
+      <span class="brand__name">Juniper<span>Health</span></span>
+    </a>
+
+    <nav class="nav-desktop" aria-label="Main">
+      <ul>
+        {NAV.map((item) => (
+          <li>
+            <a href={item.href} aria-current={path === item.href ? 'page' : undefined} data-section={inSection(item.href) ? 'true' : undefined}>
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <button class="menu-button" type="button" popovertarget="site-menu" aria-haspopup="true">
+      <Icon name="menu" />
+      <span>Menu</span>
+    </button>
+  </div>
+
+  <div id="site-menu" class="mobile-menu" popover>
+    <div class="mobile-menu__top">
+      <a class="brand" href="/">
+        <Plant class="brand__mark" />
+        <span class="brand__name">Juniper<span>Health</span></span>
+      </a>
+      <button class="menu-button" type="button" popovertarget="site-menu" popovertargetaction="hide">
+        <Icon name="close" />
+        <span>Close</span>
+      </button>
+    </div>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="/">Home</a></li>
+        {NAV.map((item) => (
+          <li>
+            <a href={item.href} aria-current={path === item.href ? 'page' : undefined}>{item.label}</a>
+            {'children' in item && item.children && (
+              <ul>
+                {item.children.map((c) => (
+                  <li><a href={c.href} aria-current={path === c.href ? 'page' : undefined}>{c.label}</a></li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))}
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="callout callout--danger mobile-menu__help">
+      <p class="callout__title">Need help right now?</p>
+      <p>If you are in danger, call <a href="tel:999">999</a>. To talk to someone any time, call Samaritans free on <a href="tel:116123">116 123</a>.</p>
+      <p><a href="/get-help-now/">More urgent help</a></p>
+    </div>
+  </div>
+</header>

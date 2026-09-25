@@ -1,0 +1,163 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import Plant from '../components/Plant.astro';
+import { SITE, TOOLS, money } from '../data/site';
+import rates from '../data/rates.json';
+import { abs, ORG_ID, SITE_ID } from '../lib/schema';
+import { hubs } from '../lib/topics';
+
+const conditions = await hubs('conditions');
+const maxPip = rates.pip.dailyEnhanced + rates.pip.mobilityEnhanced;
+const maxDla = rates.dla.careHighest + rates.dla.mobilityHigher;
+
+const schema = [
+  {
+    '@type': 'WebPage',
+    '@id': `${abs('/')}#webpage`,
+    url: abs('/'),
+    name: `${SITE.name}: ${SITE.tagline}`,
+    description: SITE.description,
+    isPartOf: { '@id': SITE_ID },
+    about: { '@id': ORG_ID },
+    inLanguage: SITE.lang,
+  },
+];
+
+const journeys = [
+  { icon: 'leaf', title: 'I want to understand my condition', text: 'Clear guides to symptoms, diagnosis, treatment and living well.', href: '/conditions/' },
+  { icon: 'pound', title: 'I want to know which benefits I can get', text: 'Find the right benefit for your age and situation.', href: '/benefits/' },
+  { icon: 'document', title: 'I am filling in a PIP form', text: 'Every PIP activity explained, with tips for each question.', href: '/benefits/pip/how-to-claim/' },
+  { icon: 'scales', title: 'I have been turned down', text: 'How to ask the DWP to look again, and how to appeal.', href: '/benefits/pip/challenge-a-decision/' },
+] as const;
+---
+<BaseLayout fullTitle={`${SITE.name}: PIP help, benefit self-checks and health guides`} title="Home" description={SITE.description} schema={schema}>
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div>
+        <p class="eyebrow">Free help for England and Wales</p>
+        <h1>Understand your health. Get the support you are entitled to.</h1>
+        <p class="lead">Plain-English guides to health conditions and disability benefits, with free self-checks for PIP, Attendance Allowance and DLA.</p>
+        <div class="cluster hero__actions">
+          <a class="btn btn--accent" href={TOOLS.pip.href}>Check your PIP points <Icon name="arrow" /></a>
+          <a class="btn btn--ghost" href="/conditions/">Explore conditions</a>
+        </div>
+        <ul class="cluster small" style="list-style:none;padding:0;margin-top:var(--space-l);--cluster-gap:var(--space-xs) var(--space-l);color:var(--text-muted)">
+          <li><Icon name="check" size={18} class="inline-icon" /> Free, always</li>
+          <li><Icon name="lock" size={18} class="inline-icon" /> Answers stay on your device</li>
+          <li><Icon name="people" size={18} class="inline-icon" /> Written in plain English</li>
+        </ul>
+      </div>
+      <Plant class="hero__art" />
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="journeys">
+    <div class="wrap">
+      <h2 id="journeys">What do you need help with?</h2>
+      <div class="grid" style="margin-top:var(--space-l);--grid-min:15rem">
+        {journeys.map((j) => (
+          <article class="card">
+            <span class="card__icon"><Icon name={j.icon} /></span>
+            <h3><a class="card__link" href={j.href}>{j.title}</a></h3>
+            <p>{j.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint" aria-labelledby="tools">
+    <div class="wrap">
+      <p class="eyebrow">Free self-checks</p>
+      <h2 id="tools">See what you may be able to get</h2>
+      <p class="lead" style="margin-top:var(--space-s)">Answer simple questions, one at a time. Your answers never leave your device.</p>
+      <div class="grid" style="margin-top:var(--space-l)">
+        {Object.values(TOOLS).map((t) => (
+          <article class="card card--tool">
+            <span class="card__icon"><Icon name="calculator" /></span>
+            <h3><a class="card__link" href={t.href}>{t.name}</a></h3>
+            <p>{t.blurb}</p>
+            <p class="small muted"><Icon name="clock" size={16} class="inline-icon" />{t.time}</p>
+            <span class="card__more" aria-hidden="true">Start now &rarr;</span>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="benefits">
+    <div class="wrap">
+      <p class="eyebrow">Disability benefits</p>
+      <h2 id="benefits">Benefits explained simply</h2>
+      <div class="grid" style="margin-top:var(--space-l)">
+        <article class="card">
+          <h3><a class="card__link" href="/benefits/pip/">Personal Independence Payment (PIP)</a></h3>
+          <p>For people aged 16 to State Pension age. Up to {money(maxPip)} a week.</p>
+          <span class="card__more" aria-hidden="true">Read the PIP guide &rarr;</span>
+        </article>
+        <article class="card">
+          <h3><a class="card__link" href="/benefits/attendance-allowance/">Attendance Allowance</a></h3>
+          <p>For people over State Pension age who need care. Up to {money(rates.aa.higher)} a week.</p>
+          <span class="card__more" aria-hidden="true">Read the guide &rarr;</span>
+        </article>
+        <article class="card">
+          <h3><a class="card__link" href="/benefits/dla/">DLA for children</a></h3>
+          <p>For children under 16 who need extra care or help getting around. Up to {money(maxDla)} a week.</p>
+          <span class="card__more" aria-hidden="true">Read the guide &rarr;</span>
+        </article>
+      </div>
+      <p class="small muted" style="margin-top:var(--space-m)">Rates for {rates.taxYear}. None of these benefits are means-tested.</p>
+    </div>
+  </section>
+
+  <section class="section section--tint" aria-labelledby="conditions">
+    <div class="wrap">
+      <p class="eyebrow">Health conditions</p>
+      <h2 id="conditions">Guides to living with a long-term condition</h2>
+      <div class="grid" style="margin-top:var(--space-l)">
+        {conditions.map((c) => (
+          <article class="card">
+            <span class="card__icon"><Icon name={c.data.cardIcon} /></span>
+            <h3><a class="card__link" href={`/conditions/${c.id}/`}>{c.data.conditionName || c.data.title}</a></h3>
+            <p>{c.data.summary}</p>
+            <span class="card__more" aria-hidden="true">Read the guide &rarr;</span>
+          </article>
+        ))}
+        <article class="card" style="box-shadow:none;border-style:dashed;background:transparent">
+          <h3>More conditions coming soon</h3>
+          <p>We are adding new guides regularly. <a href="/contact/">Tell us which condition you would like us to cover</a>.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="trust">
+    <div class="wrap">
+      <h2 id="trust">Why you can trust our guides</h2>
+      <div class="grid" style="margin-top:var(--space-l);--grid-min:14rem">
+        <div class="stack" style="--stack-space:var(--space-xs)">
+          <span class="card__icon"><Icon name="document" /></span>
+          <h3 style="font-size:var(--step-1)">Based on official sources</h3>
+          <p class="muted">We use GOV.UK, the law, the NHS and NICE, and list our sources on every page.</p>
+        </div>
+        <div class="stack" style="--stack-space:var(--space-xs)">
+          <span class="card__icon"><Icon name="clock" /></span>
+          <h3 style="font-size:var(--step-1)">Checked and dated</h3>
+          <p class="muted">Every guide shows when it was last checked. We review each one at least once a year.</p>
+        </div>
+        <div class="stack" style="--stack-space:var(--space-xs)">
+          <span class="card__icon"><Icon name="shield" /></span>
+          <h3 style="font-size:var(--step-1)">Private by design</h3>
+          <p class="muted">No tracking cookies, no adverts, and self-check answers never leave your device.</p>
+        </div>
+        <div class="stack" style="--stack-space:var(--space-xs)">
+          <span class="card__icon"><Icon name="scales" /></span>
+          <h3 style="font-size:var(--step-1)">Independent</h3>
+          <p class="muted">We are not part of the DWP or any company that sells claim services.</p>
+        </div>
+      </div>
+      <p style="margin-top:var(--space-xl)"><a href="/about/editorial-policy/">Read how we check our facts</a></p>
+    </div>
+  </section>
+</BaseLayout>

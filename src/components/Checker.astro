@@ -1,0 +1,86 @@
+---
+import type { CheckerDefinition } from '../lib/checker/types';
+import Icon from './Icon.astro';
+interface Props {
+  def: CheckerDefinition;
+  showPoints?: boolean;
+}
+const { def, showPoints = false } = Astro.props;
+---
+<div class="checker" data-checker={def.id}>
+  <div class="callout callout--good" data-resume hidden style="margin-bottom:var(--space-l)">
+    <p class="callout__title">You saved some answers on this device</p>
+    <div class="cluster">
+      <button type="button" class="btn" data-resume-yes>Show my saved result</button>
+      <button type="button" class="btn btn--ghost" data-resume-no>Delete them</button>
+    </div>
+  </div>
+
+  <section data-intro aria-labelledby={`${def.id}-intro`}>
+    <h2 id={`${def.id}-intro`} class="visually-hidden">Before you start</h2>
+    <div class="prose"><slot /></div>
+    <button type="button" class="btn btn--accent btn--block" data-start style="margin-top:var(--space-l)">
+      Start the check <Icon name="arrow" />
+    </button>
+    <p class="checker__privacy">
+      <Icon name="lock" />
+      <span><strong>Private by design.</strong> Your answers stay on your phone or computer. They are never sent to us or anyone else, and we cannot see them.</span>
+    </p>
+    <noscript>
+      <p class="callout callout--warn">This check needs JavaScript switched on to work out your result. You can still read all the questions below and use them to think about your answers.</p>
+    </noscript>
+  </section>
+
+  <div class="checker__progress" data-progress hidden>
+    <div class="checker__progress-label"><span data-progress-text>Question 1</span><span>{def.name}</span></div>
+    <div class="checker__bar" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <span data-progress-bar></span>
+    </div>
+  </div>
+
+  <form novalidate aria-label={def.name}>
+    {def.steps.map((step) => (
+      <fieldset class="step" data-step={step.id} data-type={step.type} data-show-if={step.showIf ? JSON.stringify(step.showIf) : undefined}>
+        <legend>
+          {step.kicker && <span class="step__kicker">{step.kicker}</span>}
+          <span class="step__title">{step.title}</span>
+        </legend>
+        {step.hint && <p class="step__hint">{step.hint}</p>}
+        {step.help && (
+          <details>
+            <summary>What this means</summary>
+            <div set:html={step.help} />
+          </details>
+        )}
+        <div class="options">
+          {step.options.map((o) => (
+            <label class="option">
+              <input
+                type={step.type === 'multi' ? 'checkbox' : 'radio'}
+                name={step.id}
+                value={o.value}
+                data-label={o.label}
+                data-points={o.points}
+                data-level={o.level}
+                data-stop={o.stop ? 'true' : undefined}
+                data-exclusive={o.exclusive ? 'true' : undefined}
+              />
+              <span>
+                <span class="option__label">{o.label}</span>
+                {showPoints && o.points !== undefined && <span class="option__points">{o.points} {o.points === 1 ? 'point' : 'points'}</span>}
+                {o.detail && <span class="option__detail">{o.detail}</span>}
+              </span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+    ))}
+    <p class="checker__error" data-error role="alert"></p>
+    <div class="checker__nav" data-nav hidden>
+      <button type="button" class="btn btn--ghost" data-back><Icon name="back" /> Back</button>
+      <button type="submit" class="btn" data-next>Continue</button>
+    </div>
+  </form>
+
+  <div data-result hidden></div>
+</div>

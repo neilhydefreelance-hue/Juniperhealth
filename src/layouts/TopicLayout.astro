@@ -1,0 +1,208 @@
+---
+/**
+ * Layout for health condition and benefit pages. Each topic (a condition or a
+ * benefit) has a main page plus any number of pages inside it. This layout
+ * adds the topic menu, contents list, author and review date, sources,
+ * common questions and the structured data that search engines read.
+ */
+import type { CollectionEntry } from 'astro:content';
+import type { MarkdownHeading } from 'astro';
+import BaseLayout from './BaseLayout.astro';
+import CheckerCta from '../components/CheckerCta.astro';
+import RatesBox from '../components/RatesBox.astro';
+import Faqs from '../components/Faqs.astro';
+import ProductList from '../components/ProductList.astro';
+import Icon from '../components/Icon.astro';
+import { SITE, TOOLS, type ToolKey } from '../data/site';
+import { abs, AUTHOR_ID, ORG_ID, SITE_ID, faqPage, iso, type Crumb } from '../lib/schema';
+
+type Entry = CollectionEntry<'conditions'> | CollectionEntry<'benefits'>;
+
+interface Props {
+  kind: 'conditions' | 'benefits';
+  entry: Entry;
+  hub: Entry;
+  pages: Entry[];
+  headings: MarkdownHeading[];
+}
+
+const { kind, entry, hub, pages, headings } = Astro.props;
+const d = entry.data;
+const url = `/${kind}/${entry.id}/`;
+const hubUrl = `/${kind}/${hub.id}/`;
+const isHub = entry.id === hub.id;
+const topicName =
+  kind === 'conditions' ? (hub.data as CollectionEntry<'conditions'>['data']).conditionName || hub.data.title : (hub.data as CollectionEntry<'benefits'>['data']).benefitName || hub.data.title;
+const shortTopic = hub.data.navTitle || topicName;
+const sectionName = kind === 'conditions' ? 'Health conditions' : 'Benefits';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: '/' },
+  { name: sectionName, href: `/${kind}/` },
+  { name: shortTopic, href: hubUrl },
+];
+if (!isHub) crumbs.push({ name: d.navTitle || d.title, href: url });
+
+const reviewed = d.lastReviewed;
+const reviewedText = reviewed.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+const words = (entry.body ?? '').split(/\s+/).filter(Boolean).length;
+const minutes = Math.max(1, Math.round(words / 200));
+const toc = headings.filter((h) => h.depth === 2);
+
+// Which self-check goes with this topic.
+const benefitTool: Record<string, ToolKey> = { pip: 'pip', 'attendance-allowance': 'aa', dla: 'dla' };
+const tool: ToolKey = kind === 'benefits' ? (benefitTool[hub.id] ?? 'pip') : 'pip';
+const rates = kind === 'benefits' ? (entry as CollectionEntry<'benefits'>).data.showRates : 'none';
+
+// Structured data
+const pageSchema: Record<string, unknown> = {
+  '@type': kind === 'conditions' ? 'MedicalWebPage' : 'WebPage',
+  '@id': `${abs(url)}#webpage`,
+  url: abs(url),
+  name: d.title,
+  headline: d.title,
+  description: d.description,
+  inLanguage: SITE.lang,
+  isPartOf: { '@id': SITE_ID },
+  publisher: { '@id': ORG_ID },
+  author: { '@id': AUTHOR_ID },
+  lastReviewed: iso(reviewed),
+  dateModified: iso(reviewed),
+  breadcrumb: { '@id': `${abs(url)}#breadcrumb` },
+  isAccessibleForFree: true,
+  ...(d.sources.length ? { citation: d.sources.map((s) => ({ '@type': 'CreativeWork', name: s.label, url: s.url })) } : {}),
+};
+if (kind === 'conditions') {
+  const hd = hub.data as CollectionEntry<'conditions'>['data'];
+  const condition: Record<string, unknown> = {
+    '@type': 'MedicalCondition',
+    '@id': `${abs(hubUrl)}#condition`,
+    name: topicName,
+    ...(hd.alternateNames.length ? { alternateName: hd.alternateNames } : {}),
+    ...(hd.icd10 ? { code: { '@type': 'MedicalCode', code: hd.icd10, codingSystem: 'ICD-10' } } : {}),
+    url: abs(hubUrl),
+  };
+  pageSchema.about = isHub ? condition : { '@id': condition['@id'] };
+  pageSchema.medicalAudience = { '@type': 'MedicalAudience', audienceType: 'Patient' };
+  pageSchema.audience = { '@type': 'PeopleAudience', geographicArea: 'England and Wales' };
+} else {
+  const service = {
+    '@type': 'GovernmentService',
+    '@id': `${abs(hubUrl)}#service`,
+    name: topicName,
+    serviceType: 'Disability benefit',
+    provider: {
+      '@type': 'GovernmentOrganization',
+      name: 'Department for Work and Pensions',
+      url: 'https://www.gov.uk/government/organisations/department-for-work-pensions',
+    },
+    areaServed: [
+      { '@type': 'Country', name: 'England' },
+      { '@type': 'Country', name: 'Wales' },
+    ],
+  };
+  pageSchema.about = isHub ? service : { '@id': service['@id'] };
+}
+if (toc.length) pageSchema.hasPart = toc.map((h) => ({ '@type': 'WebPageElement', name: h.text, url: `${abs(url)}#${h.slug}` }));
+
+const schema = [pageSchema, ...(d.faqs.length ? [faqPage(url, d.faqs)] : [])];
+---
+<BaseLayout title={d.title} description={d.description} crumbs={crumbs} schema={schema} ogType="article" modified={reviewed}>
+  <div class="wrap">
+    <header class="page-head">
+      <p class="eyebrow">{shortTopic}</p>
+      <h1>{d.title}</h1>
+      {d.summary && <p class="lead">{d.summary}</p>}
+      <p class="meta-line">
+        <span>Written by <a href={SITE.authorSlug}>{SITE.ownerName}</a></span>
+        <span>Last checked <time datetime={iso(reviewed)}>{reviewedText}</time></span>
+        <span>{minutes} minute read</span>
+      </p>
+    </header>
+
+    {pages.length > 1 && (
+      <nav class="subnav" aria-label={`${shortTopic} pages`}>
+        {pages.map((p) => (
+          <a href={`/${kind}/${p.id}/`} aria-current={p.id === entry.id ? 'page' : undefined}>
+            {p.id === hub.id ? 'Overview' : p.data.navTitle || p.data.title}
+          </a>
+        ))}
+      </nav>
+    )}
+
+    <div class="article-layout">
+      <article>
+        {toc.length >= 4 && (
+          <details class="toc" style="margin-bottom:var(--space-xl)">
+            <summary>On this page</summary>
+            <ol>
+              {toc.map((h) => (
+                <li><a href={`#${h.slug}`}>{h.text}</a></li>
+              ))}
+            </ol>
+          </details>
+        )}
+
+        {rates !== 'none' && <div style="margin-bottom:var(--space-xl)"><RatesBox benefit={rates} /></div>}
+
+        <div class="prose">
+          <slot />
+        </div>
+
+        {kind === 'conditions' && <ProductList condition={hub.id} />}
+
+        <Faqs faqs={d.faqs} />
+
+        {d.sources.length > 0 && (
+          <section class="sources" aria-labelledby="sources">
+            <h2 id="sources">Sources we used</h2>
+            <ul>
+              {d.sources.map((s) => (
+                <li><a href={s.url} rel="noopener">{s.label}</a></li>
+              ))}
+            </ul>
+            <p style="margin-top:var(--space-s)">
+              We check this page at least once a year, and sooner when the rules change. Read <a href="/about/editorial-policy/">how we check our facts</a>, or <a href="/contact/">tell us if something looks wrong</a>.
+            </p>
+          </section>
+        )}
+
+        <aside class="callout" style="margin-top:var(--space-xl);max-width:var(--measure)">
+          <p class="small">
+            {kind === 'conditions'
+              ? 'This page is general information to help you understand your health and your options. It is not medical advice. Always talk to your GP or another health professional about your own care.'
+              : 'This page is general information, not legal or financial advice. Juniper Health is not part of the DWP. Only the DWP can decide whether you get a benefit.'}
+          </p>
+        </aside>
+      </article>
+
+      <aside class="article-layout__aside" aria-label="More on this topic">
+        <CheckerCta tool={tool} compact />
+        {pages.length > 1 && (
+          <nav class="box" aria-label={`In this ${kind === 'conditions' ? 'condition' : 'benefit'} guide`}>
+            <h2>{shortTopic} guide</h2>
+            <ul>
+              {pages.map((p) => (
+                <li>
+                  <a href={`/${kind}/${p.id}/`} aria-current={p.id === entry.id ? 'page' : undefined}>
+                    {p.id === hub.id ? 'Overview' : p.data.navTitle || p.data.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
+        <div class="box">
+          <h2><Icon name="phone" size={18} class="inline-icon" /> Struggling right now?</h2>
+          <p class="small">Call Samaritans free, day or night, on <a href="tel:116123">116 123</a>. For urgent medical help call <a href="tel:111">NHS 111</a>.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  {kind === 'benefits' && (
+    <aside class="sticky-cta" slot="end" aria-label="Free self-check">
+      <a class="btn btn--accent btn--block" href={TOOLS[tool].href}>Try the free {TOOLS[tool].name}</a>
+    </aside>
+  )}
+</BaseLayout>

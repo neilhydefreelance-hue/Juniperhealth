@@ -1,0 +1,26 @@
+---
+import { TOOLS, type ToolKey } from '../data/site';
+import Icon from './Icon.astro';
+interface Props {
+  tool?: ToolKey;
+  compact?: boolean;
+}
+const { tool = 'pip', compact = false } = Astro.props;
+const t = TOOLS[tool];
+---
+{compact ? (
+  <div class="box box--cta">
+    <h2>{t.name}</h2>
+    <p>{t.blurb}</p>
+    <a class="btn btn--accent btn--block" href={t.href}>Start the free check <Icon name="arrow" /></a>
+    <p class="small" style="margin-top:var(--space-s);margin-bottom:0">Private: your answers stay on your device.</p>
+  </div>
+) : (
+  <div class="card card--tool not-prose" style="margin-block:var(--space-l)">
+    <span class="tag">Free self-check</span>
+    <h3><a class="card__link" href={t.href}>{t.name}</a></h3>
+    <p>{t.blurb}</p>
+    <p class="small muted"><Icon name="clock" size={16} class="inline-icon" /> {t.time}. Your answers never leave your device.</p>
+    <span class="card__more" aria-hidden="true">Start now &rarr;</span>
+  </div>
+)}

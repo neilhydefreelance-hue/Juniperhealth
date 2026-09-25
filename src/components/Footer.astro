@@ -1,0 +1,67 @@
+---
+import { SITE, addressLines, TOOLS } from '../data/site';
+import Plant from './Plant.astro';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="stack" style="--stack-space: var(--space-s)">
+        <p class="footer-brand"><Plant /> Juniper Health</p>
+        <p>{SITE.tagline}. Free, plain-English guides for people in England and Wales.</p>
+        {SITE.donationUrl && <p><a href="/support-us/">Support our work</a></p>}
+      </div>
+      <nav aria-labelledby="f-conditions">
+        <h2 id="f-conditions">Health conditions</h2>
+        <ul>
+          <li><a href="/conditions/">All conditions</a></li>
+          <li><a href="/conditions/fibromyalgia/">Fibromyalgia</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="f-benefits">
+        <h2 id="f-benefits">Benefits and self-checks</h2>
+        <ul>
+          <li><a href="/benefits/pip/">PIP</a></li>
+          <li><a href="/benefits/attendance-allowance/">Attendance Allowance</a></li>
+          <li><a href="/benefits/dla/">DLA for children</a></li>
+          <li><a href={TOOLS.pip.href}>{TOOLS.pip.name}</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="f-about">
+        <h2 id="f-about">About us</h2>
+        <ul>
+          <li><a href="/about/">About Juniper Health</a></li>
+          <li><a href="/about/editorial-policy/">How we check our facts</a></li>
+          <li><a href="/contact/">Contact us</a></li>
+          <li><a href="/support-us/">Support us</a></li>
+          <li><a href="/affiliate-disclosure/">How we make money</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="f-legal">
+        <h2 id="f-legal">Legal</h2>
+        <ul>
+          <li><a href="/privacy-policy/">Privacy policy</a></li>
+          <li><a href="/cookie-policy/">Cookie policy</a></li>
+          <li><a href="/terms/">Terms of use</a></li>
+          <li><a href="/accessibility/">Accessibility</a></li>
+          <li><a href="/complaints/">Complaints</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer-help">
+      <p><strong>Need urgent help?</strong> If you or someone else is in danger, call <a href="tel:999">999</a>. For urgent medical help, call <a href="tel:111">NHS 111</a>. To talk to someone at any time, call Samaritans free on <a href="tel:116123">116 123</a>. <a href="/get-help-now/">More places to get help</a>.</p>
+    </div>
+
+    <div class="footer-legal">
+      <p>
+        Juniper Health is not part of the Department for Work and Pensions (DWP), the NHS or any government body. Our guides and self-checks are general information, not medical, legal or financial advice.
+      </p>
+      <p>
+        Juniper Health is a trading name of {SITE.ownerName}, a sole trader. Address: {addressLines().join(', ')}. Email: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
+        {SITE.icoNumber && <> ICO registration number: {SITE.icoNumber}.</>}
+      </p>
+      <p>&copy; {year} {SITE.ownerName} trading as Juniper Health.</p>
+    </div>
+  </div>
+</footer>

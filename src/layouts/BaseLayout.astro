@@ -1,0 +1,106 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { SITE } from '../data/site';
+import { abs, breadcrumbList, organization, person, website, type Crumb } from '../lib/schema';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Full title override, for the home page. */
+  fullTitle?: string;
+  crumbs?: Crumb[];
+  schema?: Record<string, unknown>[];
+  ogType?: 'website' | 'article';
+  ogImage?: string;
+  noindex?: boolean;
+  modified?: Date;
+}
+
+const { title, description, fullTitle, crumbs = [], schema = [], ogType = 'website', ogImage = SITE.ogImage, noindex = false, modified } = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, SITE.url).href;
+const pageTitle = fullTitle ?? `${title} | ${SITE.name}`;
+const graph = {
+  '@context': 'https://schema.org',
+  '@graph': [organization(), website(), person(), ...(crumbs.length > 1 ? [breadcrumbList(crumbs)] : []), ...schema],
+};
+
+// Pages the browser can load in the background when someone is likely to tap a link.
+const speculation = {
+  prerender: [
+    {
+      where: { and: [{ href_matches: '/*' }, { not: { href_matches: ['/keystatic/*', '/api/*'] } }] },
+      eagerness: 'moderate',
+    },
+  ],
+};
+---
+<!doctype html>
+<html lang={SITE.lang}>
+  <head>
+    <meta charset="utf-8" />
+    <script is:inline>document.documentElement.classList.add('js')</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+    {!noindex && <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />}
+
+    <link rel="preload" href="/fonts/atkinson-next.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/lexend.woff2" as="font" type="font/woff2" crossorigin />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#15121c" media="(prefers-color-scheme: dark)" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:locale" content={SITE.locale} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={fullTitle ?? title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={abs(ogImage)} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Juniper Health logo: a white plant on a purple circle" />
+    <meta name="twitter:card" content="summary_large_image" />
+    {modified && <meta property="article:modified_time" content={modified.toISOString()} />}
+
+    <script type="application/ld+json" set:html={JSON.stringify(graph)} />
+    <script type="speculationrules" set:html={JSON.stringify(speculation)} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <Header />
+    <Breadcrumbs items={crumbs} />
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    <Footer />
+    <slot name="end" />
+    {SITE.analyticsToken && (
+      <script is:inline define:vars={{ token: SITE.analyticsToken }}>
+        // Cookie-free, privacy-first statistics. Not loaded if you have opted out
+        // on our cookie policy page, or if your browser sends a privacy signal.
+        (function () {
+          var optedOut = false;
+          try { optedOut = localStorage.getItem('jh-analytics-optout') === '1'; } catch (e) {}
+          if (optedOut || navigator.globalPrivacyControl || navigator.doNotTrack === '1') return;
+          var s = document.createElement('script');
+          s.defer = true;
+          s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+          s.setAttribute('data-cf-beacon', JSON.stringify({ token: token, spa: false }));
+          document.body.appendChild(s);
+        })();
+      </script>
+    )}
+  </body>
+</html>

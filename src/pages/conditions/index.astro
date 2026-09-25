@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icon from '../../components/Icon.astro';
+import { hubs } from '../../lib/topics';
+import { abs, SITE_ID } from '../../lib/schema';
+
+const conditions = await hubs('conditions');
+const schema = [
+  {
+    '@type': 'CollectionPage',
+    '@id': `${abs('/conditions/')}#webpage`,
+    url: abs('/conditions/'),
+    name: 'Health conditions',
+    isPartOf: { '@id': SITE_ID },
+    breadcrumb: { '@id': `${abs('/conditions/')}#breadcrumb` },
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: conditions.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.data.conditionName || c.data.title, url: abs(`/conditions/${c.id}/`) })),
+    },
+  },
+];
+---
+<BaseLayout
+  title="Health conditions explained"
+  description="Plain-English guides to long-term health conditions: symptoms, diagnosis, treatment, living well, work and the benefits you may be able to claim."
+  crumbs={[{ name: 'Home', href: '/' }, { name: 'Health conditions', href: '/conditions/' }]}
+  schema={schema}
+>
+  <div class="wrap" style="padding-bottom:var(--space-3xl)">
+    <header class="page-head">
+      <h1>Health conditions explained</h1>
+      <p class="lead">Clear, practical guides to living with a long-term health condition, from getting a diagnosis to getting the support you are entitled to.</p>
+    </header>
+    <div class="grid">
+      {conditions.map((c) => (
+        <article class="card">
+          <span class="card__icon"><Icon name={c.data.cardIcon} /></span>
+          <h2><a class="card__link" href={`/conditions/${c.id}/`}>{c.data.conditionName || c.data.title}</a></h2>
+          <p>{c.data.summary}</p>
+          <span class="card__more" aria-hidden="true">Read the guide &rarr;</span>
+        </article>
+      ))}
+      <article class="card" style="box-shadow:none;border-style:dashed;background:transparent">
+        <h2>More conditions coming soon</h2>
+        <p>We are adding new conditions regularly. <a href="/contact/">Tell us which one you would like next</a>.</p>
+      </article>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,28 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import Checker from '../../../components/Checker.astro';
+import { aaChecker } from '../../../lib/checker/aa';
+---
+<ToolLayout
+  title="Attendance Allowance check"
+  eyebrow="Free self-check"
+  description="Free Attendance Allowance checker for people over State Pension age. See if you may qualify and whether the lower or higher rate may apply. Private and quick."
+  lead="For people over State Pension age who need help with personal care or to stay safe. See if you may qualify, and at which rate."
+  crumbs={[
+    { name: 'Home', href: '/' },
+    { name: 'Benefits', href: '/benefits/' },
+    { name: 'Attendance Allowance', href: '/benefits/attendance-allowance/' },
+    { name: 'Check', href: '/benefits/attendance-allowance/checker/' },
+  ]}
+>
+  <Checker def={aaChecker}>
+    <p>This check takes about 4 minutes. You can do it for yourself, or on behalf of someone you care for.</p>
+    <p>Answer based on the help that is <strong>needed</strong>, even if nobody is giving it at the moment. Think about a typical week, and whether things can be done safely and without too much pain or tiredness.</p>
+  </Checker>
+</ToolLayout>
+
+<script>
+  import { initChecker } from '../../../lib/checker/engine';
+  import { scoreAa } from '../../../lib/checker/aa';
+  initChecker('aa', scoreAa);
+</script>

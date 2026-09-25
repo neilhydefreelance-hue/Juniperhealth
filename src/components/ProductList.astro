@@ -1,0 +1,32 @@
+---
+/**
+ * Affiliate products for a condition. Every item carries a clear "Ad" label
+ * and rel="sponsored" so people and search engines know it is paid.
+ */
+import { getCollection } from 'astro:content';
+interface Props {
+  condition: string;
+}
+const { condition } = Astro.props;
+// Only read the collection once at least one product has been added, to keep build logs quiet.
+const hasProducts = Object.keys(import.meta.glob('../content/products/*.json')).length > 0;
+const products = hasProducts ? (await getCollection('products')).filter((p) => p.data.active && p.data.conditions.includes(condition)) : [];
+---
+{products.length > 0 && (
+  <section aria-labelledby="products" style="margin-top:var(--space-2xl);max-width:var(--measure)">
+    <h2 id="products">Everyday aids people find useful</h2>
+    <p class="muted small" style="margin-block:var(--space-xs) var(--space-m)">
+      These are affiliate links. If you buy through them we may earn a small amount, at no extra cost to you. It never changes what we write. <a href="/affiliate-disclosure/">How we make money</a>.
+    </p>
+    <div class="grid products">
+      {products.map((p) => (
+        <article class="card product">
+          <span class="ad-label">Ad</span>
+          <h3><a class="card__link" href={p.data.url} rel="sponsored nofollow noopener" target="_blank">{p.data.name}<span class="visually-hidden"> (opens in a new tab)</span></a></h3>
+          <p>{p.data.description}</p>
+          <span class="card__more" aria-hidden="true">View at {p.data.merchant} &rarr;</span>
+        </article>
+      ))}
+    </div>
+  </section>
+)}

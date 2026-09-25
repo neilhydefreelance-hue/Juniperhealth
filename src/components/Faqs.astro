@@ -1,0 +1,17 @@
+---
+interface Props {
+  faqs: { question: string; answer: string }[];
+}
+const { faqs } = Astro.props;
+---
+{faqs.length > 0 && (
+  <section class="prose" aria-labelledby="faqs" style="margin-top:var(--space-2xl)">
+    <h2 id="faqs">Common questions</h2>
+    {faqs.map((f) => (
+      <details class="toc">
+        <summary>{f.question}</summary>
+        <p style="margin-top:var(--space-xs)">{f.answer}</p>
+      </details>
+    ))}
+  </section>
+)}
