@@ -18,7 +18,8 @@
 
 ## Every year
 
-- [ ] **April:** update benefit rates in Keystatic under Benefit rates.
+- [ ] **April:** update benefit rates in Keystatic under Benefit rates, and check NHS charges, Carer's Allowance, railcard and card prices on the Disability support pages.
+- [ ] **April:** check the NHS health costs rules (NHSBSA leaflet HC11) and update the NHS health costs check if they change.
 - [ ] **Each page:** check it against its sources and update "Last checked for accuracy".
 - [ ] **Watch for PIP changes** from the Timms Review (due late 2026). If the points or activities change, the PIP self-check needs updating by a developer.
 - [ ] **Legal pages:** review the privacy and cookie policies if anything about the site changes (for example adding adverts, a newsletter or accounts).

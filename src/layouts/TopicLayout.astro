@@ -17,10 +17,10 @@ import { SITE, TOOLS, type ToolKey } from '../data/site';
 import { abs, AUTHOR_ID, ORG_ID, SITE_ID, faqPage, iso, type Crumb } from '../lib/schema';
 import { shortId } from '../lib/topics';
 
-type Entry = CollectionEntry<'conditions'> | CollectionEntry<'benefits'>;
+type Entry = CollectionEntry<'conditions'> | CollectionEntry<'benefits'> | CollectionEntry<'support'>;
 
 interface Props {
-  kind: 'conditions' | 'benefits';
+  kind: 'conditions' | 'benefits' | 'support';
   entry: Entry;
   hub: Entry;
   pages: Entry[];
@@ -35,9 +35,13 @@ const url = `/${kind}/${entry.id}/`;
 const hubUrl = `/${kind}/${hub.id}/`;
 const isHub = entry.id === hub.id;
 const topicName =
-  kind === 'conditions' ? (hub.data as CollectionEntry<'conditions'>['data']).conditionName || hub.data.title : (hub.data as CollectionEntry<'benefits'>['data']).benefitName || hub.data.title;
+  kind === 'conditions'
+    ? (hub.data as CollectionEntry<'conditions'>['data']).conditionName || hub.data.title
+    : kind === 'benefits'
+      ? (hub.data as CollectionEntry<'benefits'>['data']).benefitName || hub.data.title
+      : hub.data.title;
 const shortTopic = hub.data.navTitle || topicName;
-const sectionName = kind === 'conditions' ? 'Health conditions' : 'Benefits';
+const sectionName = kind === 'conditions' ? 'Health conditions' : kind === 'benefits' ? 'Benefits' : 'Disability support';
 
 const crumbs: Crumb[] = [
   { name: 'Home', href: '/' },
@@ -55,7 +59,9 @@ const toc = headings.filter((h) => h.depth === 2);
 
 // Which self-check goes with this topic.
 const benefitTool: Record<string, ToolKey> = { pip: 'pip', 'attendance-allowance': 'aa', dla: 'dla' };
-const tool: ToolKey = kind === 'benefits' ? (benefitTool[hub.id] ?? 'pip') : 'pip';
+const tool: ToolKey = kind === 'benefits' ? (benefitTool[hub.id] ?? 'pip') : kind === 'support' && hub.id === 'health-costs' ? 'nhs' : 'pip';
+// Phones get a sticky self-check button on benefit pages and the NHS health costs pages.
+const showSticky = kind === 'benefits' || (kind === 'support' && hub.id === 'health-costs');
 const rates = kind === 'benefits' ? (entry as CollectionEntry<'benefits'>).data.showRates : 'none';
 
 // Structured data
@@ -181,7 +187,9 @@ const schema = [pageSchema, ...(d.faqs.length ? [faqPage(url, d.faqs)] : [])];
           <p class="small">
             {kind === 'conditions'
               ? 'This page is general information to help you understand your health and your options. It is not medical advice. Always talk to your GP or another health professional about your own care.'
-              : 'This page is general information, not legal or financial advice. Juniper Health is not part of the DWP. Only the DWP can decide whether you get a benefit.'}
+              : kind === 'benefits'
+                ? 'This page is general information, not legal or financial advice. Juniper Health is not part of the DWP. Only the DWP can decide whether you get a benefit.'
+                : 'This page is general information, not legal or financial advice. Schemes, prices and rules can change, so check with the organisation that runs the scheme before you apply.'}
           </p>
         </aside>
       </article>
@@ -189,7 +197,7 @@ const schema = [pageSchema, ...(d.faqs.length ? [faqPage(url, d.faqs)] : [])];
       <aside class="article-layout__aside" aria-label="More on this topic">
         <CheckerCta tool={tool} compact />
         {pages.length > 1 && (
-          <nav class="box" aria-label={`In this ${kind === 'conditions' ? 'condition' : 'benefit'} guide`}>
+          <nav class="box" aria-label={`In this ${kind === 'conditions' ? 'condition' : kind === 'benefits' ? 'benefit' : 'support'} guide`}>
             <h2>{shortTopic} guide</h2>
             <ul>
               {pages.map((p) => (
@@ -210,7 +218,7 @@ const schema = [pageSchema, ...(d.faqs.length ? [faqPage(url, d.faqs)] : [])];
     </div>
   </div>
 
-  {kind === 'benefits' && (
+  {showSticky && (
     <aside class="sticky-cta" slot="end" aria-label="Free self-check">
       <a class="btn btn--accent btn--block" href={TOOLS[tool].href}>Try the free {TOOLS[tool].name}</a>
     </aside>

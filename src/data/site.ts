@@ -45,12 +45,26 @@ export const NAV = [
     ],
   },
   {
+    label: 'Disability support',
+    href: '/support/',
+    children: [
+      { label: 'Days out and leisure', href: '/support/leisure/' },
+      { label: 'Help for carers', href: '/support/carers/' },
+      { label: 'Help with NHS health costs', href: '/support/health-costs/' },
+      { label: 'Home adaptations and equipment', href: '/support/home-and-equipment/' },
+      { label: 'Money off bills', href: '/support/money-off-bills/' },
+      { label: 'Travel and getting around', href: '/support/travel/' },
+      { label: 'Work and study', href: '/support/work-and-study/' },
+    ],
+  },
+  {
     label: 'Self-checks',
     href: '/tools/',
     children: [
       { label: 'PIP points self-check', href: '/benefits/pip/points-checker/' },
       { label: 'Attendance Allowance check', href: '/benefits/attendance-allowance/checker/' },
       { label: 'DLA for children check', href: '/benefits/dla/checker/' },
+      { label: 'NHS health costs check', href: '/support/health-costs/checker/' },
     ],
   },
   { label: 'About', href: '/about/' },
@@ -68,6 +82,12 @@ export const TOOLS = {
     href: '/benefits/attendance-allowance/checker/',
     blurb: 'For people over State Pension age. See if you may qualify and at which rate.',
     time: 'About 4 minutes',
+  },
+  nhs: {
+    name: 'NHS health costs check',
+    href: '/support/health-costs/checker/',
+    blurb: 'Find out if you can get free prescriptions, eye tests, glasses, dental treatment and help with travel to hospital.',
+    time: 'About 3 minutes',
   },
   dla: {
     name: 'DLA for children check',

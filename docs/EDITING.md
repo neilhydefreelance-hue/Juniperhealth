@@ -10,6 +10,7 @@ On the left you will see:
 
 - **Health condition pages:** fibromyalgia and future conditions
 - **Benefit pages:** PIP, Attendance Allowance and DLA
+- **Disability support pages:** NHS health costs, travel, leisure, bills, home and equipment, work and study, and carers
 - **Other pages:** about, contact and the legal pages
 - **Affiliate products:** shop links shown on condition pages
 - **Business details:** your name, address, email and donation link

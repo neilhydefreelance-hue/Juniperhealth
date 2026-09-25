@@ -112,6 +112,31 @@ ok(await page.getByText('If you need help now').first().isVisible(), 'Mental hea
 await page.goto(`${BASE}/conditions/physical/asthma/`);
 ok((await page.getByText('If you need help now').count()) === 0, 'Physical condition pages do not show the mental health crisis banner');
 
+/* NHS health costs check */
+await page.goto(`${BASE}/support/health-costs/checker/`);
+await page.locator('[data-start]').click();
+await choose('england');
+await choose('60plus');
+ok((await activeStep()) === 'pregnant', 'NHS: education question skipped for over 60s');
+await choose('no');
+await page.locator('fieldset.step.is-active input[value="uc"]').check({ force: true });
+await page.locator('[data-next]').click();
+ok((await activeStep()) === 'ucPay', 'NHS: Universal Credit earnings question shown');
+await choose('mid');
+ok((await activeStep()) === 'ucExtra', 'NHS: child or LCW question shown for mid earnings');
+await choose('yes');
+await page.locator('fieldset.step.is-active input[value="none"]').check({ force: true });
+await page.locator('[data-next]').click();
+await choose('yes');
+ok((await page.locator('.score').count()) === 6, 'NHS: result lists 6 health costs');
+ok((await page.locator('[data-result] h2').innerText()).includes('6 of 6'), 'NHS: all 6 free with qualifying Universal Credit');
+
+/* Disability support */
+await page.goto(`${BASE}/support/`);
+ok((await page.locator('.grid > .card').count()) === 7, 'Support: index shows 7 topics');
+await page.goto(`${BASE}/support/travel/blue-badge/`);
+ok((await page.locator('.breadcrumbs li').count()) === 4, 'Support: breadcrumbs on a support page');
+
 /* Mobile menu */
 await page.goto(`${BASE}/`);
 await page.locator('.site-header__inner .menu-button').click();
@@ -120,7 +145,7 @@ ok(await page.locator('#site-menu').isVisible(), 'Menu: opens on mobile');
 ok(errors.length === 0, `No JavaScript errors${errors.length ? ': ' + errors.join(' | ') : ''}`);
 
 /* Accessibility scan with axe-core, in light and dark mode */
-const pages = ['/', '/conditions/', '/conditions/physical/', '/conditions/physical/asthma/', '/conditions/mental-health/', '/conditions/mental-health/bipolar-1/', '/conditions/mental-health/eating-disorders/benefits-and-work/', '/conditions/physical/type-2-diabetes/benefits-and-work/', '/conditions/physical/fibromyalgia/', '/benefits/', '/benefits/pip/', '/benefits/pip/activities/', '/benefits/pip/points-checker/', '/privacy-policy/', '/cookie-policy/', '/tools/'];
+const pages = ['/', '/conditions/', '/conditions/physical/', '/conditions/physical/asthma/', '/conditions/mental-health/', '/support/', '/support/health-costs/', '/support/health-costs/checker/', '/support/leisure/cea-card/', '/conditions/mental-health/bipolar-1/', '/conditions/mental-health/eating-disorders/benefits-and-work/', '/conditions/physical/type-2-diabetes/benefits-and-work/', '/conditions/physical/fibromyalgia/', '/benefits/', '/benefits/pip/', '/benefits/pip/activities/', '/benefits/pip/points-checker/', '/privacy-policy/', '/cookie-policy/', '/tools/'];
 for (const theme of ['light', 'dark']) {
   const tctx = await browser.newContext({ viewport: { width: 390, height: 844 }, colorScheme: theme });
   const p = await tctx.newPage();

@@ -1,14 +1,14 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 
-type Kind = 'conditions' | 'benefits';
-type Entry = CollectionEntry<'conditions'> | CollectionEntry<'benefits'>;
+type Kind = 'conditions' | 'benefits' | 'support';
+type Entry = CollectionEntry<'conditions'> | CollectionEntry<'benefits'> | CollectionEntry<'support'>;
 
 /**
  * How many parts the web address of a topic's main page has.
  *   Conditions sit inside a category:  physical / fibromyalgia / symptoms
  *   Benefits do not:                   pip / how-to-claim
  */
-const HUB_DEPTH: Record<Kind, number> = { conditions: 2, benefits: 1 };
+const HUB_DEPTH: Record<Kind, number> = { conditions: 2, benefits: 1, support: 1 };
 
 const depth = (id: string) => id.split('/').length;
 export const hubId = (kind: Kind, id: string) => id.split('/').slice(0, HUB_DEPTH[kind]).join('/');
@@ -52,5 +52,11 @@ export async function hubs<K extends Kind>(kind: K, category?: string): Promise<
   const all = (await getCollection(kind)) as CollectionEntry<K>[];
   return all
     .filter((e) => depth(e.id) === HUB_DEPTH[kind] && (!category || e.id.startsWith(`${category}/`)))
-    .sort((a, b) => (kind === 'conditions' ? aToZ(conditionName(a), conditionName(b)) : a.data.order - b.data.order));
+    .sort((a, b) =>
+      kind === 'conditions'
+        ? aToZ(conditionName(a), conditionName(b))
+        : kind === 'support'
+          ? aToZ(a.data.title, b.data.title)
+          : a.data.order - b.data.order,
+    );
 }
