@@ -5,9 +5,10 @@ import Plant from '../components/Plant.astro';
 import { SITE, TOOLS, money } from '../data/site';
 import rates from '../data/rates.json';
 import { abs, ORG_ID, SITE_ID } from '../lib/schema';
-import { hubs } from '../lib/topics';
+import { categories, hubs } from '../lib/topics';
 
 const conditions = await hubs('conditions');
+const cats = await categories();
 const maxPip = rates.pip.dailyEnhanced + rates.pip.mobilityEnhanced;
 const maxDla = rates.dla.careHighest + rates.dla.mobilityHigher;
 
@@ -115,20 +116,18 @@ const journeys = [
     <div class="wrap">
       <p class="eyebrow">Health conditions</p>
       <h2 id="conditions">Guides to living with a long-term condition</h2>
-      <div class="grid" style="margin-top:var(--space-l)">
-        {conditions.map((c) => (
-          <article class="card">
-            <span class="card__icon"><Icon name={c.data.cardIcon} /></span>
-            <h3><a class="card__link" href={`/conditions/${c.id}/`}>{c.data.conditionName || c.data.title}</a></h3>
-            <p>{c.data.summary}</p>
-            <span class="card__more" aria-hidden="true">Read the guide &rarr;</span>
-          </article>
-        ))}
-        <article class="card" style="box-shadow:none;border-style:dashed;background:transparent">
-          <h3>More conditions coming soon</h3>
-          <p>We are adding new guides regularly. <a href="/contact/">Tell us which condition you would like us to cover</a>.</p>
-        </article>
-      </div>
+      <p class="lead" style="margin-top:var(--space-s)">Symptoms, treatment, living well, work and benefits, explained simply for each condition.</p>
+      {cats.map((cat) => (
+        <div style="margin-top:var(--space-l)">
+          <h3 style="font-size:var(--step-1)"><a href={`/conditions/${cat.id}/`}>{cat.data.title}</a></h3>
+          <ul class="chip-list">
+            {conditions.filter((c) => c.id.startsWith(`${cat.id}/`)).map((c) => (
+              <li><a class="chip" href={`/conditions/${c.id}/`}><Icon name={c.data.cardIcon} size={18} />{c.data.conditionName || c.data.title}</a></li>
+            ))}
+          </ul>
+        </div>
+      ))}
+      <p style="margin-top:var(--space-l)"><a href="/contact/">Tell us which condition you would like us to cover next</a></p>
     </div>
   </section>
 

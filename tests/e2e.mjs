@@ -90,6 +90,17 @@ for (const v of ['toddler', 'ew', 'no', 'long', 'lot', 'frequent', 'repeated']) 
 ok((await page.locator('.score').count()) === 1, 'DLA: only the care part shown for a toddler');
 ok((await page.locator('.score__band').innerText()).includes('Highest'), 'DLA: day and night needs give highest care');
 
+/* Physical conditions: filter box */
+await page.goto(`${BASE}/conditions/physical/`);
+const cardCount = await page.locator('[data-conditions] > .card').count();
+ok(cardCount >= 12, `Conditions: category lists ${cardCount} conditions`);
+await page.locator('#condition-filter').fill('diab');
+ok((await page.locator('[data-conditions] > .card:visible').count()) === 2, 'Conditions: filter "diab" shows the two diabetes guides');
+await page.locator('#condition-filter').fill('zzz');
+ok((await page.locator('[data-filter-status]').innerText()).includes('No conditions'), 'Conditions: filter explains when nothing matches');
+await page.goto(`${BASE}/conditions/physical/asthma/treatment/`);
+ok((await page.locator('.breadcrumbs li').count()) === 5, 'Conditions: breadcrumbs include the category');
+
 /* Mobile menu */
 await page.goto(`${BASE}/`);
 await page.locator('.site-header__inner .menu-button').click();
@@ -98,7 +109,7 @@ ok(await page.locator('#site-menu').isVisible(), 'Menu: opens on mobile');
 ok(errors.length === 0, `No JavaScript errors${errors.length ? ': ' + errors.join(' | ') : ''}`);
 
 /* Accessibility scan with axe-core, in light and dark mode */
-const pages = ['/', '/conditions/fibromyalgia/', '/benefits/', '/benefits/pip/', '/benefits/pip/activities/', '/benefits/pip/points-checker/', '/privacy-policy/', '/cookie-policy/', '/tools/'];
+const pages = ['/', '/conditions/', '/conditions/physical/', '/conditions/physical/asthma/', '/conditions/physical/type-2-diabetes/benefits-and-work/', '/conditions/physical/fibromyalgia/', '/benefits/', '/benefits/pip/', '/benefits/pip/activities/', '/benefits/pip/points-checker/', '/privacy-policy/', '/cookie-policy/', '/tools/'];
 for (const theme of ['light', 'dark']) {
   const tctx = await browser.newContext({ viewport: { width: 390, height: 844 }, colorScheme: theme });
   const p = await tctx.newPage();

@@ -1,10 +1,14 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Icon from '../../components/Icon.astro';
-import { hubs } from '../../lib/topics';
+import { categories, hubs } from '../../lib/topics';
 import { abs, SITE_ID } from '../../lib/schema';
 
-const conditions = await hubs('conditions');
+const cats = await categories();
+const groups = await Promise.all(cats.map(async (c) => ({ category: c, conditions: await hubs('conditions', c.id) })));
+const all = groups.flatMap((g) => g.conditions);
+const name = (c: (typeof all)[number]) => c.data.conditionName || c.data.title;
+
 const schema = [
   {
     '@type': 'CollectionPage',
@@ -15,7 +19,7 @@ const schema = [
     breadcrumb: { '@id': `${abs('/conditions/')}#breadcrumb` },
     mainEntity: {
       '@type': 'ItemList',
-      itemListElement: conditions.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.data.conditionName || c.data.title, url: abs(`/conditions/${c.id}/`) })),
+      itemListElement: cats.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.data.title, url: abs(`/conditions/${c.id}/`) })),
     },
   },
 ];
@@ -31,19 +35,30 @@ const schema = [
       <h1>Health conditions explained</h1>
       <p class="lead">Clear, practical guides to living with a long-term health condition, from getting a diagnosis to getting the support you are entitled to.</p>
     </header>
+
     <div class="grid">
-      {conditions.map((c) => (
+      {groups.map(({ category, conditions }) => (
         <article class="card">
-          <span class="card__icon"><Icon name={c.data.cardIcon} /></span>
-          <h2><a class="card__link" href={`/conditions/${c.id}/`}>{c.data.conditionName || c.data.title}</a></h2>
-          <p>{c.data.summary}</p>
-          <span class="card__more" aria-hidden="true">Read the guide &rarr;</span>
+          <span class="card__icon"><Icon name={category.data.cardIcon} /></span>
+          <h2><a class="card__link" href={`/conditions/${category.id}/`}>{category.data.title}</a></h2>
+          <p>{category.data.summary}</p>
+          <p class="small muted">{conditions.length} {conditions.length === 1 ? 'condition' : 'conditions'}</p>
+          <span class="card__more" aria-hidden="true">See all &rarr;</span>
         </article>
       ))}
       <article class="card" style="box-shadow:none;border-style:dashed;background:transparent">
-        <h2>More conditions coming soon</h2>
-        <p>We are adding new conditions regularly. <a href="/contact/">Tell us which one you would like next</a>.</p>
+        <h2>More coming soon</h2>
+        <p>We are adding new conditions and groups regularly. <a href="/contact/">Tell us what you would like us to cover next</a>.</p>
       </article>
     </div>
+
+    <section class="prose" aria-labelledby="a-z" style="margin-top:var(--space-2xl)">
+      <h2 id="a-z">All conditions, A to Z</h2>
+      <ul class="az-list">
+        {all.map((c) => (
+          <li><a href={`/conditions/${c.id}/`}>{name(c)}</a></li>
+        ))}
+      </ul>
+    </section>
   </div>
 </BaseLayout>

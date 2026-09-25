@@ -37,7 +37,7 @@ npm run test:e2e
 ```
 src/
   content/          All page text (edited through Keystatic)
-    conditions/     One main page per condition, plus pages inside it (fibromyalgia/symptoms.mdoc)
+    conditions/     Groups (physical.mdoc), conditions (physical/asthma.mdoc) and their pages (physical/asthma/treatment.mdoc)
     benefits/       One main page per benefit, plus pages inside it (pip/how-to-claim.mdoc)
     pages/          About, contact and legal pages
     products/       Affiliate products (empty at launch)
@@ -55,9 +55,11 @@ scripts/            Icon, share image and copy checking scripts
 ## Adding a new condition
 
 1. In Keystatic, open **Health condition pages** and choose **Add**.
-2. Give the main page a web address with no slash, for example `me-cfs`.
-3. Add pages inside it with a slash, for example `me-cfs/symptoms`.
-4. Add it to the menu in `src/data/site.ts` (`NAV`) and to the product options in `keystatic.config.ts` if you want affiliate products on it.
+2. Give the main page a web address made of its group and name, for example `physical/me-cfs`, and fill in **Condition name** and **Card icon**.
+3. Add pages inside it, for example `physical/me-cfs/treatment`.
+4. Add it to the product options in `keystatic.config.ts` if you want affiliate products on it.
+
+Conditions sit inside groups. A group is a page with a one-part address (for example `physical`). The group page, the A to Z list on /conditions/ and the home page list its conditions automatically. A new group needs adding to `NAV` in `src/data/site.ts`.
 
 The topic menu, breadcrumbs, structured data, sitemap and llms.txt all update automatically.
 

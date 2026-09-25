@@ -15,6 +15,7 @@ import ProductList from '../components/ProductList.astro';
 import Icon from '../components/Icon.astro';
 import { SITE, TOOLS, type ToolKey } from '../data/site';
 import { abs, AUTHOR_ID, ORG_ID, SITE_ID, faqPage, iso, type Crumb } from '../lib/schema';
+import { shortId } from '../lib/topics';
 
 type Entry = CollectionEntry<'conditions'> | CollectionEntry<'benefits'>;
 
@@ -24,9 +25,11 @@ interface Props {
   hub: Entry;
   pages: Entry[];
   headings: MarkdownHeading[];
+  /** For conditions: the category the condition sits in, such as Physical conditions. */
+  category?: CollectionEntry<'conditions'>;
 }
 
-const { kind, entry, hub, pages, headings } = Astro.props;
+const { kind, entry, hub, pages, headings, category } = Astro.props;
 const d = entry.data;
 const url = `/${kind}/${entry.id}/`;
 const hubUrl = `/${kind}/${hub.id}/`;
@@ -39,6 +42,7 @@ const sectionName = kind === 'conditions' ? 'Health conditions' : 'Benefits';
 const crumbs: Crumb[] = [
   { name: 'Home', href: '/' },
   { name: sectionName, href: `/${kind}/` },
+  ...(category ? [{ name: category.data.navTitle || category.data.title, href: `/conditions/${category.id}/` }] : []),
   { name: shortTopic, href: hubUrl },
 ];
 if (!isHub) crumbs.push({ name: d.navTitle || d.title, href: url });
@@ -149,7 +153,7 @@ const schema = [pageSchema, ...(d.faqs.length ? [faqPage(url, d.faqs)] : [])];
           <slot />
         </div>
 
-        {kind === 'conditions' && <ProductList condition={hub.id} />}
+        {kind === 'conditions' && <ProductList condition={shortId(hub.id)} />}
 
         <Faqs faqs={d.faqs} />
 

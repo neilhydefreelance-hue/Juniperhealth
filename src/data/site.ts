@@ -30,7 +30,7 @@ export const NAV = [
   {
     label: 'Conditions',
     href: '/conditions/',
-    children: [{ label: 'Fibromyalgia', href: '/conditions/fibromyalgia/' }],
+    children: [{ label: 'Physical conditions', href: '/conditions/physical/' }],
   },
   {
     label: 'Benefits',
