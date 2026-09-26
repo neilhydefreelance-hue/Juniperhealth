@@ -22,7 +22,7 @@ const conditions = defineCollection({
     conditionName: z.string().default(''),
     alternateNames: z.array(z.string()).default([]),
     icd10: z.string().default(''),
-    cardIcon: z.enum(['leaf', 'heart', 'brain', 'body']).default('leaf'),
+    cardIcon: z.enum(['leaf', 'heart', 'brain', 'body', 'lungs', 'ear', 'joint', 'drop', 'pulse', 'thyroid', 'shield', 'people', 'wave', 'cup', 'pill', 'loop', 'bolt', 'eye', 'bone', 'gut', 'kidney', 'skin', 'moon', 'flower']).default('leaf'),
   }),
 });
 
@@ -56,4 +56,11 @@ const products = defineCollection({
   }),
 });
 
-export const collections = { conditions, benefits, pages, products };
+const support = defineCollection({
+  loader: glob({ pattern: '**/*.mdoc', base: './src/content/support' }),
+  schema: topicPage.extend({
+    cardIcon: z.enum(['leaf', 'heart', 'brain', 'body', 'lungs', 'ear', 'joint', 'drop', 'pulse', 'thyroid', 'shield', 'people', 'wave', 'cup', 'pill', 'loop', 'bolt', 'pound', 'gift', 'document', 'calculator']).default('gift'),
+  }),
+});
+
+export const collections = { conditions, benefits, support, pages, products };

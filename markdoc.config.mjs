@@ -34,7 +34,7 @@ export default defineMarkdocConfig({
       render: component('./src/components/CheckerCta.astro'),
       selfClosing: true,
       attributes: {
-        tool: { type: String, default: 'pip', matches: ['pip', 'aa', 'dla'] },
+        tool: { type: String, default: 'pip', matches: ['pip', 'aa', 'dla', 'nhs'] },
       },
     },
   },

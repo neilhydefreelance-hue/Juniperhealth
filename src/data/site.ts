@@ -2,7 +2,7 @@ import settings from './settings.json';
 
 export const SITE = {
   name: 'Juniper Health',
-  url: 'https://juniperhealth.app',
+  url: 'https://juniperhealth.info',
   tagline: 'Clear, kind help with health conditions and disability benefits',
   description:
     'Plain-English guides to health conditions and disability benefits in England and Wales, with free PIP, Attendance Allowance and DLA self-checks.',
@@ -13,6 +13,7 @@ export const SITE = {
   email: settings.email,
   postalAddress: settings.postalAddress.trim(),
   donationUrl: settings.donationUrl.trim(),
+  facebookGroupUrl: (settings.facebookGroupUrl ?? '').trim(),
   icoNumber: settings.icoNumber.trim(),
   analyticsToken: (settings.analyticsToken ?? '').trim(),
   authorSlug: '/about/neil-hyde/',
@@ -30,7 +31,17 @@ export const NAV = [
   {
     label: 'Conditions',
     href: '/conditions/',
-    children: [{ label: 'Fibromyalgia', href: '/conditions/fibromyalgia/' }],
+    children: [
+      { label: 'Brain, nerves and senses', href: '/conditions/brain-nerves-and-senses/' },
+      { label: 'Digestive and liver', href: '/conditions/digestive-and-liver/' },
+      { label: 'Heart and circulation', href: '/conditions/heart-and-circulation/' },
+      { label: 'Kidney, bladder and reproductive', href: '/conditions/kidney-bladder-and-reproductive/' },
+      { label: 'Mental health', href: '/conditions/mental-health/' },
+      { label: 'Metabolic and hormonal', href: '/conditions/metabolic-and-hormonal/' },
+      { label: 'Musculoskeletal', href: '/conditions/musculoskeletal/' },
+      { label: 'Respiratory and allergy', href: '/conditions/respiratory-and-allergy/' },
+      { label: 'Skin', href: '/conditions/skin/' },
+    ],
   },
   {
     label: 'Benefits',
@@ -39,6 +50,21 @@ export const NAV = [
       { label: 'PIP', href: '/benefits/pip/' },
       { label: 'Attendance Allowance', href: '/benefits/attendance-allowance/' },
       { label: 'DLA for children', href: '/benefits/dla/' },
+      { label: 'ESA', href: '/benefits/esa/' },
+      { label: 'Universal Credit health element', href: '/benefits/universal-credit-health/' },
+    ],
+  },
+  {
+    label: 'Disability support',
+    href: '/support/',
+    children: [
+      { label: 'Days out and leisure', href: '/support/leisure/' },
+      { label: 'Help for carers', href: '/support/carers/' },
+      { label: 'Help with NHS health costs', href: '/support/health-costs/' },
+      { label: 'Home adaptations and equipment', href: '/support/home-and-equipment/' },
+      { label: 'Money off bills', href: '/support/money-off-bills/' },
+      { label: 'Travel and getting around', href: '/support/travel/' },
+      { label: 'Work and study', href: '/support/work-and-study/' },
     ],
   },
   {
@@ -48,6 +74,7 @@ export const NAV = [
       { label: 'PIP points self-check', href: '/benefits/pip/points-checker/' },
       { label: 'Attendance Allowance check', href: '/benefits/attendance-allowance/checker/' },
       { label: 'DLA for children check', href: '/benefits/dla/checker/' },
+      { label: 'NHS health costs check', href: '/support/health-costs/checker/' },
     ],
   },
   { label: 'About', href: '/about/' },
@@ -65,6 +92,12 @@ export const TOOLS = {
     href: '/benefits/attendance-allowance/checker/',
     blurb: 'For people over State Pension age. See if you may qualify and at which rate.',
     time: 'About 4 minutes',
+  },
+  nhs: {
+    name: 'NHS health costs check',
+    href: '/support/health-costs/checker/',
+    blurb: 'Find out if you can get free prescriptions, eye tests, glasses, dental treatment and help with travel to hospital.',
+    time: 'About 3 minutes',
   },
   dla: {
     name: 'DLA for children check',

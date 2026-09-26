@@ -5,9 +5,11 @@ import Plant from '../components/Plant.astro';
 import { SITE, TOOLS, money } from '../data/site';
 import rates from '../data/rates.json';
 import { abs, ORG_ID, SITE_ID } from '../lib/schema';
-import { hubs } from '../lib/topics';
+import { categories, hubs } from '../lib/topics';
 
 const conditions = await hubs('conditions');
+const cats = await categories();
+const supportTopics = await hubs('support');
 const maxPip = rates.pip.dailyEnhanced + rates.pip.mobilityEnhanced;
 const maxDla = rates.dla.careHighest + rates.dla.mobilityHigher;
 
@@ -108,6 +110,20 @@ const journeys = [
         </article>
       </div>
       <p class="small muted" style="margin-top:var(--space-m)">Rates for {rates.taxYear}. None of these benefits are means-tested.</p>
+      <p style="margin-top:var(--space-s)">Health stopping you working? Read about <a href="/benefits/esa/">New Style ESA</a> and the <a href="/benefits/universal-credit-health/">Universal Credit health element</a>.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="support">
+    <div class="wrap">
+      <p class="eyebrow">Disability support</p>
+      <h2 id="support">Discounts, concessions and extra help</h2>
+      <p class="lead" style="margin-top:var(--space-s)">Free prescriptions, Blue Badges, railcards, free carer tickets, money off bills and more.</p>
+      <ul class="chip-list" style="margin-top:var(--space-l)">
+        {supportTopics.map((t) => (
+          <li><a class="chip" href={`/support/${t.id}/`}><Icon name={t.data.cardIcon} size={18} />{t.data.title}</a></li>
+        ))}
+      </ul>
     </div>
   </section>
 
@@ -115,20 +131,14 @@ const journeys = [
     <div class="wrap">
       <p class="eyebrow">Health conditions</p>
       <h2 id="conditions">Guides to living with a long-term condition</h2>
-      <div class="grid" style="margin-top:var(--space-l)">
-        {conditions.map((c) => (
-          <article class="card">
-            <span class="card__icon"><Icon name={c.data.cardIcon} /></span>
-            <h3><a class="card__link" href={`/conditions/${c.id}/`}>{c.data.conditionName || c.data.title}</a></h3>
-            <p>{c.data.summary}</p>
-            <span class="card__more" aria-hidden="true">Read the guide &rarr;</span>
-          </article>
+      <p class="lead" style="margin-top:var(--space-s)">Symptoms, treatment, living well, work and benefits, explained simply for each condition.</p>
+      <ul class="chip-list" style="margin-top:var(--space-l)">
+        {cats.map((cat) => (
+          <li><a class="chip" href={`/conditions/${cat.id}/`}><Icon name={cat.data.cardIcon} size={18} />{cat.data.navTitle || cat.data.title}</a></li>
         ))}
-        <article class="card" style="box-shadow:none;border-style:dashed;background:transparent">
-          <h3>More conditions coming soon</h3>
-          <p>We are adding new guides regularly. <a href="/contact/">Tell us which condition you would like us to cover</a>.</p>
-        </article>
-      </div>
+      </ul>
+      <p style="margin-top:var(--space-m)"><a href="/conditions/#a-z">See all {conditions.length} conditions, A to Z</a></p>
+      <p style="margin-top:var(--space-l)"><a href="/contact/">Tell us which condition you would like us to cover next</a></p>
     </div>
   </section>
 

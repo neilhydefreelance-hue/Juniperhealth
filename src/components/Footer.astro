@@ -9,13 +9,16 @@ const year = new Date().getFullYear();
       <div class="stack" style="--stack-space: var(--space-s)">
         <p class="footer-brand"><Plant /> Juniper Health</p>
         <p>{SITE.tagline}. Free, plain-English guides for people in England and Wales.</p>
+        {SITE.facebookGroupUrl && <p><a href={SITE.facebookGroupUrl} rel="noopener">Join our Facebook community</a></p>}
         {SITE.donationUrl && <p><a href="/support-us/">Support our work</a></p>}
       </div>
       <nav aria-labelledby="f-conditions">
         <h2 id="f-conditions">Health conditions</h2>
         <ul>
-          <li><a href="/conditions/">All conditions</a></li>
-          <li><a href="/conditions/fibromyalgia/">Fibromyalgia</a></li>
+          <li><a href="/conditions/#a-z">All conditions A to Z</a></li>
+          <li><a href="/conditions/heart-and-circulation/">Heart and circulation</a></li>
+          <li><a href="/conditions/mental-health/">Mental health</a></li>
+          <li><a href="/conditions/musculoskeletal/">Musculoskeletal</a></li>
         </ul>
       </nav>
       <nav aria-labelledby="f-benefits">
@@ -24,7 +27,19 @@ const year = new Date().getFullYear();
           <li><a href="/benefits/pip/">PIP</a></li>
           <li><a href="/benefits/attendance-allowance/">Attendance Allowance</a></li>
           <li><a href="/benefits/dla/">DLA for children</a></li>
+          <li><a href="/benefits/esa/">ESA</a></li>
+          <li><a href="/benefits/universal-credit-health/">Universal Credit health element</a></li>
           <li><a href={TOOLS.pip.href}>{TOOLS.pip.name}</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="f-support">
+        <h2 id="f-support">Disability support</h2>
+        <ul>
+          <li><a href="/support/">All disability support</a></li>
+          <li><a href="/support/health-costs/">Help with NHS health costs</a></li>
+          <li><a href="/support/travel/blue-badge/">Blue Badge</a></li>
+          <li><a href="/support/leisure/cea-card/">CEA cinema card</a></li>
+          <li><a href="/support/work-and-study/access-to-work/">Access to Work</a></li>
         </ul>
       </nav>
       <nav aria-labelledby="f-about">

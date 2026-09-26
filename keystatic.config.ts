@@ -1,7 +1,7 @@
 /**
  * Keystatic editor setup.
  *
- * This file decides what you see at juniperhealth.app/keystatic: which kinds of page
+ * This file decides what you see at juniperhealth.info/keystatic: which kinds of page
  * you can create, and which boxes each page has. Every page is saved as a file
  * in this repository, so nothing is locked away in a database.
  *
@@ -76,6 +76,7 @@ const contentComponents = {
           { label: 'PIP points self-check', value: 'pip' },
           { label: 'Attendance Allowance check', value: 'aa' },
           { label: 'DLA for children check', value: 'dla' },
+          { label: 'NHS health costs check', value: 'nhs' },
         ],
         defaultValue: 'pip',
       }),
@@ -126,6 +127,7 @@ export default config({
     navigation: {
       'Health conditions': ['conditions'],
       Benefits: ['benefits'],
+      'Disability support': ['support'],
       'Other pages': ['pages'],
       'Affiliate products': ['products'],
       'Site settings': ['settings', 'rates'],
@@ -145,13 +147,13 @@ export default config({
           slug: {
             label: 'Web address',
             description:
-              'For the main page of a condition use just its name, for example "fibromyalgia". For a page inside it, add a slash, for example "fibromyalgia/symptoms".',
+              'Start with the category, then the condition. A category page is just its name, for example "skin". A condition main page is "skin/eczema". A page inside it is "skin/eczema/treatment".',
           },
         }),
         ...sharedPageFields,
         conditionName: fields.text({
           label: 'Condition name',
-          description: 'Only needed on the main page of a condition, for example "Fibromyalgia".',
+          description: 'Needed on the main page of a condition, for example "Asthma". Leave empty on category pages and pages inside a condition.',
         }),
         alternateNames: fields.array(fields.text({ label: 'Other name' }), {
           label: 'Other names for this condition',
@@ -165,6 +167,26 @@ export default config({
             { label: 'Heart', value: 'heart' },
             { label: 'Brain', value: 'brain' },
             { label: 'Body', value: 'body' },
+            { label: 'Lungs', value: 'lungs' },
+            { label: 'Ear', value: 'ear' },
+            { label: 'Joint', value: 'joint' },
+            { label: 'Drop (blood sugar)', value: 'drop' },
+            { label: 'Pulse (blood pressure)', value: 'pulse' },
+            { label: 'Thyroid', value: 'thyroid' },
+            { label: 'Shield', value: 'shield' },
+            { label: 'People', value: 'people' },
+            { label: 'Wave (mood)', value: 'wave' },
+            { label: 'Cup', value: 'cup' },
+            { label: 'Pill', value: 'pill' },
+            { label: 'Loop', value: 'loop' },
+            { label: 'Lightning bolt', value: 'bolt' },
+            { label: 'Eye', value: 'eye' },
+            { label: 'Bone', value: 'bone' },
+            { label: 'Gut (digestion)', value: 'gut' },
+            { label: 'Kidney', value: 'kidney' },
+            { label: 'Hand (skin)', value: 'skin' },
+            { label: 'Moon (sleep)', value: 'moon' },
+            { label: 'Flower (allergy)', value: 'flower' },
           ],
           defaultValue: 'leaf',
         }),
@@ -201,6 +223,39 @@ export default config({
         body: fields.markdoc({ label: 'Page content', components: contentComponents }),
       },
     }),
+    support: collection({
+      label: 'Disability support pages',
+      path: 'src/content/support/**',
+      slugField: 'title',
+      format: { contentField: 'body' },
+      entryLayout: 'content',
+      columns: ['title', 'lastReviewed'],
+      schema: {
+        title: fields.slug({
+          name: { label: 'Page title' },
+          slug: {
+            label: 'Web address',
+            description: 'For the main page of a topic use its short name, for example "travel". For a page inside it, for example "travel/blue-badge".',
+          },
+        }),
+        ...sharedPageFields,
+        cardIcon: fields.select({
+          label: 'Card icon',
+          options: [
+            { label: 'Gift', value: 'gift' },
+            { label: 'Pound sign', value: 'pound' },
+            { label: 'Document', value: 'document' },
+            { label: 'Heart', value: 'heart' },
+            { label: 'People', value: 'people' },
+            { label: 'Body', value: 'body' },
+            { label: 'Calculator', value: 'calculator' },
+            { label: 'Pill', value: 'pill' },
+          ],
+          defaultValue: 'gift',
+        }),
+        body: fields.markdoc({ label: 'Page content', components: contentComponents }),
+      },
+    }),
     pages: collection({
       label: 'Other pages (about, legal)',
       path: 'src/content/pages/**',
@@ -232,7 +287,20 @@ export default config({
         url: fields.url({ label: 'Affiliate link', validation: { isRequired: true } }),
         conditions: fields.multiselect({
           label: 'Show on these condition pages',
-          options: [{ label: 'Fibromyalgia', value: 'fibromyalgia' }],
+          options: [
+            { label: 'Asthma', value: 'asthma' },
+            { label: 'COPD', value: 'copd' },
+            { label: 'Coronary heart disease', value: 'coronary-heart-disease' },
+            { label: 'Fibromyalgia', value: 'fibromyalgia' },
+            { label: 'Hearing loss', value: 'hearing-loss' },
+            { label: 'High blood pressure', value: 'high-blood-pressure' },
+            { label: 'Hypothyroidism', value: 'hypothyroidism' },
+            { label: 'Migraine', value: 'migraine' },
+            { label: 'Obesity', value: 'obesity' },
+            { label: 'Osteoarthritis', value: 'osteoarthritis' },
+            { label: 'Type 1 diabetes', value: 'type-1-diabetes' },
+            { label: 'Type 2 diabetes', value: 'type-2-diabetes' },
+          ],
           defaultValue: ['fibromyalgia'],
         }),
         active: fields.checkbox({ label: 'Show on the site', defaultValue: true }),
@@ -254,6 +322,10 @@ export default config({
           multiline: true,
         }),
         donationUrl: fields.url({ label: 'Donation link (Ko-fi or Stripe)' }),
+        facebookGroupUrl: fields.url({
+          label: 'Facebook community group link',
+          description: 'Shown in the footer. Leave empty to hide it.',
+        }),
         icoNumber: fields.text({ label: 'ICO registration number (if registered)' }),
         analyticsToken: fields.text({
           label: 'Cloudflare Web Analytics token',

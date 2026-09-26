@@ -4,12 +4,13 @@ You do not need to know any code to edit the website. Everything is done in the 
 
 ## Opening the editor
 
-Go to **juniperhealth.app/keystatic** and sign in. (Before the site is live, see "Setting up editing" at the bottom of this page.)
+Go to **juniperhealth.info/keystatic** and sign in. (Before the site is live, see "Setting up editing" at the bottom of this page.)
 
 On the left you will see:
 
 - **Health condition pages:** fibromyalgia and future conditions
 - **Benefit pages:** PIP, Attendance Allowance and DLA
+- **Disability support pages:** NHS health costs, travel, leisure, bills, home and equipment, work and study, and carers
 - **Other pages:** about, contact and the legal pages
 - **Affiliate products:** shop links shown on condition pages
 - **Business details:** your name, address, email and donation link
@@ -28,7 +29,7 @@ The website rebuilds itself automatically. Your change will be live in about 2 m
 
 1. Open **Health condition pages** (or **Benefit pages**) and click **Add**.
 2. Type the **Page title**.
-3. Set the **Web address**. For a page inside fibromyalgia, write `fibromyalgia/your-page-name`, using small letters and hyphens between words.
+3. Set the **Web address**. Conditions have three parts: the group, the condition and the page. For a page inside fibromyalgia, write `musculoskeletal/fibromyalgia/your-page-name`, using small letters and hyphens between words.
 4. Fill in the **Short menu name**, **Search result description** and **Opening summary**.
 5. Set **Position in the topic menu** (1 is first).
 6. Write the page and add your sources at the bottom.
@@ -37,10 +38,14 @@ The website rebuilds itself automatically. Your change will be live in about 2 m
 ## Adding a new condition
 
 1. Open **Health condition pages** and click **Add**.
-2. Set the **Web address** to just the condition name, for example `me-cfs`. This becomes its main page.
+2. Set the **Web address** to the group and the condition name, for example `brain-nerves-and-senses/me-cfs`. This becomes its main page.
 3. Fill in the **Condition name** box (for example "ME/CFS").
-4. Add pages inside it as above, for example `me-cfs/symptoms`.
-5. Ask your developer to add the condition to the top menu (a one-line change).
+4. Add pages inside it as above, for example `brain-nerves-and-senses/me-cfs/treatment`.
+5. It appears automatically, in A to Z order, on its group page, the A to Z list and the home page. Set **Position in the topic menu** on the main page to match its place in the A to Z list, so the editor list stays in order too.
+
+## Adding a new group of conditions
+
+To start a new group, such as mental health conditions, add a page with a one-part web address, for example `mental-health`, a title such as "Mental health conditions" and a short summary. Then add conditions inside it, for example `mental-health/depression`. Ask your developer to add the group to the top menu.
 
 ## Building blocks
 
@@ -87,4 +92,4 @@ Online editing uses **Keystatic Cloud**, which has a free plan for small teams.
 2. Create a team (for example "juniper-health") and a project (for example "juniperhealth").
 3. Connect the project to the GitHub repository **juniperhealth**.
 4. In Cloudflare, add a build variable called `PUBLIC_KEYSTATIC_CLOUD_PROJECT` with the value `team-name/project-name` (for example `juniper-health/juniperhealth`).
-5. Redeploy. You can now sign in at juniperhealth.app/keystatic.
+5. Redeploy. You can now sign in at juniperhealth.info/keystatic.

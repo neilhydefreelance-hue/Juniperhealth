@@ -1,0 +1,67 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+@font-face{font-family:Lexend;src:url(../../../public/fonts/lexend.woff2) format('woff2');font-weight:100 900}
+@font-face{font-family:Atk;src:url(../../../public/fonts/atkinson-next.woff2) format('woff2');font-weight:200 800}
+*{margin:0;box-sizing:border-box}
+/* TikTok is 1080 x 1920. Its buttons and caption cover the right edge and the bottom, so text stays inside x 80 to 900 and y 230 to 1450. */
+body{width:1080px;height:1920px;overflow:hidden;position:relative;color:#fff;font-family:Atk;background:#2E1A52}
+#bg{position:absolute;inset:-200px;background:radial-gradient(900px 700px at 80% 10%,#8556b8 0%,transparent 65%),radial-gradient(800px 700px at 10% 95%,rgba(242,180,65,.18),transparent 70%),linear-gradient(160deg,#5b3494 0%,#432777 55%,#2e1a52 100%)}
+#plant{position:absolute;right:-140px;bottom:260px;width:760px;height:760px;color:rgba(255,255,255,.06)}
+.brand{position:absolute;left:80px;top:150px;display:flex;align-items:center;gap:18px;font-family:Lexend;font-weight:600;font-size:38px}
+.brand img{width:84px;height:84px;border-radius:50%}
+.dots{position:absolute;left:80px;top:270px;display:flex;gap:14px}
+.dot{width:70px;height:10px;border-radius:5px;background:rgba(255,255,255,.22);overflow:hidden}
+.dot i{display:block;height:100%;width:0;background:#f2b441}
+.scene{position:absolute;left:80px;right:180px;top:380px;bottom:470px;display:flex;flex-direction:column;justify-content:center;opacity:0}
+.eyebrow{font-family:Lexend;font-weight:600;font-size:40px;letter-spacing:.1em;text-transform:uppercase;color:#f2b441;margin-bottom:28px}
+.num{width:150px;height:150px;border-radius:50%;background:#f2b441;color:#1e1b26;font:700 86px/150px Lexend;text-align:center;margin-bottom:48px}
+h1{font-family:Lexend;font-weight:700;font-size:96px;line-height:1.06;letter-spacing:-.01em}
+h2{font-family:Lexend;font-weight:700;font-size:74px;line-height:1.12}
+p{font-size:48px;line-height:1.35;color:#ece5f7;margin-top:36px}
+.line{display:block}
+.url{display:inline-block;margin-top:48px;padding:22px 40px;border-radius:999px;background:#f2b441;color:#1e1b26;font:700 50px Lexend}
+.small{font-size:32px;color:#d9cdee;margin-top:40px}
+.logo-big{width:260px;height:260px;border-radius:50%;margin-bottom:48px;box-shadow:0 24px 70px rgb(0 0 0/.35)}
+</style></head><body>
+<div id="bg"></div>
+<svg id="plant" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M50 14c7 6 8 14 0 22-8-8-7-16 0-22z"/><path d="M50 23c2.6 2.4 2.6 5.6 0 8-2.6-2.4-2.6-5.6 0-8z"/><path d="M50 36v48"/><path d="M50 50 40.5 40.5"/><path d="M40.5 40.5c-8 0-12.5-6-11.5-13.5 7.5 0 12.5 5.5 11.5 13.5z"/><path d="M50 50l9.5-9.5"/><path d="M59.5 40.5c8 0 12.5-6 11.5-13.5-7.5 0-12.5 5.5-11.5 13.5z"/><path d="M50 76c0-5-2.5-8.5-6-10"/><path d="M44 66c-14 1.5-26-8-26-22 14-1.5 26 8 26 22z"/><path d="M41 62 25 48"/><path d="M50 76c0-5 2.5-8.5 6-10"/><path d="M56 66c14 1.5 26-8 26-22-14-1.5-26 8-26 22z"/><path d="M59 62l16-14"/></svg>
+<div class="brand"><img src="../../../docs/logo-master.png" alt="">Juniper Health</div>
+<div class="dots" id="dots"></div>
+<div id="scenes"></div>
+<script>
+// Scenes come from the video file via window.setup(). Each scene: {dur, kind, html}.
+// window.render(t) draws the frame at t seconds, so every frame is exact and repeatable.
+const ease = (x) => 1 - Math.pow(1 - Math.min(Math.max(x, 0), 1), 3);
+let scenes = [], starts = [], total = 0, numbered = [];
+window.setup = (list) => {
+  scenes = list; let t = 0;
+  const box = document.getElementById('scenes');
+  box.innerHTML = list.map((s, i) => `<section class="scene" id="s${i}">${s.html}</section>`).join('');
+  list.forEach((s) => { starts.push(t); t += s.dur; });
+  total = t;
+  numbered = list.map((s, i) => (s.kind === 'point' ? i : -1)).filter((i) => i >= 0);
+  document.getElementById('dots').innerHTML = numbered.map(() => '<span class="dot"><i></i></span>').join('');
+  return total;
+};
+window.render = (t) => {
+  document.getElementById('bg').style.transform = `translate(${Math.sin(t / 4) * 40}px, ${Math.cos(t / 5) * 40}px)`;
+  document.getElementById('plant').style.transform = `rotate(${Math.sin(t / 3) * 4}deg)`;
+  scenes.forEach((s, i) => {
+    const el = document.getElementById('s' + i), local = t - starts[i], out = s.dur - local;
+    const vis = local >= 0 && out > 0;
+    el.style.opacity = vis ? Math.min(ease(local / 0.35), ease(out / 0.3)) : 0;
+    if (!vis) return;
+    el.querySelectorAll('[data-in]').forEach((part) => {
+      const k = ease((local - parseFloat(part.dataset.in)) / 0.45);
+      part.style.opacity = k;
+      part.style.transform = part.classList.contains('num') || part.classList.contains('url')
+        ? `scale(${0.6 + 0.4 * k})` : `translateY(${(1 - k) * 60}px)`;
+    });
+  });
+  document.querySelectorAll('.dot i').forEach((bar, n) => {
+    const i = numbered[n], k = (t - starts[i]) / scenes[i].dur;
+    bar.style.width = `${Math.min(Math.max(k, 0), 1) * 100}%`;
+  });
+};
+</script>
+</body></html>

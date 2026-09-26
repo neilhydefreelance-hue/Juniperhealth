@@ -90,6 +90,62 @@ for (const v of ['toddler', 'ew', 'no', 'long', 'lot', 'frequent', 'repeated']) 
 ok((await page.locator('.score').count()) === 1, 'DLA: only the care part shown for a toddler');
 ok((await page.locator('.score__band').innerText()).includes('Highest'), 'DLA: day and night needs give highest care');
 
+/* Condition groups: filter box */
+await page.goto(`${BASE}/conditions/metabolic-and-hormonal/`);
+const cardCount = await page.locator('[data-conditions] > .card').count();
+ok(cardCount >= 5, `Conditions: group lists ${cardCount} conditions`);
+await page.locator('#condition-filter').fill('diab');
+ok((await page.locator('[data-conditions] > .card:visible').count()) === 2, 'Conditions: filter "diab" shows the two diabetes guides');
+await page.locator('#condition-filter').fill('zzz');
+ok((await page.locator('[data-filter-status]').innerText()).includes('No conditions'), 'Conditions: filter explains when nothing matches');
+await page.goto(`${BASE}/conditions/respiratory-and-allergy/asthma/treatment/`);
+ok((await page.locator('.breadcrumbs li').count()) === 5, 'Conditions: breadcrumbs include the category');
+
+/* Mental health: group page and crisis banner */
+await page.goto(`${BASE}/conditions/mental-health/`);
+const mhCount = await page.locator('[data-conditions] > .card').count();
+ok(mhCount >= 13, `Mental health: group lists ${mhCount} conditions`);
+await page.locator('#condition-filter').fill('bipolar');
+ok((await page.locator('[data-conditions] > .card:visible').count()) === 2, 'Mental health: filter "bipolar" shows bipolar 1 and 2');
+await page.goto(`${BASE}/conditions/mental-health/ptsd/treatment/`);
+ok(await page.getByText('If you need help now').first().isVisible(), 'Mental health: crisis help shows on condition pages');
+await page.goto(`${BASE}/conditions/respiratory-and-allergy/asthma/`);
+ok((await page.getByText('If you need help now').count()) === 0, 'Physical condition pages do not show the mental health crisis banner');
+
+/* NHS health costs check */
+await page.goto(`${BASE}/support/health-costs/checker/`);
+await page.locator('[data-start]').click();
+await choose('england');
+await choose('60plus');
+ok((await activeStep()) === 'pregnant', 'NHS: education question skipped for over 60s');
+await choose('no');
+await page.locator('fieldset.step.is-active input[value="uc"]').check({ force: true });
+await page.locator('[data-next]').click();
+ok((await activeStep()) === 'ucPay', 'NHS: Universal Credit earnings question shown');
+await choose('mid');
+ok((await activeStep()) === 'ucExtra', 'NHS: child or LCW question shown for mid earnings');
+await choose('yes');
+await page.locator('fieldset.step.is-active input[value="none"]').check({ force: true });
+await page.locator('[data-next]').click();
+await choose('yes');
+ok((await page.locator('.score').count()) === 6, 'NHS: result lists 6 health costs');
+ok((await page.locator('[data-result] h2').innerText()).includes('6 of 6'), 'NHS: all 6 free with qualifying Universal Credit');
+
+/* Disability support */
+await page.goto(`${BASE}/support/`);
+ok((await page.locator('.grid > .card').count()) === 7, 'Support: index shows 7 topics');
+await page.goto(`${BASE}/support/travel/blue-badge/`);
+ok((await page.locator('.breadcrumbs li').count()) === 4, 'Support: breadcrumbs on a support page');
+
+/* ESA and Universal Credit guides have no self-check of their own */
+await page.goto(`${BASE}/benefits/universal-credit-health/`);
+ok((await page.locator('.sticky-cta').count()) === 0, 'UC health element: no sticky self-check button');
+ok((await page.locator('table').first().innerText()).includes('£217.26'), 'UC health element: shows the lower rate');
+await page.goto(`${BASE}/benefits/esa/`);
+ok((await page.locator('.sticky-cta').count()) === 0, 'ESA: no sticky self-check button');
+await page.goto(`${BASE}/benefits/pip/`);
+ok((await page.locator('.sticky-cta').count()) === 1, 'PIP: sticky self-check button still shows');
+
 /* Mobile menu */
 await page.goto(`${BASE}/`);
 await page.locator('.site-header__inner .menu-button').click();
@@ -98,7 +154,7 @@ ok(await page.locator('#site-menu').isVisible(), 'Menu: opens on mobile');
 ok(errors.length === 0, `No JavaScript errors${errors.length ? ': ' + errors.join(' | ') : ''}`);
 
 /* Accessibility scan with axe-core, in light and dark mode */
-const pages = ['/', '/conditions/fibromyalgia/', '/benefits/', '/benefits/pip/', '/benefits/pip/activities/', '/benefits/pip/points-checker/', '/privacy-policy/', '/cookie-policy/', '/tools/'];
+const pages = ['/', '/conditions/', '/conditions/metabolic-and-hormonal/', '/conditions/skin/', '/conditions/heart-and-circulation/stroke/', '/conditions/brain-nerves-and-senses/epilepsy/', '/conditions/skin/eczema/benefits-and-work/', '/conditions/mental-health/depression/', '/conditions/respiratory-and-allergy/asthma/', '/conditions/mental-health/', '/support/', '/support/health-costs/', '/support/health-costs/checker/', '/support/leisure/cea-card/', '/conditions/mental-health/bipolar-1/', '/conditions/mental-health/eating-disorders/benefits-and-work/', '/conditions/metabolic-and-hormonal/type-2-diabetes/benefits-and-work/', '/conditions/musculoskeletal/fibromyalgia/', '/benefits/', '/benefits/pip/', '/benefits/pip/activities/', '/benefits/pip/points-checker/', '/benefits/esa/', '/benefits/esa/work-capability-assessment/', '/benefits/universal-credit-health/', '/privacy-policy/', '/contact/', '/cookie-policy/', '/tools/'];
 for (const theme of ['light', 'dark']) {
   const tctx = await browser.newContext({ viewport: { width: 390, height: 844 }, colorScheme: theme });
   const p = await tctx.newPage();
