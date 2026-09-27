@@ -1,5 +1,6 @@
 // Renders the Ko-fi tier images (2:1): node scripts/social/kofi/render.mjs
-// Writes docs/social/kofi/<tier>.png (1200 x 600) and <tier>@2x.png (2400 x 1200).
+// Writes docs/social/kofi/<tier>.png (400 x 200, the size Ko-fi uses) and <tier>@2x.png (800 x 400).
+// The design is laid out at 1200 x 600 and scaled down, so it stays sharp.
 import { chromium } from 'playwright';
 const tiers = [
   { file: 'bronze', name: 'Bronze', icon: 'cup', line: 'A cuppa a month to keep Juniper Health free for everyone.',
@@ -10,13 +11,13 @@ const tiers = [
     colours: { hi: '#FFE6A8', mid: '#F2B441', lo: '#B7791F', glow: 'rgba(242,180,65,.35)', text: '#F2B441' } },
 ];
 const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || undefined });
-for (const scale of [1, 2]) {
+for (const scale of [1 / 3, 2 / 3]) {
   const page = await browser.newPage({ viewport: { width: 1200, height: 600 }, deviceScaleFactor: scale });
   await page.goto(new URL('./tier.html', import.meta.url).href);
   await page.evaluate(() => document.fonts.ready);
   for (const t of tiers) {
     await page.evaluate((x) => window.setTier(x), t);
-    const out = new URL(`../../../docs/social/kofi/${t.file}${scale === 2 ? '@2x' : ''}.png`, import.meta.url).pathname;
+    const out = new URL(`../../../docs/social/kofi/${t.file}${scale > 0.5 ? '@2x' : ''}.png`, import.meta.url).pathname;
     await page.screenshot({ path: out });
     console.log('Wrote', out.split('/juniperhealth/')[1]);
   }
