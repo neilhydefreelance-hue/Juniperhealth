@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Community from '../components/Community.astro';
 import Icon from '../components/Icon.astro';
 import Plant from '../components/Plant.astro';
 import { SITE, TOOLS, money } from '../data/site';
@@ -139,6 +140,15 @@ const journeys = [
       </ul>
       <p style="margin-top:var(--space-m)"><a href="/conditions/#a-z">See all {conditions.length} conditions, A to Z</a></p>
       <p style="margin-top:var(--space-l)"><a href="/contact/">Tell us which condition you would like us to cover next</a></p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="community">
+    <div class="wrap">
+      <p class="eyebrow">Our community</p>
+      <h2 id="community">You are not on your own</h2>
+      <p class="lead" style="margin-top:var(--space-s)">Talk to people who understand. Share tips, ask questions and support each other in our free communities.</p>
+      <Community />
     </div>
   </section>
 

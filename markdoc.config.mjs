@@ -18,6 +18,10 @@ export default defineMarkdocConfig({
       render: component('./src/components/DonateButton.astro'),
       selfClosing: true,
     },
+    community: {
+      render: component('./src/components/Community.astro'),
+      selfClosing: true,
+    },
     businessDetails: {
       render: component('./src/components/BusinessDetails.astro'),
       selfClosing: true,

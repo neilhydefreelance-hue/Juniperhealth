@@ -3,8 +3,9 @@
   "tradingName": "Juniper Health",
   "email": "hello@juniperhealth.info",
   "postalAddress": "",
-  "donationUrl": "",
+  "donationUrl": "https://ko-fi.com/juniperhealth",
   "icoNumber": "",
   "analyticsToken": "",
-  "facebookGroupUrl": "https://www.facebook.com/groups/1074542085447556/"
+  "facebookGroupUrl": "https://www.facebook.com/groups/1074542085447556/",
+  "discordUrl": "https://discord.gg/p6qjffATU"
 }

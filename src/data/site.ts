@@ -14,6 +14,7 @@ export const SITE = {
   postalAddress: settings.postalAddress.trim(),
   donationUrl: settings.donationUrl.trim(),
   facebookGroupUrl: (settings.facebookGroupUrl ?? '').trim(),
+  discordUrl: (settings.discordUrl ?? '').trim(),
   icoNumber: settings.icoNumber.trim(),
   analyticsToken: (settings.analyticsToken ?? '').trim(),
   authorSlug: '/about/neil-hyde/',
@@ -77,6 +78,7 @@ export const NAV = [
       { label: 'NHS health costs check', href: '/support/health-costs/checker/' },
     ],
   },
+  { label: 'Community', href: '/community/' },
   { label: 'About', href: '/about/' },
 ] as const;
 

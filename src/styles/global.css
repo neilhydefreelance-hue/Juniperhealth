@@ -1605,3 +1605,51 @@ hr {
   border-color: var(--link);
   color: var(--link);
 }
+
+/* ---------- Community (Facebook group and Discord) ---------- */
+.community-block {
+  margin-block: var(--space-l);
+}
+.community {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  gap: var(--space-m);
+  margin-bottom: var(--space-s);
+}
+.community__card {
+  display: flex;
+  gap: var(--space-m);
+  align-items: flex-start;
+  padding: var(--space-l);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-m);
+  background: var(--surface-tint);
+}
+.community__icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--bg);
+}
+.community__name {
+  font-family: var(--font-heading, inherit);
+  font-weight: 600;
+  font-size: var(--step-1);
+  color: var(--heading);
+  margin: 0;
+}
+.community__text {
+  color: var(--text-muted);
+  margin: var(--space-2xs, 0.25rem) 0 var(--space-m);
+}
+.community__note {
+  color: var(--text-muted);
+  margin: 0;
+}
+.prose .community a.btn {
+  text-decoration: none;
+}

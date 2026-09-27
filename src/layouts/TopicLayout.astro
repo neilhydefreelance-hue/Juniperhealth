@@ -8,6 +8,7 @@
 import type { CollectionEntry } from 'astro:content';
 import type { MarkdownHeading } from 'astro';
 import BaseLayout from './BaseLayout.astro';
+import Community from '../components/Community.astro';
 import CheckerCta from '../components/CheckerCta.astro';
 import RatesBox from '../components/RatesBox.astro';
 import Faqs from '../components/Faqs.astro';
@@ -211,6 +212,7 @@ const schema = [pageSchema, ...(d.faqs.length ? [faqPage(url, d.faqs)] : [])];
             </ul>
           </nav>
         )}
+        <Community variant="compact" />
         <div class="box">
           <h2><Icon name="phone" size={18} class="inline-icon" /> Struggling right now?</h2>
           <p class="small">Call Samaritans free, day or night, on <a href="tel:116123">116 123</a>. For urgent medical help call <a href="tel:111">NHS 111</a>.</p>

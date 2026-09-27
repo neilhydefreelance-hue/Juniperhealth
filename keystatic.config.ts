@@ -34,6 +34,11 @@ const contentComponents = {
     description: 'A button linking to the donation link in Site settings.',
     schema: {},
   }),
+  community: block({
+    label: 'Join our community box',
+    description: 'Shows our Facebook group and Discord, using the links in Business details.',
+    schema: {},
+  }),
   businessDetails: block({
     label: 'Business details box',
     description: 'Shows the owner name, trading name, address and email from Site settings.',
@@ -325,6 +330,10 @@ export default config({
         facebookGroupUrl: fields.url({
           label: 'Facebook community group link',
           description: 'Shown in the footer. Leave empty to hide it.',
+        }),
+        discordUrl: fields.url({
+          label: 'Discord invite link',
+          description: 'Use an invite that never expires. Leave empty to hide Discord across the site.',
         }),
         icoNumber: fields.text({ label: 'ICO registration number (if registered)' }),
         analyticsToken: fields.text({
