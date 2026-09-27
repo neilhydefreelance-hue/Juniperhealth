@@ -1,0 +1,41 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+@font-face{font-family:Lexend;src:url(../../../public/fonts/lexend.woff2) format('woff2');font-weight:100 900}
+@font-face{font-family:Atk;src:url(../../../public/fonts/atkinson-next.woff2) format('woff2');font-weight:200 800}
+*{margin:0;box-sizing:border-box}
+body{width:1200px;height:600px;overflow:hidden;position:relative;color:#fff;font-family:Atk;
+ background:radial-gradient(700px 420px at 100% 0%,#8556b8 0%,transparent 70%),linear-gradient(135deg,#5b3494 0%,#432777 55%,#2e1a52 100%)}
+.glow{position:absolute;left:-120px;top:50%;width:620px;height:620px;transform:translateY(-50%);border-radius:50%;background:radial-gradient(circle,var(--glow) 0%,transparent 65%)}
+.plant{position:absolute;right:-70px;bottom:-90px;width:420px;height:420px;color:rgba(255,255,255,.07)}
+.wrap{position:absolute;inset:0;display:flex;align-items:center;gap:64px;padding:0 90px}
+.medal{flex:none;width:300px;height:300px;border-radius:50%;display:grid;place-items:center;
+ background:radial-gradient(circle at 32% 28%,var(--hi) 0%,var(--mid) 45%,var(--lo) 100%);box-shadow:0 22px 60px rgb(0 0 0/.4),inset 0 0 0 10px rgba(255,255,255,.25),inset 0 0 0 22px rgba(0,0,0,.08)}
+.medal svg{width:140px;height:140px;color:#2e1a52}
+.eyebrow{font:600 26px Lexend;letter-spacing:.14em;text-transform:uppercase;color:var(--text)}
+h1{margin-top:10px;font:700 104px/1 Lexend;letter-spacing:-.01em}
+p{margin-top:22px;font-size:34px;line-height:1.3;color:#ece5f7;max-width:620px}
+.brand{position:absolute;left:90px;bottom:36px;display:flex;align-items:center;gap:12px;font:600 22px Lexend;color:#e3d6f5}
+.brand img{width:40px;height:40px;border-radius:50%}
+</style></head><body>
+<div class="glow"></div>
+<svg class="plant" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M50 14c7 6 8 14 0 22-8-8-7-16 0-22z"/><path d="M50 23c2.6 2.4 2.6 5.6 0 8-2.6-2.4-2.6-5.6 0-8z"/><path d="M50 36v48"/><path d="M50 50 40.5 40.5"/><path d="M40.5 40.5c-8 0-12.5-6-11.5-13.5 7.5 0 12.5 5.5 11.5 13.5z"/><path d="M50 50l9.5-9.5"/><path d="M59.5 40.5c8 0 12.5-6 11.5-13.5-7.5 0-12.5 5.5-11.5 13.5z"/><path d="M50 76c0-5-2.5-8.5-6-10"/><path d="M44 66c-14 1.5-26-8-26-22 14-1.5 26 8 26 22z"/><path d="M41 62 25 48"/><path d="M50 76c0-5 2.5-8.5 6-10"/><path d="M56 66c14 1.5 26-8 26-22-14-1.5-26 8-26 22z"/><path d="M59 62l16-14"/></svg>
+<div class="wrap">
+  <div class="medal" id="icon"></div>
+  <div><div class="eyebrow">Monthly supporter</div><h1 id="name"></h1><p id="line"></p></div>
+</div>
+<div class="brand"><img src="../../../docs/logo-master.png" alt="">Juniper Health</div>
+<script>
+const icons = {
+  cup: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9z"/><path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8 3.5c0 1.2 1 1.3 1 2.5M12 3.5c0 1.2 1 1.3 1 2.5"/><path d="M3 21h14"/></svg>',
+  book: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5z"/><path d="M12 6.5v13"/></svg>',
+  people: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><path d="M16 5.5a3 3 0 0 1 0 5.5M18 14a5 5 0 0 1 2.5 5"/></svg>',
+};
+window.setTier = (t) => {
+  const r = document.documentElement.style;
+  for (const [k, v] of Object.entries(t.colours)) r.setProperty(`--${k}`, v);
+  document.getElementById('icon').innerHTML = icons[t.icon];
+  document.getElementById('name').textContent = t.name;
+  document.getElementById('line').textContent = t.line;
+};
+</script>
+</body></html>
