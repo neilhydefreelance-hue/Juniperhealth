@@ -17,6 +17,7 @@ import Icon from '../components/Icon.astro';
 import { SITE, TOOLS, type ToolKey } from '../data/site';
 import { abs, AUTHOR_ID, ORG_ID, SITE_ID, faqPage, iso, type Crumb } from '../lib/schema';
 import { shortId } from '../lib/topics';
+import { articlesFor } from '../lib/articles';
 
 type Entry = CollectionEntry<'conditions'> | CollectionEntry<'benefits'> | CollectionEntry<'support'>;
 
@@ -64,6 +65,8 @@ const tool: ToolKey = kind === 'benefits' ? (benefitTool[hub.id] ?? 'pip') : kin
 // Phones get a sticky self-check button on pages that have their own self-check.
 // ESA and the Universal Credit health element have no self-check, so they only show the PIP box.
 const showSticky = (kind === 'benefits' && hub.id in benefitTool) || (kind === 'support' && hub.id === 'health-costs');
+// Articles linked to this condition, benefit or support topic.
+const articles = await articlesFor(kind, hub.id);
 const rates = kind === 'benefits' ? (entry as CollectionEntry<'benefits'>).data.showRates : 'none';
 
 // Structured data
@@ -167,6 +170,17 @@ const schema = [pageSchema, ...(d.faqs.length ? [faqPage(url, d.faqs)] : [])];
           <slot />
         </div>
 
+        {isHub && articles.length > 0 && (
+          <section aria-labelledby="articles" style="margin-top:var(--space-2xl);max-width:var(--measure)">
+            <h2 id="articles">Articles you may find useful</h2>
+            <ul>
+              {articles.map((a) => (
+                <li><a href={`/articles/${a.id}/`}>{a.data.title}</a>{a.data.containsAds && <span class="small muted"> (contains ads)</span>}</li>
+              ))}
+            </ul>
+          </section>
+        )}
+
         {kind === 'conditions' && <ProductList condition={shortId(hub.id)} />}
 
         <Faqs faqs={d.faqs} />
@@ -208,6 +222,16 @@ const schema = [pageSchema, ...(d.faqs.length ? [faqPage(url, d.faqs)] : [])];
                     {p.id === hub.id ? 'Overview' : p.data.navTitle || p.data.title}
                   </a>
                 </li>
+              ))}
+            </ul>
+          </nav>
+        )}
+        {articles.length > 0 && (
+          <nav class="box" aria-label="Articles">
+            <h2><Icon name="document" size={18} class="inline-icon" /> Articles</h2>
+            <ul>
+              {articles.map((a) => (
+                <li><a href={`/articles/${a.id}/`}>{a.data.title}</a></li>
               ))}
             </ul>
           </nav>

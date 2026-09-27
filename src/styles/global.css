@@ -1653,3 +1653,52 @@ hr {
 .prose .community a.btn {
   text-decoration: none;
 }
+
+/* ---------- Affiliate products inside articles ---------- */
+.product--inline {
+  margin-block: var(--space-l);
+  max-width: 34rem;
+  background: var(--surface);
+}
+.product__name {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--step-1);
+  color: var(--heading);
+  margin: 0;
+}
+.product__text > :last-child {
+  margin-bottom: 0;
+}
+.product--inline .btn {
+  align-self: flex-start;
+}
+.prose .product--inline a.btn {
+  text-decoration: none;
+}
+.ad-notice .ad-label {
+  vertical-align: middle;
+}
+
+/* ---------- Articles ---------- */
+.article-meta {
+  color: var(--text-muted);
+  margin-top: var(--space-s);
+}
+.topic-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  list-style: none;
+  padding: 0;
+  margin: var(--space-s) 0 0;
+}
+.topic-chips a {
+  display: inline-block;
+  padding: 0.15rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface-tint);
+  font-size: 0.9rem;
+  text-decoration: none;
+}

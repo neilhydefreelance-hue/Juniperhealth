@@ -93,3 +93,18 @@ Online editing uses **Keystatic Cloud**, which has a free plan for small teams.
 3. Connect the project to the GitHub repository **juniperhealth**.
 4. In Cloudflare, add a build variable called `PUBLIC_KEYSTATIC_CLOUD_PROJECT` with the value `team-name/project-name` (for example `juniper-health/juniperhealth`).
 5. Redeploy. You can now sign in at juniperhealth.info/keystatic.
+
+## Adding an article
+
+1. In the editor, open **Articles** and choose **Add**.
+2. Fill in the title, the search result description, the opening summary and the dates.
+3. Under **Related guides**, tick every condition, benefit or support guide the article is about. The article is then listed on those guides, in the sidebar and at the bottom of the main page.
+4. Write the article. Keep to plain English and never use em or en dashes.
+
+### Adding affiliate links (ads)
+
+- Use the **Affiliate product (Ad)** block for every affiliate link. It is always labelled "Ad" and the link is marked as sponsored.
+- Put the **Advert notice** block near the top of the article.
+- Tick **This article contains affiliate links (ads)**.
+- Use your Amazon affiliate short link (for example https://link.amazon/...), not the long product address, so the sale is credited to you.
+- Never say a product treats or cures a condition, and always mention free NHS options first.

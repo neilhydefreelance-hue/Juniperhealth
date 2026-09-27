@@ -6,11 +6,13 @@ import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { SITE, TOOLS } from '../data/site';
 import { aToZ } from '../lib/topics';
+import { allArticles } from '../lib/articles';
 
 export const prerender = true;
 
 export const GET: APIRoute = async () => {
   const [conditions, benefits, support, pages] = await Promise.all([getCollection('conditions'), getCollection('benefits'), getCollection('support'), getCollection('pages')]);
+  const articles = await allArticles();
   const line = (title: string, path: string, desc: string) => `- [${title}](${SITE.url}${path}): ${desc.replace(/\s+/g, ' ').trim()}`;
   const byId = <T extends { id: string }>(a: T, b: T) => a.id.localeCompare(b.id);
   const body = [
@@ -26,6 +28,9 @@ export const GET: APIRoute = async () => {
     '',
     '## Disability support, discounts and concessions (England and Wales)',
     ...support.sort((a, b) => aToZ(a.data.title, b.data.title)).map((e) => line(e.data.title, `/support/${e.id}/`, e.data.description)),
+    '',
+    '## Articles',
+    ...articles.map((e) => line(e.data.title, `/articles/${e.id}/`, e.data.description)),
     '',
     '## Free self-checks (run entirely in the browser, no data collected)',
     ...Object.values(TOOLS).map((t) => line(t.name, t.href, t.blurb)),

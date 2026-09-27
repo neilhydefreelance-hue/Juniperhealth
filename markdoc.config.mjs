@@ -18,6 +18,18 @@ export default defineMarkdocConfig({
       render: component('./src/components/DonateButton.astro'),
       selfClosing: true,
     },
+    affiliate: {
+      render: component('./src/components/AffiliateProduct.astro'),
+      attributes: {
+        name: { type: String, required: true },
+        url: { type: String, required: true },
+        merchant: { type: String, default: 'Amazon' },
+      },
+    },
+    adNotice: {
+      render: component('./src/components/AdNotice.astro'),
+      selfClosing: true,
+    },
     community: {
       render: component('./src/components/Community.astro'),
       selfClosing: true,

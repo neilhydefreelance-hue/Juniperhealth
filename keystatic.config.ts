@@ -34,6 +34,20 @@ const contentComponents = {
     description: 'A button linking to the donation link in Site settings.',
     schema: {},
   }),
+  affiliate: wrapper({
+    label: 'Affiliate product (Ad)',
+    description: 'A product box clearly marked "Ad", with an affiliate link. Write one or two plain sentences inside. Never claim it treats or cures anything.',
+    schema: {
+      name: fields.text({ label: 'Product name', validation: { length: { min: 1 } } }),
+      url: fields.url({ label: 'Affiliate link', validation: { isRequired: true } }),
+      merchant: fields.text({ label: 'Shop name', defaultValue: 'Amazon' }),
+    },
+  }),
+  adNotice: block({
+    label: 'Advert notice',
+    description: 'Put this near the top of any article with affiliate links. It explains the "Ad" labels.',
+    schema: {},
+  }),
   community: block({
     label: 'Join our community box',
     description: 'Shows our Facebook group and Discord, using the links in Business details.',
@@ -90,6 +104,25 @@ const contentComponents = {
 };
 
 /* Boxes shared by every health and benefits page. */
+
+/**
+ * Every condition, benefit and support guide, for the "related guides" pickers.
+ * Built from the content folders, so new guides appear here automatically.
+ */
+const titleCase = (slug: string) => slug.replace(/-/g, ' ').replace(/^./, (c) => c.toUpperCase());
+const guideOptions = (() => {
+  const hubs = (files: Record<string, unknown>, kind: string, depth: number, label: string) =>
+    Object.keys(files)
+      .map((f) => f.replace(/^.*\/content\/[a-z]+\//, '').replace(/\.mdoc$/, ''))
+      .filter((id) => id.split('/').length === depth)
+      .map((id) => ({ label: `${label}: ${titleCase(id.split('/').pop() as string)}`, value: `${kind}/${id}` }));
+  return [
+    ...hubs(import.meta.glob('./src/content/conditions/**/*.mdoc'), 'conditions', 2, 'Condition'),
+    ...hubs(import.meta.glob('./src/content/benefits/**/*.mdoc'), 'benefits', 1, 'Benefit'),
+    ...hubs(import.meta.glob('./src/content/support/**/*.mdoc'), 'support', 1, 'Support'),
+  ].sort((a, b) => a.label.localeCompare(b.label, 'en-GB'));
+})();
+
 const sharedPageFields = {
   navTitle: fields.text({
     label: 'Short menu name',
@@ -135,6 +168,7 @@ export default config({
       'Disability support': ['support'],
       'Other pages': ['pages'],
       'Affiliate products': ['products'],
+      'Articles': ['articles'],
       'Site settings': ['settings', 'rates'],
     },
   },
@@ -275,6 +309,35 @@ export default config({
         body: fields.markdoc({ label: 'Page content', components: contentComponents }),
       },
     }),
+    articles: collection({
+      label: 'Articles',
+      path: 'src/content/articles/*',
+      slugField: 'title',
+      format: { contentField: 'body' },
+      entryLayout: 'content',
+      columns: ['title', 'published'],
+      schema: {
+        title: fields.slug({ name: { label: 'Article title' }, slug: { label: 'Web address', description: 'The end of the link, for example "aids-that-can-help-with-asthma".' } }),
+        description: sharedPageFields.description,
+        summary: sharedPageFields.summary,
+        published: fields.date({ label: 'Date published', validation: { isRequired: true } }),
+        lastReviewed: fields.date({ label: 'Last checked for accuracy', validation: { isRequired: true } }),
+        topics: fields.multiselect({
+          label: 'Related guides',
+          description: 'The article will be listed on these condition, benefit or support guides.',
+          options: guideOptions,
+          defaultValue: [],
+        }),
+        containsAds: fields.checkbox({
+          label: 'This article contains affiliate links (ads)',
+          description: 'Tick this if you add any Affiliate product boxes, and add the Advert notice near the top.',
+          defaultValue: false,
+        }),
+        sources: sharedPageFields.sources,
+        faqs: sharedPageFields.faqs,
+        body: fields.markdoc({ label: 'Article', components: contentComponents }),
+      },
+    }),
     products: collection({
       label: 'Affiliate products',
       path: 'src/content/products/*',
@@ -292,21 +355,10 @@ export default config({
         url: fields.url({ label: 'Affiliate link', validation: { isRequired: true } }),
         conditions: fields.multiselect({
           label: 'Show on these condition pages',
-          options: [
-            { label: 'Asthma', value: 'asthma' },
-            { label: 'COPD', value: 'copd' },
-            { label: 'Coronary heart disease', value: 'coronary-heart-disease' },
-            { label: 'Fibromyalgia', value: 'fibromyalgia' },
-            { label: 'Hearing loss', value: 'hearing-loss' },
-            { label: 'High blood pressure', value: 'high-blood-pressure' },
-            { label: 'Hypothyroidism', value: 'hypothyroidism' },
-            { label: 'Migraine', value: 'migraine' },
-            { label: 'Obesity', value: 'obesity' },
-            { label: 'Osteoarthritis', value: 'osteoarthritis' },
-            { label: 'Type 1 diabetes', value: 'type-1-diabetes' },
-            { label: 'Type 2 diabetes', value: 'type-2-diabetes' },
-          ],
-          defaultValue: ['fibromyalgia'],
+          options: guideOptions
+            .filter((o) => o.value.startsWith('conditions/'))
+            .map((o) => ({ label: o.label.replace('Condition: ', ''), value: o.value.split('/').pop() as string })),
+          defaultValue: [],
         }),
         active: fields.checkbox({ label: 'Show on the site', defaultValue: true }),
       },
