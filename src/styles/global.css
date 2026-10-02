@@ -1553,3 +1553,152 @@ hr {
 .not-prose h3 {
   margin-top: 0;
 }
+
+.condition-filter {
+  max-width: 28rem;
+}
+.condition-filter input {
+  width: 100%;
+}
+
+.prose .az-list {
+  list-style: none;
+  padding: 0;
+  columns: 2 14rem;
+  column-gap: var(--space-xl);
+}
+.prose .az-list li {
+  break-inside: avoid;
+  margin: 0;
+}
+.prose .az-list a {
+  display: flex;
+  align-items: center;
+  min-height: 2.75rem;
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  list-style: none;
+  padding: 0;
+  margin-top: var(--space-s);
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  min-height: var(--tap);
+  padding: 0 var(--space-m);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+}
+.chip svg {
+  color: var(--eyebrow);
+}
+.chip:hover {
+  border-color: var(--link);
+  color: var(--link);
+}
+
+/* ---------- Community (Facebook group and Discord) ---------- */
+.community-block {
+  margin-block: var(--space-l);
+}
+.community {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  gap: var(--space-m);
+  margin-bottom: var(--space-s);
+}
+.community__card {
+  display: flex;
+  gap: var(--space-m);
+  align-items: flex-start;
+  padding: var(--space-l);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-m);
+  background: var(--surface-tint);
+}
+.community__icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--bg);
+}
+.community__name {
+  font-family: var(--font-heading, inherit);
+  font-weight: 600;
+  font-size: var(--step-1);
+  color: var(--heading);
+  margin: 0;
+}
+.community__text {
+  color: var(--text-muted);
+  margin: var(--space-2xs, 0.25rem) 0 var(--space-m);
+}
+.community__note {
+  color: var(--text-muted);
+  margin: 0;
+}
+.prose .community a.btn {
+  text-decoration: none;
+}
+
+/* ---------- Affiliate products inside articles ---------- */
+.product--inline {
+  margin-block: var(--space-l);
+  max-width: 34rem;
+  background: var(--surface);
+}
+.product__name {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--step-1);
+  color: var(--heading);
+  margin: 0;
+}
+.product__text > :last-child {
+  margin-bottom: 0;
+}
+.product--inline .btn {
+  align-self: flex-start;
+}
+.prose .product--inline a.btn {
+  text-decoration: none;
+}
+.ad-notice .ad-label {
+  vertical-align: middle;
+}
+
+/* ---------- Articles ---------- */
+.article-meta {
+  color: var(--text-muted);
+  margin-top: var(--space-s);
+}
+.topic-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  list-style: none;
+  padding: 0;
+  margin: var(--space-s) 0 0;
+}
+.topic-chips a {
+  display: inline-block;
+  padding: 0.15rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface-tint);
+  font-size: 0.9rem;
+  text-decoration: none;
+}

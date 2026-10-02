@@ -46,6 +46,31 @@ if (existsSync(dist)) {
       if (!ok) problems.push(`Broken link ${href} in ${rel}`);
     }
   }
+  // Condition lists must always be A to Z (ignoring capitals, numbers in natural order).
+  const aToZ = (a, b) => a.localeCompare(b, 'en-GB', { sensitivity: 'base', numeric: true });
+  const text = (h) => h.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').trim();
+  const checkOrder = (label, names) => {
+    const sorted = [...names].sort(aToZ);
+    if (names.join('|') !== sorted.join('|')) problems.push(`Not A to Z (${label}): ${names.join(', ')}`);
+  };
+  const conditionsDir = join(dist, 'conditions');
+  if (existsSync(join(conditionsDir, 'index.html'))) {
+    const index = readFileSync(join(conditionsDir, 'index.html'), 'utf8');
+    const az = index.match(/<ul class="az-list">([\s\S]*?)<\/ul>/)?.[1] ?? '';
+    checkOrder('A to Z list on /conditions/', [...az.matchAll(/<a [^>]*>([\s\S]*?)<\/a>/g)].map((m) => text(m[1])));
+    checkOrder('groups on /conditions/', [...index.matchAll(/class="card__link" href="\/conditions\/[^/"]+\/">([^<]*)</g)].map((m) => text(m[1])));
+    for (const group of readdirSync(conditionsDir)) {
+      const page = join(conditionsDir, group, 'index.html');
+      if (!existsSync(page)) continue;
+      const cards = [...readFileSync(page, 'utf8').matchAll(/<article class="card" data-name[^>]*>[\s\S]*?class="card__link"[^>]*>([^<]*)</g)].map((m) => text(m[1]));
+      if (cards.length) checkOrder(`/conditions/${group}/`, cards);
+    }
+    const home = readFileSync(join(dist, 'index.html'), 'utf8');
+    for (const [, list] of home.matchAll(/<ul class="chip-list">([\s\S]*?)<\/ul>/g)) {
+      checkOrder('home page condition list', [...list.matchAll(/<\/svg>([^<]*)<\/a>/g)].map((m) => text(m[1])));
+    }
+  }
+
   console.log(`Checked ${html.length} pages.`);
 }
 

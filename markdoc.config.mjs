@@ -18,6 +18,22 @@ export default defineMarkdocConfig({
       render: component('./src/components/DonateButton.astro'),
       selfClosing: true,
     },
+    affiliate: {
+      render: component('./src/components/AffiliateProduct.astro'),
+      attributes: {
+        name: { type: String, required: true },
+        url: { type: String, required: true },
+        merchant: { type: String, default: 'Amazon' },
+      },
+    },
+    adNotice: {
+      render: component('./src/components/AdNotice.astro'),
+      selfClosing: true,
+    },
+    community: {
+      render: component('./src/components/Community.astro'),
+      selfClosing: true,
+    },
     businessDetails: {
       render: component('./src/components/BusinessDetails.astro'),
       selfClosing: true,
@@ -34,7 +50,7 @@ export default defineMarkdocConfig({
       render: component('./src/components/CheckerCta.astro'),
       selfClosing: true,
       attributes: {
-        tool: { type: String, default: 'pip', matches: ['pip', 'aa', 'dla'] },
+        tool: { type: String, default: 'pip', matches: ['pip', 'aa', 'dla', 'nhs'] },
       },
     },
   },

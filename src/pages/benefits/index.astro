@@ -21,15 +21,15 @@ const schema = [
 ];
 ---
 <BaseLayout
-  title="PIP, Attendance Allowance and DLA explained"
-  description="Find out which disability benefit is right for you. Plain-English guides to PIP, Attendance Allowance and DLA for children in England and Wales, with free self-checks."
+  title="Disability and health benefits explained"
+  description="Plain English guides to PIP, Attendance Allowance, DLA, ESA and the Universal Credit health element in England and Wales, with free self-checks."
   crumbs={[{ name: 'Home', href: '/' }, { name: 'Benefits', href: '/benefits/' }]}
   schema={schema}
 >
   <div class="wrap" style="padding-bottom:var(--space-3xl)">
     <header class="page-head">
       <h1>Disability benefits</h1>
-      <p class="lead">Extra money to help with the costs of a long-term health condition or disability. None of these benefits depend on your income or savings, and you can get them whether or not you work.</p>
+      <p class="lead">Extra money if you have a long-term health condition or disability. Some benefits help with the extra costs of disability. Others help if your health stops you working.</p>
     </header>
 
     <section class="prose" aria-labelledby="which" style="margin-bottom:var(--space-2xl)">
@@ -44,6 +44,17 @@ const schema = [
         </tbody>
       </table>
       <p class="small muted">If you already get PIP or DLA when you reach State Pension age, you can usually keep it. In Scotland, these benefits are being replaced by payments from Social Security Scotland.</p>
+      <p>PIP, Attendance Allowance and DLA do not depend on your income or savings, and you can get them whether or not you work.</p>
+
+      <h2 id="work">If your health stops you working</h2>
+      <p>These benefits are about work, not the extra costs of disability. You can get them as well as PIP.</p>
+      <table>
+        <thead><tr><th scope="col">Benefit</th><th scope="col">Who it is for</th></tr></thead>
+        <tbody>
+          <tr><td><a href="/benefits/esa/">New Style ESA</a></td><td>People who cannot work, or can only work a little, and have paid enough National Insurance. Savings do not matter.</td></tr>
+          <tr><td><a href="/benefits/universal-credit-health/">Universal Credit health element</a></td><td>People on Universal Credit whose health means they cannot work or prepare for work. Universal Credit depends on income and savings.</td></tr>
+        </tbody>
+      </table>
     </section>
 
     <div class="grid">

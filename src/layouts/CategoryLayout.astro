@@ -1,0 +1,90 @@
+---
+/**
+ * A group of health conditions, such as Skin conditions. Lists every
+ * condition in the group A to Z, with a quick filter box on phones and computers.
+ */
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import { abs, SITE_ID, type Crumb } from '../lib/schema';
+
+interface Props {
+  entry: CollectionEntry<'conditions'>;
+  conditions: CollectionEntry<'conditions'>[];
+}
+const { entry, conditions } = Astro.props;
+const d = entry.data;
+const url = `/conditions/${entry.id}/`;
+const name = (c: CollectionEntry<'conditions'>) => c.data.conditionName || c.data.title;
+const crumbs: Crumb[] = [
+  { name: 'Home', href: '/' },
+  { name: 'Health conditions', href: '/conditions/' },
+  { name: d.navTitle || d.title, href: url },
+];
+const schema = [
+  {
+    '@type': 'CollectionPage',
+    '@id': `${abs(url)}#webpage`,
+    url: abs(url),
+    name: d.title,
+    description: d.description,
+    isPartOf: { '@id': SITE_ID },
+    breadcrumb: { '@id': `${abs(url)}#breadcrumb` },
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: conditions.length,
+      itemListElement: conditions.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: name(c), url: abs(`/conditions/${c.id}/`) })),
+    },
+  },
+];
+---
+<BaseLayout title={d.title} description={d.description} crumbs={crumbs} schema={schema}>
+  <div class="wrap" style="padding-bottom:var(--space-3xl)">
+    <header class="page-head">
+      <p class="eyebrow">Health conditions</p>
+      <h1>{d.title}</h1>
+      {d.summary && <p class="lead">{d.summary}</p>}
+    </header>
+
+    <div class="field condition-filter" data-filter hidden>
+      <label for="condition-filter">Find a condition</label>
+      <input id="condition-filter" type="search" autocomplete="off" placeholder={`For example, ${conditions[0] ? name(conditions[0]) : "asthma"}`} />
+    </div>
+    <p class="small muted" data-filter-status role="status" aria-live="polite"></p>
+
+    <div class="grid" style="margin-top:var(--space-m)" data-conditions>
+      {conditions.map((c) => (
+        <article class="card" data-name={`${name(c)} ${c.data.alternateNames.join(' ')}`.toLowerCase()}>
+          <span class="card__icon"><Icon name={c.data.cardIcon} /></span>
+          <h2><a class="card__link" href={`/conditions/${c.id}/`}>{name(c)}</a></h2>
+          <p>{c.data.summary}</p>
+          <span class="card__more" aria-hidden="true">Read the guide &rarr;</span>
+        </article>
+      ))}
+    </div>
+
+    <div class="prose" style="margin-top:var(--space-2xl)">
+      <slot />
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  const box = document.querySelector<HTMLElement>('[data-filter]');
+  const input = box?.querySelector('input');
+  const cards = Array.from(document.querySelectorAll<HTMLElement>('[data-conditions] > .card'));
+  const status = document.querySelector<HTMLElement>('[data-filter-status]');
+  if (box && input && status) {
+    box.hidden = false;
+    input.addEventListener('input', () => {
+      const q = input.value.trim().toLowerCase();
+      let shown = 0;
+      for (const c of cards) {
+        const match = !q || (c.dataset.name ?? '').includes(q);
+        c.hidden = !match;
+        if (match) shown++;
+      }
+      status.textContent = q ? (shown ? `${shown} ${shown === 1 ? 'condition' : 'conditions'} found` : 'No conditions found. Try another word.') : '';
+    });
+  }
+</script>

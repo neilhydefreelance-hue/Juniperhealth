@@ -3,4 +3,4 @@ Allow: /
 Disallow: /keystatic/
 Disallow: /api/
 
-Sitemap: https://juniperhealth.app/sitemap-index.xml
+Sitemap: https://juniperhealth.info/sitemap-index.xml
