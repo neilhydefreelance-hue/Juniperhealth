@@ -1,0 +1,40 @@
+name: Aspirin
+alsoKnownAs:
+- Acetylsalicylic acid
+- low-dose aspirin
+- Nu-Seals
+medicineType: Antiplatelet medicine and painkiller
+forms:
+- tablets
+- dispersible tablets
+- gastro-resistant tablets
+availability: shop
+summary: Low-dose aspirin (usually 75mg) helps stop blood clots in people with heart disease or after a stroke. Higher doses are a painkiller.
+conditions:
+- heart-and-circulation/coronary-heart-disease
+- heart-and-circulation/stroke
+- heart-and-circulation/peripheral-arterial-disease
+uses:
+- Low dose, preventing heart attacks and strokes in people who have heart or circulation disease
+- After a heart attack, stroke, mini-stroke (TIA) or heart surgery
+- Higher doses, mild to moderate pain, high temperature and inflammation
+offLabel:
+- Lowering the risk of pre-eclampsia in pregnancy, on a doctor's or midwife's advice
+- Preventing some bowel cancers in people with Lynch syndrome, on specialist advice
+howItWorks: Low-dose aspirin stops platelets, tiny cells in the blood, from sticking together. This makes clots less likely to form in arteries. At higher doses it blocks chemicals called prostaglandins that cause pain and inflammation.
+sideEffectsCommon:
+- indigestion or stomach pain
+- bruising more easily
+- bleeding for longer after a cut
+sideEffectsSerious:
+- vomiting blood, or black or bloody poo
+- wheezing or worsening asthma
+- a severe headache or sudden weakness
+stopping: If you take low-dose aspirin because of heart disease or a stroke, stopping it can raise your risk of a heart attack or stroke. Do not stop without advice. There are no withdrawal symptoms.
+stoppingRisk: medium
+warnings:
+- Never give aspirin to children under 16, except on a doctor's advice, because of the risk of Reye's syndrome.
+- Low-dose aspirin is no longer recommended for people who do not have heart or circulation disease.
+- It can make asthma worse in some people.
+nhsSlug: low-dose-aspirin
+lastReviewed: '2026-10-05'

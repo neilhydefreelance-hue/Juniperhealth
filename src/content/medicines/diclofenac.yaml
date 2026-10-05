@@ -1,0 +1,51 @@
+name: Diclofenac
+alsoKnownAs:
+- Voltarol
+- Voltarol Emulgel
+- Arthrotec (with misoprostol)
+medicineType: Non-steroidal anti-inflammatory drug (NSAID)
+forms:
+- tablets
+- capsules
+- gel
+- suppositories
+- injection
+- eye drops
+availability: pharmacy
+summary: Diclofenac is an anti-inflammatory painkiller. It eases pain and swelling in conditions such as arthritis, sprains and back pain.
+conditions:
+- musculoskeletal/osteoarthritis
+- musculoskeletal/rheumatoid-arthritis
+- musculoskeletal/back-and-neck-pain
+- musculoskeletal/gout
+uses:
+- Pain and inflammation in arthritis, including osteoarthritis and rheumatoid arthritis
+- Back pain, sprains and strains
+- Gout attacks
+- Period pain, migraine and pain after surgery
+- Local pain and swelling (gel)
+offLabel:
+- Kidney stone pain (suppositories or injection)
+howItWorks: Diclofenac blocks enzymes called COX, which make prostaglandins. Prostaglandins cause pain, swelling and fever, so blocking them reduces these symptoms.
+sideEffectsCommon:
+- indigestion
+- stomach pain
+- feeling sick
+- diarrhoea
+- headache
+- dizziness
+- skin irritation (gel)
+sideEffectsSerious:
+- black or bloody poo, or vomiting blood
+- chest pain, or signs of a heart attack or stroke. Call 999
+- swollen ankles, peeing less or breathlessness
+- yellowing of the skin or eyes
+stopping: Diclofenac does not cause withdrawal symptoms. Pain and swelling may return.
+stoppingRisk: low
+warnings:
+- Tablets are not suitable for people with heart disease, heart failure or after a stroke.
+- Use the lowest dose for the shortest time.
+- Do not take it with other anti-inflammatory painkillers, such as ibuprofen or naproxen.
+- It can make asthma worse in some people.
+nhsSlug: diclofenac
+lastReviewed: '2026-10-05'

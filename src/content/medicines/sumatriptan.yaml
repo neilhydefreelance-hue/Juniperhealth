@@ -1,0 +1,36 @@
+name: Sumatriptan
+alsoKnownAs:
+- Imigran
+- Imigran Recovery
+medicineType: Triptan (migraine medicine)
+forms:
+- tablets
+- nasal spray
+- injection
+availability: pharmacy
+summary: Sumatriptan treats migraine and cluster headache attacks. It works best when taken early in an attack.
+conditions:
+- brain-nerves-and-senses/migraine
+uses:
+- Treating migraine attacks (some strengths available from pharmacies)
+- Treating cluster headache attacks (injection or nasal spray)
+offLabel: []
+howItWorks: Sumatriptan acts on serotonin receptors around blood vessels and nerves in the head. It narrows widened blood vessels and blocks the release of chemicals that cause migraine pain.
+sideEffectsCommon:
+- feeling hot
+- tingling or heavy
+- tightness in the chest or throat
+- feeling sick
+- dizziness
+- feeling tired
+sideEffectsSerious:
+- severe chest pain or tightness that does not go away. Call 999
+- signs of serotonin syndrome, such as confusion, high temperature and muscle twitching
+- fits
+stopping: Sumatriptan does not cause withdrawal. Taking triptans on 10 or more days a month can cause medication overuse headaches. Your GP can help you stop safely.
+stoppingRisk: low
+warnings:
+- Not suitable if you have heart disease, peripheral arterial disease, uncontrolled high blood pressure or have had a stroke.
+- Do not take a second dose for the same attack if the first did not help.
+nhsSlug: sumatriptan
+lastReviewed: '2026-10-05'

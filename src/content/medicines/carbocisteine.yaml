@@ -1,0 +1,29 @@
+name: Carbocisteine
+alsoKnownAs:
+- Mucodyne
+medicineType: Mucolytic (mucus thinner)
+forms:
+- capsules
+- liquid
+- oral solution sachets
+summary: Carbocisteine makes mucus (phlegm) thinner and easier to cough up. It is mainly used for COPD and other long-term lung conditions.
+conditions:
+- respiratory-and-allergy/copd
+uses:
+- Thick, sticky mucus in long-term lung conditions such as COPD and bronchiectasis
+offLabel: []
+howItWorks: Carbocisteine changes the structure of mucus, making it thinner and less sticky. This makes it easier to cough up and can reduce the number of flare-ups.
+sideEffectsCommon:
+- feeling sick
+- stomach discomfort
+- diarrhoea
+sideEffectsSerious:
+- vomiting blood, or black or bloody poo, which can be signs of bleeding in the stomach
+- a skin rash with blisters
+stopping: Carbocisteine does not cause withdrawal symptoms. Your mucus may become thicker again after stopping. Your doctor may review whether it is helping after about 4 weeks.
+stoppingRisk: low
+warnings:
+- It is not suitable if you have an active stomach ulcer.
+- It is not recommended in the first 3 months of pregnancy.
+nhsSlug: carbocisteine
+lastReviewed: '2026-10-05'

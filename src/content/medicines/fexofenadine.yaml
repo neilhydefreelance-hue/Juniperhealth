@@ -1,0 +1,30 @@
+name: Fexofenadine
+alsoKnownAs:
+- Telfast
+- Allevia
+medicineType: Non-drowsy antihistamine
+forms:
+- tablets
+availability: pharmacy
+summary: Fexofenadine is a non-drowsy antihistamine. It treats hay fever and itchy hives.
+conditions:
+- respiratory-and-allergy/hay-fever
+uses:
+- Hay fever and other allergies affecting the nose and eyes
+- Hives (urticaria)
+offLabel: []
+howItWorks: Fexofenadine blocks histamine, a chemical the body releases during an allergic reaction. This reduces sneezing, a runny nose, itchy eyes and itchy skin.
+sideEffectsCommon:
+- headache
+- feeling dizzy
+- feeling sick
+- feeling tired
+sideEffectsSerious:
+- a fast or irregular heartbeat
+stopping: Fexofenadine does not cause withdrawal symptoms. Allergy symptoms may come back.
+stoppingRisk: low
+warnings:
+- Do not take it with fruit juice, such as orange, apple or grapefruit juice, as this makes it work less well.
+- Leave 2 hours between it and indigestion remedies containing aluminium or magnesium.
+nhsSlug: fexofenadine
+lastReviewed: '2026-10-05'

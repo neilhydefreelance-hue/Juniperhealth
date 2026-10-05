@@ -1,0 +1,33 @@
+name: Ezetimibe
+alsoKnownAs:
+- Ezetrol
+- Inegy (with simvastatin)
+medicineType: Cholesterol absorption inhibitor
+forms:
+- tablets
+summary: Ezetimibe lowers cholesterol by reducing how much your gut absorbs. It is often used with a statin, or instead of one.
+conditions:
+- heart-and-circulation/high-cholesterol
+- heart-and-circulation/coronary-heart-disease
+uses:
+- High cholesterol, with or without a statin
+- Familial hypercholesterolaemia (inherited high cholesterol)
+offLabel: []
+howItWorks: Ezetimibe blocks a protein in the small intestine that absorbs cholesterol from food and bile. Less cholesterol enters the blood, so LDL ("bad") cholesterol falls.
+sideEffectsCommon:
+- stomach pain
+- diarrhoea
+- wind
+- feeling tired
+- headache
+- muscle aches
+sideEffectsSerious:
+- unexplained muscle pain, tenderness or weakness
+- yellowing of the skin or eyes
+- severe stomach pain
+stopping: Ezetimibe does not cause withdrawal symptoms. Cholesterol levels will rise again.
+stoppingRisk: low
+warnings:
+- It works best alongside a healthy diet.
+nhsSlug: ezetimibe
+lastReviewed: '2026-10-05'

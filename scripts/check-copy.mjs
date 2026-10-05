@@ -19,7 +19,7 @@ const problems = [];
 const DASHES = /[–—]/;
 
 for (const file of [...walk(join(root, 'src')), ...walk(join(root, 'docs')), join(root, 'README.md')]) {
-  if (!existsSync(file) || !/\.(astro|ts|mdoc|md|json|css|mjs)$/.test(file)) continue;
+  if (!existsSync(file) || !/.(astro|ts|mdoc|md|json|yaml|css|mjs)$/.test(file)) continue;
   readFileSync(file, 'utf8').split('\n').forEach((line, i) => {
     if (DASHES.test(line)) problems.push(`Dash found: ${relative(root, file)}:${i + 1}`);
   });
@@ -53,6 +53,12 @@ if (existsSync(dist)) {
     const sorted = [...names].sort(aToZ);
     if (names.join('|') !== sorted.join('|')) problems.push(`Not A to Z (${label}): ${names.join(', ')}`);
   };
+  const medIndex = join(dist, 'medicines', 'index.html');
+  if (existsSync(medIndex)) {
+    const src = readFileSync(medIndex, 'utf8');
+    const block = src.match(/<div class="prose" data-medicines>([\s\S]*?)<\/div>/)?.[1] ?? '';
+    checkOrder('Medicines A to Z on /medicines/', [...block.matchAll(/<a href="\/medicines\/[^"]+">([\s\S]*?)<\/a>/g)].map((m) => text(m[1])));
+  }
   const conditionsDir = join(dist, 'conditions');
   if (existsSync(join(conditionsDir, 'index.html'))) {
     const index = readFileSync(join(conditionsDir, 'index.html'), 'utf8');

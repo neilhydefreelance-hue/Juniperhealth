@@ -84,4 +84,33 @@ const articles = defineCollection({
   }),
 });
 
-export const collections = { conditions, benefits, support, pages, products, articles };
+/**
+ * Medicines: one YAML file per medicine, for example "sertraline.yaml".
+ * "conditions" links a medicine to condition guides, for example "mental-health/depression".
+ * The medicine is then listed on those guides.
+ */
+const medicines = defineCollection({
+  loader: glob({ pattern: '*.yaml', base: './src/content/medicines' }),
+  schema: z.object({
+    name: z.string(),
+    alsoKnownAs: z.array(z.string()).default([]),
+    medicineType: z.string(),
+    forms: z.array(z.string()).default([]),
+    availability: z.enum(['prescription', 'pharmacy', 'shop', 'hospital', 'specialist']).default('prescription'),
+    summary: z.string(),
+    conditions: z.array(z.string()).default([]),
+    uses: z.array(z.string()).min(1),
+    offLabel: z.array(z.string()).default([]),
+    howItWorks: z.string(),
+    sideEffectsCommon: z.array(z.string()).default([]),
+    sideEffectsSerious: z.array(z.string()).default([]),
+    stopping: z.string(),
+    stoppingRisk: z.enum(['low', 'medium', 'high']).default('medium'),
+    warnings: z.array(z.string()).default([]),
+    nhsSlug: z.string().default(''),
+    bnfSlug: z.string().default(''),
+    lastReviewed: z.coerce.date(),
+  }),
+});
+
+export const collections = { conditions, benefits, support, pages, products, articles, medicines };

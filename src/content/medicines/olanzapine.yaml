@@ -1,0 +1,41 @@
+name: Olanzapine
+alsoKnownAs:
+- Zyprexa
+- Zalasta
+medicineType: Atypical antipsychotic
+forms:
+- tablets
+- orodispersible tablets
+- injection
+availability: specialist
+summary: Olanzapine is an antipsychotic used for schizophrenia and bipolar disorder.
+conditions:
+- mental-health/schizophrenia
+- mental-health/bipolar-1
+uses:
+- Schizophrenia
+- Mania in bipolar disorder, and preventing it returning
+offLabel:
+- Severe agitation or anxiety
+- Anorexia nervosa (low doses, specialist only)
+- Sickness in palliative care
+howItWorks: Olanzapine blocks dopamine and serotonin receptors in the brain. This reduces symptoms such as hearing voices, paranoia and mania.
+sideEffectsCommon:
+- weight gain and increased appetite
+- feeling sleepy
+- dizziness
+- dry mouth
+- constipation
+- raised blood sugar and cholesterol
+sideEffectsSerious:
+- a high temperature with stiff muscles and confusion (neuroleptic malignant syndrome). Call 999
+- uncontrolled movements of the face, tongue or body
+- feeling very thirsty and peeing a lot, which can be signs of diabetes
+- signs of a blood clot, such as a painful swollen leg
+stopping: Stopping suddenly can cause withdrawal symptoms, such as sweating, feeling sick and trouble sleeping, and increases the risk of symptoms returning. Your team will reduce it slowly.
+stoppingRisk: high
+warnings:
+- Your weight, blood sugar and cholesterol will be checked regularly.
+- Smoking lowers olanzapine levels. Tell your team if you start or stop smoking.
+nhsSlug: olanzapine
+lastReviewed: '2026-10-05'

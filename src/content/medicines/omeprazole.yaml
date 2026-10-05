@@ -1,0 +1,39 @@
+name: Omeprazole
+alsoKnownAs:
+- Losec
+medicineType: Proton pump inhibitor (PPI)
+forms:
+- capsules
+- tablets
+- liquid
+- injection
+availability: pharmacy
+summary: Omeprazole reduces the amount of acid your stomach makes. It is one of the most common treatments for heartburn, acid reflux and stomach ulcers.
+conditions:
+- digestive-and-liver/acid-reflux
+uses:
+- Heartburn and acid reflux (GORD)
+- Healing and preventing stomach and duodenal ulcers
+- Getting rid of H. pylori infection, with antibiotics
+- Protecting the stomach in people taking anti-inflammatory painkillers
+- Zollinger-Ellison syndrome
+offLabel: []
+howItWorks: Omeprazole blocks proton pumps in the stomach lining that release acid. Less acid means less irritation and allows ulcers and inflammation to heal.
+sideEffectsCommon:
+- headache
+- stomach pain
+- diarrhoea or constipation
+- wind
+- feeling sick
+sideEffectsSerious:
+- severe or watery diarrhoea that does not stop
+- muscle cramps or an irregular heartbeat after long use, which can be signs of low magnesium
+- a rash on sun-exposed skin with joint pain
+stopping: Stopping after long use can cause rebound acid, with worse heartburn for a few weeks. Your GP may suggest reducing the dose gradually or using it only when needed.
+stoppingRisk: low
+warnings:
+- See a GP if you need it for more than 2 weeks, have trouble swallowing, are losing weight or vomiting.
+- It can make clopidogrel work less well.
+- Long-term use can lower vitamin B12 and magnesium levels.
+nhsSlug: omeprazole
+lastReviewed: '2026-10-05'

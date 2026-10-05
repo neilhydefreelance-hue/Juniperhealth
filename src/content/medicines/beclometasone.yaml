@@ -1,0 +1,42 @@
+name: Beclometasone
+alsoKnownAs:
+- Clenil
+- Qvar
+- Kelhale
+- Beconase
+- Fostair (with formoterol)
+medicineType: Corticosteroid (preventer inhaler and nasal spray)
+forms:
+- inhalers
+- nasal spray
+- cream
+- tablets
+summary: Beclometasone is a steroid. As a preventer inhaler it reduces swelling in the airways in asthma. As a nasal spray it treats hay fever.
+conditions:
+- respiratory-and-allergy/asthma
+- respiratory-and-allergy/copd
+- respiratory-and-allergy/hay-fever
+uses:
+- Preventing asthma symptoms (brown inhalers, or combined with formoterol)
+- COPD, in combination inhalers
+- Hay fever and other nasal allergies (nasal spray)
+- Skin inflammation such as eczema (cream, ointment)
+- Some forms of ulcerative colitis (modified-release tablets)
+offLabel: []
+howItWorks: Beclometasone is a corticosteroid. It reduces inflammation and swelling in the airways or nose, so they are less sensitive and less likely to react to triggers.
+sideEffectsCommon:
+- hoarse voice
+- sore throat
+- oral thrush (white patches in the mouth)
+- nosebleeds or a dry nose (nasal spray)
+sideEffectsSerious:
+- wheezing or breathlessness that gets worse straight after using the inhaler
+- changes in eyesight, such as blurred vision
+stopping: Stopping a preventer inhaler does not cause withdrawal, but your asthma or COPD can become poorly controlled over days or weeks and increase the risk of a serious attack.
+stoppingRisk: medium
+warnings:
+- Rinse your mouth or brush your teeth after using the inhaler to prevent thrush.
+- Use it every day, even when you feel well.
+- Different brands are not always interchangeable. Always ask for your inhaler by brand name.
+nhsSlug: beclometasone-inhalers
+lastReviewed: '2026-10-05'

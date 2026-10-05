@@ -78,6 +78,7 @@ export const NAV = [
       { label: 'NHS health costs check', href: '/support/health-costs/checker/' },
     ],
   },
+  { label: 'Medicines', href: '/medicines/' },
   { label: 'Articles', href: '/articles/' },
   { label: 'Community', href: '/community/' },
   { label: 'About', href: '/about/' },

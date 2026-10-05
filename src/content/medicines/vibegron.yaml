@@ -1,0 +1,26 @@
+name: Vibegron
+alsoKnownAs:
+- Obgemsa
+medicineType: Beta-3 agonist bladder medicine
+forms:
+- tablets
+summary: Vibegron is a newer once-a-day tablet for an overactive bladder. It works differently to older bladder medicines and is less likely to affect memory.
+conditions:
+- kidney-bladder-and-reproductive/urinary-incontinence
+uses:
+- Overactive bladder, urgency and urge incontinence in adults
+offLabel: []
+howItWorks: Vibegron stimulates beta-3 receptors in the bladder muscle. This relaxes the bladder while it fills, so it can hold more urine and you feel the urge less often.
+sideEffectsCommon:
+- headache
+- urine infections
+- diarrhoea
+- feeling sick
+- a cold or blocked nose
+sideEffectsSerious:
+- being unable to pee, especially if you have an enlarged prostate
+stopping: Vibegron does not cause withdrawal symptoms. Bladder symptoms may return.
+stoppingRisk: low
+warnings:
+- It may be recommended where anticholinergic bladder medicines are not suitable, for example in older people. Your GP will check if it is available locally.
+lastReviewed: '2026-10-05'

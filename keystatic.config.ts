@@ -338,6 +338,57 @@ export default config({
         body: fields.markdoc({ label: 'Article', components: contentComponents }),
       },
     }),
+    medicines: collection({
+      label: 'Medicines',
+      path: 'src/content/medicines/*',
+      slugField: 'name',
+      format: { data: 'yaml' },
+      columns: ['name', 'medicineType'],
+      schema: {
+        name: fields.slug({ name: { label: 'Medicine name' }, slug: { label: 'Web address' } }),
+        alsoKnownAs: fields.array(fields.text({ label: 'Name' }), { label: 'Brand and other names', itemLabel: (p) => p.value }),
+        medicineType: fields.text({ label: 'Type of medicine', description: 'For example "SSRI antidepressant".' }),
+        forms: fields.array(fields.text({ label: 'Form' }), { label: 'Comes as', itemLabel: (p) => p.value }),
+        availability: fields.select({
+          label: 'How you get it',
+          options: [
+            { label: 'Prescription only', value: 'prescription' },
+            { label: 'Pharmacy (some forms)', value: 'pharmacy' },
+            { label: 'Shops and pharmacies (some forms)', value: 'shop' },
+            { label: 'Hospital or specialist team', value: 'hospital' },
+            { label: 'Started by a specialist', value: 'specialist' },
+          ],
+          defaultValue: 'prescription',
+        }),
+        summary: fields.text({ label: 'Opening summary', multiline: true }),
+        conditions: fields.multiselect({
+          label: 'Show on these condition guides',
+          options: guideOptions
+            .filter((o) => o.value.startsWith('conditions/') && o.value.split('/').length === 3)
+            .map((o) => ({ label: o.label.replace('Condition: ', ''), value: o.value.replace('conditions/', '') })),
+          defaultValue: [],
+        }),
+        uses: fields.array(fields.text({ label: 'Use', multiline: true }), { label: 'What it is used for (licensed uses)', itemLabel: (p) => p.value }),
+        offLabel: fields.array(fields.text({ label: 'Use', multiline: true }), { label: 'Off-label uses', itemLabel: (p) => p.value }),
+        howItWorks: fields.text({ label: 'How it works', multiline: true }),
+        sideEffectsCommon: fields.array(fields.text({ label: 'Side effect' }), { label: 'Common side effects', itemLabel: (p) => p.value }),
+        sideEffectsSerious: fields.array(fields.text({ label: 'Side effect', multiline: true }), { label: 'Serious side effects (call 111)', itemLabel: (p) => p.value }),
+        stopping: fields.text({ label: 'Stopping and withdrawal', multiline: true }),
+        stoppingRisk: fields.select({
+          label: 'Risk of stopping suddenly',
+          options: [
+            { label: 'Low', value: 'low' },
+            { label: 'Medium', value: 'medium' },
+            { label: 'High', value: 'high' },
+          ],
+          defaultValue: 'medium',
+        }),
+        warnings: fields.array(fields.text({ label: 'Warning', multiline: true }), { label: 'Important safety information', itemLabel: (p) => p.value }),
+        nhsSlug: fields.text({ label: 'NHS website address (end part only)', description: 'For example "sertraline". Leave empty if the NHS has no page.' }),
+        bnfSlug: fields.text({ label: 'BNF address (end part only)', description: 'Leave empty if it matches the web address.' }),
+        lastReviewed: fields.date({ label: 'Last checked for accuracy', validation: { isRequired: true } }),
+      },
+    }),
     products: collection({
       label: 'Affiliate products',
       path: 'src/content/products/*',

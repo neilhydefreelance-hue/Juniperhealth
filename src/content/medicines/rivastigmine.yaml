@@ -1,0 +1,36 @@
+name: Rivastigmine
+alsoKnownAs:
+- Exelon
+- Alzest
+- Prometax
+medicineType: Acetylcholinesterase inhibitor (dementia medicine)
+forms:
+- capsules
+- liquid
+- skin patches
+summary: Rivastigmine treats the symptoms of Alzheimer's disease and dementia in Parkinson's disease. It comes as capsules or a daily skin patch.
+conditions:
+- brain-nerves-and-senses/dementia
+- brain-nerves-and-senses/parkinsons
+uses:
+- Mild to moderate Alzheimer's disease (capsules, liquid or patches)
+- Mild to moderate dementia in Parkinson's disease (capsules or liquid)
+offLabel:
+- Dementia with Lewy bodies
+howItWorks: Rivastigmine stops enzymes from breaking down acetylcholine, a chemical messenger important for memory and thinking, so more of it is available in the brain.
+sideEffectsCommon:
+- feeling sick or being sick
+- loss of appetite and weight loss
+- dizziness
+- diarrhoea
+- skin redness or itching under patches
+sideEffectsSerious:
+- severe vomiting, which can lead to dehydration
+- a slow heartbeat or fainting
+- black or bloody poo
+stopping: There is no classic withdrawal, but symptoms may get worse after stopping. If treatment is interrupted for more than 3 days, it must be restarted at the lowest dose.
+stoppingRisk: medium
+warnings:
+- Remove the old patch before putting on a new one. Using more than one patch by mistake can cause a dangerous overdose.
+- Change patch sites each day.
+lastReviewed: '2026-10-05'

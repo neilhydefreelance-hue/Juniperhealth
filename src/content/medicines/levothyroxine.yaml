@@ -1,0 +1,32 @@
+name: Levothyroxine
+alsoKnownAs:
+- Thyroxine
+- Eltroxin
+- Evotrox
+medicineType: Thyroid hormone replacement
+forms:
+- tablets
+- liquid
+summary: Levothyroxine replaces the thyroid hormone your body is not making enough of. Most people with an underactive thyroid take it for life.
+conditions:
+- metabolic-and-hormonal/hypothyroidism
+uses:
+- Underactive thyroid (hypothyroidism)
+- After thyroid surgery or radioactive iodine treatment
+- Some types of thyroid cancer, to stop the thyroid being stimulated
+offLabel: []
+howItWorks: Levothyroxine is a man-made version of thyroxine (T4), a hormone that controls your metabolism. It replaces the hormone your thyroid cannot make, restoring normal energy and body functions.
+sideEffectsCommon:
+- usually none once you are on the right dose
+- if the dose is too high, a fast heartbeat, sweating, shaking, feeling anxious, trouble sleeping or diarrhoea
+sideEffectsSerious:
+- chest pain or a very fast or irregular heartbeat
+- a severe headache
+stopping: Levothyroxine does not cause withdrawal, but stopping it means your symptoms, such as tiredness, weight gain and feeling cold, will slowly return over weeks. In severe cases, very low thyroid levels can be dangerous.
+stoppingRisk: medium
+warnings:
+- Take it on an empty stomach, usually 30 to 60 minutes before breakfast or caffeine.
+- Leave 4 hours between it and iron, calcium or indigestion remedies.
+- You need blood tests to check your dose, especially when starting or if you become pregnant.
+nhsSlug: levothyroxine
+lastReviewed: '2026-10-05'

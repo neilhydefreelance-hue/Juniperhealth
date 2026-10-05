@@ -1,0 +1,35 @@
+name: Brimonidine
+alsoKnownAs:
+- Alphagan
+- Combigan (with timolol)
+- Simbrinza (with brinzolamide)
+- Mirvaso (gel)
+medicineType: Alpha agonist eye drops and skin gel
+forms:
+- eye drops
+- gel
+summary: Brimonidine eye drops lower pressure in the eye in glaucoma. A gel version reduces facial redness in rosacea.
+conditions:
+- brain-nerves-and-senses/glaucoma
+uses:
+- Open-angle glaucoma and high pressure in the eye (eye drops)
+- Facial redness caused by rosacea (gel)
+offLabel: []
+howItWorks: In the eye, brimonidine reduces the amount of fluid made inside the eye and helps it drain away, which lowers the pressure. On the skin, it narrows small blood vessels, which reduces redness.
+sideEffectsCommon:
+- red
+- itchy or stinging eyes
+- dry mouth
+- tiredness or drowsiness
+- headache
+- flushing or burning skin (gel)
+sideEffectsSerious:
+- swollen, red, very itchy eyes or eyelids, which can be an allergic reaction
+- feeling faint, or a very slow heartbeat
+stopping: Brimonidine does not cause withdrawal symptoms, but eye pressure will rise again. With the gel, redness can come back, sometimes worse than before for a short time.
+stoppingRisk: low
+warnings:
+- The eye drops are not suitable for children under 2.
+- It can make you drowsy. Do not drive if affected.
+nhsSlug: brimonidine
+lastReviewed: '2026-10-05'

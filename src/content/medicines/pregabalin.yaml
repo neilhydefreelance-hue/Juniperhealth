@@ -1,0 +1,43 @@
+name: Pregabalin
+alsoKnownAs:
+- Lyrica
+- Alzain
+- Axalid
+medicineType: Anticonvulsant (also used for nerve pain and anxiety)
+forms:
+- capsules
+- liquid
+summary: Pregabalin treats nerve pain, generalised anxiety disorder and some types of epilepsy. It is a controlled drug because it can be misused.
+conditions:
+- mental-health/generalised-anxiety-disorder
+- brain-nerves-and-senses/epilepsy
+- musculoskeletal/fibromyalgia
+- musculoskeletal/back-and-neck-pain
+uses:
+- Nerve pain (neuropathic pain)
+- Generalised anxiety disorder
+- Focal seizures in epilepsy, alongside other medicines
+offLabel:
+- Fibromyalgia
+- Alcohol or benzodiazepine withdrawal (limited evidence)
+howItWorks: Pregabalin attaches to calcium channels on nerve cells and reduces the release of chemical messengers. This calms overactive nerves involved in pain, anxiety and seizures.
+sideEffectsCommon:
+- feeling sleepy or dizzy
+- weight gain
+- blurred vision
+- dry mouth
+- unsteadiness
+- swollen hands or feet
+- constipation
+sideEffectsSerious:
+- slow or shallow breathing, especially if you also take opioids. Call 999
+- thoughts of harming yourself
+- signs of dependence, such as needing more to get the same effect
+stopping: Stopping suddenly can cause withdrawal symptoms such as anxiety, trouble sleeping, sweating, feeling sick, pain and, in epilepsy, seizures. Your doctor will reduce the dose over at least a week, often much longer.
+stoppingRisk: high
+warnings:
+- It is a controlled drug and can cause dependence and misuse.
+- Taking it with opioids, alcohol or other sedatives can stop your breathing.
+- It may harm an unborn baby. Use contraception and talk to your doctor before trying for a baby.
+nhsSlug: pregabalin
+lastReviewed: '2026-10-05'

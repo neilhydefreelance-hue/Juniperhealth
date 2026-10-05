@@ -1,0 +1,27 @@
+name: Mebeverine
+alsoKnownAs:
+- Colofac
+medicineType: Antispasmodic
+forms:
+- tablets
+- modified-release capsules
+- liquid
+availability: pharmacy
+summary: Mebeverine relaxes the muscles in the bowel. It eases stomach cramps and bloating in irritable bowel syndrome (IBS).
+conditions:
+- digestive-and-liver/ibs
+uses:
+- Stomach cramps and bowel spasms in IBS
+- Similar symptoms in other bowel conditions such as diverticular disease
+offLabel: []
+howItWorks: Mebeverine acts directly on the smooth muscle of the bowel wall, relaxing it. This reduces spasms that cause pain, without slowing normal bowel movements.
+sideEffectsCommon:
+- side effects are rare. Some people get indigestion or heartburn
+sideEffectsSerious:
+- a skin rash or swelling of the face, which can be an allergic reaction
+stopping: Mebeverine does not cause withdrawal symptoms. Cramps may return.
+stoppingRisk: low
+warnings:
+- See a GP if you have new bowel symptoms over the age of 40, blood in your poo, weight loss or a change that lasts more than a few weeks.
+nhsSlug: mebeverine
+lastReviewed: '2026-10-05'

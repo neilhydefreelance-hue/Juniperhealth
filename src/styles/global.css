@@ -1702,3 +1702,51 @@ hr {
   font-size: 0.9rem;
   text-decoration: none;
 }
+
+/* Medicines */
+.med-facts {
+  display: grid;
+  gap: var(--space-2xs) var(--space-l);
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  margin: var(--space-m) 0 0;
+}
+.med-facts div {
+  margin: 0;
+}
+.med-facts dt {
+  font-weight: 600;
+  font-size: var(--step--1);
+}
+.med-facts dd {
+  margin: 0;
+}
+.prose .med-list li {
+  display: flex;
+  flex-direction: column;
+  padding: 0.125rem 0;
+}
+.prose .med-list a {
+  min-height: 2.75rem;
+}
+.prose .med-list .small {
+  margin-top: -0.5rem;
+}
+.az-jump ul {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-m) 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+}
+.az-jump a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  border-radius: var(--radius-s);
+  border: 1px solid var(--border-strong);
+  font-weight: 600;
+  text-decoration: none;
+}

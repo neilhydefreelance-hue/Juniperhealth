@@ -18,6 +18,7 @@ import { SITE, TOOLS, type ToolKey } from '../data/site';
 import { abs, AUTHOR_ID, ORG_ID, SITE_ID, faqPage, iso, type Crumb } from '../lib/schema';
 import { shortId } from '../lib/topics';
 import { articlesFor } from '../lib/articles';
+import { medicinesFor } from '../lib/medicines';
 
 type Entry = CollectionEntry<'conditions'> | CollectionEntry<'benefits'> | CollectionEntry<'support'>;
 
@@ -67,6 +68,10 @@ const tool: ToolKey = kind === 'benefits' ? (benefitTool[hub.id] ?? 'pip') : kin
 const showSticky = (kind === 'benefits' && hub.id in benefitTool) || (kind === 'support' && hub.id === 'health-costs');
 // Articles linked to this condition, benefit or support topic.
 const articles = await articlesFor(kind, hub.id);
+// Medicines linked to this condition.
+const medicines = kind === 'conditions' ? await medicinesFor(hub.id) : [];
+// Condition name for use mid-sentence: "depression", but keep "COPD", "Crohn's" and "Parkinson's".
+const inSentence = /^[A-Z][a-z]/.test(shortTopic) && !/^(Crohn|Parkinson|Alzheimer)/.test(shortTopic) ? shortTopic[0].toLowerCase() + shortTopic.slice(1) : shortTopic;
 const rates = kind === 'benefits' ? (entry as CollectionEntry<'benefits'>).data.showRates : 'none';
 
 // Structured data
@@ -181,6 +186,16 @@ const schema = [pageSchema, ...(d.faqs.length ? [faqPage(url, d.faqs)] : [])];
           </section>
         )}
 
+        {isHub && medicines.length > 0 && (
+          <section aria-labelledby="medicines" style="margin-top:var(--space-2xl);max-width:var(--measure)">
+            <h2 id="medicines">Medicines used for {inSentence}</h2>
+            <p>These are some of the medicines that may be used. Your doctor will talk to you about what is right for you. Never stop or change a medicine without talking to your GP first.</p>
+            <ul class="topic-chips">
+              {medicines.map((m) => <li><a href={`/medicines/${m.id}/`}>{m.data.name}</a></li>)}
+            </ul>
+          </section>
+        )}
+
         {kind === 'conditions' && <ProductList condition={shortId(hub.id)} />}
 
         <Faqs faqs={d.faqs} />
@@ -232,6 +247,16 @@ const schema = [pageSchema, ...(d.faqs.length ? [faqPage(url, d.faqs)] : [])];
             <ul>
               {articles.map((a) => (
                 <li><a href={`/articles/${a.id}/`}>{a.data.title}</a></li>
+              ))}
+            </ul>
+          </nav>
+        )}
+        {medicines.length > 0 && (
+          <nav class="box" aria-label="Medicines">
+            <h2><Icon name="pill" size={18} class="inline-icon" /> Medicines</h2>
+            <ul>
+              {medicines.map((m) => (
+                <li><a href={`/medicines/${m.id}/`}>{m.data.name}</a></li>
               ))}
             </ul>
           </nav>

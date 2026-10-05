@@ -1,0 +1,32 @@
+name: Tolterodine
+alsoKnownAs:
+- Detrusitol
+- Neditol XL
+medicineType: Antimuscarinic bladder medicine
+forms:
+- tablets
+- modified-release capsules
+summary: Tolterodine treats an overactive bladder. It reduces urgency, needing to pee often and leaking.
+conditions:
+- kidney-bladder-and-reproductive/urinary-incontinence
+uses:
+- Overactive bladder, urgency and urge incontinence
+offLabel: []
+howItWorks: Tolterodine blocks acetylcholine receptors on the bladder muscle, so the bladder squeezes less suddenly and can hold more.
+sideEffectsCommon:
+- dry mouth
+- constipation
+- headache
+- dry eyes
+- blurred vision
+- dizziness
+sideEffectsSerious:
+- being unable to pee
+- a fast or irregular heartbeat
+- confusion, especially in older people
+stopping: Tolterodine does not cause withdrawal symptoms. Bladder symptoms may return.
+stoppingRisk: low
+warnings:
+- Long-term use of this type of medicine has been linked with memory problems in older people.
+nhsSlug: tolterodine
+lastReviewed: '2026-10-05'

@@ -1,0 +1,38 @@
+name: Dexamfetamine
+alsoKnownAs:
+- Amfexa
+- Dexedrine
+medicineType: Stimulant (ADHD medicine)
+forms:
+- tablets
+- liquid
+availability: specialist
+summary: Dexamfetamine is a stimulant used to treat ADHD and narcolepsy. It helps with concentration and impulsive behaviour.
+conditions:
+- mental-health/adhd
+uses:
+- Attention deficit hyperactivity disorder (ADHD) in children and adults
+- Narcolepsy
+offLabel: []
+howItWorks: Dexamfetamine increases the release of dopamine and noradrenaline in the brain. These chemical messengers help with attention, focus and controlling impulses.
+sideEffectsCommon:
+- loss of appetite and weight loss
+- trouble sleeping
+- headache
+- dry mouth
+- a fast heartbeat
+- feeling anxious or irritable
+- stomach ache
+sideEffectsSerious:
+- chest pain, fainting or a very fast or irregular heartbeat
+- seeing or hearing things that are not there, or feeling paranoid
+- a sudden change in mood or thoughts of harming yourself
+stopping: Stopping does not usually cause dangerous withdrawal, but after high doses or long use you may feel very tired, low in mood, hungry or sleep a lot for a few days. ADHD symptoms will return. Your specialist may advise reducing the dose gradually.
+stoppingRisk: medium
+warnings:
+- It is a controlled drug. Keep it safe and never share it.
+- Your blood pressure, heart rate, weight and height (in children) will be checked regularly.
+- It can be misused. Tell your doctor if you have a history of drug misuse.
+- It is illegal to drive with certain levels in your blood, unless you take it as prescribed and your driving is not impaired.
+nhsSlug: dexamfetamine
+lastReviewed: '2026-10-05'

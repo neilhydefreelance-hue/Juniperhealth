@@ -1,0 +1,30 @@
+name: Brinzolamide
+alsoKnownAs:
+- Azopt
+- Simbrinza (with brimonidine)
+- Azarga (with timolol)
+medicineType: Carbonic anhydrase inhibitor eye drops
+forms:
+- eye drops
+summary: Brinzolamide eye drops lower the pressure inside the eye. They are used for glaucoma, often alongside other eye drops.
+conditions:
+- brain-nerves-and-senses/glaucoma
+uses:
+- Open-angle glaucoma
+- High pressure in the eye (ocular hypertension)
+offLabel: []
+howItWorks: Brinzolamide blocks an enzyme called carbonic anhydrase in the eye. This reduces the amount of fluid the eye makes, which lowers the pressure inside it.
+sideEffectsCommon:
+- blurred vision for a short time after using the drops
+- a bitter or unusual taste
+- eye irritation or discomfort
+sideEffectsSerious:
+- eye pain, severe redness or a change in vision
+- a skin rash or swelling of the face
+stopping: Brinzolamide does not cause withdrawal symptoms, but the pressure in your eye will rise again. This can damage your sight over time.
+stoppingRisk: medium
+warnings:
+- Shake the bottle well before use.
+- Leave at least 5 minutes between different eye drops.
+- Tell your doctor if you are allergic to sulfonamide (sulfa) medicines.
+lastReviewed: '2026-10-05'
