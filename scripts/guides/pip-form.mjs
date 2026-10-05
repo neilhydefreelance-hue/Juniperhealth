@@ -98,18 +98,18 @@ strong { color: var(--night); }
 .lead { font-size: 13pt; color: var(--slate); }
 .small { font-size: 9.5pt; color: var(--slate); }
 
-/* Cover */
-.cover { page: cover; height: 297mm; padding: 26mm 22mm 20mm; color: #fff; display: flex; flex-direction: column;
-  background: radial-gradient(circle at 85% 12%, rgba(242,180,65,.20), transparent 40%), linear-gradient(160deg, #8556B8 0%, #5B3494 38%, #432777 70%, #2E1A52 100%); }
-.cover__brand { display: flex; align-items: center; gap: 12px; font: 600 15pt 'Lexend', sans-serif; }
-.cover__brand img { width: 64px; height: 64px; border-radius: 50%; background: #fff; }
-.cover h1 { color: #fff; font-size: 40pt; font-weight: 700; margin: 34mm 0 8mm; letter-spacing: -.01em; }
-.cover .lead { color: #EDE4F8; font-size: 15pt; max-width: 140mm; }
-.cover strong { color: #fff; }
+/* Cover: white background so it uses very little ink when printed. */
+.cover { page: cover; height: 297mm; padding: 26mm 22mm 20mm; color: var(--ink); display: flex; flex-direction: column;
+  background: #fff; border-top: 6mm solid var(--purple); }
+.cover__brand { display: flex; align-items: center; gap: 12px; font: 600 15pt 'Lexend', sans-serif; color: var(--night); }
+.cover__brand img { width: 64px; height: 64px; border-radius: 50%; }
+.cover h1 { color: var(--night); font-size: 40pt; font-weight: 700; margin: 34mm 0 8mm; letter-spacing: -.01em; }
+.cover .lead { color: var(--slate); font-size: 15pt; max-width: 140mm; }
+.cover strong { color: var(--night); }
 .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10mm; }
-.badge { background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 6px 14px; font-size: 10pt; }
-.cover__plant { width: 70mm; height: 70mm; color: rgba(255,255,255,.16); margin: auto 0 0 auto; }
-.cover__foot { border-top: 1px solid rgba(255,255,255,.35); padding-top: 5mm; font-size: 10pt; color: #EDE4F8; display: flex; justify-content: space-between; }
+.badge { background: #fff; border: 1.5px solid var(--lavender); color: var(--purple); border-radius: 999px; padding: 6px 14px; font-size: 10pt; }
+.cover__plant { width: 70mm; height: 70mm; color: #EFE9F7; margin: auto 0 0 auto; }
+.cover__foot { border-top: 1px solid var(--line); padding-top: 5mm; font-size: 10pt; color: var(--slate); display: flex; justify-content: space-between; }
 
 /* Boxes */
 .box { background: var(--mist); border-radius: 10px; padding: 12px 16px; margin: 1em 0; break-inside: avoid; }
@@ -175,7 +175,7 @@ tr:nth-child(even) td { background: #FBF9FE; }
 
 <section class="cover">
   <div class="cover__brand"><img src="${file('public/images/logo-512.webp')}" alt=""> Juniper Health</div>
-  <p class="eyebrow" style="color:#F2B441;margin-top:30mm;margin-bottom:0">Free printable guide</p>
+  <p class="eyebrow" style="margin-top:30mm;margin-bottom:0">Free printable guide</p>
   <h1 style="margin-top:4mm">How to fill in your PIP form</h1>
   <p class="lead">A plain English, question by question guide to the <strong>“How your disability affects you”</strong> form, with tips on what to write, what scores points and what evidence helps.</p>
   <div class="badges">
