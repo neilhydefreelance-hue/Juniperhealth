@@ -8,6 +8,7 @@ import { SITE, TOOLS } from '../data/site';
 import { aToZ } from '../lib/topics';
 import { allArticles } from '../lib/articles';
 import { allMedicines } from '../lib/medicines';
+import { RESOURCES } from '../data/resources';
 
 export const prerender = true;
 
@@ -33,6 +34,10 @@ export const GET: APIRoute = async () => {
     '',
     '## Medicines (general information, not medical advice)',
     ...medicines.map((e) => line(e.data.name, `/medicines/${e.id}/`, e.data.summary)),
+    '',
+    '## Free printable resources (PDF)',
+    line('Free printable resources', '/resources/', 'All our free downloadable guides and planners.'),
+    ...RESOURCES.map((r) => line(r.title, r.href, `${r.audience}. ${r.blurb}`)),
     '',
     '## Articles',
     ...articles.map((e) => line(e.data.title, `/articles/${e.id}/`, e.data.description)),

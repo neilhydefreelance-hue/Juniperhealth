@@ -79,6 +79,7 @@ export const NAV = [
     ],
   },
   { label: 'Medicines', href: '/medicines/' },
+  { label: 'Free resources', href: '/resources/' },
   { label: 'Articles', href: '/articles/' },
   { label: 'Community', href: '/community/' },
   { label: 'About', href: '/about/' },
