@@ -53,6 +53,7 @@ export const NAV = [
       { label: 'DLA for children', href: '/benefits/dla/' },
       { label: 'ESA', href: '/benefits/esa/' },
       { label: 'Universal Credit health element', href: '/benefits/universal-credit-health/' },
+      { label: 'Adult Disability Payment (Scotland)', href: '/benefits/adp/' },
     ],
   },
   {
