@@ -28,7 +28,7 @@ export interface CheckerStep {
 }
 
 export interface CheckerDefinition {
-  id: 'pip' | 'aa' | 'dla';
+  id: 'pip' | 'aa' | 'dla' | 'nhs';
   name: string;
   steps: CheckerStep[];
 }

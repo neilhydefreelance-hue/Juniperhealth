@@ -1,0 +1,33 @@
+name: Naltrexone with bupropion
+alsoKnownAs:
+- Mysimba
+medicineType: Weight management medicine
+forms:
+- prolonged-release tablets
+summary: This combination medicine (Mysimba) helps reduce appetite and cravings to support weight loss alongside diet and exercise.
+conditions:
+- metabolic-and-hormonal/obesity
+uses:
+- Weight management in adults with obesity, or who are overweight with a weight-related health condition, alongside diet and activity
+offLabel: []
+howItWorks: Bupropion acts on brain chemicals that control appetite, and naltrexone blocks a feedback signal that would otherwise limit this effect. Together they reduce hunger and food cravings.
+sideEffectsCommon:
+- feeling sick
+- constipation
+- headache
+- being sick
+- dizziness
+- trouble sleeping
+- dry mouth
+sideEffectsSerious:
+- fits
+- raised blood pressure or a fast heartbeat
+- changes in mood, thoughts of harming yourself
+- signs of a serious allergic reaction or severe skin rash
+stopping: Stopping does not usually cause withdrawal symptoms. Your doctor should review it after 16 weeks and stop it if you have not lost at least 5% of your body weight.
+stoppingRisk: low
+warnings:
+- It is not recommended by NICE for routine NHS use, so it is usually only available privately.
+- Not suitable if you have epilepsy, an eating disorder or uncontrolled high blood pressure, or take opioids.
+bnfSlug: naltrexone-with-bupropion
+lastReviewed: '2026-10-05'

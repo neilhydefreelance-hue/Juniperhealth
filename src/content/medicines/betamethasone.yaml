@@ -1,0 +1,42 @@
+name: Betamethasone
+alsoKnownAs:
+- Betnovate
+- Betnesol
+- Diprosone
+- Dovobet (with calcipotriol)
+medicineType: Corticosteroid
+forms:
+- cream
+- ointment
+- scalp application
+- tablets
+- eye drops
+- ear drops
+- nose drops
+- injection
+summary: Betamethasone is a strong steroid. It is mostly used as a cream or ointment for inflamed skin conditions such as eczema and psoriasis.
+conditions:
+- skin/eczema
+- skin/psoriasis
+uses:
+- Eczema, psoriasis and other inflamed skin conditions (cream, ointment, scalp application)
+- Inflammation in the eyes, ears or nose (drops)
+- Severe allergic and inflammatory conditions (tablets or injection)
+offLabel: []
+howItWorks: Betamethasone is a corticosteroid. It reduces inflammation by calming the immune response in the skin or other tissues, which eases redness, itching and swelling.
+sideEffectsCommon:
+- burning or stinging when you first apply it
+- thinning of the skin with long use
+- stretch marks
+- spots or acne where it is applied
+sideEffectsSerious:
+- signs of a skin infection, such as weeping, crusting or pain
+- with tablets, changes in mood, very high blood sugar or signs of infection
+stopping: Stopping a strong steroid cream suddenly after long use can make the skin flare up (rebound). Your doctor may advise using it less often before stopping. Steroid tablets taken for more than 3 weeks must be reduced slowly.
+stoppingRisk: medium
+warnings:
+- Use the smallest amount for the shortest time. Ask how many fingertip units to use.
+- Do not use it on the face unless your doctor tells you to.
+- Steroid tablets can affect your body's natural steroid production. Carry a steroid card if you are given one.
+nhsSlug: betamethasone-skin-creams
+lastReviewed: '2026-10-05'

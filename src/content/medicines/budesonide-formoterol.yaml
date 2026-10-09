@@ -1,0 +1,37 @@
+name: Budesonide with formoterol
+alsoKnownAs:
+- Symbicort
+- DuoResp Spiromax
+- WockAIR
+- Fobumix
+medicineType: Combination inhaler (steroid and long-acting reliever)
+forms:
+- inhalers
+summary: This inhaler combines a steroid preventer (budesonide) with a long-acting reliever (formoterol). It is used for asthma and COPD, and some people use it as both their preventer and their reliever.
+conditions:
+- respiratory-and-allergy/asthma
+- respiratory-and-allergy/copd
+uses:
+- Asthma, as a regular preventer, or as an anti-inflammatory reliever (AIR) or maintenance and reliever therapy (MART)
+- Chronic obstructive pulmonary disease (COPD)
+offLabel: []
+howItWorks: Budesonide reduces swelling and inflammation in the airways. Formoterol relaxes the muscles around the airways for up to 12 hours, and starts working within minutes, so it can also relieve symptoms quickly.
+sideEffectsCommon:
+- hoarse voice or sore throat
+- oral thrush
+- headache
+- shaking or trembling
+- a pounding or fast heartbeat
+sideEffectsSerious:
+- wheezing or breathlessness that gets worse straight after using the inhaler
+- a very fast or irregular heartbeat, or chest pain
+- muscle cramps or weakness, which can be a sign of low potassium
+stopping: Stopping does not cause withdrawal symptoms, but your asthma or COPD may become much harder to control, raising the risk of a serious attack.
+stoppingRisk: medium
+warnings:
+- Your asthma action plan should say exactly how to use it, especially if it is also your reliever.
+- If you need more than your maximum number of puffs in a day, get medical help.
+- Rinse your mouth after use.
+nhsSlug: budesonide-with-formoterol
+bnfSlug: budesonide-with-formoterol
+lastReviewed: '2026-10-05'

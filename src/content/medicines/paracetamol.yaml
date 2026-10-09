@@ -1,0 +1,41 @@
+name: Paracetamol
+alsoKnownAs:
+- Calpol
+- Panadol
+- Co-codamol (with codeine)
+medicineType: Painkiller and fever reducer
+forms:
+- tablets
+- capsules
+- liquid
+- soluble tablets
+- suppositories
+- injection
+availability: shop
+summary: Paracetamol is a common painkiller. It treats mild to moderate pain and lowers a high temperature.
+conditions:
+- musculoskeletal/osteoarthritis
+- musculoskeletal/back-and-neck-pain
+- brain-nerves-and-senses/migraine
+- musculoskeletal/costochondritis
+uses:
+- Mild to moderate pain, such as headaches, toothache and period pain
+- High temperature (fever)
+- Pain after surgery (injection in hospital)
+offLabel: []
+howItWorks: Nobody is completely sure how paracetamol works. It is thought to reduce the production of prostaglandins in the brain and spinal cord, which lowers pain and temperature.
+sideEffectsCommon:
+- side effects are rare at the right dose
+sideEffectsSerious:
+- a skin rash with blisters or peeling
+- yellowing of the skin or eyes
+- if you have taken too much, even if you feel well. Go to A and E straight away
+stopping: Paracetamol does not cause withdrawal symptoms. Taking painkillers for headaches on more than 15 days a month can cause medication overuse headaches.
+stoppingRisk: low
+warnings:
+- Do not take more than 4g (usually 8 x 500mg tablets) in 24 hours, and leave at least 4 hours between doses.
+- Check other medicines, such as cold and flu remedies, do not also contain paracetamol.
+- People who weigh less than 50kg may need a lower dose.
+- An overdose can cause serious liver damage, even if you feel fine at first.
+nhsSlug: paracetamol-for-adults
+lastReviewed: '2026-10-05'

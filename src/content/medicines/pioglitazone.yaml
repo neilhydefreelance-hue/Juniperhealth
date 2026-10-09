@@ -1,0 +1,33 @@
+name: Pioglitazone
+alsoKnownAs:
+- Actos
+- Competact (with metformin)
+medicineType: Thiazolidinedione (diabetes medicine)
+forms:
+- tablets
+summary: Pioglitazone is a tablet for type 2 diabetes. It helps your body use its own insulin better.
+conditions:
+- metabolic-and-hormonal/type-2-diabetes
+uses:
+- Type 2 diabetes, on its own or with other diabetes medicines or insulin
+offLabel:
+- Fatty liver disease (MASH) in people with diabetes, under a specialist
+howItWorks: Pioglitazone makes muscle, fat and liver cells more sensitive to insulin. This means insulin works better at moving sugar out of the blood.
+sideEffectsCommon:
+- weight gain
+- swollen ankles
+- headache
+- muscle aches
+- cold-like symptoms
+sideEffectsSerious:
+- breathlessness, rapid weight gain or swelling, which can be signs of heart failure
+- blood in your pee or pain when you pee, which can rarely be signs of bladder cancer
+- yellowing of the skin or eyes
+- broken bones after a minor fall
+stopping: Pioglitazone does not cause withdrawal symptoms. Blood sugar may rise.
+stoppingRisk: low
+warnings:
+- Not suitable if you have heart failure, bladder cancer or blood in your pee that has not been checked.
+- It increases the risk of broken bones, especially in women.
+nhsSlug: pioglitazone
+lastReviewed: '2026-10-05'

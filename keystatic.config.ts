@@ -1,7 +1,7 @@
 /**
  * Keystatic editor setup.
  *
- * This file decides what you see at juniperhealth.app/keystatic: which kinds of page
+ * This file decides what you see at juniperhealth.info/keystatic: which kinds of page
  * you can create, and which boxes each page has. Every page is saved as a file
  * in this repository, so nothing is locked away in a database.
  *
@@ -32,6 +32,25 @@ const contentComponents = {
   donateButton: block({
     label: 'Donate button',
     description: 'A button linking to the donation link in Site settings.',
+    schema: {},
+  }),
+  affiliate: wrapper({
+    label: 'Affiliate product (Ad)',
+    description: 'A product box clearly marked "Ad", with an affiliate link. Write one or two plain sentences inside. Never claim it treats or cures anything.',
+    schema: {
+      name: fields.text({ label: 'Product name', validation: { length: { min: 1 } } }),
+      url: fields.url({ label: 'Affiliate link', validation: { isRequired: true } }),
+      merchant: fields.text({ label: 'Shop name', defaultValue: 'Amazon' }),
+    },
+  }),
+  adNotice: block({
+    label: 'Advert notice',
+    description: 'Put this near the top of any article with affiliate links. It explains the "Ad" labels.',
+    schema: {},
+  }),
+  community: block({
+    label: 'Join our community box',
+    description: 'Shows our Facebook group and Discord, using the links in Business details.',
     schema: {},
   }),
   businessDetails: block({
@@ -76,6 +95,7 @@ const contentComponents = {
           { label: 'PIP points self-check', value: 'pip' },
           { label: 'Attendance Allowance check', value: 'aa' },
           { label: 'DLA for children check', value: 'dla' },
+          { label: 'NHS health costs check', value: 'nhs' },
         ],
         defaultValue: 'pip',
       }),
@@ -84,6 +104,25 @@ const contentComponents = {
 };
 
 /* Boxes shared by every health and benefits page. */
+
+/**
+ * Every condition, benefit and support guide, for the "related guides" pickers.
+ * Built from the content folders, so new guides appear here automatically.
+ */
+const titleCase = (slug: string) => slug.replace(/-/g, ' ').replace(/^./, (c) => c.toUpperCase());
+const guideOptions = (() => {
+  const hubs = (files: Record<string, unknown>, kind: string, depth: number, label: string) =>
+    Object.keys(files)
+      .map((f) => f.replace(/^.*\/content\/[a-z]+\//, '').replace(/\.mdoc$/, ''))
+      .filter((id) => id.split('/').length === depth)
+      .map((id) => ({ label: `${label}: ${titleCase(id.split('/').pop() as string)}`, value: `${kind}/${id}` }));
+  return [
+    ...hubs(import.meta.glob('./src/content/conditions/**/*.mdoc'), 'conditions', 2, 'Condition'),
+    ...hubs(import.meta.glob('./src/content/benefits/**/*.mdoc'), 'benefits', 1, 'Benefit'),
+    ...hubs(import.meta.glob('./src/content/support/**/*.mdoc'), 'support', 1, 'Support'),
+  ].sort((a, b) => a.label.localeCompare(b.label, 'en-GB'));
+})();
+
 const sharedPageFields = {
   navTitle: fields.text({
     label: 'Short menu name',
@@ -126,8 +165,10 @@ export default config({
     navigation: {
       'Health conditions': ['conditions'],
       Benefits: ['benefits'],
+      'Disability support': ['support'],
       'Other pages': ['pages'],
       'Affiliate products': ['products'],
+      'Articles': ['articles'],
       'Site settings': ['settings', 'rates'],
     },
   },
@@ -145,13 +186,13 @@ export default config({
           slug: {
             label: 'Web address',
             description:
-              'For the main page of a condition use just its name, for example "fibromyalgia". For a page inside it, add a slash, for example "fibromyalgia/symptoms".',
+              'Start with the category, then the condition. A category page is just its name, for example "skin". A condition main page is "skin/eczema". A page inside it is "skin/eczema/treatment".',
           },
         }),
         ...sharedPageFields,
         conditionName: fields.text({
           label: 'Condition name',
-          description: 'Only needed on the main page of a condition, for example "Fibromyalgia".',
+          description: 'Needed on the main page of a condition, for example "Asthma". Leave empty on category pages and pages inside a condition.',
         }),
         alternateNames: fields.array(fields.text({ label: 'Other name' }), {
           label: 'Other names for this condition',
@@ -165,6 +206,26 @@ export default config({
             { label: 'Heart', value: 'heart' },
             { label: 'Brain', value: 'brain' },
             { label: 'Body', value: 'body' },
+            { label: 'Lungs', value: 'lungs' },
+            { label: 'Ear', value: 'ear' },
+            { label: 'Joint', value: 'joint' },
+            { label: 'Drop (blood sugar)', value: 'drop' },
+            { label: 'Pulse (blood pressure)', value: 'pulse' },
+            { label: 'Thyroid', value: 'thyroid' },
+            { label: 'Shield', value: 'shield' },
+            { label: 'People', value: 'people' },
+            { label: 'Wave (mood)', value: 'wave' },
+            { label: 'Cup', value: 'cup' },
+            { label: 'Pill', value: 'pill' },
+            { label: 'Loop', value: 'loop' },
+            { label: 'Lightning bolt', value: 'bolt' },
+            { label: 'Eye', value: 'eye' },
+            { label: 'Bone', value: 'bone' },
+            { label: 'Gut (digestion)', value: 'gut' },
+            { label: 'Kidney', value: 'kidney' },
+            { label: 'Hand (skin)', value: 'skin' },
+            { label: 'Moon (sleep)', value: 'moon' },
+            { label: 'Flower (allergy)', value: 'flower' },
           ],
           defaultValue: 'leaf',
         }),
@@ -201,6 +262,39 @@ export default config({
         body: fields.markdoc({ label: 'Page content', components: contentComponents }),
       },
     }),
+    support: collection({
+      label: 'Disability support pages',
+      path: 'src/content/support/**',
+      slugField: 'title',
+      format: { contentField: 'body' },
+      entryLayout: 'content',
+      columns: ['title', 'lastReviewed'],
+      schema: {
+        title: fields.slug({
+          name: { label: 'Page title' },
+          slug: {
+            label: 'Web address',
+            description: 'For the main page of a topic use its short name, for example "travel". For a page inside it, for example "travel/blue-badge".',
+          },
+        }),
+        ...sharedPageFields,
+        cardIcon: fields.select({
+          label: 'Card icon',
+          options: [
+            { label: 'Gift', value: 'gift' },
+            { label: 'Pound sign', value: 'pound' },
+            { label: 'Document', value: 'document' },
+            { label: 'Heart', value: 'heart' },
+            { label: 'People', value: 'people' },
+            { label: 'Body', value: 'body' },
+            { label: 'Calculator', value: 'calculator' },
+            { label: 'Pill', value: 'pill' },
+          ],
+          defaultValue: 'gift',
+        }),
+        body: fields.markdoc({ label: 'Page content', components: contentComponents }),
+      },
+    }),
     pages: collection({
       label: 'Other pages (about, legal)',
       path: 'src/content/pages/**',
@@ -213,6 +307,86 @@ export default config({
         summary: fields.text({ label: 'Opening summary', multiline: true }),
         lastUpdated: fields.date({ label: 'Last updated', validation: { isRequired: true } }),
         body: fields.markdoc({ label: 'Page content', components: contentComponents }),
+      },
+    }),
+    articles: collection({
+      label: 'Articles',
+      path: 'src/content/articles/*',
+      slugField: 'title',
+      format: { contentField: 'body' },
+      entryLayout: 'content',
+      columns: ['title', 'published'],
+      schema: {
+        title: fields.slug({ name: { label: 'Article title' }, slug: { label: 'Web address', description: 'The end of the link, for example "aids-that-can-help-with-asthma".' } }),
+        description: sharedPageFields.description,
+        summary: sharedPageFields.summary,
+        published: fields.date({ label: 'Date published', validation: { isRequired: true } }),
+        lastReviewed: fields.date({ label: 'Last checked for accuracy', validation: { isRequired: true } }),
+        topics: fields.multiselect({
+          label: 'Related guides',
+          description: 'The article will be listed on these condition, benefit or support guides.',
+          options: guideOptions,
+          defaultValue: [],
+        }),
+        containsAds: fields.checkbox({
+          label: 'This article contains affiliate links (ads)',
+          description: 'Tick this if you add any Affiliate product boxes, and add the Advert notice near the top.',
+          defaultValue: false,
+        }),
+        sources: sharedPageFields.sources,
+        faqs: sharedPageFields.faqs,
+        body: fields.markdoc({ label: 'Article', components: contentComponents }),
+      },
+    }),
+    medicines: collection({
+      label: 'Medicines',
+      path: 'src/content/medicines/*',
+      slugField: 'name',
+      format: { data: 'yaml' },
+      columns: ['name', 'medicineType'],
+      schema: {
+        name: fields.slug({ name: { label: 'Medicine name' }, slug: { label: 'Web address' } }),
+        alsoKnownAs: fields.array(fields.text({ label: 'Name' }), { label: 'Brand and other names', itemLabel: (p) => p.value }),
+        medicineType: fields.text({ label: 'Type of medicine', description: 'For example "SSRI antidepressant".' }),
+        forms: fields.array(fields.text({ label: 'Form' }), { label: 'Comes as', itemLabel: (p) => p.value }),
+        availability: fields.select({
+          label: 'How you get it',
+          options: [
+            { label: 'Prescription only', value: 'prescription' },
+            { label: 'Pharmacy (some forms)', value: 'pharmacy' },
+            { label: 'Shops and pharmacies (some forms)', value: 'shop' },
+            { label: 'Hospital or specialist team', value: 'hospital' },
+            { label: 'Started by a specialist', value: 'specialist' },
+          ],
+          defaultValue: 'prescription',
+        }),
+        summary: fields.text({ label: 'Opening summary', multiline: true }),
+        conditions: fields.multiselect({
+          label: 'Show on these condition guides',
+          options: guideOptions
+            .filter((o) => o.value.startsWith('conditions/') && o.value.split('/').length === 3)
+            .map((o) => ({ label: o.label.replace('Condition: ', ''), value: o.value.replace('conditions/', '') })),
+          defaultValue: [],
+        }),
+        uses: fields.array(fields.text({ label: 'Use', multiline: true }), { label: 'What it is used for (licensed uses)', itemLabel: (p) => p.value }),
+        offLabel: fields.array(fields.text({ label: 'Use', multiline: true }), { label: 'Off-label uses', itemLabel: (p) => p.value }),
+        howItWorks: fields.text({ label: 'How it works', multiline: true }),
+        sideEffectsCommon: fields.array(fields.text({ label: 'Side effect' }), { label: 'Common side effects', itemLabel: (p) => p.value }),
+        sideEffectsSerious: fields.array(fields.text({ label: 'Side effect', multiline: true }), { label: 'Serious side effects (call 111)', itemLabel: (p) => p.value }),
+        stopping: fields.text({ label: 'Stopping and withdrawal', multiline: true }),
+        stoppingRisk: fields.select({
+          label: 'Risk of stopping suddenly',
+          options: [
+            { label: 'Low', value: 'low' },
+            { label: 'Medium', value: 'medium' },
+            { label: 'High', value: 'high' },
+          ],
+          defaultValue: 'medium',
+        }),
+        warnings: fields.array(fields.text({ label: 'Warning', multiline: true }), { label: 'Important safety information', itemLabel: (p) => p.value }),
+        nhsSlug: fields.text({ label: 'NHS website address (end part only)', description: 'For example "sertraline". Leave empty if the NHS has no page.' }),
+        bnfSlug: fields.text({ label: 'BNF address (end part only)', description: 'Leave empty if it matches the web address.' }),
+        lastReviewed: fields.date({ label: 'Last checked for accuracy', validation: { isRequired: true } }),
       },
     }),
     products: collection({
@@ -232,8 +406,10 @@ export default config({
         url: fields.url({ label: 'Affiliate link', validation: { isRequired: true } }),
         conditions: fields.multiselect({
           label: 'Show on these condition pages',
-          options: [{ label: 'Fibromyalgia', value: 'fibromyalgia' }],
-          defaultValue: ['fibromyalgia'],
+          options: guideOptions
+            .filter((o) => o.value.startsWith('conditions/'))
+            .map((o) => ({ label: o.label.replace('Condition: ', ''), value: o.value.split('/').pop() as string })),
+          defaultValue: [],
         }),
         active: fields.checkbox({ label: 'Show on the site', defaultValue: true }),
       },
@@ -254,10 +430,22 @@ export default config({
           multiline: true,
         }),
         donationUrl: fields.url({ label: 'Donation link (Ko-fi or Stripe)' }),
+        facebookGroupUrl: fields.url({
+          label: 'Facebook community group link',
+          description: 'Shown in the footer. Leave empty to hide it.',
+        }),
+        discordUrl: fields.url({
+          label: 'Discord invite link',
+          description: 'Use an invite that never expires. Leave empty to hide Discord across the site.',
+        }),
         icoNumber: fields.text({ label: 'ICO registration number (if registered)' }),
         analyticsToken: fields.text({
           label: 'Cloudflare Web Analytics token',
           description: 'Leave empty to switch analytics off. The token is shown in the Cloudflare dashboard under Web Analytics.',
+        }),
+        gaMeasurementId: fields.text({
+          label: 'Google Analytics measurement ID',
+          description: 'Starts with G-. Google Analytics only loads after a visitor accepts statistics cookies. Leave empty to switch it off.',
         }),
       },
     }),

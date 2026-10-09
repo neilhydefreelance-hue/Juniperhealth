@@ -1,0 +1,48 @@
+name: Naproxen
+alsoKnownAs:
+- Naprosyn
+- Feminax Ultra
+- Vimovo (with esomeprazole)
+medicineType: Non-steroidal anti-inflammatory drug (NSAID)
+forms:
+- tablets
+- gastro-resistant tablets
+- liquid
+availability: pharmacy
+summary: Naproxen is an anti-inflammatory painkiller. It eases pain and swelling in arthritis, gout, back pain and period pain.
+conditions:
+- musculoskeletal/osteoarthritis
+- musculoskeletal/rheumatoid-arthritis
+- musculoskeletal/gout
+- musculoskeletal/back-and-neck-pain
+- kidney-bladder-and-reproductive/endometriosis
+- musculoskeletal/costochondritis
+uses:
+- Arthritis, including osteoarthritis and rheumatoid arthritis
+- Gout attacks
+- Back pain, sprains and strains
+- Period pain (available from pharmacies for this)
+offLabel:
+- Migraine
+- Chest wall pain such as costochondritis
+howItWorks: Naproxen blocks enzymes called COX that make prostaglandins, which cause pain, swelling and fever.
+sideEffectsCommon:
+- indigestion
+- stomach pain
+- feeling sick
+- headache
+- feeling dizzy or sleepy
+sideEffectsSerious:
+- black or bloody poo, or vomiting blood
+- chest pain or signs of a heart attack or stroke. Call 999
+- swollen ankles, breathlessness or peeing less
+- yellowing of the skin or eyes
+stopping: Naproxen does not cause withdrawal symptoms. Pain and swelling may return.
+stoppingRisk: low
+warnings:
+- Use the lowest dose for the shortest time.
+- Your doctor may give you a stomach-protecting medicine such as omeprazole.
+- Not suitable with other anti-inflammatory painkillers or with blood thinners unless your doctor advises it.
+- It can make asthma worse in some people.
+nhsSlug: naproxen
+lastReviewed: '2026-10-05'

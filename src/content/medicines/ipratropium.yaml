@@ -1,0 +1,36 @@
+name: Ipratropium
+alsoKnownAs:
+- Atrovent
+- Rinatec
+medicineType: Short-acting antimuscarinic bronchodilator
+forms:
+- inhaler
+- nebuliser liquid
+- nasal spray
+summary: Ipratropium opens the airways. It is used as an inhaler or nebuliser for COPD and asthma, and as a nasal spray for a runny nose.
+conditions:
+- respiratory-and-allergy/copd
+- respiratory-and-allergy/asthma
+uses:
+- Relieving breathlessness in COPD
+- Severe asthma attacks, given by nebuliser with salbutamol in hospital
+- A constantly runny nose (rhinitis), as a nasal spray
+offLabel: []
+howItWorks: Ipratropium blocks acetylcholine receptors on the muscles around the airways. This relaxes the muscles so the airways open up and breathing is easier, for about 6 hours.
+sideEffectsCommon:
+- dry mouth
+- headache
+- cough
+- constipation
+- a dry nose or nosebleeds (nasal spray)
+sideEffectsSerious:
+- wheezing that gets worse straight after using it
+- eye pain, blurred vision or seeing halos, especially if the nebuliser mist gets in your eyes
+- being unable to pee
+stopping: Ipratropium does not cause withdrawal symptoms. Breathing symptoms may get worse.
+stoppingRisk: low
+warnings:
+- Use a mouthpiece rather than a mask with a nebuliser if you have glaucoma.
+- It is not usually used at the same time as tiotropium or other long-acting antimuscarinic inhalers.
+nhsSlug: ipratropium-inhalers
+lastReviewed: '2026-10-05'

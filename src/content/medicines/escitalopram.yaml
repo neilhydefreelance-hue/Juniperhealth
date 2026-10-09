@@ -1,0 +1,44 @@
+name: Escitalopram
+alsoKnownAs:
+- Cipralex
+medicineType: SSRI antidepressant
+forms:
+- tablets
+- drops
+summary: Escitalopram is an SSRI antidepressant. It treats depression and several anxiety conditions.
+conditions:
+- mental-health/depression
+- mental-health/generalised-anxiety-disorder
+- mental-health/ocd
+- mental-health/mixed-anxiety-and-depression
+uses:
+- Depression
+- Generalised anxiety disorder
+- Panic disorder
+- Social anxiety disorder
+- Obsessive compulsive disorder (OCD)
+offLabel:
+- Post-traumatic stress disorder (PTSD)
+- Hot flushes during the menopause
+howItWorks: Escitalopram is a selective serotonin reuptake inhibitor (SSRI). It increases serotonin in the brain, which helps regulate mood and anxiety. It usually takes 4 to 6 weeks to work fully.
+sideEffectsCommon:
+- feeling sick
+- headache
+- sweating
+- feeling sleepy or having trouble sleeping
+- feeling anxious when you first start
+- sexual problems
+- yawning
+sideEffectsSerious:
+- thoughts of harming yourself or ending your life
+- a fast or irregular heartbeat, or fainting
+- unusual bleeding or bruising
+- signs of serotonin syndrome, such as confusion, high temperature, sweating and muscle twitching
+stopping: Stopping suddenly can cause withdrawal symptoms, such as dizziness, electric shock feelings, irritability, feeling sick and sleep problems. Your doctor will reduce the dose slowly, often over weeks or months.
+stoppingRisk: medium
+warnings:
+- It can affect heart rhythm. Tell your doctor if you have heart problems.
+- Do not take it with St John's wort.
+- Tell your doctor straight away if you feel worse or have thoughts of suicide.
+nhsSlug: escitalopram
+lastReviewed: '2026-10-05'

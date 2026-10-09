@@ -1,0 +1,36 @@
+name: Pramipexole
+alsoKnownAs:
+- Mirapexin
+- Oprymea
+medicineType: Dopamine agonist
+forms:
+- tablets
+- prolonged-release tablets
+summary: Pramipexole treats Parkinson's disease and restless legs syndrome.
+conditions:
+- brain-nerves-and-senses/parkinsons
+uses:
+- Parkinson's disease, on its own or with levodopa
+- Moderate to severe restless legs syndrome
+offLabel:
+- Treatment-resistant depression, under a specialist
+howItWorks: Pramipexole copies the action of dopamine, a chemical messenger that is low in Parkinson's disease. It stimulates dopamine receptors in the brain, improving movement.
+sideEffectsCommon:
+- feeling sick
+- feeling sleepy
+- dizziness
+- swollen legs
+- uncontrolled movements (dyskinesia)
+- seeing things that are not there
+sideEffectsSerious:
+- falling asleep suddenly without warning
+- urges you cannot control, such as gambling, shopping, eating or a high sex drive
+- confusion, paranoia or feeling agitated
+stopping: Stopping suddenly can cause a serious reaction similar to neuroleptic malignant syndrome, with high temperature, stiff muscles and confusion. People can also get dopamine agonist withdrawal, with anxiety, low mood, pain and cravings. The dose must be reduced slowly by your specialist.
+stoppingRisk: high
+warnings:
+- Tell your doctor straight away about any new urges or behaviour changes. Family members may notice them first.
+- Do not drive if you get sudden sleepiness.
+- In restless legs syndrome, symptoms can get worse over time (augmentation). Tell your doctor if this happens.
+nhsSlug: pramipexole
+lastReviewed: '2026-10-05'

@@ -1,0 +1,42 @@
+name: Mesalazine
+alsoKnownAs:
+- Asacol
+- Octasa
+- Pentasa
+- Mezavant
+- Salofalk
+medicineType: Aminosalicylate (anti-inflammatory for the bowel)
+forms:
+- gastro-resistant tablets
+- granules
+- suppositories
+- enemas
+- foam
+summary: Mesalazine reduces inflammation in the bowel. It is the main treatment for mild to moderate ulcerative colitis.
+conditions:
+- digestive-and-liver/crohns-and-colitis
+uses:
+- Treating flares of mild to moderate ulcerative colitis
+- Keeping ulcerative colitis in remission
+- Crohn's disease affecting the bowel (some brands)
+offLabel:
+- Microscopic colitis
+howItWorks: Mesalazine works directly on the lining of the bowel. It reduces the production of chemicals that cause inflammation, helping the bowel heal and stay settled.
+sideEffectsCommon:
+- headache
+- feeling sick
+- stomach pain
+- diarrhoea
+- rash
+sideEffectsSerious:
+- unexplained bruising, bleeding, sore throat or high temperature
+- worsening bloody diarrhoea with stomach pain and a high temperature
+- chest pain or breathlessness, which can be signs of inflammation around the heart
+- peeing less, or dark pee
+stopping: Mesalazine does not cause withdrawal symptoms, but stopping can lead to a flare-up of colitis. It is often taken long term.
+stoppingRisk: medium
+warnings:
+- You need regular blood tests to check your kidneys and blood count.
+- Stay on the same brand, as different brands release the medicine in different parts of the bowel.
+nhsSlug: mesalazine
+lastReviewed: '2026-10-05'

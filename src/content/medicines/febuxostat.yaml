@@ -1,0 +1,32 @@
+name: Febuxostat
+alsoKnownAs:
+- Adenuric
+medicineType: Urate-lowering medicine
+forms:
+- tablets
+summary: Febuxostat lowers the level of uric acid in the blood to prevent gout attacks. It is usually used when allopurinol is not suitable.
+conditions:
+- musculoskeletal/gout
+uses:
+- Preventing gout attacks in people with long-term high uric acid
+- Preventing high uric acid during some cancer treatments
+offLabel: []
+howItWorks: Febuxostat blocks the enzyme xanthine oxidase, which makes uric acid. Lower levels stop new crystals forming and allow existing ones to dissolve.
+sideEffectsCommon:
+- more gout flares when you first start
+- diarrhoea
+- headache
+- feeling sick
+- rash
+- abnormal liver tests
+sideEffectsSerious:
+- chest pain or signs of a heart attack or stroke. Call 999
+- a skin rash with blisters, peeling or a high temperature
+- yellowing of the skin or eyes
+stopping: Febuxostat does not cause withdrawal symptoms, but gout attacks are likely to return. It is usually taken long term.
+stoppingRisk: low
+warnings:
+- It is not usually recommended for people with serious heart disease.
+- It must not be taken with azathioprine or mercaptopurine.
+nhsSlug: febuxostat
+lastReviewed: '2026-10-05'

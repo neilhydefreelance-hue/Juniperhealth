@@ -1,0 +1,32 @@
+name: Memantine
+alsoKnownAs:
+- Ebixa
+medicineType: NMDA receptor antagonist (dementia medicine)
+forms:
+- tablets
+- orodispersible tablets
+- liquid
+summary: Memantine treats the symptoms of moderate to severe Alzheimer's disease. It can help with memory, attention and daily activities.
+conditions:
+- brain-nerves-and-senses/dementia
+uses:
+- Moderate to severe dementia caused by Alzheimer's disease, on its own or with donepezil, galantamine or rivastigmine
+offLabel:
+- Dementia with Lewy bodies, and agitation in dementia, under a specialist
+howItWorks: In Alzheimer's disease, too much of a chemical messenger called glutamate can damage nerve cells. Memantine blocks NMDA receptors, which protects the cells from too much glutamate.
+sideEffectsCommon:
+- headache
+- feeling dizzy or sleepy
+- constipation
+- high blood pressure
+- shortness of breath
+sideEffectsSerious:
+- fits
+- seeing or hearing things that are not there, or sudden confusion
+- severe stomach pain
+stopping: Memantine does not cause classic withdrawal, but symptoms may get worse after stopping. The decision should be made with the memory clinic or GP.
+stoppingRisk: medium
+warnings:
+- People with kidney problems may need a lower dose.
+nhsSlug: memantine
+lastReviewed: '2026-10-05'

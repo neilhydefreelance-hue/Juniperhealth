@@ -1,0 +1,37 @@
+name: Clopidogrel
+alsoKnownAs:
+- Plavix
+medicineType: Antiplatelet medicine
+forms:
+- tablets
+summary: Clopidogrel stops platelets in your blood sticking together. It lowers the risk of heart attacks and strokes in people with heart or circulation disease.
+conditions:
+- heart-and-circulation/stroke
+- heart-and-circulation/coronary-heart-disease
+- heart-and-circulation/peripheral-arterial-disease
+uses:
+- Preventing strokes after an ischaemic stroke or mini-stroke (TIA)
+- Preventing heart attacks in people with peripheral arterial disease
+- After a heart attack or unstable angina, often with aspirin
+- After having a stent put in a heart artery
+offLabel: []
+howItWorks: Clopidogrel blocks a receptor on platelets called P2Y12. This stops platelets clumping together and forming clots in arteries.
+sideEffectsCommon:
+- bruising more easily
+- nosebleeds
+- bleeding for longer after a cut
+- indigestion
+- diarrhoea
+- stomach pain
+sideEffectsSerious:
+- blood in your pee or poo, or black poo
+- vomiting or coughing up blood
+- a severe headache or sudden weakness. Call 999
+- unexplained bruising with a high temperature and confusion
+stopping: Stopping early, especially within a year of having a stent, can greatly increase the risk of a heart attack or stroke. Never stop without talking to your heart doctor, including before surgery or dental work.
+stoppingRisk: high
+warnings:
+- Tell any doctor or dentist you take it.
+- Some indigestion medicines, such as omeprazole and esomeprazole, can make it work less well. Ask a pharmacist.
+nhsSlug: clopidogrel
+lastReviewed: '2026-10-05'

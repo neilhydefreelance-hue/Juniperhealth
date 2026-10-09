@@ -1,0 +1,30 @@
+name: Rizatriptan
+alsoKnownAs:
+- Maxalt
+medicineType: Triptan (migraine medicine)
+forms:
+- tablets
+- wafers that melt on the tongue
+summary: Rizatriptan treats migraine attacks. It works best when taken as soon as the headache starts.
+conditions:
+- brain-nerves-and-senses/migraine
+uses:
+- Treating migraine attacks, with or without aura
+offLabel: []
+howItWorks: Rizatriptan acts on serotonin receptors around blood vessels and nerves in the head. It narrows widened blood vessels and blocks the release of chemicals that cause migraine pain.
+sideEffectsCommon:
+- feeling sleepy or dizzy
+- tingling
+- a feeling of heaviness or tightness in the chest or throat
+- dry mouth
+- feeling sick
+sideEffectsSerious:
+- chest pain or tightness that is severe or does not go away. Call 999
+- signs of serotonin syndrome, such as confusion, high temperature and muscle twitching
+stopping: Rizatriptan does not cause withdrawal. Taking triptans on 10 or more days a month can cause medication overuse headaches. If so, your GP can help you stop safely.
+stoppingRisk: low
+warnings:
+- Not suitable if you have heart disease, uncontrolled high blood pressure, or have had a stroke.
+- If you take propranolol, you need a lower dose.
+nhsSlug: rizatriptan
+lastReviewed: '2026-10-05'

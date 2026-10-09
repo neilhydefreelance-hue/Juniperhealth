@@ -1,0 +1,32 @@
+name: Teriflunomide
+alsoKnownAs:
+- Aubagio
+medicineType: Disease-modifying therapy for multiple sclerosis
+forms:
+- tablets
+availability: specialist
+summary: Teriflunomide is a once-a-day tablet for relapsing multiple sclerosis.
+conditions:
+- brain-nerves-and-senses/multiple-sclerosis
+uses:
+- Relapsing remitting multiple sclerosis in adults and children aged 10 and over
+offLabel: []
+howItWorks: Teriflunomide blocks an enzyme that fast-dividing immune cells need. This reduces the number of active immune cells that can attack the nerves, lowering the number of relapses.
+sideEffectsCommon:
+- diarrhoea
+- feeling sick
+- hair thinning
+- raised liver enzymes
+- headache
+- tingling
+sideEffectsSerious:
+- yellowing of the skin or eyes, dark pee or pale poo
+- signs of infection, such as a high temperature or sore throat
+- a severe skin rash
+- a new cough or breathlessness
+stopping: Teriflunomide does not cause withdrawal symptoms. It stays in the body for up to 2 years unless an accelerated washout is used. MS activity may return after stopping.
+stoppingRisk: medium
+warnings:
+- You need regular blood tests and blood pressure checks.
+- Avoid pregnancy. If you become pregnant, contact your team straight away for a washout treatment.
+lastReviewed: '2026-10-05'

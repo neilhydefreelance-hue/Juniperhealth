@@ -1,0 +1,35 @@
+name: Edoxaban
+alsoKnownAs:
+- Lixiana
+medicineType: Anticoagulant (blood thinner)
+forms:
+- tablets
+summary: Edoxaban is a once-a-day blood thinner. It lowers the risk of strokes in atrial fibrillation and treats blood clots.
+conditions:
+- heart-and-circulation/atrial-fibrillation
+- heart-and-circulation/stroke
+uses:
+- Preventing strokes and blood clots in atrial fibrillation
+- Treating and preventing deep vein thrombosis (DVT) and pulmonary embolism (PE)
+offLabel: []
+howItWorks: Edoxaban blocks a clotting protein called factor Xa. This slows down how quickly your blood clots, so harmful clots are less likely to form.
+sideEffectsCommon:
+- bruising more easily
+- nosebleeds
+- bleeding gums
+- heavier periods
+- rash
+- anaemia
+sideEffectsSerious:
+- red, pink or brown pee, or red or black poo
+- coughing up or vomiting blood
+- bleeding that will not stop
+- a severe headache, confusion or sudden weakness. Call 999
+stopping: Stopping edoxaban suddenly increases your risk of a stroke or blood clot. Never stop without advice, including before surgery or dental work.
+stoppingRisk: high
+warnings:
+- Carry an anticoagulant alert card.
+- Avoid anti-inflammatory painkillers such as ibuprofen unless your doctor agrees.
+- Get urgent help after a fall or head injury.
+nhsSlug: edoxaban
+lastReviewed: '2026-10-05'
