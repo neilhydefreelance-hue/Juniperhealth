@@ -1,0 +1,86 @@
+---
+/**
+ * Asks before setting Google Analytics cookies, as PECR requires.
+ * Google Analytics only loads after someone presses "Accept". The choice is
+ * kept in local storage (jh-cookie-consent) and can be changed at any time
+ * from the footer or the cookie policy page.
+ */
+import { SITE } from '../data/site';
+const gaId = SITE.gaMeasurementId;
+---
+{gaId && (
+  <section class="cookie-banner" data-cookie-banner hidden aria-labelledby="cookie-banner-title">
+    <h2 id="cookie-banner-title">Can we use cookies to improve our website?</h2>
+    <p>
+      We would like to use Google Analytics cookies to count visits and see which pages help people most. They do not
+      show ads. We will only set them if you say yes. <a href="/cookie-policy/">Read our cookie policy</a>.
+    </p>
+    <div class="cluster">
+      <button type="button" class="btn" data-cookie-accept>Accept statistics cookies</button>
+      <button type="button" class="btn" data-cookie-reject>Reject statistics cookies</button>
+    </div>
+  </section>
+  <script is:inline define:vars={{ gaId }}>
+    (function () {
+      var KEY = 'jh-cookie-consent';
+      var banner = document.querySelector('[data-cookie-banner]');
+      var loaded = false;
+
+      function read() {
+        try { return localStorage.getItem(KEY); } catch (e) { return null; }
+      }
+      function save(v) {
+        try { localStorage.setItem(KEY, v); } catch (e) {}
+      }
+      function load() {
+        if (loaded) return;
+        loaded = true;
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () { window.dataLayer.push(arguments); };
+        window.gtag('js', new Date());
+        window.gtag('config', gaId, { allow_google_signals: false, allow_ad_personalization_signals: false });
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaId;
+        document.head.appendChild(s);
+      }
+      function clearCookies() {
+        window['ga-disable-' + gaId] = true;
+        var host = location.hostname.replace(/^www\./, '');
+        document.cookie.split(';').forEach(function (c) {
+          var name = c.split('=')[0].trim();
+          if (name === '_ga' || name.indexOf('_ga_') === 0) {
+            ['', '; domain=' + host, '; domain=.' + host].forEach(function (d) {
+              document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' + d;
+            });
+          }
+        });
+      }
+      function show() { if (banner) banner.hidden = false; }
+      function hide() { if (banner) banner.hidden = true; }
+
+      window.jhCookies = {
+        get: read,
+        accept: function () { save('yes'); delete window['ga-disable-' + gaId]; load(); hide(); document.dispatchEvent(new Event('jh-cookies')); },
+        reject: function () { save('no'); clearCookies(); hide(); document.dispatchEvent(new Event('jh-cookies')); },
+        open: function () {
+          show();
+          var h = banner && banner.querySelector('h2');
+          if (h) { h.setAttribute('tabindex', '-1'); h.focus(); }
+        },
+      };
+
+      if (banner) {
+        banner.querySelector('[data-cookie-accept]').addEventListener('click', window.jhCookies.accept);
+        banner.querySelector('[data-cookie-reject]').addEventListener('click', window.jhCookies.reject);
+      }
+      document.querySelectorAll('[data-cookie-settings]').forEach(function (b) {
+        b.addEventListener('click', window.jhCookies.open);
+      });
+
+      var choice = read();
+      if (choice === 'yes') load();
+      else if (choice !== 'no') show();
+    })();
+  </script>
+)}

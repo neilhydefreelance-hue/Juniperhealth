@@ -443,6 +443,10 @@ export default config({
           label: 'Cloudflare Web Analytics token',
           description: 'Leave empty to switch analytics off. The token is shown in the Cloudflare dashboard under Web Analytics.',
         }),
+        gaMeasurementId: fields.text({
+          label: 'Google Analytics measurement ID',
+          description: 'Starts with G-. Google Analytics only loads after a visitor accepts statistics cookies. Leave empty to switch it off.',
+        }),
       },
     }),
     rates: singleton({

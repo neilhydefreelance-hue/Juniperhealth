@@ -17,6 +17,7 @@ export const SITE = {
   discordUrl: (settings.discordUrl ?? '').trim(),
   icoNumber: settings.icoNumber.trim(),
   analyticsToken: (settings.analyticsToken ?? '').trim(),
+  gaMeasurementId: (settings.gaMeasurementId ?? '').trim(),
   authorSlug: '/about/neil-hyde/',
   logo: '/images/logo-512.webp',
   ogImage: '/images/og-default.png',
