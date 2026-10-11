@@ -1,7 +1,8 @@
 ---
 /**
  * Asks before setting Google Analytics cookies, as PECR requires.
- * Google Analytics only loads after someone presses "Accept". The choice is
+ * The Google tag is in the page head (BaseLayout) with every consent type
+ * denied. Nothing is measured until someone presses "Accept". The choice is
  * kept in local storage (jh-cookie-consent) and can be changed at any time
  * from the footer or the cookie policy page.
  */
@@ -33,16 +34,10 @@ const gaId = SITE.gaMeasurementId;
         try { localStorage.setItem(KEY, v); } catch (e) {}
       }
       function load() {
-        if (loaded) return;
+        if (loaded || !window.gtag) return;
         loaded = true;
-        window.dataLayer = window.dataLayer || [];
-        window.gtag = function () { window.dataLayer.push(arguments); };
-        window.gtag('js', new Date());
+        window.gtag('consent', 'update', { analytics_storage: 'granted' });
         window.gtag('config', gaId, { allow_google_signals: false, allow_ad_personalization_signals: false });
-        var s = document.createElement('script');
-        s.async = true;
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaId;
-        document.head.appendChild(s);
       }
       function clearCookies() {
         window['ga-disable-' + gaId] = true;
@@ -62,7 +57,7 @@ const gaId = SITE.gaMeasurementId;
       window.jhCookies = {
         get: read,
         accept: function () { save('yes'); delete window['ga-disable-' + gaId]; load(); hide(); document.dispatchEvent(new Event('jh-cookies')); },
-        reject: function () { save('no'); clearCookies(); hide(); document.dispatchEvent(new Event('jh-cookies')); },
+        reject: function () { save('no'); if (window.gtag) window.gtag('consent', 'update', { analytics_storage: 'denied' }); clearCookies(); hide(); document.dispatchEvent(new Event('jh-cookies')); },
         open: function () {
           show();
           var h = banner && banner.querySelector('h2');

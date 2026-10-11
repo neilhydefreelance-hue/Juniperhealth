@@ -77,6 +77,26 @@ const speculation = {
 
     <script type="application/ld+json" set:html={JSON.stringify(graph)} />
     <script type="speculationrules" set:html={JSON.stringify(speculation)} />
+    {SITE.gaMeasurementId && (
+      <>
+        {/* Google tag. Consent Mode starts with everything denied, and nothing is
+            measured until a visitor presses "Accept" (see CookieConsent.astro). */}
+        <script is:inline define:vars={{ gaId: SITE.gaMeasurementId }}>
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = function () { window.dataLayer.push(arguments); };
+          window.gtag('consent', 'default', {
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+            analytics_storage: 'denied',
+          });
+          window.gtag('set', 'ads_data_redaction', true);
+          window.gtag('js', new Date());
+          window.jhGaId = gaId;
+        </script>
+        <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${SITE.gaMeasurementId}`}></script>
+      </>
+    )}
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
