@@ -14,6 +14,9 @@ const ok = (cond, msg) => {
 
 const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || undefined });
 const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
+// Third-party scripts (the Google tag) are stubbed so tests do not depend on the network.
+const stubThirdParty = (c) => c.route(/googletagmanager\.com|google-analytics\.com/, (r) => r.fulfill({ status: 200, contentType: 'text/javascript', body: '' }));
+await stubThirdParty(ctx);
 const page = await ctx.newPage();
 const errors = [];
 page.on('pageerror', (e) => errors.push(e.message));
@@ -157,6 +160,7 @@ ok(errors.length === 0, `No JavaScript errors${errors.length ? ': ' + errors.joi
 const pages = ['/', '/conditions/', '/conditions/metabolic-and-hormonal/', '/conditions/skin/', '/conditions/heart-and-circulation/stroke/', '/conditions/brain-nerves-and-senses/epilepsy/', '/conditions/skin/eczema/benefits-and-work/', '/conditions/mental-health/depression/', '/conditions/respiratory-and-allergy/asthma/', '/conditions/mental-health/', '/support/', '/support/health-costs/', '/support/health-costs/checker/', '/support/leisure/cea-card/', '/conditions/mental-health/bipolar-1/', '/conditions/mental-health/eating-disorders/benefits-and-work/', '/conditions/metabolic-and-hormonal/type-2-diabetes/benefits-and-work/', '/conditions/musculoskeletal/fibromyalgia/', '/conditions/musculoskeletal/costochondritis/', '/benefits/', '/benefits/pip/', '/benefits/pip/activities/', '/benefits/pip/points-checker/', '/benefits/esa/', '/benefits/esa/work-capability-assessment/', '/benefits/universal-credit-health/', '/benefits/adp/', '/privacy-policy/', '/supporter-terms/', '/community/', '/support-us/', '/articles/', '/articles/aids-that-can-help-with-asthma/', '/articles/aids-that-can-help-with-copd/', '/articles/the-timms-review-of-pip-explained/', '/articles/see-your-gp-record-in-the-nhs-app/', '/medicines/', '/resources/', '/medicines/sertraline/', '/medicines/valproate/', '/medicines/insulin-glargine/', '/support/home-and-equipment/', '/contact/', '/cookie-policy/', '/tools/'];
 for (const theme of ['light', 'dark']) {
   const tctx = await browser.newContext({ viewport: { width: 390, height: 844 }, colorScheme: theme });
+  await stubThirdParty(tctx);
   const p = await tctx.newPage();
   for (const path of pages) {
     await p.goto(`${BASE}${path}`);
