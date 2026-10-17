@@ -1,0 +1,45 @@
+name: Diazepam
+alsoKnownAs:
+- Valium
+- Stesolid
+- Diazemuls
+medicineType: Benzodiazepine
+forms:
+- tablets
+- liquid
+- rectal tubes
+- injection
+summary: Diazepam is a benzodiazepine. It is used short term for severe anxiety, muscle spasms, alcohol withdrawal and seizures.
+conditions:
+- mental-health/generalised-anxiety-disorder
+- mental-health/alcohol-dependence
+- brain-nerves-and-senses/epilepsy
+- brain-nerves-and-senses/multiple-sclerosis
+uses:
+- Short-term treatment of severe anxiety
+- Muscle spasms, including spasticity in conditions such as multiple sclerosis or cerebral palsy
+- Alcohol withdrawal
+- Stopping a prolonged seizure (rectal tubes)
+- Before surgery or some medical procedures
+- Short-term help with severe sleep problems
+offLabel:
+- Helping people reduce other benzodiazepines slowly
+howItWorks: Diazepam boosts the effect of a calming chemical messenger in the brain called GABA. This reduces anxiety, relaxes muscles and stops seizures.
+sideEffectsCommon:
+- feeling sleepy
+- tired or unsteady
+- muscle weakness
+- poor memory or concentration
+- headache
+sideEffectsSerious:
+- slow or shallow breathing, or being very hard to wake. Call 999
+- feeling agitated, aggressive, or seeing things that are not there
+- thoughts of harming yourself
+stopping: Diazepam can cause dependence, even after a few weeks. Stopping suddenly after regular use can cause withdrawal symptoms such as anxiety, trouble sleeping, sweating, shaking and, in severe cases, seizures. Your doctor will reduce the dose very slowly, sometimes over many months.
+stoppingRisk: high
+warnings:
+- It is usually only prescribed for 2 to 4 weeks because of the risk of dependence.
+- Never take it with alcohol or opioids, as this can stop your breathing.
+- Do not drive if you feel sleepy. It is illegal to drive with certain levels in your blood unless you take it as prescribed and your driving is not impaired.
+nhsSlug: diazepam
+lastReviewed: '2026-10-05'

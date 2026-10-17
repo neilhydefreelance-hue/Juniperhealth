@@ -18,7 +18,11 @@
 
 ## Every year
 
-- [ ] **April:** update benefit rates in Keystatic under Benefit rates.
+- [ ] **April:** update benefit rates in Keystatic under Benefit rates, and check NHS charges, Carer's Allowance, railcard and card prices on the Disability support pages.
+- [ ] **April:** check the NHS health costs rules (NHSBSA leaflet HC11) and update the NHS health costs check if they change.
+- [ ] **April:** update the ESA and Universal Credit health element amounts written in the ESA and Universal Credit guides (they are in the page text, not the Benefit rates box).
+- [ ] **April, or when PIP rules change:** update the PIP rates in Keystatic, then run `npm run build:guides` to rebuild the PIP form PDF guide (it reads the rates and points automatically) and commit the new PDF.
+- [ ] **Every few months:** check the ESA and Universal Credit "What is changing" page against GOV.UK and the House of Commons Library, as the Work Capability Assessment and PIP changes are still being decided.
 - [ ] **Each page:** check it against its sources and update "Last checked for accuracy".
 - [ ] **Watch for PIP changes** from the Timms Review (due late 2026). If the points or activities change, the PIP self-check needs updating by a developer.
 - [ ] **Legal pages:** review the privacy and cookie policies if anything about the site changes (for example adding adverts, a newsletter or accounts).

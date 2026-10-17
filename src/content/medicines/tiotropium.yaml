@@ -1,0 +1,34 @@
+name: Tiotropium
+alsoKnownAs:
+- Spiriva
+- Braltus
+- Spiolto (with olodaterol)
+medicineType: Long-acting antimuscarinic inhaler (LAMA)
+forms:
+- inhalers
+summary: Tiotropium is a once-a-day inhaler that keeps the airways open. It is used for COPD and some people with asthma.
+conditions:
+- respiratory-and-allergy/copd
+- respiratory-and-allergy/asthma
+uses:
+- Chronic obstructive pulmonary disease (COPD)
+- Asthma, as an add-on to steroid inhalers (Spiriva Respimat)
+offLabel: []
+howItWorks: Tiotropium blocks acetylcholine receptors on the muscles around the airways. This keeps the airways relaxed and open for 24 hours, easing breathlessness.
+sideEffectsCommon:
+- dry mouth
+- constipation
+- cough
+- headache
+- sore throat
+sideEffectsSerious:
+- wheezing that gets worse straight after using the inhaler
+- eye pain, blurred vision or seeing halos
+- being unable to pee
+stopping: Tiotropium does not cause withdrawal symptoms, but breathlessness and flare-ups may increase.
+stoppingRisk: low
+warnings:
+- It is not a reliever. Keep using your reliever inhaler for sudden symptoms.
+- Capsules for the HandiHaler are for inhaling only. Never swallow them.
+nhsSlug: tiotropium-inhalers
+lastReviewed: '2026-10-05'

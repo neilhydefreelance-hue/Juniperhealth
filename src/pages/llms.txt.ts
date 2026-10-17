@@ -5,11 +5,17 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { SITE, TOOLS } from '../data/site';
+import { aToZ } from '../lib/topics';
+import { allArticles } from '../lib/articles';
+import { allMedicines } from '../lib/medicines';
+import { RESOURCES } from '../data/resources';
 
 export const prerender = true;
 
 export const GET: APIRoute = async () => {
-  const [conditions, benefits, pages] = await Promise.all([getCollection('conditions'), getCollection('benefits'), getCollection('pages')]);
+  const [conditions, benefits, support, pages] = await Promise.all([getCollection('conditions'), getCollection('benefits'), getCollection('support'), getCollection('pages')]);
+  const articles = await allArticles();
+  const medicines = await allMedicines();
   const line = (title: string, path: string, desc: string) => `- [${title}](${SITE.url}${path}): ${desc.replace(/\s+/g, ' ').trim()}`;
   const byId = <T extends { id: string }>(a: T, b: T) => a.id.localeCompare(b.id);
   const body = [
@@ -18,10 +24,23 @@ export const GET: APIRoute = async () => {
     `> ${SITE.description} Juniper Health is independent and is not part of the DWP or the NHS. Information is general, not advice. Benefit rates shown are for 2026 to 2027.`,
     '',
     '## Health conditions',
-    ...conditions.sort(byId).map((e) => line(e.data.title, `/conditions/${e.id}/`, e.data.description)),
+    ...conditions.sort((a, b) => aToZ(a.data.title, b.data.title)).map((e) => line(e.data.title, `/conditions/${e.id}/`, e.data.description)),
     '',
     '## Disability benefits (England and Wales)',
     ...benefits.sort(byId).map((e) => line(e.data.title, `/benefits/${e.id}/`, e.data.description)),
+    '',
+    '## Disability support, discounts and concessions (England and Wales)',
+    ...support.sort((a, b) => aToZ(a.data.title, b.data.title)).map((e) => line(e.data.title, `/support/${e.id}/`, e.data.description)),
+    '',
+    '## Medicines (general information, not medical advice)',
+    ...medicines.map((e) => line(e.data.name, `/medicines/${e.id}/`, e.data.summary)),
+    '',
+    '## Free printable resources (PDF)',
+    line('Free printable resources', '/resources/', 'All our free downloadable guides and planners.'),
+    ...RESOURCES.map((r) => line(r.title, r.href, `${r.audience}. ${r.blurb}`)),
+    '',
+    '## Articles',
+    ...articles.map((e) => line(e.data.title, `/articles/${e.id}/`, e.data.description)),
     '',
     '## Free self-checks (run entirely in the browser, no data collected)',
     ...Object.values(TOOLS).map((t) => line(t.name, t.href, t.blurb)),

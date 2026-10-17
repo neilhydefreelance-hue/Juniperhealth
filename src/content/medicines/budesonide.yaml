@@ -1,0 +1,51 @@
+name: Budesonide
+alsoKnownAs:
+- Pulmicort
+- Rhinocort
+- Entocort
+- Budenofalk
+- Cortiment
+- Jorveza
+medicineType: Corticosteroid
+forms:
+- inhalers
+- nebuliser liquid
+- nasal spray
+- capsules
+- tablets
+- foam and enemas
+summary: Budesonide is a steroid. Depending on the form, it treats asthma, hay fever, or inflammation in the bowel such as Crohn's disease and microscopic colitis.
+conditions:
+- respiratory-and-allergy/asthma
+- respiratory-and-allergy/hay-fever
+- digestive-and-liver/crohns-and-colitis
+uses:
+- Preventing asthma symptoms (inhaler or nebuliser)
+- Croup in children (nebuliser)
+- Hay fever and nasal polyps (nasal spray)
+- Crohn's disease affecting the end of the small bowel (capsules)
+- Microscopic colitis and ulcerative colitis (capsules, tablets, foam or enemas)
+- Eosinophilic oesophagitis (dissolving tablets)
+- Autoimmune hepatitis
+offLabel: []
+howItWorks: Budesonide is a corticosteroid that reduces inflammation where it is applied. When swallowed, most of it is broken down by the liver before it reaches the rest of the body, so it causes fewer whole-body side effects than steroids such as prednisolone.
+sideEffectsCommon:
+- hoarse voice or sore throat (inhaler)
+- oral thrush
+- nosebleeds (nasal spray)
+- indigestion
+- headache
+- trouble sleeping
+- mood changes (capsules and tablets)
+sideEffectsSerious:
+- wheezing that gets worse straight after using the inhaler
+- changes in your eyesight
+- signs of infection, such as a high temperature, or chickenpox or shingles if you have not had it before
+stopping: Stopping an inhaler or nasal spray does not cause withdrawal but symptoms can return. If you take budesonide capsules or tablets for a long time, your doctor may reduce the dose slowly, as your body may need time to make its own steroid again.
+stoppingRisk: medium
+warnings:
+- Rinse your mouth after using the inhaler.
+- If you take budesonide tablets or capsules, tell your doctor if you have not had chickenpox and you come into contact with someone who has it.
+- You may be given a steroid card. Carry it with you.
+nhsSlug: budesonide-inhalers
+lastReviewed: '2026-10-05'

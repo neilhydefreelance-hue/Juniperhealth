@@ -1,0 +1,32 @@
+name: Acamprosate
+alsoKnownAs:
+- Acamprosate calcium
+- Campral
+medicineType: Medicine to help prevent relapse in alcohol dependence
+forms:
+- gastro-resistant tablets
+summary: Acamprosate helps people who have stopped drinking alcohol to stay alcohol-free. It works best alongside counselling and support.
+conditions:
+- mental-health/alcohol-dependence
+uses:
+- Helping to keep you alcohol-free after you have stopped drinking (alcohol dependence), usually for up to 6 months or longer
+offLabel: []
+howItWorks: Long-term heavy drinking changes the balance of chemical messengers in the brain, especially glutamate and GABA. Acamprosate is thought to help restore this balance, which can reduce cravings and the urge to drink after you have stopped.
+sideEffectsCommon:
+- diarrhoea
+- feeling sick or being sick
+- stomach pain
+- itching
+- rash
+- changes in sex drive
+sideEffectsSerious:
+- low mood, or thoughts of harming yourself
+- a severe skin rash with blisters or peeling
+stopping: Acamprosate does not cause withdrawal symptoms or dependence. The main risk of stopping early is a higher chance of going back to drinking. Your treatment team will usually advise a set course, often 6 to 12 months.
+stoppingRisk: low
+warnings:
+- It is usually started as soon as possible after alcohol withdrawal (detox) is complete.
+- It is not suitable for people with severe kidney or liver problems.
+- It works best with counselling or a support group.
+nhsSlug: acamprosate
+lastReviewed: '2026-10-05'

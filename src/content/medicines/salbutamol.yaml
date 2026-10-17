@@ -1,0 +1,42 @@
+name: Salbutamol
+alsoKnownAs:
+- Ventolin
+- Salamol
+- Airomir
+- Easyhaler Salbutamol
+medicineType: Short-acting reliever (bronchodilator)
+forms:
+- inhalers
+- nebuliser liquid
+- tablets
+- liquid
+- injection
+summary: Salbutamol is a reliever inhaler. It quickly opens the airways when you are wheezy or breathless with asthma or COPD.
+conditions:
+- respiratory-and-allergy/asthma
+- respiratory-and-allergy/copd
+uses:
+- Quick relief of asthma symptoms and asthma attacks
+- Preventing asthma symptoms caused by exercise
+- Relieving breathlessness in COPD
+offLabel:
+- High potassium levels (nebuliser, in hospital)
+howItWorks: Salbutamol relaxes the muscles around the airways within a few minutes. This opens the airways and makes breathing easier for 4 to 6 hours.
+sideEffectsCommon:
+- shaking hands
+- a fast or pounding heartbeat
+- headache
+- muscle cramps
+- feeling nervous
+sideEffectsSerious:
+- wheezing that gets worse straight after using it
+- chest pain or a very fast or irregular heartbeat
+- if your reliever is not helping, or you need it every 4 hours or more. Get urgent help
+stopping: Salbutamol is used when needed, so there is no withdrawal. Always keep your reliever with you.
+stoppingRisk: low
+warnings:
+- If you need your reliever 3 or more times a week, your asthma is not well controlled. See your GP or nurse.
+- In an asthma attack, follow your action plan and call 999 if it does not help.
+- Using a spacer helps more of the medicine reach your lungs.
+nhsSlug: salbutamol-inhaler
+lastReviewed: '2026-10-05'

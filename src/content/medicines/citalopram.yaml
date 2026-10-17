@@ -1,0 +1,41 @@
+name: Citalopram
+alsoKnownAs:
+- Cipramil
+medicineType: SSRI antidepressant
+forms:
+- tablets
+- drops
+summary: Citalopram is an SSRI antidepressant. It is used for depression and panic disorder.
+conditions:
+- mental-health/depression
+- mental-health/mixed-anxiety-and-depression
+- mental-health/generalised-anxiety-disorder
+uses:
+- Depression
+- Panic disorder
+offLabel:
+- Obsessive compulsive disorder (OCD)
+- Generalised anxiety disorder
+- Hot flushes during the menopause
+howItWorks: Citalopram is a selective serotonin reuptake inhibitor (SSRI). It increases the amount of serotonin, a chemical messenger in the brain that helps regulate mood. It usually takes 4 to 6 weeks to work fully.
+sideEffectsCommon:
+- feeling sick
+- headache
+- sweating
+- dry mouth
+- feeling sleepy or having trouble sleeping
+- feeling anxious when you first start
+- sexual problems
+sideEffectsSerious:
+- thoughts of harming yourself or ending your life
+- a fast or irregular heartbeat, or fainting
+- unusual bleeding or bruising
+- confusion, high temperature, sweating and muscle twitching, which can be signs of serotonin syndrome
+stopping: Stopping suddenly can cause withdrawal (discontinuation) symptoms, such as dizziness, electric shock feelings, irritability, anxiety, feeling sick and vivid dreams. For some people these are mild, but they can be severe or last a long time. Your doctor will reduce the dose slowly, often over several weeks or months.
+stoppingRisk: medium
+warnings:
+- It can affect your heart rhythm at higher doses. Your doctor may check your heart if you have heart problems.
+- Do not take it with St John's wort.
+- Tell your doctor straight away if you feel worse or have thoughts of suicide, especially if you are under 25.
+nhsSlug: citalopram
+lastReviewed: '2026-10-05'
