@@ -19,17 +19,17 @@ const icon = (size) => `<html><head><style>${fonts}
 </style></head><body>${plant}</body></html>`;
 
 const banner = `<html><head><style>${fonts}
-  body { width: 1920px; height: 384px; position: relative; color: #fff; font-family: Atkinson, sans-serif;
+  body { width: 1920px; height: 576px; position: relative; color: #fff; font-family: Atkinson, sans-serif;
     background: linear-gradient(115deg, #8556B8 0%, #5B3494 45%, #2E1A52 100%); }
-  .glow { position: absolute; width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(circle, rgba(242,180,65,.18), transparent 65%); left: -180px; top: -320px; }
+  .glow { position: absolute; width: 900px; height: 900px; border-radius: 50%; background: radial-gradient(circle, rgba(242,180,65,.18), transparent 65%); left: -220px; top: -380px; }
   .plant { position: absolute; color: rgba(255,255,255,.10); stroke-width: 3; }
-  .p1 { width: 420px; height: 420px; right: 60px; top: -10px; }
-  .p2 { width: 260px; height: 260px; left: 90px; bottom: -70px; transform: rotate(-12deg); }
-  .inner { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 1200px; text-align: center; }
-  .eyebrow { font-family: Lexend; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: #F2B441; font-size: 26px; }
-  h1 { font-family: Lexend; font-weight: 700; font-size: 82px; line-height: 1.05; margin: 10px 0 14px; }
-  p { font-size: 32px; color: #EDE4F8; }
-  .url { display: inline-block; margin-top: 18px; background: #F2B441; color: #1E1B26; font-family: Lexend; font-weight: 600; font-size: 26px; padding: 8px 26px; border-radius: 999px; }
+  .p1 { width: 560px; height: 560px; right: 60px; top: 10px; }
+  .p2 { width: 340px; height: 340px; left: 90px; bottom: -80px; transform: rotate(-12deg); }
+  .inner { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 1400px; text-align: center; }
+  .eyebrow { font-family: Lexend; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: #F2B441; font-size: 30px; }
+  h1 { font-family: Lexend; font-weight: 700; font-size: 104px; line-height: 1.05; margin: 14px 0 20px; }
+  p { font-size: 38px; color: #EDE4F8; }
+  .url { display: inline-block; margin-top: 28px; background: #F2B441; color: #1E1B26; font-family: Lexend; font-weight: 600; font-size: 32px; padding: 10px 32px; border-radius: 999px; }
 </style></head><body>
   <div class="glow"></div>
   ${plant.replace('class="plant"', 'class="plant p1"')}
@@ -56,5 +56,6 @@ const shot = async (html, w, h, file) => {
 };
 await shot(icon(256), 256, 256, 'reddit-icon-256.png');
 await shot(icon(512), 512, 512, 'reddit-icon-512.png');
-await shot(banner, 1920, 384, 'reddit-banner-1920x384.png');
+// 10:3, as Reddit asks for.
+await shot(banner, 1920, 576, 'reddit-banner-1920x576.png');
 await browser.close();
