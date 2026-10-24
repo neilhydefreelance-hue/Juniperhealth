@@ -1,0 +1,30 @@
+name: Famotidine
+alsoKnownAs:
+- Pepcid
+medicineType: H2 blocker (antacid medicine)
+forms:
+- tablets
+availability: pharmacy
+summary: Famotidine reduces stomach acid. It is used for heartburn, acid reflux and stomach ulcers.
+conditions:
+- digestive-and-liver/acid-reflux
+uses:
+- Heartburn and acid reflux
+- Healing and preventing stomach and duodenal ulcers
+offLabel:
+- Some allergic conditions, together with an antihistamine
+howItWorks: Famotidine blocks histamine H2 receptors on the stomach lining. Histamine normally tells the stomach to release acid, so blocking it reduces acid.
+sideEffectsCommon:
+- headache
+- dizziness
+- constipation or diarrhoea
+sideEffectsSerious:
+- a fast or irregular heartbeat
+- confusion, especially in older people or people with kidney problems
+- yellowing of the skin or eyes
+stopping: Famotidine does not usually cause withdrawal symptoms. Heartburn may return.
+stoppingRisk: low
+warnings:
+- People with kidney problems may need a lower dose.
+nhsSlug: famotidine
+lastReviewed: '2026-10-05'

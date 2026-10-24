@@ -1,0 +1,34 @@
+name: Natalizumab
+alsoKnownAs:
+- Tysabri
+- Tyruko
+medicineType: Disease-modifying therapy for multiple sclerosis
+forms:
+- drip into a vein (infusion)
+- injection under the skin
+availability: hospital
+summary: Natalizumab is a strong treatment for highly active relapsing multiple sclerosis, given in hospital every 4 to 6 weeks.
+conditions:
+- brain-nerves-and-senses/multiple-sclerosis
+uses:
+- Highly active relapsing remitting multiple sclerosis
+offLabel: []
+howItWorks: Natalizumab is a man-made antibody. It stops immune cells crossing from the blood into the brain and spinal cord, where they would cause inflammation and damage.
+sideEffectsCommon:
+- headache
+- feeling dizzy
+- feeling sick
+- joint pain
+- tiredness
+- urine infections
+- infusion reactions
+sideEffectsSerious:
+- new or worsening weakness, clumsiness, problems with speech, vision, thinking or memory, which can be signs of a rare brain infection called PML
+- signs of a serious infection
+- yellowing of the skin or eyes
+stopping: There are no withdrawal symptoms, but MS activity can return within months of stopping, sometimes strongly. Your team will plan another treatment to start soon after.
+stoppingRisk: medium
+warnings:
+- You will have regular blood tests for the JC virus and MRI scans to check the risk of PML.
+- Carry the patient alert card.
+lastReviewed: '2026-10-05'

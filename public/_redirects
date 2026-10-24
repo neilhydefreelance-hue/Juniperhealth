@@ -1,0 +1,14 @@
+# Conditions moved out of the old "physical" group in September 2026
+/conditions/physical/fibromyalgia/* /conditions/musculoskeletal/fibromyalgia/:splat 301
+/conditions/physical/osteoarthritis/* /conditions/musculoskeletal/osteoarthritis/:splat 301
+/conditions/physical/high-blood-pressure/* /conditions/heart-and-circulation/high-blood-pressure/:splat 301
+/conditions/physical/coronary-heart-disease/* /conditions/heart-and-circulation/coronary-heart-disease/:splat 301
+/conditions/physical/obesity/* /conditions/metabolic-and-hormonal/obesity/:splat 301
+/conditions/physical/type-1-diabetes/* /conditions/metabolic-and-hormonal/type-1-diabetes/:splat 301
+/conditions/physical/type-2-diabetes/* /conditions/metabolic-and-hormonal/type-2-diabetes/:splat 301
+/conditions/physical/hypothyroidism/* /conditions/metabolic-and-hormonal/hypothyroidism/:splat 301
+/conditions/physical/asthma/* /conditions/respiratory-and-allergy/asthma/:splat 301
+/conditions/physical/copd/* /conditions/respiratory-and-allergy/copd/:splat 301
+/conditions/physical/hearing-loss/* /conditions/brain-nerves-and-senses/hearing-loss/:splat 301
+/conditions/physical/migraine/* /conditions/brain-nerves-and-senses/migraine/:splat 301
+/conditions/physical/ /conditions/ 301

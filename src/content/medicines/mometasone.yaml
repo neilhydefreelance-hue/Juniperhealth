@@ -1,0 +1,42 @@
+name: Mometasone
+alsoKnownAs:
+- Elocon
+- Nasonex
+- Asmanex
+medicineType: Corticosteroid
+forms:
+- nasal spray
+- cream
+- ointment
+- scalp lotion
+- inhaler
+availability: pharmacy
+summary: Mometasone is a steroid. It is used as a nasal spray for hay fever and as a cream or ointment for eczema and psoriasis.
+conditions:
+- respiratory-and-allergy/hay-fever
+- skin/eczema
+- skin/psoriasis
+- respiratory-and-allergy/asthma
+uses:
+- Hay fever and nasal allergies (nasal spray)
+- Nasal polyps (nasal spray)
+- Eczema, psoriasis and other inflamed skin conditions (cream, ointment, lotion)
+- Preventing asthma (inhaler)
+offLabel: []
+howItWorks: Mometasone is a strong corticosteroid that reduces inflammation, swelling and itching in the nose, skin or airways.
+sideEffectsCommon:
+- nosebleeds
+- a dry or sore nose
+- headache
+- burning or stinging on the skin
+- thinning of the skin with long use
+sideEffectsSerious:
+- changes in your eyesight
+- signs of skin infection, such as weeping or crusting
+stopping: Stopping does not usually cause withdrawal. Skin may flare up if a strong cream is stopped suddenly after long use, so your doctor may suggest using it less often before stopping.
+stoppingRisk: low
+warnings:
+- Use the smallest amount of cream for the shortest time.
+- Do not use the cream on the face unless advised.
+nhsSlug: mometasone-nasal-spray
+lastReviewed: '2026-10-05'

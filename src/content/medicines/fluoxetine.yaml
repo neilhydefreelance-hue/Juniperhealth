@@ -1,0 +1,43 @@
+name: Fluoxetine
+alsoKnownAs:
+- Prozac
+medicineType: SSRI antidepressant
+forms:
+- capsules
+- tablets
+- liquid
+summary: Fluoxetine is an SSRI antidepressant. It is used for depression, OCD and bulimia, and is the main antidepressant used for young people.
+conditions:
+- mental-health/depression
+- mental-health/ocd
+- mental-health/eating-disorders
+- mental-health/mixed-anxiety-and-depression
+uses:
+- Depression, including in children and young people aged 8 and over
+- Obsessive compulsive disorder (OCD)
+- Bulimia nervosa
+offLabel:
+- Panic disorder and other anxiety conditions
+- Premenstrual dysphoric disorder (severe PMS)
+howItWorks: Fluoxetine is a selective serotonin reuptake inhibitor (SSRI). It increases serotonin in the brain, which helps regulate mood, anxiety and eating behaviour. It can take 4 to 6 weeks to work.
+sideEffectsCommon:
+- feeling sick
+- headache
+- trouble sleeping
+- feeling anxious or restless
+- diarrhoea
+- loss of appetite
+- sexual problems
+sideEffectsSerious:
+- thoughts of harming yourself or ending your life
+- unusual bleeding or bruising
+- a fast or irregular heartbeat
+- signs of serotonin syndrome, such as confusion, high temperature and muscle twitching
+stopping: Fluoxetine stays in the body for a long time, so withdrawal symptoms are usually milder and come on more slowly than with other SSRIs. They can still happen. Your doctor will plan how to stop.
+stoppingRisk: medium
+warnings:
+- Tell your doctor straight away if you feel worse or have thoughts of suicide, especially if you are under 25.
+- It interacts with many medicines because it stays in the body for weeks.
+- Do not take it with St John's wort.
+nhsSlug: fluoxetine-prozac
+lastReviewed: '2026-10-05'

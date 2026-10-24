@@ -1,13 +1,37 @@
 ---
 import { render, type CollectionEntry } from 'astro:content';
 import TopicLayout from '../../layouts/TopicLayout.astro';
-import { topicPaths } from '../../lib/topics';
+import CategoryLayout from '../../layouts/CategoryLayout.astro';
+import { categories, hubs, topicPaths } from '../../lib/topics';
 
-export const getStaticPaths = () => topicPaths('conditions');
 type Entry = CollectionEntry<'conditions'>;
-const { entry, hub, pages } = Astro.props as { entry: Entry; hub: Entry; pages: Entry[] };
-const { Content, headings } = await render(entry);
+
+export async function getStaticPaths() {
+  const cats = await categories();
+  const categoryPaths = await Promise.all(
+    cats.map(async (category) => ({
+      params: { slug: category.id },
+      props: { entry: category, conditions: await hubs('conditions', category.id) },
+    })),
+  );
+  return [...categoryPaths, ...(await topicPaths('conditions'))];
+}
+
+const props = Astro.props as {
+  entry: Entry;
+  hub?: Entry;
+  pages?: Entry[];
+  category?: Entry;
+  conditions?: Entry[];
+};
+const { Content, headings } = await render(props.entry);
 ---
-<TopicLayout kind="conditions" entry={entry} hub={hub} pages={pages} headings={headings}>
-  <Content />
-</TopicLayout>
+{props.conditions ? (
+  <CategoryLayout entry={props.entry} conditions={props.conditions}>
+    <Content />
+  </CategoryLayout>
+) : (
+  <TopicLayout kind="conditions" entry={props.entry} hub={props.hub!} pages={props.pages!} category={props.category} headings={headings}>
+    <Content />
+  </TopicLayout>
+)}

@@ -1,0 +1,38 @@
+name: Hydroxychloroquine
+alsoKnownAs:
+- Plaquenil
+- Quinoric
+medicineType: Disease-modifying antirheumatic drug (DMARD)
+forms:
+- tablets
+availability: specialist
+summary: Hydroxychloroquine calms the immune system. It is used for rheumatoid arthritis, lupus and some skin conditions.
+conditions:
+- musculoskeletal/rheumatoid-arthritis
+uses:
+- Rheumatoid arthritis
+- Lupus (systemic and discoid)
+- Skin conditions made worse by sunlight
+offLabel:
+- Sjogren's syndrome
+- Some other inflammatory skin and joint conditions
+howItWorks: Hydroxychloroquine changes how some immune cells work, which reduces inflammation and the immune system's attack on the body. It takes 2 to 3 months to work fully.
+sideEffectsCommon:
+- feeling sick
+- stomach pain
+- diarrhoea
+- headache
+- skin rash
+- changes in skin colour
+sideEffectsSerious:
+- changes in your eyesight, such as blurring or difficulty reading. Stop and contact your doctor
+- signs of low blood sugar, such as shaking, sweating and confusion
+- muscle weakness
+- a severe skin rash with blisters
+stopping: Hydroxychloroquine does not cause withdrawal symptoms, but your condition may flare up within weeks or months.
+stoppingRisk: medium
+warnings:
+- It can damage the retina at the back of the eye with long-term use. You need regular eye checks after 5 years, or sooner if you are at higher risk.
+- Keep it away from children. Even a small number of tablets can be dangerous.
+nhsSlug: hydroxychloroquine
+lastReviewed: '2026-10-05'

@@ -1,0 +1,45 @@
+name: Sertraline
+alsoKnownAs:
+- Lustral
+medicineType: SSRI antidepressant
+forms:
+- tablets
+- liquid
+summary: Sertraline is one of the most widely used antidepressants in the UK. It treats depression and several anxiety conditions.
+conditions:
+- mental-health/depression
+- mental-health/generalised-anxiety-disorder
+- mental-health/ocd
+- mental-health/ptsd
+- mental-health/mixed-anxiety-and-depression
+uses:
+- Depression
+- Panic disorder and social anxiety disorder
+- Obsessive compulsive disorder (OCD), including in children aged 6 and over
+- Post-traumatic stress disorder (PTSD)
+offLabel:
+- Generalised anxiety disorder (it is commonly recommended first)
+- Premature ejaculation
+- Premenstrual dysphoric disorder (severe PMS)
+howItWorks: Sertraline is a selective serotonin reuptake inhibitor (SSRI). It increases the level of serotonin in the brain, which helps regulate mood and anxiety. It usually takes 4 to 6 weeks to work fully.
+sideEffectsCommon:
+- feeling sick
+- diarrhoea or indigestion
+- headache
+- trouble sleeping or feeling sleepy
+- dizziness
+- sweating
+- feeling anxious when you first start
+- sexual problems
+sideEffectsSerious:
+- thoughts of harming yourself or ending your life
+- unusual bleeding or bruising, or blood in your pee or poo
+- signs of serotonin syndrome, such as confusion, high temperature, sweating and muscle twitching
+stopping: Stopping suddenly can cause withdrawal (discontinuation) symptoms, such as dizziness, electric shock feelings, irritability, anxiety, feeling sick and vivid dreams. For most people they are mild, but some people have severe or long-lasting symptoms. Your doctor will reduce the dose slowly, often over weeks or months.
+stoppingRisk: medium
+warnings:
+- Tell your doctor straight away if you feel worse or have thoughts of suicide, especially in the first few weeks or if you are under 25.
+- Do not take it with St John's wort.
+- It is often the preferred SSRI in pregnancy and breastfeeding, but always discuss this with your doctor.
+nhsSlug: sertraline
+lastReviewed: '2026-10-05'

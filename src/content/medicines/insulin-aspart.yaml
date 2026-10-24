@@ -1,0 +1,39 @@
+name: Insulin aspart
+alsoKnownAs:
+- NovoRapid
+- Fiasp
+- Trurapi
+- NovoMix 30 (mixed insulin)
+medicineType: Rapid-acting insulin
+forms:
+- injection pens
+- cartridges
+- vials
+- insulin pumps
+summary: Insulin aspart is a fast-acting insulin. It is injected around mealtimes to stop blood sugar rising after eating.
+conditions:
+- metabolic-and-hormonal/type-1-diabetes
+- metabolic-and-hormonal/type-2-diabetes
+uses:
+- Type 1 diabetes, as mealtime insulin or in an insulin pump
+- Type 2 diabetes, when other treatments are not enough
+- Diabetes in pregnancy
+offLabel: []
+howItWorks: Insulin is a hormone that moves sugar from the blood into the body's cells. Insulin aspart starts working within about 10 to 20 minutes and lasts 3 to 5 hours, covering the rise in blood sugar after a meal.
+sideEffectsCommon:
+- low blood sugar (hypos)
+- redness or swelling where you inject
+- lumps under the skin if you inject in the same place
+- weight gain
+sideEffectsSerious:
+- a severe hypo with confusion, fits or passing out. Someone should give glucagon or call 999
+- swelling of the face or trouble breathing
+stopping: If you have type 1 diabetes, stopping insulin is dangerous and can cause diabetic ketoacidosis (DKA) within hours. Never stop insulin, even if you are unwell and not eating. Follow your sick day rules and get advice.
+stoppingRisk: high
+warnings:
+- Learn the signs of a hypo and always carry fast-acting sugar.
+- Rotate where you inject to avoid lumps.
+- Tell the DVLA if you take insulin and drive.
+nhsSlug: insulin
+bnfSlug: insulin-aspart
+lastReviewed: '2026-10-05'

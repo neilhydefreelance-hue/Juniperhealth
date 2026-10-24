@@ -1,0 +1,48 @@
+name: Valproate (sodium valproate)
+alsoKnownAs:
+- Epilim
+- Episenta
+- Epival
+- Depakote (valproic acid)
+medicineType: Anticonvulsant and mood stabiliser
+forms:
+- tablets
+- modified-release tablets
+- granules
+- liquid
+- injection
+availability: specialist
+summary: Valproate is a very effective epilepsy medicine and is also used for bipolar disorder. It carries a serious risk to unborn babies, so strict safety rules apply.
+conditions:
+- brain-nerves-and-senses/epilepsy
+- mental-health/bipolar-1
+- brain-nerves-and-senses/migraine
+uses:
+- Epilepsy, including generalised and focal seizures
+- Mania in bipolar disorder (valproic acid)
+offLabel:
+- Preventing migraine
+- Preventing bipolar episodes long term
+howItWorks: Valproate increases the level of GABA, a calming chemical messenger in the brain, and blocks some channels on nerve cells. This calms overactive brain activity.
+sideEffectsCommon:
+- feeling sick
+- weight gain
+- hair thinning or changes in hair
+- shaking
+- stomach pain
+- feeling sleepy
+sideEffectsSerious:
+- yellowing of the skin or eyes, being sick, feeling very unwell or more seizures, which can be signs of liver damage
+- severe stomach pain, which can be a sign of an inflamed pancreas
+- unusual bruising or bleeding
+- confusion or drowsiness
+- thoughts of harming yourself
+stopping: Stopping suddenly can cause seizures or a return of bipolar symptoms. Never stop it on your own, even if you find out you are pregnant. Speak to your doctor urgently instead.
+stoppingRisk: high
+warnings:
+- Valproate can seriously harm an unborn baby, causing birth defects and problems with learning and development. Women and girls who could get pregnant must be on the Pregnancy Prevention Programme and use highly effective contraception.
+- Men starting valproate are now usually reviewed by two specialists, because of a possible risk to children they father.
+- You need regular blood tests in the first few months.
+nhsSlug: sodium-valproate
+bnfSlug: sodium-valproate
+lastReviewed: '2026-10-05'

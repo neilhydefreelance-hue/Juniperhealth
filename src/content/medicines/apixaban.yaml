@@ -1,0 +1,36 @@
+name: Apixaban
+alsoKnownAs:
+- Eliquis
+medicineType: Anticoagulant (blood thinner)
+forms:
+- tablets
+summary: Apixaban is a blood thinner. It lowers the risk of harmful blood clots that can cause a stroke or block a vein.
+conditions:
+- heart-and-circulation/atrial-fibrillation
+- heart-and-circulation/stroke
+uses:
+- Preventing strokes and blood clots in people with atrial fibrillation
+- Treating and preventing deep vein thrombosis (DVT) and pulmonary embolism (PE)
+- Preventing blood clots after a hip or knee replacement
+offLabel: []
+howItWorks: Apixaban blocks a clotting protein in the blood called factor Xa. This makes your blood take longer to clot, which lowers the chance of a clot forming.
+sideEffectsCommon:
+- bruising more easily
+- nosebleeds
+- bleeding gums
+- heavier periods
+- feeling sick
+sideEffectsSerious:
+- red, pink or brown pee, or red or black poo
+- coughing up or vomiting blood
+- bleeding that will not stop
+- a severe headache, confusion or sudden weakness, which can be signs of bleeding in the brain. Call 999
+stopping: Stopping apixaban suddenly greatly increases your risk of a stroke or blood clot. Never stop it without talking to your doctor, including before surgery or dental work.
+stoppingRisk: high
+warnings:
+- Carry an anticoagulant alert card.
+- Tell any doctor, dentist or pharmacist that you take it.
+- Do not take anti-inflammatory painkillers such as ibuprofen or aspirin unless your doctor says so.
+- Get urgent help after a fall or head injury, even if you feel fine.
+nhsSlug: apixaban
+lastReviewed: '2026-10-05'

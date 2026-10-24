@@ -1,0 +1,31 @@
+name: Rasagiline
+alsoKnownAs:
+- Azilect
+medicineType: MAO-B inhibitor (Parkinson's medicine)
+forms:
+- tablets
+availability: specialist
+summary: Rasagiline is a once-a-day tablet for Parkinson's disease. It can be used on its own early on, or with levodopa.
+conditions:
+- brain-nerves-and-senses/parkinsons
+uses:
+- Parkinson's disease, on its own or with levodopa to reduce "wearing off"
+offLabel: []
+howItWorks: Rasagiline blocks an enzyme called monoamine oxidase B, which breaks down dopamine in the brain. More dopamine is available, which improves movement.
+sideEffectsCommon:
+- headache
+- flu-like symptoms
+- joint pain
+- indigestion
+- low mood
+- uncontrolled movements when taken with levodopa
+sideEffectsSerious:
+- urges you cannot control, such as gambling or shopping
+- seeing or hearing things that are not there
+- a new or changing mole
+stopping: Rasagiline does not usually cause severe withdrawal, but Parkinson's symptoms may get worse. Talk to your specialist before stopping.
+stoppingRisk: medium
+warnings:
+- It interacts with some antidepressants, painkillers such as tramadol, and cough and cold remedies. Always check with a pharmacist.
+- Have regular skin checks.
+lastReviewed: '2026-10-05'

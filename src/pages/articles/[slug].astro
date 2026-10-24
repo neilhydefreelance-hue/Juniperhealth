@@ -1,0 +1,96 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Faqs from '../../components/Faqs.astro';
+import Community from '../../components/Community.astro';
+import { allArticles, topicLinks, formatDate, type Article } from '../../lib/articles';
+import { abs, AUTHOR_ID, ORG_ID, SITE_ID, faqPage, iso } from '../../lib/schema';
+import { SITE } from '../../data/site';
+
+export async function getStaticPaths() {
+  const articles = await allArticles();
+  return articles.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props as { entry: Article };
+const { Content } = await render(entry);
+const d = entry.data;
+const url = `/articles/${entry.id}/`;
+const topics = await topicLinks(d.topics);
+
+const schema: Record<string, unknown>[] = [
+  {
+    '@type': 'Article',
+    '@id': `${abs(url)}#article`,
+    headline: d.title,
+    description: d.description,
+    url: abs(url),
+    mainEntityOfPage: { '@id': `${abs(url)}#webpage` },
+    isPartOf: { '@id': SITE_ID },
+    inLanguage: SITE.lang,
+    datePublished: iso(d.published),
+    dateModified: iso(d.lastReviewed),
+    author: { '@id': AUTHOR_ID },
+    publisher: { '@id': ORG_ID },
+    ...(topics.length ? { about: topics.map((t) => ({ '@type': 'Thing', name: t.name, url: abs(t.href) })) } : {}),
+    ...(d.sources.length ? { citation: d.sources.map((s) => ({ '@type': 'CreativeWork', name: s.label, url: s.url })) } : {}),
+  },
+  { '@type': 'WebPage', '@id': `${abs(url)}#webpage`, url: abs(url), name: d.title, isPartOf: { '@id': SITE_ID }, breadcrumb: { '@id': `${abs(url)}#breadcrumb` } },
+  ...(d.faqs.length ? [faqPage(url, d.faqs)] : []),
+];
+---
+<BaseLayout
+  title={d.title}
+  description={d.description}
+  crumbs={[{ name: 'Home', href: '/' }, { name: 'Articles', href: '/articles/' }, { name: d.title, href: url }]}
+  schema={schema}
+  ogType="article"
+  modified={d.lastReviewed}
+>
+  <div class="wrap" style="padding-bottom:var(--space-3xl)">
+    <article style="max-width:var(--measure)">
+      <header class="page-head">
+        <h1>{d.title}</h1>
+        {d.summary && <p class="lead">{d.summary}</p>}
+        <p class="article-meta small">
+          By <a href={SITE.authorSlug}>{SITE.ownerName}</a> &middot; Published {formatDate(d.published)}{iso(d.lastReviewed) !== iso(d.published) && <> &middot; Checked {formatDate(d.lastReviewed)}</>}
+        </p>
+        {topics.length > 0 && (
+          <ul class="topic-chips" aria-label="Related guides">
+            {topics.map((t) => <li><a href={t.href}>{t.name} guide</a></li>)}
+          </ul>
+        )}
+      </header>
+
+      <div class="prose">
+        <Content />
+      </div>
+
+      <Faqs faqs={d.faqs} />
+
+      {d.sources.length > 0 && (
+        <section class="sources" aria-labelledby="sources">
+          <h2 id="sources">Sources we used</h2>
+          <ul>
+            {d.sources.map((s) => <li><a href={s.url} rel="noopener">{s.label}</a></li>)}
+          </ul>
+        </section>
+      )}
+
+      {topics.length > 0 && (
+        <section aria-labelledby="related" style="margin-top:var(--space-2xl)">
+          <h2 id="related">Related guides</h2>
+          <ul>
+            {topics.map((t) => <li><a href={t.href}>{t.name}</a></li>)}
+          </ul>
+        </section>
+      )}
+
+      <Community />
+
+      <aside class="callout" style="margin-top:var(--space-xl)">
+        <p class="small">This article is general information, not medical advice. Always talk to your GP, nurse or pharmacist about your own care. {d.containsAds && <>Items marked "Ad" are affiliate links. Read <a href="/affiliate-disclosure/">how we make money</a>.</>}</p>
+      </aside>
+    </article>
+  </div>
+</BaseLayout>

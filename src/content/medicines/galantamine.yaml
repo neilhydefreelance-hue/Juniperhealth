@@ -1,0 +1,33 @@
+name: Galantamine
+alsoKnownAs:
+- Reminyl
+medicineType: Acetylcholinesterase inhibitor (dementia medicine)
+forms:
+- tablets
+- modified-release capsules
+- liquid
+summary: Galantamine treats the symptoms of mild to moderate Alzheimer's disease. It can help memory and daily function for a time.
+conditions:
+- brain-nerves-and-senses/dementia
+uses:
+- Mild to moderate dementia caused by Alzheimer's disease
+offLabel:
+- Dementia with mixed causes, under a specialist
+howItWorks: Galantamine stops the breakdown of acetylcholine, a chemical messenger important for memory and learning. It also boosts the response of nerve cells to acetylcholine.
+sideEffectsCommon:
+- feeling sick or being sick
+- loss of appetite and weight loss
+- headache
+- dizziness
+- feeling tired
+- a slow heartbeat
+sideEffectsSerious:
+- fainting or a very slow heartbeat
+- black or bloody poo, or vomiting blood
+- a skin rash with blisters
+stopping: Galantamine does not cause classic withdrawal, but memory and daily skills may get worse after stopping. If treatment stops for more than a few days, it must be restarted at a low dose.
+stoppingRisk: medium
+warnings:
+- Drink plenty of fluids, especially if sick.
+- Take it with food to reduce feeling sick.
+lastReviewed: '2026-10-05'

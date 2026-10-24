@@ -1,0 +1,45 @@
+name: Propranolol
+alsoKnownAs:
+- Inderal
+- Bedranol
+medicineType: Beta blocker
+forms:
+- tablets
+- modified-release capsules
+- liquid
+summary: Propranolol is a beta blocker. It is used for high blood pressure and heart conditions, and to prevent migraines and ease the physical symptoms of anxiety.
+conditions:
+- brain-nerves-and-senses/migraine
+- heart-and-circulation/high-blood-pressure
+- heart-and-circulation/atrial-fibrillation
+- mental-health/generalised-anxiety-disorder
+uses:
+- Preventing migraines
+- Physical symptoms of anxiety, such as a pounding heart and shaking
+- High blood pressure and angina
+- Irregular heartbeats
+- Shaking (essential tremor)
+- Overactive thyroid symptoms
+- Preventing bleeding from varicose veins in liver disease
+offLabel:
+- Performance anxiety
+- Large birthmarks (infantile haemangiomas), as a special liquid
+howItWorks: Propranolol blocks the effects of adrenaline and noradrenaline on the heart and blood vessels. It slows the heart rate and reduces physical symptoms of stress such as shaking and palpitations.
+sideEffectsCommon:
+- feeling tired
+- cold hands and feet
+- trouble sleeping or nightmares
+- feeling sick
+- dizziness
+sideEffectsSerious:
+- wheezing or breathlessness
+- a very slow heartbeat, fainting or feeling faint
+- low mood
+stopping: Stopping suddenly can cause a fast heartbeat, anxiety and, in people with heart disease, worsening angina or a heart attack. Your doctor will reduce the dose slowly.
+stoppingRisk: high
+warnings:
+- Not suitable for most people with asthma.
+- It can hide signs of low blood sugar if you have diabetes.
+- It is very dangerous in overdose. Tell your doctor if you have thoughts of self-harm, so they can prescribe safely.
+nhsSlug: propranolol
+lastReviewed: '2026-10-05'

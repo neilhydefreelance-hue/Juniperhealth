@@ -1,0 +1,31 @@
+name: Bimatoprost
+alsoKnownAs:
+- Lumigan
+- Ganfort (with timolol)
+medicineType: Prostaglandin eye drops
+forms:
+- eye drops
+summary: Bimatoprost eye drops lower the pressure inside the eye. They are used to treat glaucoma and help protect your sight.
+conditions:
+- brain-nerves-and-senses/glaucoma
+uses:
+- Open-angle glaucoma
+- High pressure in the eye (ocular hypertension)
+offLabel: []
+howItWorks: Bimatoprost is similar to natural chemicals called prostaglandins. It helps fluid drain out of the eye more easily, which lowers the pressure inside the eye.
+sideEffectsCommon:
+- red or itchy eyes
+- longer
+- darker eyelashes
+- darkening of the skin around the eye
+- a gradual darkening of the coloured part of the eye (iris)
+sideEffectsSerious:
+- eye pain, swelling or a sudden change in vision
+stopping: Bimatoprost does not cause withdrawal symptoms, but the pressure in your eye will rise again within days. Untreated glaucoma can cause permanent loss of sight.
+stoppingRisk: medium
+warnings:
+- Use it once a day, usually in the evening.
+- Remove contact lenses before using the drops and wait 15 minutes before putting them back in.
+- Changes to iris colour can be permanent.
+nhsSlug: bimatoprost
+lastReviewed: '2026-10-05'

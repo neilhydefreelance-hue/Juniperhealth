@@ -1,0 +1,33 @@
+name: Indapamide
+alsoKnownAs:
+- Natrilix
+- Tensaid
+medicineType: Thiazide-like diuretic (water tablet)
+forms:
+- tablets
+- modified-release tablets
+summary: Indapamide is a water tablet used to lower blood pressure. It is often used as a first or second choice treatment.
+conditions:
+- heart-and-circulation/high-blood-pressure
+- heart-and-circulation/stroke
+uses:
+- High blood pressure
+offLabel: []
+howItWorks: Indapamide helps the kidneys remove salt and water and relaxes blood vessels. Together, these lower blood pressure.
+sideEffectsCommon:
+- low potassium
+- needing to pee more
+- headache
+- feeling dizzy
+- skin rash
+sideEffectsSerious:
+- muscle cramps, weakness, confusion or an irregular heartbeat, which can be signs of low potassium or sodium
+- fainting
+- a severe skin rash
+stopping: It does not cause withdrawal symptoms, but blood pressure will rise again.
+stoppingRisk: low
+warnings:
+- You need regular blood tests to check potassium and sodium levels.
+- It can make gout worse.
+nhsSlug: indapamide
+lastReviewed: '2026-10-05'
