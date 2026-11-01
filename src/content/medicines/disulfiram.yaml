@@ -1,0 +1,32 @@
+name: Disulfiram
+alsoKnownAs:
+- Antabuse
+medicineType: Alcohol deterrent
+forms:
+- tablets
+availability: specialist
+summary: Disulfiram helps people stay alcohol-free by causing a very unpleasant reaction if they drink alcohol.
+conditions:
+- mental-health/alcohol-dependence
+uses:
+- Helping to prevent relapse in alcohol dependence, alongside support and counselling
+offLabel: []
+howItWorks: Disulfiram blocks an enzyme the body uses to break down alcohol. If you drink, a substance called acetaldehyde builds up, causing flushing, a pounding heart, feeling sick, headache and breathing difficulty. Knowing this will happen helps many people avoid drinking.
+sideEffectsCommon:
+- feeling sleepy or tired
+- bad breath or an unusual taste
+- feeling sick
+- reduced sex drive
+sideEffectsSerious:
+- yellowing of the skin or eyes, dark pee or pale poo
+- numbness, tingling or weakness in your hands or feet
+- changes in your mood or behaviour
+stopping: Disulfiram does not cause withdrawal symptoms. Its effects last for up to 2 weeks after your last dose, so you must still avoid alcohol for at least a week after stopping.
+stoppingRisk: low
+warnings:
+- Do not take it until at least 24 hours after your last drink.
+- Avoid all alcohol, including in food, mouthwash, some medicines and toiletries.
+- Drinking a lot of alcohol while taking it can be dangerous.
+- Carry a card saying you take disulfiram.
+nhsSlug: disulfiram
+lastReviewed: '2026-10-05'

@@ -1,0 +1,38 @@
+name: Mirtazapine
+alsoKnownAs:
+- Zispin
+medicineType: Antidepressant (NaSSA)
+forms:
+- tablets
+- orodispersible tablets
+- liquid
+summary: Mirtazapine is an antidepressant. It can also help with sleep and appetite, which is useful for some people with depression.
+conditions:
+- mental-health/depression
+- mental-health/mixed-anxiety-and-depression
+uses:
+- Depression
+offLabel:
+- Anxiety
+- Sleep problems linked to depression
+- Poor appetite and weight loss in older people
+howItWorks: Mirtazapine blocks certain receptors in the brain, which increases the release of serotonin and noradrenaline. It also blocks histamine, which is why it causes sleepiness and increased appetite.
+sideEffectsCommon:
+- feeling sleepy in the first few weeks
+- increased appetite and weight gain
+- dry mouth
+- headache
+- dizziness
+sideEffectsSerious:
+- a high temperature, sore throat or mouth ulcers, which can be signs of a low white blood cell count
+- thoughts of harming yourself
+- yellowing of the skin or eyes
+- a severe skin rash
+stopping: Stopping suddenly can cause withdrawal symptoms such as dizziness, anxiety, feeling sick, headache and trouble sleeping. Your doctor will reduce the dose slowly.
+stoppingRisk: medium
+warnings:
+- It is usually taken at bedtime.
+- Lower doses can be more sedating than higher doses.
+- Avoid alcohol.
+nhsSlug: mirtazapine
+lastReviewed: '2026-10-05'

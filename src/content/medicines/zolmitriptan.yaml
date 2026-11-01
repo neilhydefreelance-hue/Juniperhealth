@@ -1,0 +1,32 @@
+name: Zolmitriptan
+alsoKnownAs:
+- Zomig
+medicineType: Triptan (migraine medicine)
+forms:
+- tablets
+- orodispersible tablets
+- nasal spray
+summary: Zolmitriptan treats migraine and cluster headache attacks. A nasal spray is available for fast relief.
+conditions:
+- brain-nerves-and-senses/migraine
+uses:
+- Treating migraine attacks
+- Treating cluster headache attacks (nasal spray)
+offLabel: []
+howItWorks: Zolmitriptan acts on serotonin receptors around blood vessels and nerves in the head, narrowing the blood vessels and blocking pain signals.
+sideEffectsCommon:
+- feeling sleepy or dizzy
+- tingling
+- tightness in the chest or throat
+- dry mouth
+- feeling sick
+- an unusual taste (nasal spray)
+sideEffectsSerious:
+- severe chest pain or tightness that does not go away. Call 999
+- signs of serotonin syndrome
+stopping: Zolmitriptan does not cause withdrawal. Using triptans on 10 or more days a month can cause medication overuse headaches.
+stoppingRisk: low
+warnings:
+- Not suitable if you have heart disease, uncontrolled high blood pressure or have had a stroke.
+nhsSlug: zolmitriptan
+lastReviewed: '2026-10-05'

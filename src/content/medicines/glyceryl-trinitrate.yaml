@@ -1,0 +1,39 @@
+name: Glyceryl trinitrate (GTN)
+alsoKnownAs:
+- GTN spray
+- Nitrolingual
+- Glytrin
+- Rectogesic
+- Transiderm-Nitro
+medicineType: Nitrate
+forms:
+- spray under the tongue
+- tablets under the tongue
+- patches
+- ointment
+- injection
+summary: GTN quickly widens blood vessels. A spray or tablet under the tongue relieves angina chest pain within minutes.
+conditions:
+- heart-and-circulation/coronary-heart-disease
+uses:
+- Relieving angina attacks, or preventing one before exercise (spray or tablets)
+- Preventing angina (patches)
+- Anal fissure (ointment)
+offLabel: []
+howItWorks: GTN releases nitric oxide, which relaxes and widens blood vessels. This lowers the work the heart has to do and improves blood flow to the heart muscle, easing chest pain.
+sideEffectsCommon:
+- headache
+- flushing
+- feeling dizzy or light-headed when standing up
+sideEffectsSerious:
+- fainting
+- chest pain that does not go away after 2 doses
+stopping: The spray or tablets are only used when needed. Patches should not be stopped suddenly, as angina may get worse. Ask your doctor before stopping.
+stoppingRisk: medium
+warnings:
+- Sit down before using it, as it can make you feel faint.
+- If chest pain has not gone 5 minutes after the second dose, call 999.
+- Never take it with medicines for erection problems such as sildenafil, as blood pressure can fall dangerously.
+nhsSlug: glyceryl-trinitrate-gtn
+bnfSlug: glyceryl-trinitrate
+lastReviewed: '2026-10-05'

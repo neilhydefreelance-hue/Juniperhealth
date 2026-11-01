@@ -1,0 +1,44 @@
+name: Diltiazem
+alsoKnownAs:
+- Tildiem
+- Adizem
+- Slozem
+- Zemtard
+- Anoheal
+medicineType: Calcium channel blocker
+forms:
+- tablets
+- modified-release tablets and capsules
+- ointment
+summary: Diltiazem relaxes blood vessels and slows the heart. It is used for angina and high blood pressure, and as an ointment for anal fissures.
+conditions:
+- heart-and-circulation/coronary-heart-disease
+- heart-and-circulation/high-blood-pressure
+- heart-and-circulation/atrial-fibrillation
+uses:
+- Preventing angina
+- High blood pressure (some long-acting forms)
+- Anal fissure (ointment)
+offLabel:
+- Controlling heart rate in atrial fibrillation
+- Raynaud's phenomenon
+howItWorks: Diltiazem blocks calcium from entering muscle cells in the heart and blood vessel walls. This widens the blood vessels and slows the heart, lowering blood pressure and the heart's need for oxygen.
+sideEffectsCommon:
+- swollen ankles
+- headache
+- flushing
+- feeling dizzy or tired
+- a slow heartbeat
+- constipation
+sideEffectsSerious:
+- a very slow heartbeat, fainting or feeling faint
+- breathlessness or swollen ankles that get worse
+- a skin rash with blisters or peeling
+stopping: Stopping suddenly can make angina worse. Your doctor may reduce the dose gradually.
+stoppingRisk: medium
+warnings:
+- Different brands of long-acting diltiazem release the medicine differently. Stay on the same brand.
+- It interacts with many medicines, including some statins and beta blockers.
+- Avoid grapefruit juice.
+nhsSlug: diltiazem
+lastReviewed: '2026-10-05'

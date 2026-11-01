@@ -1,0 +1,35 @@
+name: Amlodipine
+alsoKnownAs:
+- Istin
+medicineType: Calcium channel blocker
+forms:
+- tablets
+- liquid
+summary: Amlodipine is a common medicine for high blood pressure. It is also used to prevent chest pain caused by angina.
+conditions:
+- heart-and-circulation/high-blood-pressure
+- heart-and-circulation/coronary-heart-disease
+uses:
+- High blood pressure
+- Preventing angina (chest pain caused by heart disease)
+offLabel:
+- Raynaud's phenomenon (cold, painful fingers and toes)
+howItWorks: Amlodipine blocks calcium from entering the muscle cells in the walls of blood vessels. This relaxes and widens the blood vessels, so blood flows more easily and blood pressure falls.
+sideEffectsCommon:
+- swollen ankles
+- headache
+- flushing
+- feeling dizzy
+- feeling tired
+- palpitations
+sideEffectsSerious:
+- chest pain that is new or worse
+- yellowing of the skin or eyes
+- severe stomach pain
+stopping: Amlodipine does not usually cause withdrawal symptoms, but your blood pressure is likely to rise again. Stopping suddenly can sometimes make angina worse.
+stoppingRisk: medium
+warnings:
+- Avoid large amounts of grapefruit juice, which can increase its effects.
+- Swollen ankles are common. Tell your doctor if this bothers you.
+nhsSlug: amlodipine
+lastReviewed: '2026-10-05'

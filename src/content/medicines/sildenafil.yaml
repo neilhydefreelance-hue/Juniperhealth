@@ -1,0 +1,40 @@
+name: Sildenafil
+alsoKnownAs:
+- Viagra
+- Viagra Connect
+- Revatio
+medicineType: PDE5 inhibitor
+forms:
+- tablets
+- chewable tablets
+- liquid
+- injection
+availability: pharmacy
+summary: Sildenafil treats erection problems. A different dose (Revatio) treats high blood pressure in the lungs.
+conditions: []
+uses:
+- Erectile dysfunction (some strengths available from pharmacies)
+- Pulmonary arterial hypertension (high blood pressure in the lungs) (Revatio)
+offLabel:
+- Raynaud's phenomenon, under a specialist
+howItWorks: Sildenafil blocks an enzyme called PDE5. This relaxes blood vessels in the penis so more blood can flow in when you are sexually aroused. In the lungs, it relaxes blood vessels and lowers pressure.
+sideEffectsCommon:
+- headache
+- flushing
+- indigestion
+- a blocked nose
+- dizziness
+- changes in colour vision
+sideEffectsSerious:
+- an erection lasting more than 2 hours. Go to A and E
+- chest pain during or after sex. Stop and call 999
+- sudden loss of vision or hearing
+stopping: Sildenafil does not cause withdrawal symptoms. For lung blood pressure, do not stop without talking to your specialist.
+stoppingRisk: low
+warnings:
+- Never take it with nitrates such as GTN spray or isosorbide, or recreational "poppers". Blood pressure can drop dangerously.
+- Not suitable if your doctor has advised against sex because of heart problems.
+- Erection problems can be an early sign of heart disease or diabetes. See a GP.
+nhsSlug: sildenafil
+bnfSlug: sildenafil
+lastReviewed: '2026-10-05'

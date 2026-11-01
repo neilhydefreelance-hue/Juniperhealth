@@ -1,0 +1,39 @@
+name: Topiramate
+alsoKnownAs:
+- Topamax
+medicineType: Anticonvulsant
+forms:
+- tablets
+- capsules that can be sprinkled on food
+summary: Topiramate treats epilepsy and is used to prevent migraines. It has strict pregnancy safety rules.
+conditions:
+- brain-nerves-and-senses/epilepsy
+- brain-nerves-and-senses/migraine
+uses:
+- Epilepsy
+- Preventing migraine in adults
+offLabel:
+- Weight loss and binge eating, under a specialist
+- Alcohol dependence (limited evidence)
+howItWorks: Topiramate calms nerve activity in several ways, including blocking sodium channels and boosting the calming messenger GABA. This makes seizures and migraines less likely.
+sideEffectsCommon:
+- tingling in hands and feet
+- tiredness
+- loss of appetite and weight loss
+- memory or concentration problems
+- trouble finding words
+- dizziness
+- low mood
+sideEffectsSerious:
+- sudden eye pain, redness or blurred vision. Get help straight away
+- not sweating and getting very hot
+- pain in your side or back, or blood in your pee, which can be kidney stones
+- thoughts of harming yourself
+stopping: Stopping suddenly can cause seizures, even if you take it for migraine. Your doctor will reduce the dose slowly.
+stoppingRisk: high
+warnings:
+- It can harm an unborn baby. If you could get pregnant, you must follow a pregnancy prevention programme and use highly effective contraception.
+- It can make hormonal contraception less effective.
+- Drink plenty of water.
+nhsSlug: topiramate
+lastReviewed: '2026-10-05'

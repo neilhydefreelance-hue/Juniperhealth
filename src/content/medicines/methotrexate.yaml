@@ -1,0 +1,47 @@
+name: Methotrexate
+alsoKnownAs:
+- Metoject
+- Nordimet
+- Maxtrex
+medicineType: Disease-modifying antirheumatic drug (DMARD) and chemotherapy
+forms:
+- tablets
+- liquid
+- injection pens
+availability: specialist
+summary: Methotrexate calms the immune system. It is taken once a week for rheumatoid arthritis, psoriasis and Crohn's disease. Higher doses treat some cancers.
+conditions:
+- musculoskeletal/rheumatoid-arthritis
+- skin/psoriasis
+- digestive-and-liver/crohns-and-colitis
+uses:
+- Rheumatoid arthritis and juvenile idiopathic arthritis
+- Severe psoriasis and psoriatic arthritis
+- Crohn's disease
+- Some cancers, at much higher doses
+offLabel:
+- Severe eczema, vasculitis, lupus and other inflammatory conditions
+- Ending an ectopic pregnancy
+howItWorks: At low weekly doses, methotrexate reduces the activity of immune cells that cause inflammation. At high doses, it stops cancer cells from dividing.
+sideEffectsCommon:
+- feeling sick
+- mouth ulcers
+- tiredness
+- hair thinning
+- headache
+- more infections
+sideEffectsSerious:
+- a new dry cough or breathlessness
+- signs of infection, such as a high temperature or sore throat
+- unusual bruising or bleeding
+- yellowing of the skin or eyes
+stopping: Methotrexate does not cause withdrawal symptoms, but your condition may flare up after stopping.
+stoppingRisk: medium
+warnings:
+- It is taken ONCE A WEEK, on the same day each week. Taking it daily by mistake can be fatal.
+- You will usually also take folic acid on a different day.
+- You need regular blood tests.
+- Avoid pregnancy. Both men and women should use contraception during treatment and for 6 months after.
+- Limit alcohol. Avoid trimethoprim and co-trimoxazole antibiotics.
+nhsSlug: methotrexate
+lastReviewed: '2026-10-05'

@@ -1,0 +1,34 @@
+name: Liraglutide
+alsoKnownAs:
+- Victoza
+- Saxenda
+medicineType: GLP-1 receptor agonist
+forms:
+- injection pens
+summary: Liraglutide is a daily injection used for type 2 diabetes (Victoza) and, at a higher dose, for weight management (Saxenda).
+conditions:
+- metabolic-and-hormonal/type-2-diabetes
+- metabolic-and-hormonal/obesity
+uses:
+- Type 2 diabetes (Victoza)
+- Weight management in people living with obesity, alongside diet and activity (Saxenda)
+offLabel: []
+howItWorks: Liraglutide copies a natural gut hormone called GLP-1. It helps the pancreas release insulin when blood sugar is high, slows emptying of the stomach and reduces appetite.
+sideEffectsCommon:
+- feeling sick
+- diarrhoea or constipation
+- being sick
+- indigestion
+- loss of appetite
+- headache
+sideEffectsSerious:
+- severe stomach pain that may spread to your back, with or without being sick, which can be a sign of an inflamed pancreas
+- pain in the upper right tummy, a high temperature or yellow skin, which can be gallstones
+- signs of dehydration from ongoing sickness or diarrhoea
+stopping: Liraglutide does not cause withdrawal symptoms. Blood sugar may rise, and appetite and weight often return after stopping.
+stoppingRisk: low
+warnings:
+- Do not use it if you are pregnant or trying to get pregnant.
+- Only use medicines prescribed by a doctor or registered pharmacy. Fake weight-loss pens are sold online.
+nhsSlug: liraglutide
+lastReviewed: '2026-10-05'

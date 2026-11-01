@@ -1,0 +1,42 @@
+name: Methylphenidate
+alsoKnownAs:
+- Ritalin
+- Concerta XL
+- Equasym XL
+- Medikinet
+- Xaggitin XL
+- Delmosart
+medicineType: Stimulant (ADHD medicine)
+forms:
+- tablets
+- modified-release tablets
+- modified-release capsules
+availability: specialist
+summary: Methylphenidate is the most common medicine for ADHD. It helps with concentration, impulsiveness and hyperactivity.
+conditions:
+- mental-health/adhd
+uses:
+- ADHD in children aged 6 and over, young people and adults
+offLabel:
+- Narcolepsy
+howItWorks: Methylphenidate stops dopamine and noradrenaline being taken back into nerve cells, so more is available in the brain. This improves attention and self-control.
+sideEffectsCommon:
+- loss of appetite
+- trouble sleeping
+- headache
+- stomach ache
+- feeling anxious or irritable
+- a fast heartbeat
+sideEffectsSerious:
+- chest pain, fainting or a very fast or irregular heartbeat
+- seeing or hearing things that are not there
+- new tics or twitches
+- thoughts of harming yourself
+stopping: There is no dangerous withdrawal, but some people feel tired, low or irritable for a few days after stopping. ADHD symptoms will return. Some people have planned breaks, such as during school holidays, with their specialist's agreement.
+stoppingRisk: medium
+warnings:
+- It is a controlled drug. Keep it safe and never share it.
+- Height, weight, blood pressure and heart rate are checked regularly.
+- Different long-acting brands release the medicine differently. Do not switch without advice.
+nhsSlug: methylphenidate-children
+lastReviewed: '2026-10-05'

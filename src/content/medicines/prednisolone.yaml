@@ -1,0 +1,50 @@
+name: Prednisolone
+alsoKnownAs:
+- Deltacortril
+medicineType: Corticosteroid (steroid tablet)
+forms:
+- tablets
+- soluble tablets
+- liquid
+- eye drops
+- suppositories
+- enemas
+summary: Prednisolone is a steroid. It reduces inflammation and calms the immune system in many conditions, from asthma attacks to arthritis flares.
+conditions:
+- respiratory-and-allergy/asthma
+- respiratory-and-allergy/copd
+- digestive-and-liver/crohns-and-colitis
+- musculoskeletal/rheumatoid-arthritis
+- skin/eczema
+- brain-nerves-and-senses/multiple-sclerosis
+uses:
+- Asthma attacks and COPD flare-ups
+- Flares of Crohn's disease and ulcerative colitis
+- Rheumatoid arthritis, polymyalgia rheumatica and giant cell arteritis
+- Severe allergic reactions and skin conditions
+- Lupus, vasculitis and other autoimmune conditions
+- MS relapses
+- Some cancers and after organ transplants
+offLabel:
+- Bell's palsy
+howItWorks: Prednisolone is a man-made version of cortisol, a hormone made by your adrenal glands. At higher doses, it strongly reduces inflammation and the activity of the immune system.
+sideEffectsCommon:
+- increased appetite and weight gain
+- trouble sleeping
+- mood changes
+- indigestion
+- raised blood sugar
+- more infections
+sideEffectsSerious:
+- feeling very low, very high or confused, or thoughts of harming yourself
+- signs of a serious infection
+- black or bloody poo, or vomiting blood
+- very high blood sugar, with thirst and needing to pee a lot
+stopping: If you have taken prednisolone for more than 3 weeks, or high doses, your body stops making enough of its own steroid. Stopping suddenly can cause adrenal crisis, which can be life-threatening. Symptoms include severe tiredness, dizziness, being sick and low blood pressure. The dose must be reduced slowly.
+stoppingRisk: high
+warnings:
+- Carry a steroid emergency card if you take it for more than 3 weeks.
+- Long-term use can thin bones, raise blood pressure and blood sugar and cause cataracts.
+- Avoid contact with chickenpox and shingles if you have not had chickenpox.
+nhsSlug: prednisolone
+lastReviewed: '2026-10-05'
