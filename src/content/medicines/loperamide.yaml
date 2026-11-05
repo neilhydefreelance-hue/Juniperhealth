@@ -1,0 +1,40 @@
+name: Loperamide
+alsoKnownAs:
+- Imodium
+- Diocalm
+medicineType: Antidiarrhoeal medicine
+forms:
+- capsules
+- tablets
+- orodispersible tablets
+- liquid
+availability: shop
+summary: Loperamide slows down the bowel to treat diarrhoea. It can also help with long-term diarrhoea in conditions such as IBS.
+conditions:
+- digestive-and-liver/ibs
+- digestive-and-liver/crohns-and-colitis
+uses:
+- Short-term diarrhoea
+- Long-term diarrhoea, including in IBS with diarrhoea (IBS-D)
+- Reducing output from an ileostomy
+offLabel: []
+howItWorks: Loperamide acts on opioid receptors in the gut wall. It slows the movement of the bowel so more water is absorbed, making poo firmer and less frequent. It does not act on the brain at normal doses.
+sideEffectsCommon:
+- constipation
+- wind
+- stomach cramps
+- feeling sick
+- headache
+- dizziness
+sideEffectsSerious:
+- a swollen, painful tummy, especially with a high temperature
+- a fast or irregular heartbeat or fainting, which can happen with very high doses
+stopping: Loperamide does not cause withdrawal at normal doses. Diarrhoea may come back.
+stoppingRisk: low
+warnings:
+- Do not use it if you have blood in your poo or a high temperature, unless a doctor advises it.
+- Do not use it during a flare of ulcerative colitis unless your specialist agrees.
+- Never take more than the recommended dose. Very high doses can cause serious heart problems.
+- Not for children under 12 unless prescribed.
+nhsSlug: loperamide
+lastReviewed: '2026-10-05'

@@ -1,0 +1,34 @@
+name: Dimethyl fumarate
+alsoKnownAs:
+- Tecfidera
+- Skilarence
+medicineType: Disease-modifying therapy for multiple sclerosis
+forms:
+- gastro-resistant capsules
+- tablets
+availability: specialist
+summary: Dimethyl fumarate is a tablet treatment for relapsing multiple sclerosis. A version called Skilarence is used for psoriasis.
+conditions:
+- brain-nerves-and-senses/multiple-sclerosis
+- skin/psoriasis
+uses:
+- Relapsing remitting multiple sclerosis (Tecfidera)
+- Moderate to severe plaque psoriasis (Skilarence)
+offLabel: []
+howItWorks: Dimethyl fumarate is thought to calm the immune system and protect nerve cells from damage. In MS, this reduces the number of relapses. In psoriasis, it reduces inflammation in the skin.
+sideEffectsCommon:
+- flushing (red or hot itchy skin)
+- diarrhoea
+- stomach pain
+- feeling sick
+- low white blood cell count
+sideEffectsSerious:
+- signs of infection, such as a high temperature
+- new or worsening weakness, clumsiness, changes in vision, thinking or memory, which can rarely be signs of a brain infection called PML
+- yellowing of the skin or eyes
+stopping: It does not cause withdrawal symptoms, but stopping can allow MS relapses or psoriasis to return.
+stoppingRisk: medium
+warnings:
+- You need regular blood tests to check your white blood cells.
+- Taking it with food can reduce flushing and stomach side effects.
+lastReviewed: '2026-10-05'

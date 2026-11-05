@@ -1,0 +1,35 @@
+name: Fluvoxamine
+alsoKnownAs:
+- Faverin
+medicineType: SSRI antidepressant
+forms:
+- tablets
+summary: Fluvoxamine is an SSRI antidepressant, used for depression and obsessive compulsive disorder (OCD).
+conditions:
+- mental-health/ocd
+- mental-health/depression
+uses:
+- Depression
+- Obsessive compulsive disorder (OCD)
+offLabel:
+- Social anxiety and panic disorder
+howItWorks: Fluvoxamine is a selective serotonin reuptake inhibitor (SSRI). It increases serotonin in the brain, which can reduce obsessive thoughts and improve mood.
+sideEffectsCommon:
+- feeling sick
+- feeling sleepy or having trouble sleeping
+- headache
+- dry mouth
+- sweating
+- feeling restless
+- sexual problems
+sideEffectsSerious:
+- thoughts of harming yourself
+- unusual bleeding or bruising
+- fits
+- signs of serotonin syndrome
+stopping: Stopping suddenly can cause withdrawal symptoms such as dizziness, feeling sick, headache, anxiety and electric shock feelings. Your doctor will reduce the dose slowly.
+stoppingRisk: medium
+warnings:
+- It interacts with many medicines, including caffeine, theophylline, warfarin and some antipsychotics. Always check with a pharmacist.
+- Cut down on caffeine, as fluvoxamine can make its effects stronger.
+lastReviewed: '2026-10-05'

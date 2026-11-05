@@ -1,0 +1,45 @@
+name: Venlafaxine
+alsoKnownAs:
+- Efexor XL
+- Vencarm XL
+- Venlalic XL
+medicineType: SNRI antidepressant
+forms:
+- tablets
+- modified-release tablets and capsules
+- liquid
+summary: Venlafaxine is an SNRI antidepressant. It treats depression and anxiety conditions.
+conditions:
+- mental-health/depression
+- mental-health/generalised-anxiety-disorder
+- mental-health/mixed-anxiety-and-depression
+uses:
+- Depression
+- Generalised anxiety disorder
+- Social anxiety disorder and panic disorder
+offLabel:
+- Hot flushes during the menopause or after breast cancer treatment
+- Nerve pain and preventing migraine
+howItWorks: Venlafaxine increases serotonin and, at higher doses, noradrenaline in the brain. These chemical messengers help regulate mood and anxiety.
+sideEffectsCommon:
+- feeling sick
+- headache
+- sweating
+- dry mouth
+- trouble sleeping
+- dizziness
+- constipation
+- sexual problems
+sideEffectsSerious:
+- thoughts of harming yourself or ending your life
+- a fast or irregular heartbeat, or chest pain
+- very high blood pressure, with a severe headache
+- signs of serotonin syndrome
+stopping: Venlafaxine is well known for causing strong withdrawal symptoms, sometimes within hours of a missed dose. They include dizziness, electric shock feelings, feeling sick, sweating, irritability and anxiety. Your doctor will reduce the dose very slowly.
+stoppingRisk: high
+warnings:
+- It can raise blood pressure. Your doctor may check it.
+- It is more dangerous in overdose than SSRIs.
+- Try not to miss doses.
+nhsSlug: venlafaxine
+lastReviewed: '2026-10-05'

@@ -1,0 +1,37 @@
+name: Methadone
+alsoKnownAs:
+- Physeptone
+- Methadose
+medicineType: Opioid
+forms:
+- oral solution
+- tablets
+- injection
+availability: specialist
+summary: Methadone is an opioid used to treat opioid dependence. It is also sometimes used for severe pain.
+conditions:
+- mental-health/drug-dependence
+uses:
+- Opioid dependence, as an opioid substitution treatment
+- Severe pain, under a specialist
+- Cough in terminal illness (linctus, rarely)
+offLabel: []
+howItWorks: Methadone is a long-acting opioid. Taken once a day, it prevents withdrawal and reduces cravings for heroin and other opioids. It also blocks the high from other opioids.
+sideEffectsCommon:
+- constipation
+- sweating
+- feeling sleepy
+- feeling sick
+- dry mouth
+- lower sex drive
+sideEffectsSerious:
+- slow or shallow breathing, or being very sleepy and hard to wake. Call 999
+- a fast or irregular heartbeat, fainting or fits
+stopping: Stopping suddenly causes opioid withdrawal, such as aches, sweating, diarrhoea, anxiety and cravings. Withdrawal from methadone can last longer than from heroin. Stopping also greatly increases the risk of relapse and fatal overdose because tolerance falls quickly. Reducing should be planned with your treatment service.
+stoppingRisk: high
+warnings:
+- Never take it with alcohol, benzodiazepines or other sedatives unless prescribed.
+- It can affect heart rhythm. You may need an ECG.
+- Keep it locked away. A small amount can kill a child or someone who does not usually take opioids.
+- Ask for naloxone, which can reverse an overdose.
+lastReviewed: '2026-10-05'

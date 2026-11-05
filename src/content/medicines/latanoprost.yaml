@@ -1,0 +1,31 @@
+name: Latanoprost
+alsoKnownAs:
+- Xalatan
+- Monopost
+- Xalacom (with timolol)
+medicineType: Prostaglandin eye drops
+forms:
+- eye drops
+summary: Latanoprost eye drops lower pressure inside the eye. They are often the first treatment for glaucoma.
+conditions:
+- brain-nerves-and-senses/glaucoma
+uses:
+- Open-angle glaucoma
+- High pressure in the eye (ocular hypertension)
+offLabel: []
+howItWorks: Latanoprost is similar to natural prostaglandins. It increases the drainage of fluid from the eye, which lowers the pressure inside it.
+sideEffectsCommon:
+- red or irritated eyes
+- longer and darker eyelashes
+- gradual darkening of the coloured part of the eye (iris)
+- darker skin around the eye
+sideEffectsSerious:
+- eye pain, swelling or sudden changes in vision
+stopping: Latanoprost does not cause withdrawal symptoms, but eye pressure will rise again within days. Untreated glaucoma can permanently damage your sight.
+stoppingRisk: medium
+warnings:
+- Use it once a day in the evening.
+- Remove contact lenses before use.
+- Store unopened bottles in the fridge.
+nhsSlug: latanoprost
+lastReviewed: '2026-10-05'

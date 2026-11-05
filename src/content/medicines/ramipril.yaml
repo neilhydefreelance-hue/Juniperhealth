@@ -1,0 +1,44 @@
+name: Ramipril
+alsoKnownAs:
+- Tritace
+medicineType: ACE inhibitor
+forms:
+- capsules
+- tablets
+- liquid
+summary: Ramipril is an ACE inhibitor. It lowers blood pressure and protects the heart and kidneys.
+conditions:
+- heart-and-circulation/high-blood-pressure
+- heart-and-circulation/heart-failure
+- heart-and-circulation/coronary-heart-disease
+- kidney-bladder-and-reproductive/chronic-kidney-disease
+- heart-and-circulation/stroke
+uses:
+- High blood pressure
+- Heart failure
+- After a heart attack
+- Preventing heart attacks and strokes in people at higher risk
+- Kidney disease, especially in people with diabetes
+offLabel: []
+howItWorks: Ramipril blocks an enzyme that makes angiotensin II, a hormone that narrows blood vessels. With less of it, blood vessels relax and widen, blood pressure falls and the heart does not have to work as hard.
+sideEffectsCommon:
+- a dry
+- tickly cough
+- feeling dizzy
+- headache
+- feeling tired
+- feeling sick
+sideEffectsSerious:
+- swelling of the face, lips, tongue or throat (angioedema). Call 999
+- yellowing of the skin or eyes
+- peeing much less than usual
+- a skin rash, or a sore throat with a high temperature
+stopping: Ramipril does not cause withdrawal symptoms, but blood pressure will rise again, and the protection for your heart and kidneys will be lost.
+stoppingRisk: low
+warnings:
+- You need blood tests to check your kidneys and potassium.
+- Pause it if you are being sick or have diarrhoea and cannot drink (sick day rules). Ask your doctor.
+- Not suitable in pregnancy.
+- Avoid potassium supplements and salt substitutes containing potassium.
+nhsSlug: ramipril
+lastReviewed: '2026-10-05'

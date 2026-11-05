@@ -226,7 +226,7 @@ export function scorePip(a: Answers): ResultView {
       tone: 'redirect',
       headline: 'In Scotland, PIP has been replaced by Adult Disability Payment',
       body: '<p>Adult Disability Payment is paid by Social Security Scotland. It uses the same activities and points as PIP, so this self-check can still give you a rough idea, but you apply through Social Security Scotland.</p>',
-      next: [{ label: 'Adult Disability Payment on mygov.scot', href: 'https://www.mygov.scot/adult-disability-payment' }],
+      next: [{ label: 'Our Adult Disability Payment guide', href: '/benefits/adp/' }, { label: 'Adult Disability Payment on mygov.scot', href: 'https://www.mygov.scot/adult-disability-payment' }],
     };
   if (where === 'abroad')
     return {

@@ -1,0 +1,36 @@
+name: Lacosamide
+alsoKnownAs:
+- Vimpat
+medicineType: Anticonvulsant (epilepsy medicine)
+forms:
+- tablets
+- liquid
+- injection
+availability: specialist
+summary: Lacosamide is an epilepsy medicine used to control focal seizures, and sometimes other types of seizure.
+conditions:
+- brain-nerves-and-senses/epilepsy
+uses:
+- Focal seizures, on its own or with other epilepsy medicines
+- Primary generalised tonic-clonic seizures, alongside other medicines
+offLabel:
+- Some types of nerve pain, under a specialist
+howItWorks: Lacosamide slows down the recovery of sodium channels on nerve cells. This calms nerve cells that are firing too often, which helps stop seizures.
+sideEffectsCommon:
+- feeling dizzy
+- headache
+- feeling sick
+- double vision
+- unsteadiness
+- feeling tired
+sideEffectsSerious:
+- a slow or irregular heartbeat, fainting
+- thoughts of harming yourself
+- a severe skin rash
+stopping: Stopping suddenly can cause seizures to return or become more frequent, which can be dangerous. Your doctor will reduce the dose slowly.
+stoppingRisk: high
+warnings:
+- Your doctor may check your heart with an ECG if you have heart problems.
+- Do not drive until you know how it affects you, and follow DVLA rules on epilepsy.
+nhsSlug: lacosamide
+lastReviewed: '2026-10-05'

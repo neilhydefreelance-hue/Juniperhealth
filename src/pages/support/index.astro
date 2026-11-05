@@ -1,0 +1,60 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icon from '../../components/Icon.astro';
+import CheckerCta from '../../components/CheckerCta.astro';
+import { aToZ, hubs } from '../../lib/topics';
+import { abs, SITE_ID } from '../../lib/schema';
+
+const topics = await hubs('support');
+const all = await getCollection('support');
+const pagesIn = (id: string) =>
+  all.filter((p) => p.id.startsWith(`${id}/`)).sort((a, b) => aToZ(a.data.navTitle || a.data.title, b.data.navTitle || b.data.title));
+
+const schema = [
+  {
+    '@type': 'CollectionPage',
+    '@id': `${abs('/support/')}#webpage`,
+    url: abs('/support/'),
+    name: 'Disability support',
+    isPartOf: { '@id': SITE_ID },
+    breadcrumb: { '@id': `${abs('/support/')}#breadcrumb` },
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: topics.map((t, i) => ({ '@type': 'ListItem', position: i + 1, name: t.data.title, url: abs(`/support/${t.id}/`) })),
+    },
+  },
+];
+---
+<BaseLayout
+  title="Disability support, discounts and concessions"
+  description="Extra help for disabled people and carers in England and Wales: NHS costs, Blue Badges, railcards, bus passes, cinema cards, bills, equipment and work."
+  crumbs={[{ name: 'Home', href: '/' }, { name: 'Disability support', href: '/support/' }]}
+  schema={schema}
+>
+  <div class="wrap" style="padding-bottom:var(--space-3xl)">
+    <header class="page-head">
+      <h1>Disability support</h1>
+      <p class="lead">There is a lot of extra help for disabled people and carers beyond benefits: free and cheaper health care, travel concessions, free carer tickets, money off bills, equipment and support at work. Much of it is not well known.</p>
+    </header>
+
+    <div class="grid">
+      {topics.map((t) => (
+        <article class="card">
+          <span class="card__icon"><Icon name={t.data.cardIcon} /></span>
+          <h2><a class="card__link" href={`/support/${t.id}/`}>{t.data.title}</a></h2>
+          <p>{t.data.summary}</p>
+          <ul class="small" style="padding-left:1.1em;margin:0">
+            {pagesIn(t.id).map((p) => (
+              <li style="position:relative;z-index:1"><a href={`/support/${p.id}/`}>{p.data.navTitle || p.data.title}</a></li>
+            ))}
+          </ul>
+        </article>
+      ))}
+    </div>
+
+    <div style="max-width:44rem;margin-top:var(--space-2xl)">
+      <CheckerCta tool="nhs" />
+    </div>
+  </div>
+</BaseLayout>

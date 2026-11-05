@@ -1,0 +1,46 @@
+name: Carbamazepine
+alsoKnownAs:
+- Tegretol
+- Carbagen
+medicineType: Anticonvulsant (epilepsy medicine)
+forms:
+- tablets
+- modified-release tablets
+- liquid
+- suppositories
+summary: Carbamazepine is an epilepsy medicine. It is also used for a type of facial nerve pain called trigeminal neuralgia, and sometimes for bipolar disorder.
+conditions:
+- brain-nerves-and-senses/epilepsy
+- mental-health/bipolar-1
+- mental-health/bipolar-2
+uses:
+- Epilepsy, especially focal seizures
+- Trigeminal neuralgia (severe facial nerve pain)
+- Preventing mood episodes in bipolar disorder that has not responded to lithium
+offLabel:
+- Other types of nerve pain
+- Helping with alcohol withdrawal (now rarely used)
+howItWorks: Carbamazepine calms overactive nerve signals in the brain by blocking sodium channels on nerve cells. This makes seizures less likely and reduces nerve pain.
+sideEffectsCommon:
+- feeling dizzy
+- sleepy or unsteady
+- double or blurred vision
+- feeling sick
+- dry mouth
+- headache
+- low sodium levels
+sideEffectsSerious:
+- a skin rash, especially with blisters, peeling, mouth ulcers or a high temperature. Get help straight away
+- unusual bruising or bleeding, sore throat or high temperature
+- yellowing of the skin or eyes
+- confusion, drowsiness or fits, which can be signs of low sodium
+- thoughts of harming yourself
+stopping: Stopping suddenly can trigger seizures, which can be dangerous, even if you take it for another reason. Your doctor will reduce the dose slowly over weeks or months.
+stoppingRisk: high
+warnings:
+- It can harm an unborn baby. If you could get pregnant, talk to your doctor about contraception and pregnancy plans.
+- It makes hormonal contraception, including the pill, less effective.
+- It interacts with many medicines. Always check with a pharmacist.
+- People of Han Chinese, Thai or other South East Asian heritage may need a genetic test before starting.
+nhsSlug: carbamazepine
+lastReviewed: '2026-10-05'

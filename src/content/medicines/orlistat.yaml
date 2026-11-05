@@ -1,0 +1,34 @@
+name: Orlistat
+alsoKnownAs:
+- Xenical
+- Alli
+medicineType: Weight loss medicine (lipase inhibitor)
+forms:
+- capsules
+availability: pharmacy
+summary: Orlistat stops some of the fat in your food being absorbed. It helps with weight loss alongside a lower-fat diet.
+conditions:
+- metabolic-and-hormonal/obesity
+uses:
+- Weight loss in adults with obesity, or who are overweight with a weight-related condition, alongside a lower-fat diet (prescription)
+- Lower-dose version for overweight adults (from pharmacies)
+offLabel: []
+howItWorks: Orlistat blocks lipase, an enzyme in the gut that breaks down fat. About a third of the fat you eat is not absorbed and passes out in your poo.
+sideEffectsCommon:
+- oily spotting from your bottom
+- wind with oily discharge
+- urgent need to poo
+- oily or fatty poo
+- stomach pain
+sideEffectsSerious:
+- severe stomach pain, or yellowing of the skin or eyes
+- bleeding from your bottom
+stopping: Orlistat does not cause withdrawal symptoms. Weight can return if eating habits change.
+stoppingRisk: low
+warnings:
+- Side effects are worse after high-fat meals.
+- Take a multivitamin at bedtime, as orlistat can reduce absorption of some vitamins.
+- It can make the contraceptive pill less effective if it causes severe diarrhoea.
+- It may affect levothyroxine, epilepsy medicines and some HIV medicines.
+nhsSlug: orlistat
+lastReviewed: '2026-10-05'

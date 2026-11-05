@@ -1,0 +1,34 @@
+name: Rosuvastatin
+alsoKnownAs:
+- Crestor
+medicineType: Statin (cholesterol-lowering medicine)
+forms:
+- tablets
+summary: Rosuvastatin is a strong statin. It lowers cholesterol and reduces your risk of a heart attack or stroke.
+conditions:
+- heart-and-circulation/high-cholesterol
+- heart-and-circulation/coronary-heart-disease
+- heart-and-circulation/stroke
+uses:
+- High cholesterol, including inherited high cholesterol
+- Preventing heart attacks and strokes in people at higher risk
+offLabel: []
+howItWorks: Rosuvastatin blocks HMG-CoA reductase, an enzyme the liver uses to make cholesterol. The liver then removes more LDL ("bad") cholesterol from your blood.
+sideEffectsCommon:
+- headache
+- muscle aches
+- stomach pain
+- feeling sick
+- constipation
+- feeling weak
+sideEffectsSerious:
+- unexplained muscle pain, tenderness or weakness, especially with a high temperature or dark pee
+- yellowing of the skin or eyes
+- blood in your pee
+stopping: Rosuvastatin does not cause withdrawal symptoms, but cholesterol will rise again and the protection for your heart will be lost.
+stoppingRisk: low
+warnings:
+- People of Chinese or Japanese heritage usually start on a lower dose.
+- Indigestion remedies can reduce how well it is absorbed. Take them at least 2 hours apart.
+nhsSlug: rosuvastatin
+lastReviewed: '2026-10-05'

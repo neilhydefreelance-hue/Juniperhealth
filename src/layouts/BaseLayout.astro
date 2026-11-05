@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CookieConsent from '../components/CookieConsent.astro';
 import { SITE } from '../data/site';
 import { abs, breadcrumbList, organization, person, website, type Crumb } from '../lib/schema';
 
@@ -76,6 +77,26 @@ const speculation = {
 
     <script type="application/ld+json" set:html={JSON.stringify(graph)} />
     <script type="speculationrules" set:html={JSON.stringify(speculation)} />
+    {SITE.gaMeasurementId && (
+      <>
+        {/* Google tag. Consent Mode starts with everything denied, and nothing is
+            measured until a visitor presses "Accept" (see CookieConsent.astro). */}
+        <script is:inline define:vars={{ gaId: SITE.gaMeasurementId }}>
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = function () { window.dataLayer.push(arguments); };
+          window.gtag('consent', 'default', {
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+            analytics_storage: 'denied',
+          });
+          window.gtag('set', 'ads_data_redaction', true);
+          window.gtag('js', new Date());
+          window.jhGaId = gaId;
+        </script>
+        <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${SITE.gaMeasurementId}`}></script>
+      </>
+    )}
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
@@ -86,6 +107,7 @@ const speculation = {
     </main>
     <Footer />
     <slot name="end" />
+    <CookieConsent />
     {SITE.analyticsToken && (
       <script is:inline define:vars={{ token: SITE.analyticsToken }}>
         // Cookie-free, privacy-first statistics. Not loaded if you have opted out

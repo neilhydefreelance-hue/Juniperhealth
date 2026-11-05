@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import { RESOURCES } from '../data/resources';
+import { abs, SITE_ID } from '../lib/schema';
+
+const schema = [
+  {
+    '@type': 'CollectionPage',
+    '@id': `${abs('/resources/')}#webpage`,
+    url: abs('/resources/'),
+    name: 'Free resources',
+    isPartOf: { '@id': SITE_ID },
+    breadcrumb: { '@id': `${abs('/resources/')}#breadcrumb` },
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: RESOURCES.map((r, i) => ({ '@type': 'ListItem', position: i + 1, name: r.title, url: abs(r.href) })),
+    },
+  },
+];
+---
+<BaseLayout
+  title="Free printable resources"
+  description="Free printable guides and planners from Juniper Health, including our PIP form guide and an autism planner for parents and children to use together."
+  crumbs={[{ name: 'Home', href: '/' }, { name: 'Free resources', href: '/resources/' }]}
+  schema={schema}
+>
+  <div class="wrap" style="padding-bottom:var(--space-3xl)">
+    <header class="page-head">
+      <h1>Free printable resources</h1>
+      <p class="lead">Guides and planners you can download, print and fill in. They are free, and printed on white pages to save ink.</p>
+    </header>
+    <div class="grid">
+      {RESOURCES.map((r) => (
+        <article class="card">
+          <span class="card__icon"><Icon name={r.icon} /></span>
+          <h2><a class="card__link" href={r.href} download>{r.title}</a></h2>
+          <p class="small muted">{r.audience}</p>
+          <p>{r.blurb}</p>
+          <p class="small muted">PDF, {r.pages} pages, A4. Also see our <a href={r.related.href} style="position:relative;z-index:1">{r.related.label}</a>.</p>
+          <span class="card__more" aria-hidden="true">Download PDF &rarr;</span>
+        </article>
+      ))}
+    </div>
+    <div class="prose" style="margin-top:var(--space-2xl)">
+      <h2>Using our resources</h2>
+      <p>You are welcome to print and share our resources for personal use, or with families, schools and support groups, as long as you do not charge for them or change them. They are general information, not medical, legal or financial advice.</p>
+      <p>Is there a resource that would help you? <a href="/contact/">Tell us what you would like us to make next</a>.</p>
+    </div>
+  </div>
+</BaseLayout>

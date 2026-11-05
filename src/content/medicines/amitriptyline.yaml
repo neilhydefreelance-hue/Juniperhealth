@@ -1,0 +1,47 @@
+name: Amitriptyline
+alsoKnownAs:
+- Amitriptyline hydrochloride
+medicineType: Tricyclic antidepressant
+forms:
+- tablets
+- liquid
+summary: Amitriptyline is an older antidepressant. At low doses it is now mostly used to treat nerve pain and prevent migraines.
+conditions:
+- brain-nerves-and-senses/migraine
+- musculoskeletal/fibromyalgia
+- musculoskeletal/back-and-neck-pain
+- digestive-and-liver/ibs
+- mental-health/depression
+uses:
+- Nerve pain (neuropathic pain)
+- Preventing migraine
+- Preventing tension-type headaches
+- Depression (at higher doses, now rarely used for this)
+- Bedwetting in children (rarely)
+offLabel:
+- Fibromyalgia
+- Irritable bowel syndrome (IBS), at low doses
+- Long-term pain, such as back pain
+- Sleep problems linked to pain
+howItWorks: Amitriptyline increases the levels of serotonin and noradrenaline, two chemical messengers in the brain and spinal cord. This changes how pain signals are passed along nerves, and at higher doses it can improve mood.
+sideEffectsCommon:
+- feeling sleepy
+- dry mouth
+- constipation
+- difficulty peeing
+- headache
+- feeling dizzy
+- weight gain
+sideEffectsSerious:
+- a fast or irregular heartbeat
+- thoughts of harming yourself or ending your life
+- yellowing of the skin or eyes
+- eye pain with changes in vision
+stopping: If you have taken it for more than a few weeks, stopping suddenly can cause withdrawal symptoms such as feeling sick, headache, irritability, sleep problems and vivid dreams. Your doctor will usually reduce the dose slowly.
+stoppingRisk: medium
+warnings:
+- It is usually taken in the evening because it causes drowsiness.
+- It can be dangerous in overdose. Keep it safely away from others.
+- Avoid alcohol, as it increases drowsiness.
+nhsSlug: amitriptyline-for-pain-and-migraine
+lastReviewed: '2026-10-05'

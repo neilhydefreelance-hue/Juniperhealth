@@ -1,0 +1,33 @@
+name: Teriparatide
+alsoKnownAs:
+- Forsteo
+- Movymia
+- Terrosa
+- Sondelbay
+medicineType: Bone-building medicine (parathyroid hormone analogue)
+forms:
+- daily injection pens
+availability: specialist
+summary: Teriparatide is a daily injection that builds new bone. It is used for severe osteoporosis with a high risk of fractures.
+conditions:
+- musculoskeletal/osteoporosis
+uses:
+- Severe osteoporosis in women after the menopause and in men
+- Osteoporosis caused by long-term steroid use
+offLabel: []
+howItWorks: Teriparatide is a man-made form of part of parathyroid hormone. Given once a day, it stimulates bone-building cells, increasing bone strength and lowering the risk of fractures.
+sideEffectsCommon:
+- feeling dizzy
+- leg cramps
+- feeling sick
+- headache
+- pain where you inject
+sideEffectsSerious:
+- feeling faint, especially after the first few doses
+- signs of high calcium, such as feeling sick, being sick, constipation, tiredness or confusion
+stopping: It is used for a maximum of 2 years. There are no withdrawal symptoms, but the bone gained can be lost after stopping, so another bone medicine is usually started.
+stoppingRisk: low
+warnings:
+- Sit or lie down for the first few injections in case you feel faint.
+- Not suitable for people who have had radiotherapy to the bones or some bone diseases.
+lastReviewed: '2026-10-05'

@@ -1,0 +1,31 @@
+name: Dutasteride
+alsoKnownAs:
+- Avodart
+- Combodart (with tamsulosin)
+medicineType: 5-alpha reductase inhibitor
+forms:
+- capsules
+summary: Dutasteride shrinks an enlarged prostate. It eases urinary symptoms and lowers the chance of needing surgery.
+conditions:
+- kidney-bladder-and-reproductive/enlarged-prostate
+uses:
+- Moderate to severe symptoms of an enlarged prostate (benign prostatic hyperplasia)
+offLabel:
+- Male pattern hair loss, under a specialist
+howItWorks: Dutasteride blocks the enzymes that turn testosterone into dihydrotestosterone (DHT), a hormone that makes the prostate grow. Lower DHT slowly shrinks the prostate over 3 to 6 months.
+sideEffectsCommon:
+- erection problems
+- lower sex drive
+- problems with ejaculation
+- breast tenderness or swelling
+sideEffectsSerious:
+- breast lumps, pain or nipple discharge
+- low mood or thoughts of harming yourself
+stopping: Dutasteride does not cause withdrawal symptoms, but the prostate will slowly grow again and symptoms return. Some sexual side effects can rarely continue after stopping.
+stoppingRisk: low
+warnings:
+- Women who are or may become pregnant should not handle leaking capsules, as it can harm a male baby.
+- It lowers PSA blood test results. Make sure anyone testing your PSA knows you take it.
+- Do not give blood during treatment and for 6 months after.
+nhsSlug: dutasteride
+lastReviewed: '2026-10-05'
