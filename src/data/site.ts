@@ -75,6 +75,7 @@ export const NAV = [
     href: '/tools/',
     children: [
       { label: 'PIP points self-check', href: '/benefits/pip/points-checker/' },
+      { label: 'PIP back pay calculator', href: '/benefits/pip/back-pay-calculator/' },
       { label: 'Attendance Allowance check', href: '/benefits/attendance-allowance/checker/' },
       { label: 'DLA for children check', href: '/benefits/dla/checker/' },
       { label: 'NHS health costs check', href: '/support/health-costs/checker/' },
@@ -93,6 +94,12 @@ export const TOOLS = {
     href: '/benefits/pip/points-checker/',
     blurb: 'Go through the 12 PIP activities one at a time and see roughly how many points may apply to you.',
     time: 'About 10 minutes',
+  },
+  pipBackPay: {
+    name: 'PIP back pay calculator',
+    href: '/benefits/pip/back-pay-calculator/',
+    blurb: 'Pick your PIP rates and the date your claim started to estimate how much back pay you could get.',
+    time: 'About 1 minute',
   },
   aa: {
     name: 'Attendance Allowance check',
