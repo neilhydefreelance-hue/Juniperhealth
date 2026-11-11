@@ -6,6 +6,6 @@ export const scenes = [
   point(2, 'Ask for adjustments', p('Breaks to check glucose or treat a hypo, a private place to inject, and time off for appointments.')),
   point(3, 'Free prescriptions', p('In England, get a medical exemption certificate. Ask your GP surgery. Prescriptions are free in Wales.')),
   point(4, 'DLA for children', p('Many families claim DLA, based on the extra care a child needs day and night.')),
-  point(5, 'PIP for adults', p('You may qualify if you need prompting with insulin, have frequent hypos, or have complications.')),
+  point(5, 'PIP for adults', p('You may qualify if you need prompting or supervision with insulin, for example due to frequent hypos, or have complications.')),
   end('Read about type 1 diabetes', 'General information, not medical or legal advice.'),
 ];
