@@ -7,5 +7,5 @@ export const scenes = [
   point('!', 'Stopping is harder', p('It can cause stronger withdrawal than many antidepressants. Your doctor will lower the dose very slowly.')),
   point(3, 'Pregnancy', p('It is not usually recommended. Talk to your doctor before trying for a baby, but do not stop suddenly.')),
   point('!', 'Feeling worse?', p('Tell your doctor straight away if you have thoughts of suicide, especially if you are under 25.')),
-  end('Read about paroxetine', 'General information, not medical advice. Samaritans: 116 123.'),
+  end('Read about paroxetine', 'Not medical advice. Samaritans: 116 123.'),
 ];
