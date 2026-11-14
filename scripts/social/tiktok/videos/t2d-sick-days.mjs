@@ -2,7 +2,7 @@
 import { title, point, p, end } from './_common.mjs';
 export const scenes = [
   title('World Diabetes Day', ['Diabetes and', 'being ill'], 'Know your sick day rules.'),
-  point(1, 'Illness raises blood sugar', p('Being unwell can push your blood sugar up, even if you eat less.')),
+  point(1, 'Illness raises blood sugar', p('Being unwell can push your blood sugar up.')),
   point(2, 'Keep drinking', p('Keep drinking fluids, and eat small amounts if you can.')),
   point(3, 'Check more often', p('If you test at home, check your blood sugar more often.')),
   point('!', 'Some medicines may need a pause', p('Such as metformin and SGLT2 inhibitors, when you cannot eat or drink.')),
