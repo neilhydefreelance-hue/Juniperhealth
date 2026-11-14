@@ -1,0 +1,45 @@
+name: Risperidone
+alsoKnownAs:
+- Risperdal
+- Okedi
+- Rykindo
+medicineType: Atypical antipsychotic
+forms:
+- tablets
+- orodispersible tablets
+- liquid
+- long-acting injection
+availability: specialist
+summary: Risperidone is an antipsychotic used for schizophrenia and bipolar mania. It is also used short term for aggression in dementia and in some children with autism.
+conditions:
+- mental-health/schizophrenia
+- mental-health/bipolar-1
+- brain-nerves-and-senses/dementia
+uses:
+- Schizophrenia
+- Mania in bipolar disorder
+- Short-term treatment of persistent aggression in Alzheimer's dementia
+- Short-term treatment of persistent aggression in children with conduct disorder or learning disability
+offLabel:
+- Irritability in autism
+- Tourette's syndrome
+howItWorks: Risperidone blocks dopamine and serotonin receptors in the brain, which reduces psychosis, mania and aggression.
+sideEffectsCommon:
+- feeling sleepy
+- weight gain
+- feeling restless
+- stiffness or shaking
+- headache
+- raised prolactin levels which can cause breast changes or missed periods
+- sexual problems
+sideEffectsSerious:
+- a high temperature with stiff muscles and confusion (neuroleptic malignant syndrome). Call 999
+- uncontrolled movements of the face, tongue or body
+- signs of a stroke in older people with dementia. Call 999
+stopping: Stopping suddenly can cause withdrawal symptoms and greatly increases the risk of symptoms returning. Your team will reduce it slowly.
+stoppingRisk: high
+warnings:
+- In older people with dementia, it increases the risk of stroke. It should only be used for a short time when other approaches have not worked.
+- Your weight, blood sugar and cholesterol will be checked regularly.
+nhsSlug: risperidone
+lastReviewed: '2026-10-05'

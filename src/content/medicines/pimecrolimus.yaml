@@ -1,0 +1,29 @@
+name: Pimecrolimus
+alsoKnownAs:
+- Elidel
+medicineType: Calcineurin inhibitor (non-steroid eczema cream)
+forms:
+- cream
+summary: Pimecrolimus is a non-steroid cream for eczema. It is often used on the face and other areas where steroid creams can thin the skin.
+conditions:
+- skin/eczema
+uses:
+- Mild to moderate eczema (atopic dermatitis) in adults and children aged 2 and over, when steroid creams are not suitable or have not worked
+offLabel:
+- Eczema or other inflammation around the eyes or genitals, seborrhoeic dermatitis and some other skin conditions, under a specialist
+howItWorks: Pimecrolimus blocks calcineurin, a protein that switches on immune cells in the skin. This reduces inflammation and itching without thinning the skin.
+sideEffectsCommon:
+- burning or stinging where you apply it in the first few days
+- itching
+- skin infections such as cold sores or folliculitis
+sideEffectsSerious:
+- signs of a skin infection, such as weeping, crusting or spreading cold sores
+- swollen glands that do not go down
+stopping: Pimecrolimus does not cause withdrawal symptoms. Eczema may come back. It can be used on and off for flares, or twice a week to prevent them.
+stoppingRisk: low
+warnings:
+- Avoid sunbeds and strong sunlight on treated skin.
+- Do not use it on infected skin.
+- Alcohol may cause facial flushing while you use it.
+nhsSlug: pimecrolimus
+lastReviewed: '2026-10-05'

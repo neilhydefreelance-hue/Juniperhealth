@@ -1,0 +1,40 @@
+name: Clomipramine
+alsoKnownAs:
+- Anafranil
+medicineType: Tricyclic antidepressant
+forms:
+- capsules
+summary: Clomipramine is an older tricyclic antidepressant. It is particularly used for obsessive compulsive disorder (OCD).
+conditions:
+- mental-health/ocd
+- mental-health/depression
+uses:
+- Depression
+- Obsessive compulsive disorder (OCD) and phobias
+- Cataplexy (sudden muscle weakness) linked to narcolepsy
+offLabel:
+- Premature ejaculation
+- Panic disorder
+howItWorks: Clomipramine strongly increases the amount of serotonin, and to a lesser extent noradrenaline, in the brain. This can reduce obsessive thoughts and compulsions and improve mood.
+sideEffectsCommon:
+- dry mouth
+- constipation
+- feeling sleepy or dizzy
+- sweating
+- blurred vision
+- weight gain
+- sexual problems
+- shaking
+sideEffectsSerious:
+- a fast or irregular heartbeat
+- fits (seizures)
+- thoughts of harming yourself
+- difficulty peeing, or eye pain with changes in vision
+stopping: Stopping suddenly can cause withdrawal symptoms such as feeling sick, headache, flu-like symptoms, anxiety and sleep problems. Your doctor will reduce the dose slowly.
+stoppingRisk: medium
+warnings:
+- It can be very dangerous in overdose.
+- Avoid alcohol.
+- It interacts with many medicines.
+nhsSlug: clomipramine
+lastReviewed: '2026-10-05'

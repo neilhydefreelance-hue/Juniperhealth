@@ -1,0 +1,38 @@
+name: Esomeprazole
+alsoKnownAs:
+- Nexium
+medicineType: Proton pump inhibitor (PPI)
+forms:
+- tablets
+- capsules
+- granules
+- injection
+availability: pharmacy
+summary: Esomeprazole reduces the amount of acid your stomach makes. It treats heartburn, acid reflux and stomach ulcers.
+conditions:
+- digestive-and-liver/acid-reflux
+uses:
+- Heartburn and acid reflux (GORD)
+- Healing and preventing stomach and duodenal ulcers
+- Getting rid of H. pylori infection, with antibiotics
+- Protecting the stomach in people taking anti-inflammatory painkillers
+- Zollinger-Ellison syndrome
+offLabel: []
+howItWorks: Esomeprazole blocks the proton pumps in the stomach lining that release acid. Less acid means less irritation, and ulcers or inflamed areas can heal.
+sideEffectsCommon:
+- headache
+- stomach pain
+- diarrhoea or constipation
+- wind
+- feeling sick
+sideEffectsSerious:
+- severe or watery diarrhoea that does not stop
+- muscle cramps, shaking or a fast heartbeat, which can be signs of low magnesium after long use
+- a rash on skin exposed to the sun, with joint pain
+stopping: Stopping after long-term use can cause rebound acid, where heartburn is worse for a few weeks. Your GP may suggest reducing the dose or taking it only when needed.
+stoppingRisk: low
+warnings:
+- See a GP if you need it for more than a few weeks, have trouble swallowing, are losing weight or are being sick.
+- Long-term use is linked to lower vitamin B12 and magnesium and a slightly higher risk of broken bones.
+nhsSlug: esomeprazole
+lastReviewed: '2026-10-05'

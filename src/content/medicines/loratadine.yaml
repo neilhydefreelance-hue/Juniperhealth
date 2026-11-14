@@ -1,0 +1,32 @@
+name: Loratadine
+alsoKnownAs:
+- Clarityn
+- Clarityn Allergy
+medicineType: Non-drowsy antihistamine
+forms:
+- tablets
+- liquid
+availability: shop
+summary: Loratadine is a non-drowsy antihistamine for hay fever, allergies and itchy hives.
+conditions:
+- respiratory-and-allergy/hay-fever
+- skin/eczema
+uses:
+- Hay fever and other allergies affecting the nose and eyes
+- Hives (urticaria)
+offLabel:
+- Itching from eczema or insect bites (it may help some people a little)
+howItWorks: Loratadine blocks histamine, which the body releases during an allergic reaction. This reduces sneezing, itching, a runny nose and watery eyes.
+sideEffectsCommon:
+- headache
+- feeling tired
+- feeling sleepy (less than older antihistamines)
+sideEffectsSerious:
+- a fast or irregular heartbeat
+- fits
+stopping: Loratadine does not cause withdrawal symptoms for most people. A few people get itching for a short time after stopping long-term use.
+stoppingRisk: low
+warnings:
+- Ask a pharmacist before taking it if you have liver problems or epilepsy.
+nhsSlug: loratadine
+lastReviewed: '2026-10-05'

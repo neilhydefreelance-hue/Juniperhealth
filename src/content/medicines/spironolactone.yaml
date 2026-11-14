@@ -1,0 +1,42 @@
+name: Spironolactone
+alsoKnownAs:
+- Aldactone
+medicineType: Potassium-sparing diuretic (aldosterone antagonist)
+forms:
+- tablets
+- liquid
+summary: Spironolactone is a water tablet that blocks the hormone aldosterone. It is used for heart failure, fluid build-up and high blood pressure.
+conditions:
+- heart-and-circulation/heart-failure
+- heart-and-circulation/high-blood-pressure
+- metabolic-and-hormonal/pcos
+- skin/acne
+uses:
+- Heart failure
+- Fluid build-up caused by liver disease, kidney problems or heart failure
+- High blood pressure that is hard to control
+- Primary hyperaldosteronism (Conn's syndrome)
+offLabel:
+- Acne in women
+- Excess hair growth (hirsutism), including in PCOS
+- Gender-affirming hormone treatment, under a specialist
+howItWorks: Spironolactone blocks aldosterone, a hormone that makes the kidneys hold on to salt and water. Blocking it removes extra fluid while keeping potassium. It also blocks some effects of male hormones, which is why it can help with acne and excess hair.
+sideEffectsCommon:
+- high potassium levels
+- breast swelling or tenderness
+- irregular periods
+- feeling dizzy
+- feeling sick
+- needing to pee more
+sideEffectsSerious:
+- muscle weakness, numbness or an irregular heartbeat, which can be signs of high potassium
+- confusion, drowsiness or peeing much less
+- yellowing of the skin or eyes
+stopping: Spironolactone does not cause withdrawal symptoms, but in heart failure stopping it can make your condition worse.
+stoppingRisk: medium
+warnings:
+- You need regular blood tests to check potassium and kidneys.
+- Avoid potassium supplements and salt substitutes.
+- Pause it during sickness or diarrhoea if your doctor advises (sick day rules).
+nhsSlug: spironolactone
+lastReviewed: '2026-10-05'

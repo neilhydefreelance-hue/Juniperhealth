@@ -1,0 +1,32 @@
+name: Finasteride
+alsoKnownAs:
+- Proscar
+- Propecia
+medicineType: 5-alpha reductase inhibitor
+forms:
+- tablets
+summary: Finasteride shrinks an enlarged prostate. A lower dose treats male pattern hair loss.
+conditions:
+- kidney-bladder-and-reproductive/enlarged-prostate
+uses:
+- Symptoms of an enlarged prostate (5mg)
+- Male pattern hair loss (1mg, private prescription)
+offLabel:
+- Excess hair growth in women (hirsutism), under a specialist
+howItWorks: Finasteride blocks an enzyme that turns testosterone into dihydrotestosterone (DHT). Lower DHT shrinks the prostate and slows hair loss.
+sideEffectsCommon:
+- erection problems
+- lower sex drive
+- less semen
+- breast tenderness or swelling
+sideEffectsSerious:
+- low mood, depression or thoughts of harming yourself. Stop and see a doctor
+- breast lumps, pain or nipple discharge
+stopping: Finasteride does not cause withdrawal symptoms. Prostate symptoms or hair loss will slowly return. Some people report sexual side effects or low mood that continue after stopping.
+stoppingRisk: low
+warnings:
+- The medicines regulator warns about depression and suicidal thoughts. Tell your doctor about any mood changes.
+- Women who are or may become pregnant should not handle crushed or broken tablets.
+- It lowers PSA test results.
+nhsSlug: finasteride
+lastReviewed: '2026-10-05'

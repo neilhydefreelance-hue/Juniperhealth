@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { allArticles, topicLinks, formatDate } from '../../lib/articles';
+import { abs, SITE_ID } from '../../lib/schema';
+
+const articles = await allArticles();
+const withTopics = await Promise.all(articles.map(async (a) => ({ a, topics: await topicLinks(a.data.topics) })));
+const schema = [
+  {
+    '@type': 'CollectionPage',
+    '@id': `${abs('/articles/')}#webpage`,
+    url: abs('/articles/'),
+    name: 'Articles',
+    isPartOf: { '@id': SITE_ID },
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: articles.map((a, i) => ({ '@type': 'ListItem', position: i + 1, name: a.data.title, url: abs(`/articles/${a.id}/`) })),
+    },
+  },
+];
+---
+<BaseLayout
+  title="Articles"
+  description="Practical articles from Juniper Health on living with long-term health conditions, everyday aids, benefits and support in England and Wales."
+  crumbs={[{ name: 'Home', href: '/' }, { name: 'Articles', href: '/articles/' }]}
+  schema={schema}
+>
+  <div class="wrap" style="padding-bottom:var(--space-3xl)">
+    <header class="page-head">
+      <h1>Articles</h1>
+      <p class="lead">Practical tips on living with a long-term condition, everyday aids, and getting the support you are entitled to.</p>
+    </header>
+    {articles.length === 0 ? (
+      <p>New articles are coming soon.</p>
+    ) : (
+      <div class="grid">
+        {withTopics.map(({ a, topics }) => (
+          <article class="card">
+            <h2><a class="card__link" href={`/articles/${a.id}/`}>{a.data.title}</a></h2>
+            <p>{a.data.summary || a.data.description}</p>
+            <p class="small muted">{formatDate(a.data.published)}{topics.length > 0 && <> &middot; {topics.map((t) => t.name).join(', ')}</>}{a.data.containsAds && <> &middot; Contains ads</>}</p>
+          </article>
+        ))}
+      </div>
+    )}
+  </div>
+</BaseLayout>

@@ -1,0 +1,31 @@
+name: Allopurinol
+alsoKnownAs:
+- Zyloric
+medicineType: Urate-lowering medicine
+forms:
+- tablets
+summary: Allopurinol lowers the amount of uric acid (urate) in your blood. Taken every day, it stops gout attacks and prevents some types of kidney stone.
+conditions:
+- musculoskeletal/gout
+uses:
+- Preventing gout attacks (it does not treat an attack that has already started)
+- Preventing kidney stones made of uric acid or calcium oxalate
+- Preventing high uric acid levels during some cancer treatments
+offLabel: []
+howItWorks: Allopurinol blocks an enzyme called xanthine oxidase, which the body uses to make uric acid. Lower uric acid levels mean crystals stop forming in joints and existing crystals slowly dissolve.
+sideEffectsCommon:
+- skin rash
+- more gout flares in the first few months
+sideEffectsSerious:
+- any skin rash, especially with a high temperature, sore mouth, blisters or peeling skin. Stop and get help straight away
+- yellowing of the skin or eyes
+- unusual bleeding or bruising
+stopping: Allopurinol does not cause withdrawal symptoms, but if you stop, uric acid levels rise again and gout attacks are likely to return. It is usually taken for life.
+stoppingRisk: low
+warnings:
+- Keep taking it during a gout attack once you have started it.
+- A rash can be a sign of a rare but serious reaction. Get medical help straight away.
+- It interacts with azathioprine and mercaptopurine. Your doctor must adjust these.
+- Drink plenty of fluids.
+nhsSlug: allopurinol
+lastReviewed: '2026-10-05'

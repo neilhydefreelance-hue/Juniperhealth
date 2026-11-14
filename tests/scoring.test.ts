@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { scorePip, pipChecker } from '../src/lib/checker/pip';
 import { scoreAa, aaChecker } from '../src/lib/checker/aa';
 import { scoreDla, dlaChecker } from '../src/lib/checker/dla';
+import { scoreNhs, nhsChecker } from '../src/lib/checker/nhs';
 import type { Answers } from '../src/lib/checker/types';
 
 /** Build answers the same way the browser does, from step id and option value. */
@@ -117,5 +118,58 @@ describe('scoreDla', () => {
   it('nothing if needs are the same as other children', () => {
     const r = scoreDla(answers(dlaChecker.steps, { ...base, age: 'five', more: 'same', day: 'frequent', night: 'none', walking: 'ok', guidance: 'no' }));
     expect(r.scores?.[0].level).toBe('none');
+  });
+});
+
+describe('scoreNhs', () => {
+  const base = { where: 'england', age: '25to59', pregnant: 'no', benefits: ['none'], health: ['none'], savings: 'no' };
+  const status = (r: ReturnType<typeof scoreNhs>, name: string) => r.scores?.find((s) => s.name.startsWith(name))?.band;
+  it('working age adult with nothing else pays', () => {
+    const r = scoreNhs(answers(nhsChecker.steps, base));
+    expect(status(r, 'Prescriptions')).toBe('You may have to pay');
+    expect(status(r, 'NHS dental')).toBe('You may have to pay');
+  });
+  it('everyone in Wales gets free prescriptions', () => {
+    expect(status(scoreNhs(answers(nhsChecker.steps, { ...base, where: 'wales' })), 'Prescriptions')).toBe('Free');
+  });
+  it('60 or over gets free prescriptions and sight tests but not dental or glasses', () => {
+    const r = scoreNhs(answers(nhsChecker.steps, { ...base, age: '60plus' }));
+    expect(status(r, 'Prescriptions')).toBe('Free');
+    expect(status(r, 'NHS sight')).toBe('Free');
+    expect(status(r, 'Vouchers')).toBe('You may have to pay');
+    expect(status(r, 'NHS dental')).toBe('You may have to pay');
+  });
+  it('Universal Credit with low earnings gets full help', () => {
+    const r = scoreNhs(answers(nhsChecker.steps, { ...base, benefits: ['uc'], ucPay: 'low' }));
+    expect(r.scores?.every((s) => s.band === 'Free')).toBe(true);
+  });
+  it('Universal Credit mid earnings needs a child or LCW amount', () => {
+    expect(status(scoreNhs(answers(nhsChecker.steps, { ...base, benefits: ['uc'], ucPay: 'mid', ucExtra: 'yes' })), 'Prescriptions')).toBe('Free');
+    expect(status(scoreNhs(answers(nhsChecker.steps, { ...base, benefits: ['uc'], ucPay: 'mid', ucExtra: 'no' })), 'Prescriptions')).toBe('You may have to pay');
+    expect(status(scoreNhs(answers(nhsChecker.steps, { ...base, benefits: ['uc'], ucPay: 'high' })), 'Prescriptions')).toBe('You may have to pay');
+  });
+  it('medical exemption gives free prescriptions only', () => {
+    const r = scoreNhs(answers(nhsChecker.steps, { ...base, health: ['medex'] }));
+    expect(status(r, 'Prescriptions')).toBe('Free');
+    expect(status(r, 'NHS dental')).toBe('You may have to pay');
+  });
+  it('diabetes gives a free sight test', () => {
+    expect(status(scoreNhs(answers(nhsChecker.steps, { ...base, health: ['diabetes'] })), 'NHS sight')).toBe('Free');
+  });
+  it('pregnancy gives free prescriptions and dental', () => {
+    const r = scoreNhs(answers(nhsChecker.steps, { ...base, pregnant: 'yes' }));
+    expect(status(r, 'Prescriptions')).toBe('Free');
+    expect(status(r, 'NHS dental')).toBe('Free');
+  });
+  it('17 year old not in education gets free dental but pays for prescriptions', () => {
+    const r = scoreNhs(answers(nhsChecker.steps, { ...base, age: '16to17', education: 'no' }));
+    expect(status(r, 'NHS dental')).toBe('Free');
+    expect(status(r, 'Prescriptions')).toBe('You may have to pay');
+  });
+  it('Wales gives free dental check-ups under 25', () => {
+    expect(status(scoreNhs(answers(nhsChecker.steps, { ...base, where: 'wales', age: '19to24' })), 'NHS dental')).toBe('Some help');
+  });
+  it('sends Scotland to NHS inform', () => {
+    expect(scoreNhs(answers(nhsChecker.steps, { where: 'scotland' })).tone).toBe('redirect');
   });
 });

@@ -1,0 +1,36 @@
+name: Leflunomide
+alsoKnownAs:
+- Arava
+medicineType: Disease-modifying antirheumatic drug (DMARD)
+forms:
+- tablets
+availability: specialist
+summary: Leflunomide calms the immune system. It is used for rheumatoid arthritis and psoriatic arthritis.
+conditions:
+- musculoskeletal/rheumatoid-arthritis
+- skin/psoriasis
+uses:
+- Rheumatoid arthritis
+- Psoriatic arthritis
+offLabel: []
+howItWorks: Leflunomide blocks an enzyme that immune cells need to multiply. This reduces the immune attack on the joints, easing pain, swelling and joint damage.
+sideEffectsCommon:
+- diarrhoea
+- feeling sick
+- raised blood pressure
+- hair thinning
+- rash
+- headache
+sideEffectsSerious:
+- yellowing of the skin or eyes, or dark pee
+- signs of infection, such as a high temperature or sore throat
+- unusual bruising or bleeding
+- a new cough or breathlessness
+stopping: Leflunomide does not cause withdrawal symptoms, but arthritis may flare. It stays in the body for up to 2 years. A "washout" treatment can remove it faster if needed, for example before pregnancy.
+stoppingRisk: medium
+warnings:
+- You need regular blood tests and blood pressure checks.
+- Avoid pregnancy during treatment and until it has been washed out of the body. This applies to men planning to father a child too.
+- Limit alcohol.
+nhsSlug: leflunomide
+lastReviewed: '2026-10-05'

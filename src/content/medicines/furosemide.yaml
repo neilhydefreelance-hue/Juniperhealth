@@ -1,0 +1,38 @@
+name: Furosemide
+alsoKnownAs:
+- Frusemide
+- Lasix
+- Frusol
+medicineType: Loop diuretic (water tablet)
+forms:
+- tablets
+- liquid
+- injection
+summary: Furosemide is a strong water tablet. It removes extra fluid from the body in heart failure and other conditions that cause swelling.
+conditions:
+- heart-and-circulation/heart-failure
+- kidney-bladder-and-reproductive/chronic-kidney-disease
+uses:
+- Fluid build-up (oedema) caused by heart failure, liver disease or kidney disease
+- Fluid on the lungs
+- High blood pressure, occasionally
+offLabel: []
+howItWorks: Furosemide acts on part of the kidney called the loop of Henle. It stops salt being reabsorbed, so more salt and water are passed out in your pee. This reduces swelling and breathlessness.
+sideEffectsCommon:
+- needing to pee more often in the hours after a dose
+- feeling dizzy or light-headed
+- feeling thirsty
+- headache
+- muscle cramps
+sideEffectsSerious:
+- signs of dehydration, such as confusion, very dark pee, peeing very little or feeling faint
+- muscle weakness, cramps or an irregular heartbeat, which can be signs of low potassium
+- ringing in the ears or hearing loss
+stopping: Furosemide does not cause withdrawal symptoms, but fluid can build up again quickly, causing swelling and breathlessness. In heart failure, this can lead to a hospital stay.
+stoppingRisk: medium
+warnings:
+- Take it in the morning so you are not up at night to pee.
+- You need regular blood tests to check your salts and kidneys.
+- Weigh yourself daily if you have heart failure, and tell your team about sudden weight gain.
+nhsSlug: furosemide
+lastReviewed: '2026-10-05'

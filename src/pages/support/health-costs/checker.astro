@@ -1,0 +1,28 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import Checker from '../../../components/Checker.astro';
+import { nhsChecker } from '../../../lib/checker/nhs';
+---
+<ToolLayout
+  title="NHS health costs check"
+  eyebrow="Free self-check"
+  description="Free check for England and Wales: see if you can get free NHS prescriptions, sight tests, glasses vouchers, dental treatment, wigs and hospital travel costs."
+  lead="Find out if you can get free or cheaper prescriptions, eye tests, glasses, dental treatment and travel to hospital."
+  crumbs={[
+    { name: 'Home', href: '/' },
+    { name: 'Disability support', href: '/support/' },
+    { name: 'Help with NHS health costs', href: '/support/health-costs/' },
+    { name: 'Check', href: '/support/health-costs/checker/' },
+  ]}
+>
+  <Checker def={nhsChecker}>
+    <p>This check takes about 3 minutes. It covers the NHS rules in <strong>England and Wales</strong> that apply from April 2026.</p>
+    <p>You can answer for yourself, or for someone you care for.</p>
+  </Checker>
+</ToolLayout>
+
+<script>
+  import { initChecker } from '../../../lib/checker/engine';
+  import { scoreNhs } from '../../../lib/checker/nhs';
+  initChecker('nhs', scoreNhs);
+</script>

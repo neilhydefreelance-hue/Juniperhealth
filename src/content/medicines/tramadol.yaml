@@ -1,0 +1,42 @@
+name: Tramadol
+alsoKnownAs:
+- Zydol
+- Maxitram
+- Tramulief
+- Zamadol
+medicineType: Opioid painkiller
+forms:
+- capsules
+- tablets
+- modified-release tablets
+- soluble tablets
+- injection
+summary: Tramadol is an opioid painkiller for moderate to severe pain. It is a controlled drug and can cause dependence.
+conditions:
+- musculoskeletal/back-and-neck-pain
+- musculoskeletal/osteoarthritis
+uses:
+- Moderate to severe pain, such as after surgery or injury
+offLabel: []
+howItWorks: Tramadol attaches to opioid receptors in the brain and spinal cord, and increases serotonin and noradrenaline. Together these reduce how pain is felt.
+sideEffectsCommon:
+- feeling sick
+- constipation
+- feeling dizzy or sleepy
+- headache
+- dry mouth
+- sweating
+sideEffectsSerious:
+- slow or shallow breathing, or being very sleepy and hard to wake. Call 999
+- fits
+- signs of serotonin syndrome, such as confusion, high temperature and muscle twitching
+- hallucinations or confusion
+stopping: After regular use for more than a few weeks, stopping suddenly can cause withdrawal symptoms, such as anxiety, sweating, aches, diarrhoea and trouble sleeping. Your doctor will reduce the dose slowly.
+stoppingRisk: high
+warnings:
+- It is addictive. It works best for short-term pain and is not recommended for most long-term pain.
+- Do not take it with alcohol, benzodiazepines or other sedatives.
+- It interacts with many antidepressants.
+- It is illegal to drive if your driving is impaired.
+nhsSlug: tramadol
+lastReviewed: '2026-10-05'

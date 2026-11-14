@@ -1,0 +1,37 @@
+name: Dapagliflozin
+alsoKnownAs:
+- Forxiga
+- Xigduo (with metformin)
+medicineType: SGLT2 inhibitor
+forms:
+- tablets
+summary: Dapagliflozin lowers blood sugar by making you pass more sugar in your pee. It also protects the heart and kidneys.
+conditions:
+- metabolic-and-hormonal/type-2-diabetes
+- heart-and-circulation/heart-failure
+- kidney-bladder-and-reproductive/chronic-kidney-disease
+uses:
+- Type 2 diabetes
+- Heart failure
+- Chronic kidney disease
+offLabel: []
+howItWorks: Dapagliflozin blocks a protein in the kidneys called SGLT2, which normally reabsorbs sugar back into the blood. Instead, extra sugar and some salt and water are passed out in your pee. This lowers blood sugar, eases strain on the heart and slows kidney damage.
+sideEffectsCommon:
+- thrush or other genital infections
+- urine infections
+- needing to pee more
+- feeling thirsty
+- back pain
+- feeling dizzy
+sideEffectsSerious:
+- feeling sick or being sick, stomach pain, fast breathing, sleepiness or a sweet smell on your breath, which can be signs of diabetic ketoacidosis
+- pain, tenderness or swelling of the genitals or the area between the genitals and back passage, with a high temperature
+- signs of dehydration, such as dizziness and very dark pee
+stopping: Dapagliflozin does not cause withdrawal symptoms. Blood sugar may rise and the protection for your heart and kidneys will be lost.
+stoppingRisk: low
+warnings:
+- Stop taking it and get advice if you are unwell and cannot eat or drink, or before major surgery (sick day rules).
+- Drink plenty of fluids.
+- Keep your genital area clean to lower the risk of infections.
+nhsSlug: dapagliflozin
+lastReviewed: '2026-10-05'

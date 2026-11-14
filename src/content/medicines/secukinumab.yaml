@@ -1,0 +1,36 @@
+name: Secukinumab
+alsoKnownAs:
+- Cosentyx
+medicineType: Biologic medicine (IL-17 inhibitor)
+forms:
+- injection pens
+- prefilled syringes
+availability: specialist
+summary: Secukinumab is a biologic injection for severe psoriasis, psoriatic arthritis and axial spondyloarthritis.
+conditions:
+- skin/psoriasis
+uses:
+- Moderate to severe plaque psoriasis
+- Psoriatic arthritis
+- Axial spondyloarthritis, including ankylosing spondylitis
+- Hidradenitis suppurativa
+- Juvenile psoriatic and enthesitis-related arthritis
+offLabel: []
+howItWorks: Secukinumab is an antibody that blocks interleukin-17A, a protein that drives inflammation in the skin and joints. This reduces plaques, joint pain and swelling.
+sideEffectsCommon:
+- colds and sore throats
+- cold sores
+- diarrhoea
+- headache
+- a runny nose
+- pain where you inject
+sideEffectsSerious:
+- signs of a serious infection, such as a high temperature or feeling very unwell
+- severe stomach pain or bloody diarrhoea, which can be signs of inflammatory bowel disease
+stopping: Secukinumab does not cause withdrawal symptoms, but your condition is likely to flare up again within months.
+stoppingRisk: medium
+warnings:
+- You will be checked for tuberculosis (TB) before starting.
+- Avoid live vaccines.
+- Tell your team if you have Crohn's disease or colitis.
+lastReviewed: '2026-10-05'

@@ -1,0 +1,50 @@
+name: Adalimumab
+alsoKnownAs:
+- Humira
+- Amgevita
+- Hyrimoz
+- Imraldi
+- Yuflyma
+- Idacio
+medicineType: Biologic medicine (TNF blocker)
+forms:
+- injection pens
+- prefilled syringes
+availability: specialist
+summary: Adalimumab is a biologic medicine that calms an overactive immune system. It is used for several inflammatory conditions when other treatments have not worked well enough.
+conditions:
+- musculoskeletal/rheumatoid-arthritis
+- digestive-and-liver/crohns-and-colitis
+- skin/psoriasis
+uses:
+- Rheumatoid arthritis
+- Psoriatic arthritis and axial spondyloarthritis (including ankylosing spondylitis)
+- Crohn's disease and ulcerative colitis
+- Plaque psoriasis
+- Hidradenitis suppurativa
+- Uveitis (inflammation inside the eye)
+- Juvenile idiopathic arthritis in children
+offLabel:
+- Sarcoidosis and some other rare inflammatory conditions, under specialist care
+howItWorks: Adalimumab is a man-made antibody. It blocks a protein called tumour necrosis factor (TNF), which drives inflammation in many autoimmune conditions. Blocking TNF reduces inflammation, pain and damage.
+sideEffectsCommon:
+- pain or redness where you inject
+- headache
+- colds and sore throats
+- sinus infections
+- feeling sick
+- rash
+sideEffectsSerious:
+- signs of a serious infection, such as a high temperature, chills, a cough that will not go away, or feeling very unwell
+- signs of tuberculosis (TB), such as a long-lasting cough, weight loss or night sweats
+- unusual bruising or bleeding, or very pale skin
+- numbness, tingling or problems with your eyesight
+stopping: Adalimumab does not cause withdrawal symptoms, but stopping it often allows the condition to flare up again, sometimes within weeks or months. Your specialist team may pause it before surgery or if you have a serious infection.
+stoppingRisk: medium
+warnings:
+- You will be checked for TB and hepatitis before you start.
+- Avoid live vaccines while taking it. Ask your team about flu, COVID-19 and pneumonia vaccines.
+- Tell your team straight away if you get an infection.
+- Several brands (biosimilars) work in the same way. Your team may switch you between them.
+nhsSlug: adalimumab
+lastReviewed: '2026-10-05'

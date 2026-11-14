@@ -1,0 +1,30 @@
+name: Verteporfin
+alsoKnownAs:
+- Visudyne
+medicineType: Light-activated medicine (photodynamic therapy)
+forms:
+- drip into a vein (infusion) with laser treatment to the eye
+availability: hospital
+summary: Verteporfin is used in photodynamic therapy. It is activated by a laser to seal leaking blood vessels at the back of the eye.
+conditions:
+- brain-nerves-and-senses/macular-degeneration
+uses:
+- Some types of wet age-related macular degeneration (now mostly replaced by anti-VEGF injections)
+- Abnormal blood vessels caused by severe short-sightedness
+offLabel:
+- Central serous chorioretinopathy, a condition where fluid builds up under the retina
+- Polypoidal choroidal vasculopathy, often with anti-VEGF injections
+howItWorks: Verteporfin is given into a vein and collects in abnormal blood vessels in the eye. A low-power laser then activates it, which closes off the leaking vessels without harming the healthy retina.
+sideEffectsCommon:
+- blurred or abnormal vision
+- back pain during the infusion
+- pain or swelling where the drip went in
+- being sensitive to sunlight for a few days
+sideEffectsSerious:
+- a sudden drop in vision after treatment
+- severe skin burns if exposed to sunlight or bright light in the first 48 hours
+stopping: Verteporfin is a one-off treatment that may be repeated, so there is no withdrawal.
+stoppingRisk: low
+warnings:
+- Avoid direct sunlight and bright indoor light on your skin and eyes for 48 hours after treatment. Cover up and wear dark glasses.
+lastReviewed: '2026-10-05'

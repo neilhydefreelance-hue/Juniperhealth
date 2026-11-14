@@ -1,0 +1,42 @@
+name: Azathioprine
+alsoKnownAs:
+- Imuran
+medicineType: Immunosuppressant
+forms:
+- tablets
+availability: specialist
+summary: Azathioprine calms down the immune system. It is used for inflammatory and autoimmune conditions, and to stop the body rejecting a transplant.
+conditions:
+- digestive-and-liver/crohns-and-colitis
+- musculoskeletal/rheumatoid-arthritis
+- skin/eczema
+uses:
+- Crohn's disease and ulcerative colitis
+- Rheumatoid arthritis
+- Preventing rejection after an organ transplant
+- Autoimmune hepatitis, lupus, vasculitis and some other autoimmune conditions
+offLabel:
+- Severe eczema, under a dermatologist
+- Myasthenia gravis and some other nerve and muscle conditions
+howItWorks: Azathioprine slows down the production of white blood cells called lymphocytes, which drive inflammation in autoimmune conditions. It takes 2 to 3 months to work fully.
+sideEffectsCommon:
+- feeling sick
+- being sick
+- loss of appetite
+- tiredness
+- more infections
+- hair thinning
+sideEffectsSerious:
+- a high temperature, sore throat, mouth ulcers or other signs of infection
+- unusual bruising or bleeding
+- yellowing of the skin or eyes
+- severe stomach pain, which can be a sign of an inflamed pancreas
+stopping: Azathioprine does not cause withdrawal symptoms, but stopping can let your condition flare up again or, after a transplant, lead to rejection.
+stoppingRisk: medium
+warnings:
+- You need a blood test (TPMT) before starting, and regular blood tests during treatment.
+- It increases the risk of skin cancer. Use sunscreen and check your skin.
+- It interacts with allopurinol and febuxostat. Your doctor must adjust the dose.
+- Avoid live vaccines.
+nhsSlug: azathioprine
+lastReviewed: '2026-10-05'
