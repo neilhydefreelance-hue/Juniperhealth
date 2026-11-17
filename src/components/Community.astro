@@ -1,0 +1,57 @@
+---
+/**
+ * Our Facebook group and Discord, side by side. Links come from Business details in Keystatic.
+ * "full" is for pages, "compact" is for the sidebar of guides.
+ */
+import { SITE } from '../data/site';
+import Icon from './Icon.astro';
+
+interface Props {
+  variant?: 'full' | 'compact';
+}
+const { variant = 'full' } = Astro.props;
+
+const groups = [
+  SITE.facebookGroupUrl && {
+    href: SITE.facebookGroupUrl,
+    icon: 'people',
+    name: 'Facebook group',
+    text: 'Share tips, ask questions and support each other, at your own pace.',
+    action: 'Join the Facebook group',
+  },
+  SITE.discordUrl && {
+    href: SITE.discordUrl,
+    icon: 'chat',
+    name: 'Discord community',
+    text: 'Live voice chat, plus chats for PIP, DLA, Attendance Allowance, ADP and over 50 health conditions.',
+    action: 'Join our Discord',
+  },
+].filter(Boolean) as { href: string; icon: 'people' | 'chat'; name: string; text: string; action: string }[];
+---
+{groups.length > 0 && (variant === 'compact' ? (
+  <div class="box community-mini">
+    <h2><Icon name="people" size={18} class="inline-icon" /> You are not on your own</h2>
+    <p class="small">Talk to people who understand, in our free communities.</p>
+    <ul>
+      {groups.map((g) => (
+        <li><a href={g.href} rel="noopener" target="_blank">{g.action}<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+      ))}
+    </ul>
+  </div>
+) : (
+  <div class="community-block">
+  <div class="community">
+    {groups.map((g) => (
+      <div class="community__card">
+        <span class="community__icon"><Icon name={g.icon} /></span>
+        <div>
+          <p class="community__name">{g.name}</p>
+          <p class="community__text">{g.text}</p>
+          <a class="btn btn--accent" href={g.href} rel="noopener" target="_blank">{g.action}<span class="visually-hidden"> (opens in a new tab)</span> <Icon name="external" size={18} /></a>
+        </div>
+      </div>
+    ))}
+  </div>
+  <p class="community__note small">Free to join. Peer support, not medical or legal advice. Please keep personal details private.</p>
+  </div>
+))}

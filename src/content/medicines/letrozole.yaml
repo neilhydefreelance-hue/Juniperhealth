@@ -1,0 +1,32 @@
+name: Letrozole
+alsoKnownAs:
+- Femara
+medicineType: Aromatase inhibitor (hormone therapy)
+forms:
+- tablets
+summary: Letrozole lowers oestrogen levels. It is mainly used to treat breast cancer after the menopause, and is also used in fertility treatment.
+conditions:
+- metabolic-and-hormonal/pcos
+uses:
+- Hormone receptor positive breast cancer after the menopause
+offLabel:
+- Helping ovulation in polycystic ovary syndrome (PCOS), as a fertility treatment
+- Breast cancer in men or before the menopause, alongside other treatment
+howItWorks: Letrozole blocks an enzyme called aromatase, which makes oestrogen in the body after the menopause. Some breast cancers need oestrogen to grow, so lowering it slows or stops them. In fertility treatment, a short course triggers the brain to release hormones that help an egg develop.
+sideEffectsCommon:
+- hot flushes
+- joint pain or stiffness
+- feeling tired
+- sweating
+- headache
+- weight gain
+- thinning hair
+sideEffectsSerious:
+- sudden pain or swelling in your leg, chest pain or breathlessness, which can be signs of a blood clot
+- signs of a stroke or heart attack. Call 999
+stopping: Letrozole does not cause withdrawal symptoms. For breast cancer, it is usually taken for 5 years or more. Stopping early can raise the chance of the cancer coming back.
+stoppingRisk: medium
+warnings:
+- It can thin your bones. You may have bone density scans and be advised to take calcium and vitamin D.
+nhsSlug: letrozole
+lastReviewed: '2026-10-05'

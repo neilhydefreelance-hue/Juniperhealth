@@ -1,0 +1,32 @@
+name: Adapalene
+alsoKnownAs:
+- Differin
+- Epiduo (with benzoyl peroxide)
+medicineType: Retinoid acne treatment (applied to the skin)
+forms:
+- gel
+- cream
+summary: Adapalene is a gel or cream for acne. It unblocks pores and helps stop new spots forming.
+conditions:
+- skin/acne
+uses:
+- Mild to moderate acne on the face, chest or back
+offLabel:
+- Some other skin conditions with blocked pores, such as keratosis pilaris, under a dermatologist
+howItWorks: Adapalene is a retinoid, a medicine related to vitamin A. It makes skin cells turn over more quickly, which stops them blocking pores. It also reduces inflammation, so spots are less red and swollen.
+sideEffectsCommon:
+- dry
+- flaky or peeling skin
+- redness
+- stinging or burning when you apply it
+- skin being more sensitive to sunlight
+sideEffectsSerious:
+- severe redness, swelling, blistering or crusting of the skin
+stopping: Adapalene does not cause withdrawal symptoms. If you stop using it, acne may slowly come back. Many people keep using it a few times a week to stop spots returning.
+stoppingRisk: low
+warnings:
+- Do not use it if you are pregnant or trying to get pregnant.
+- Acne often looks a little worse in the first few weeks before it improves. It can take up to 12 weeks to see the full benefit.
+- Use sunscreen and avoid sunbeds.
+nhsSlug: adapalene
+lastReviewed: '2026-10-05'

@@ -1,0 +1,37 @@
+name: Insulin lispro
+alsoKnownAs:
+- Humalog
+- Lyumjev
+- Admelog
+- Humalog Mix (mixed insulin)
+medicineType: Rapid-acting insulin
+forms:
+- injection pens
+- cartridges
+- vials
+- insulin pumps
+summary: Insulin lispro is a fast-acting insulin, injected with meals to stop blood sugar rising after eating.
+conditions:
+- metabolic-and-hormonal/type-1-diabetes
+- metabolic-and-hormonal/type-2-diabetes
+uses:
+- Type 1 diabetes, as mealtime insulin or in an insulin pump
+- Type 2 diabetes, when other treatments are not enough
+offLabel: []
+howItWorks: Insulin lispro is absorbed quickly, starting to work in about 15 minutes and lasting 2 to 5 hours. It moves sugar from the blood into cells after a meal.
+sideEffectsCommon:
+- low blood sugar (hypos)
+- redness or swelling where you inject
+- lumps under the skin
+- weight gain
+sideEffectsSerious:
+- a severe hypo with confusion, fits or passing out
+- swelling of the face or trouble breathing
+stopping: In type 1 diabetes, stopping insulin can cause diabetic ketoacidosis within hours. Never stop insulin without medical advice. Follow your sick day rules.
+stoppingRisk: high
+warnings:
+- Humalog comes in 100 and 200 units per ml strengths. Check you have the right one.
+- Always carry fast-acting sugar.
+nhsSlug: insulin
+bnfSlug: insulin-lispro
+lastReviewed: '2026-10-05'

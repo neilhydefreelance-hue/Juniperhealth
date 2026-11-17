@@ -1,44 +1,55 @@
 ---
-/** Lets a visitor switch off our cookie-free visitor statistics on this browser. */
+/** Lets a visitor turn visitor statistics (Google Analytics cookies) on or off on this browser. */
 ---
 <div class="box" data-optout style="margin-block:var(--space-l)">
   <h3 style="font-size:1.1rem">Visitor statistics on this browser</h3>
   <p data-optout-status class="small" role="status">Checking your setting...</p>
   <div class="cluster" style="margin-top:var(--space-s)">
-    <button type="button" class="btn" data-optout-off>Turn statistics off</button>
-    <button type="button" class="btn btn--ghost" data-optout-on>Turn statistics back on</button>
+    <button type="button" class="btn" data-optout-on>Accept statistics cookies</button>
+    <button type="button" class="btn" data-optout-off>Reject statistics cookies</button>
   </div>
 </div>
 <script>
+  type Cookies = { get: () => string | null; accept: () => void; reject: () => void };
   const box = document.querySelector<HTMLElement>('[data-optout]');
   if (box) {
     const status = box.querySelector<HTMLElement>('[data-optout-status]')!;
     const key = 'jh-analytics-optout';
-    const read = () => {
+    const cookies = () => (window as Window & { jhCookies?: Cookies }).jhCookies;
+    const storageWorks = () => {
       try {
-        return localStorage.getItem(key) === '1';
+        localStorage.setItem('jh-test', '1');
+        localStorage.removeItem('jh-test');
+        return true;
       } catch {
-        return null;
+        return false;
       }
     };
     const render = () => {
-      const v = read();
-      const signal = (navigator as Navigator & { globalPrivacyControl?: boolean }).globalPrivacyControl || navigator.doNotTrack === '1';
+      if (!storageWorks()) {
+        status.textContent =
+          'Your browser is blocking storage, so we cannot remember a choice on this browser. We will not set statistics cookies unless you accept them each time.';
+        return;
+      }
+      const choice = cookies()?.get();
       status.textContent =
-        v === null
-          ? 'Your browser is blocking storage, so we cannot remember a choice on this browser. You can also block statistics with a privacy setting or add-on in your browser.'
-          : v || signal
-            ? 'Statistics are OFF on this browser.'
-            : 'Statistics are ON on this browser. They do not use cookies and cannot identify you.';
+        choice === 'yes'
+          ? 'Statistics cookies are ON on this browser. You can turn them off at any time.'
+          : choice === 'no'
+            ? 'Statistics cookies are OFF on this browser.'
+            : 'You have not made a choice yet, so statistics cookies are OFF.';
     };
     box.querySelector('[data-optout-off]')?.addEventListener('click', () => {
       try { localStorage.setItem(key, '1'); } catch {}
+      cookies()?.reject();
       render();
     });
     box.querySelector('[data-optout-on]')?.addEventListener('click', () => {
       try { localStorage.removeItem(key); } catch {}
+      cookies()?.accept();
       render();
     });
+    document.addEventListener('jh-cookies', render);
     render();
   }
 </script>

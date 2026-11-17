@@ -1,0 +1,35 @@
+name: Naltrexone
+alsoKnownAs:
+- Adepend
+medicineType: Opioid blocker
+forms:
+- tablets
+availability: specialist
+summary: Naltrexone blocks the effects of opioids and can reduce cravings for alcohol. It helps people stay off alcohol or opioids.
+conditions:
+- mental-health/alcohol-dependence
+- mental-health/drug-dependence
+uses:
+- Helping prevent relapse after stopping opioids
+- Helping prevent relapse in alcohol dependence
+offLabel:
+- Low doses for some long-term pain conditions such as fibromyalgia (limited evidence, specialist only)
+- Itching caused by liver disease
+howItWorks: Naltrexone blocks opioid receptors in the brain. Opioids taken during treatment have little or no effect, and the rewarding effect of alcohol is reduced, which helps lower cravings.
+sideEffectsCommon:
+- feeling sick
+- headache
+- trouble sleeping
+- feeling anxious or restless
+- stomach pain
+- joint and muscle pain
+sideEffectsSerious:
+- yellowing of the skin or eyes, dark pee or pale poo
+- low mood or thoughts of harming yourself
+stopping: Naltrexone does not cause withdrawal symptoms. After stopping, your tolerance to opioids is very low, so taking opioids can easily cause a fatal overdose.
+stoppingRisk: medium
+warnings:
+- You must be completely off opioids for 7 to 10 days before starting, or it will cause sudden, severe withdrawal.
+- Carry a card saying you take naltrexone, as normal opioid painkillers will not work.
+- Do not try to overcome the block by taking large amounts of opioids. This can be fatal.
+lastReviewed: '2026-10-05'

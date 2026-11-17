@@ -1,0 +1,33 @@
+name: Guanfacine
+alsoKnownAs:
+- Intuniv
+medicineType: Non-stimulant ADHD medicine
+forms:
+- prolonged-release tablets
+availability: specialist
+summary: Guanfacine is a non-stimulant medicine for ADHD in children and young people. It is used when stimulants are not suitable or have not helped.
+conditions:
+- mental-health/adhd
+uses:
+- ADHD in children and young people aged 6 to 17, when stimulants are not suitable, not tolerated or not effective
+offLabel:
+- ADHD in adults, under a specialist
+- Tic disorders such as Tourette's syndrome
+howItWorks: Guanfacine acts on alpha-2A receptors in the front part of the brain, which is involved in attention and controlling behaviour. This helps strengthen signals in this area and can reduce hyperactivity and impulsiveness.
+sideEffectsCommon:
+- feeling sleepy or tired
+- headache
+- stomach pain
+- low blood pressure
+- feeling dizzy
+- weight gain
+sideEffectsSerious:
+- fainting or a very slow heartbeat
+- extreme sleepiness
+stopping: Stopping suddenly can make blood pressure and heart rate rise sharply. The dose must be reduced slowly, usually by no more than 1mg every 3 to 7 days.
+stoppingRisk: high
+warnings:
+- Blood pressure, heart rate, height and weight are checked regularly.
+- Avoid grapefruit juice and alcohol.
+- Make sure your child drinks enough fluids, as dehydration can make dizziness worse.
+lastReviewed: '2026-10-05'

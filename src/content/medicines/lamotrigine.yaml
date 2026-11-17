@@ -1,0 +1,39 @@
+name: Lamotrigine
+alsoKnownAs:
+- Lamictal
+medicineType: Anticonvulsant and mood stabiliser
+forms:
+- tablets
+- dispersible tablets
+summary: Lamotrigine is an epilepsy medicine. It is also used to prevent episodes of depression in bipolar disorder.
+conditions:
+- brain-nerves-and-senses/epilepsy
+- mental-health/bipolar-1
+- mental-health/bipolar-2
+uses:
+- Epilepsy, including focal and generalised seizures
+- Preventing depressive episodes in bipolar disorder
+offLabel:
+- Borderline personality disorder, for mood swings (limited evidence)
+- Some types of nerve pain
+howItWorks: Lamotrigine blocks sodium channels on nerve cells and reduces the release of glutamate, a chemical messenger that excites nerves. This calms overactive brain activity.
+sideEffectsCommon:
+- headache
+- skin rash
+- feeling dizzy or unsteady
+- feeling sick
+- feeling tired
+- trouble sleeping
+- double or blurred vision
+sideEffectsSerious:
+- any skin rash, especially with a high temperature, sore mouth, blisters or peeling. Get help straight away
+- unusual bruising or bleeding, or a sore throat with high temperature
+- thoughts of harming yourself
+stopping: Stopping suddenly can trigger seizures in epilepsy, or a return of symptoms in bipolar disorder. The dose is reduced slowly over at least 2 weeks. If you miss more than 5 days, you must restart at a low dose, as restarting at your usual dose increases the risk of a serious rash.
+stoppingRisk: high
+warnings:
+- The dose must be increased slowly when starting, to lower the risk of a serious skin rash.
+- Hormonal contraception and valproate change lamotrigine levels. Your doctor may need to adjust the dose.
+- Talk to your doctor if you are planning a pregnancy. Do not stop it suddenly.
+nhsSlug: lamotrigine
+lastReviewed: '2026-10-05'

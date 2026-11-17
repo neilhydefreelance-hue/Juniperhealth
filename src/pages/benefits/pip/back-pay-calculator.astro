@@ -1,0 +1,171 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import Icon from '../../../components/Icon.astro';
+import rates from '../../../data/rates.json';
+import { money } from '../../../data/site';
+import { EARLIEST } from '../../../lib/pip-backpay';
+
+const parts = [
+  {
+    id: 'daily',
+    title: 'Daily living part',
+    hint: 'For help with things like preparing food, washing, dressing and managing medicines.',
+    std: rates.pip.dailyStandard,
+    enh: rates.pip.dailyEnhanced,
+  },
+  {
+    id: 'mobility',
+    title: 'Mobility part',
+    hint: 'For help with planning and following journeys, and moving around.',
+    std: rates.pip.mobilityStandard,
+    enh: rates.pip.mobilityEnhanced,
+  },
+];
+---
+<ToolLayout
+  title="PIP back pay calculator"
+  eyebrow="Free calculator"
+  description="Free PIP back pay calculator. Pick your daily living and mobility rates and the date your claim started to estimate your PIP back payment. Nothing leaves your device."
+  lead="PIP is paid from the date you started your claim. Pick the rates you were awarded, or expect, and your claim start date to see roughly how much back pay you could get."
+  crumbs={[
+    { name: 'Home', href: '/' },
+    { name: 'Benefits', href: '/benefits/' },
+    { name: 'PIP', href: '/benefits/pip/' },
+    { name: 'Back pay calculator', href: '/benefits/pip/back-pay-calculator/' },
+  ]}
+>
+  <form data-backpay novalidate aria-label="PIP back pay calculator" style="display:grid;gap:var(--space-xl);margin-top:var(--space-xl)">
+    {parts.map((p) => (
+      <fieldset style="border:0;padding:0;margin:0;min-width:0">
+        <legend style="padding:0"><span class="step__title" style="margin-top:0">{p.title}</span></legend>
+        <p class="step__hint">{p.hint}</p>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name={p.id} value="none" checked />
+            <span><span class="option__label">Not awarded</span></span>
+          </label>
+          <label class="option">
+            <input type="radio" name={p.id} value="standard" />
+            <span><span class="option__label">Standard rate</span><span class="option__detail">{money(p.std)} a week now</span></span>
+          </label>
+          <label class="option">
+            <input type="radio" name={p.id} value="enhanced" />
+            <span><span class="option__label">Enhanced rate</span><span class="option__detail">{money(p.enh)} a week now</span></span>
+          </label>
+        </div>
+      </fieldset>
+    ))}
+
+    <div class="field">
+      <label for="bp-start">Date your claim started</label>
+      <p class="small muted" id="bp-start-hint">This is usually the date you phoned the DWP to start your claim. It is on your award letter.</p>
+      <input type="date" id="bp-start" name="start" min={EARLIEST} required aria-describedby="bp-start-hint" />
+    </div>
+
+    <div class="field">
+      <label for="bp-end">Work it out up to</label>
+      <p class="small muted" id="bp-end-hint">Leave this as today if you are still waiting. If you already have a decision, use the date your regular payments started.</p>
+      <input type="date" id="bp-end" name="end" min={EARLIEST} aria-describedby="bp-end-hint" />
+    </div>
+
+    <p class="checker__error" data-error role="alert"></p>
+
+    <button type="submit" class="btn btn--accent btn--block">Work out my back pay <Icon name="arrow" /></button>
+
+    <p class="checker__privacy">
+      <Icon name="lock" />
+      <span><strong>Private by design.</strong> The sums are done on your phone or computer. Nothing leaves your device, and we cannot see your answers.</span>
+    </p>
+    <noscript>
+      <p class="callout callout--warn">This calculator needs JavaScript switched on to work out your result.</p>
+    </noscript>
+  </form>
+
+  <section class="box" data-result hidden aria-live="polite" aria-labelledby="bp-result-title" style="margin-top:var(--space-xl)">
+    <h2 id="bp-result-title" tabindex="-1">Your estimated back pay</h2>
+    <p class="rate__value" data-total></p>
+    <p data-summary></p>
+    <table class="answers" style="margin-top:var(--space-m)">
+      <caption class="visually-hidden">Back pay by tax year</caption>
+      <thead><tr><th scope="col">Tax year</th><th scope="col">Days</th><th scope="col">Amount</th></tr></thead>
+      <tbody data-rows></tbody>
+    </table>
+    <p class="small muted" style="margin-top:var(--space-m)">This is an estimate only. Only the DWP can decide your award and how much you are paid. If you have already had some PIP for this time, it will be taken off.</p>
+  </section>
+
+  <section class="prose" slot="after" style="padding-block:var(--space-2xl) var(--space-3xl)">
+    <h2>How PIP back pay works</h2>
+    <p>If you are awarded PIP, it is paid from <strong>the date you started your claim</strong>, so your first payment may include a back payment. After that, PIP is usually paid <strong>every 4 weeks</strong> into your bank account.</p>
+    <p>PIP rates usually go up each April. This calculator uses the rate that applied on each day, so a claim that runs over April is worked out at both the old and new rates.</p>
+    <h3>If you challenge a decision</h3>
+    <p>Many decisions are changed when people challenge them. If your rate changes after a challenge, you can use this calculator again with the new rates. Read <a href="/benefits/pip/challenge-a-decision/">how to challenge a PIP decision</a>.</p>
+    <h3>Not sure which rate you could get?</h3>
+    <p>Try our free <a href="/benefits/pip/points-checker/">PIP points self-check</a>. You need <strong>8 points</strong> in a part for the standard rate and <strong>12 points</strong> for the enhanced rate.</p>
+    <p class="small muted">Weekly rates for {rates.taxYear}: daily living {money(rates.pip.dailyStandard)} standard, {money(rates.pip.dailyEnhanced)} enhanced. Mobility {money(rates.pip.mobilityStandard)} standard, {money(rates.pip.mobilityEnhanced)} enhanced.</p>
+  </section>
+</ToolLayout>
+
+<script>
+  import { backPay, EARLIEST, type Level } from '../../../lib/pip-backpay';
+
+  const form = document.querySelector<HTMLFormElement>('[data-backpay]')!;
+  const result = document.querySelector<HTMLElement>('[data-result]')!;
+  const errorEl = form.querySelector<HTMLElement>('[data-error]')!;
+  const startEl = form.querySelector<HTMLInputElement>('#bp-start')!;
+  const endEl = form.querySelector<HTMLInputElement>('#bp-end')!;
+
+  const pad = (n: number) => String(n).padStart(2, '0');
+  const now = new Date();
+  const today = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
+  startEl.max = today;
+  endEl.value = today;
+
+  const gbp = (n: number) => `£${n.toLocaleString('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+  const longDate = (iso: string) =>
+    new Date(`${iso}T12:00:00`).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+
+  const messages = {
+    noAward: 'Pick standard or enhanced for at least one part.',
+    badDate: 'Enter the date your claim started.',
+    tooEarly: `This calculator works from ${longDate(EARLIEST)}. For an older claim, ask Citizens Advice or a welfare rights service to check your back pay.`,
+    endBeforeStart: 'The "work it out up to" date must be after the date your claim started.',
+  };
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const daily = data.get('daily') as Level;
+    const mobility = data.get('mobility') as Level;
+    const start = startEl.value;
+    const end = endEl.value || today;
+    const r = backPay(daily, mobility, start, end);
+
+    if (!r.ok) {
+      errorEl.textContent = messages[r.error];
+      result.hidden = true;
+      (r.error === 'noAward' ? form.querySelector<HTMLInputElement>('input[name="daily"]') : startEl)?.focus();
+      return;
+    }
+    errorEl.textContent = '';
+    result.querySelector('[data-total]')!.textContent = gbp(r.total);
+    const extraDays = r.days - r.weeks * 7;
+    const length = `${r.weeks} ${r.weeks === 1 ? 'week' : 'weeks'}${extraDays ? ` and ${extraDays} ${extraDays === 1 ? 'day' : 'days'}` : ''}`;
+    result.querySelector('[data-summary]')!.textContent =
+      `From ${longDate(start)} to ${longDate(end)}, which is ${length}. At today's rates you would get ${gbp(r.weeklyNow)} a week, or ${gbp(r.weeklyNow * 4)} every 4 weeks.`;
+    const rows = result.querySelector('[data-rows]')!;
+    rows.replaceChildren(
+      ...r.parts.map((p) => {
+        const tr = document.createElement('tr');
+        for (const text of [`${p.label} (${gbp(p.weekly)} a week)`, String(p.days), gbp(p.amount)]) {
+          const td = document.createElement('td');
+          td.textContent = text;
+          tr.append(td);
+        }
+        return tr;
+      }),
+    );
+    result.hidden = false;
+    result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    result.querySelector<HTMLElement>('h2')!.focus({ preventScroll: true });
+  });
+</script>

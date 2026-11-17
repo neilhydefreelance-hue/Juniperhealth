@@ -1,0 +1,31 @@
+name: Solifenacin
+alsoKnownAs:
+- Vesicare
+- Vesitirim (with tamsulosin)
+medicineType: Antimuscarinic bladder medicine
+forms:
+- tablets
+- liquid
+summary: Solifenacin treats an overactive bladder. It reduces sudden urges to pee, needing to pee often and leaking.
+conditions:
+- kidney-bladder-and-reproductive/urinary-incontinence
+uses:
+- Overactive bladder, urgency and urge incontinence
+offLabel: []
+howItWorks: Solifenacin blocks acetylcholine receptors on the bladder muscle. This relaxes the bladder so it can hold more urine and does not squeeze as suddenly.
+sideEffectsCommon:
+- dry mouth
+- constipation
+- blurred vision
+- indigestion
+- dry eyes
+sideEffectsSerious:
+- being unable to pee
+- severe stomach pain or swelling
+- confusion or memory problems, especially in older people
+stopping: Solifenacin does not cause withdrawal symptoms. Bladder symptoms may come back.
+stoppingRisk: low
+warnings:
+- Long-term use of this type of medicine has been linked with memory problems in older people. Ask your doctor whether another option suits you better.
+nhsSlug: solifenacin
+lastReviewed: '2026-10-05'

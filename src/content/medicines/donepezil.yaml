@@ -1,0 +1,36 @@
+name: Donepezil
+alsoKnownAs:
+- Aricept
+medicineType: Acetylcholinesterase inhibitor (dementia medicine)
+forms:
+- tablets
+- orodispersible tablets
+- liquid
+summary: Donepezil is used to treat the symptoms of Alzheimer's disease. It can help with memory and thinking for a while, but does not cure the condition.
+conditions:
+- brain-nerves-and-senses/dementia
+uses:
+- Mild to moderate dementia caused by Alzheimer's disease
+- Severe Alzheimer's disease
+offLabel:
+- Dementia with Lewy bodies and dementia in Parkinson's disease
+howItWorks: Donepezil stops an enzyme breaking down acetylcholine, a chemical messenger in the brain that is important for memory and learning. Higher levels can help nerve cells communicate better.
+sideEffectsCommon:
+- feeling sick
+- diarrhoea
+- trouble sleeping or vivid dreams
+- muscle cramps
+- headache
+- feeling tired
+- loss of appetite
+sideEffectsSerious:
+- a slow heartbeat, fainting or dizziness
+- black or bloody poo, or vomiting blood
+- fits
+stopping: Donepezil does not cause classic withdrawal, but stopping can lead to a noticeable drop in memory and thinking within weeks. The decision to stop should be made with the memory clinic or GP.
+stoppingRisk: medium
+warnings:
+- It is usually taken at night. If it causes vivid dreams, taking it in the morning may help.
+- Tell the doctor if the person has heart rhythm problems, asthma or stomach ulcers.
+nhsSlug: donepezil
+lastReviewed: '2026-10-05'

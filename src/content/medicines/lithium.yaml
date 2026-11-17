@@ -1,0 +1,43 @@
+name: Lithium
+alsoKnownAs:
+- Priadel
+- Camcolit
+- Liskonum
+- Li-Liquid
+medicineType: Mood stabiliser
+forms:
+- modified-release tablets
+- liquid
+availability: specialist
+summary: Lithium is a mood stabiliser. It is one of the most effective treatments for preventing manic and depressive episodes in bipolar disorder.
+conditions:
+- mental-health/bipolar-1
+- mental-health/bipolar-2
+- mental-health/depression
+uses:
+- Treating and preventing mania and depression in bipolar disorder
+- Depression that has not responded to other treatment, alongside an antidepressant
+- Aggressive or self-harming behaviour
+offLabel:
+- Cluster headaches
+howItWorks: Nobody knows exactly how lithium works. It is thought to affect several chemical messengers and signals inside nerve cells, which helps keep mood more stable and lowers the risk of suicide.
+sideEffectsCommon:
+- feeling thirsty
+- needing to pee more
+- a slight shake in the hands
+- feeling sick
+- a metallic taste
+- weight gain
+sideEffectsSerious:
+- signs of lithium toxicity, such as being sick, diarrhoea, a coarse shake, unsteadiness, slurred speech, confusion or drowsiness. Get help straight away
+- feeling cold, tired and gaining weight, which can be signs of an underactive thyroid
+- passing very large amounts of pee
+stopping: Stopping lithium suddenly sharply increases the risk of a manic episode returning within weeks. If it needs to stop, your doctor will usually reduce it over at least 4 weeks.
+stoppingRisk: high
+warnings:
+- You need regular blood tests to check your lithium level, kidneys and thyroid.
+- Keep your fluid and salt intake steady. Dehydration, hot weather and sickness can raise levels.
+- Ibuprofen, some blood pressure tablets and water tablets can raise lithium levels. Always check with a pharmacist.
+- Carry your lithium record book.
+nhsSlug: lithium
+lastReviewed: '2026-10-05'

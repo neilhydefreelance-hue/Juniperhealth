@@ -1,0 +1,19 @@
+---
+/**
+ * One affiliate product inside an article. Always labelled "Ad", with
+ * rel="sponsored" so people and search engines know it is a paid link.
+ */
+interface Props {
+  name: string;
+  url: string;
+  merchant?: string;
+}
+const { name, url, merchant = 'Amazon' } = Astro.props;
+---
+<aside class="card product product--inline" aria-label={`Advert: ${name}`}>
+  <span class="ad-label">Ad</span>
+  <p class="product__name">{name}</p>
+  <div class="product__text"><slot /></div>
+  <a class="btn btn--ghost" href={url} rel="sponsored nofollow noopener" target="_blank">View on {merchant}<span class="visually-hidden"> (advert, opens in a new tab)</span></a>
+  <p class="small muted">Affiliate link. We may earn a small commission, at no extra cost to you.</p>
+</aside>

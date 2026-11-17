@@ -1,0 +1,39 @@
+name: Oxybutynin
+alsoKnownAs:
+- Ditropan
+- Lyrinel XL
+- Kentera (patch)
+medicineType: Antimuscarinic bladder medicine
+forms:
+- tablets
+- modified-release tablets
+- liquid
+- skin patches
+summary: Oxybutynin relaxes the bladder. It treats an overactive bladder, urgency and leaking.
+conditions:
+- kidney-bladder-and-reproductive/urinary-incontinence
+uses:
+- Overactive bladder, urgency and urge incontinence
+- Bedwetting in children, when other treatments have not worked
+- Bladder problems caused by nerve conditions
+offLabel:
+- Excessive sweating (hyperhidrosis)
+howItWorks: Oxybutynin blocks acetylcholine receptors on the bladder muscle. This reduces sudden contractions, so you can hold more urine and feel less urgency.
+sideEffectsCommon:
+- dry mouth
+- constipation
+- blurred vision
+- feeling dizzy or sleepy
+- headache
+- dry eyes
+sideEffectsSerious:
+- being unable to pee
+- confusion, memory problems or seeing things that are not there, especially in older people
+- eye pain with blurred vision
+stopping: Oxybutynin does not cause withdrawal symptoms. Bladder symptoms may return.
+stoppingRisk: low
+warnings:
+- It may affect memory and thinking in older people. Long-term use of this type of medicine has been linked to a higher risk of dementia. Your doctor may suggest a different option.
+- Avoid getting too hot, as it reduces sweating.
+nhsSlug: oxybutynin
+lastReviewed: '2026-10-05'

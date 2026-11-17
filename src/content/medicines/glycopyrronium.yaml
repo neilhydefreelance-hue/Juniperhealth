@@ -1,0 +1,37 @@
+name: Glycopyrronium
+alsoKnownAs:
+- Seebri
+- Ultibro (with indacaterol)
+- Trimbow (triple inhaler)
+- Sialanar
+medicineType: Antimuscarinic medicine
+forms:
+- inhaler
+- liquid
+- tablets
+- injection
+summary: Glycopyrronium is used as a long-acting inhaler for COPD. As a liquid, it reduces severe drooling.
+conditions:
+- respiratory-and-allergy/copd
+uses:
+- Chronic obstructive pulmonary disease (COPD), as a once-daily inhaler
+- Severe drooling in children and young people with nerve conditions (liquid)
+- Reducing saliva and secretions during surgery or end-of-life care (injection)
+offLabel:
+- Excess sweating (hyperhidrosis), under a specialist
+howItWorks: Glycopyrronium blocks acetylcholine receptors. In the lungs, this relaxes the muscles around the airways so they stay open for 24 hours. Elsewhere, it reduces saliva and sweat.
+sideEffectsCommon:
+- dry mouth
+- constipation
+- difficulty peeing
+- a stuffy nose
+- headache
+sideEffectsSerious:
+- wheezing that gets worse straight after using the inhaler
+- eye pain with blurred vision or seeing halos, which can be signs of glaucoma
+- being unable to pee
+stopping: Glycopyrronium does not cause withdrawal symptoms. COPD symptoms such as breathlessness are likely to return.
+stoppingRisk: low
+warnings:
+- It may not be suitable if you have closed-angle glaucoma or problems peeing.
+lastReviewed: '2026-10-05'

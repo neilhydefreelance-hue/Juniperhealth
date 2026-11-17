@@ -1,0 +1,35 @@
+name: Tamsulosin
+alsoKnownAs:
+- Flomaxtra XL
+- Contiflo XL
+- Combodart (with dutasteride)
+medicineType: Alpha blocker
+forms:
+- modified-release capsules
+- modified-release tablets
+availability: pharmacy
+summary: Tamsulosin relaxes the prostate and bladder neck, making it easier to pee if you have an enlarged prostate.
+conditions:
+- kidney-bladder-and-reproductive/enlarged-prostate
+uses:
+- Symptoms of an enlarged prostate (benign prostatic hyperplasia), such as a weak flow and needing to pee often
+offLabel:
+- Helping kidney stones to pass
+- Helping to pee again after a catheter is removed
+howItWorks: Tamsulosin blocks alpha-1 receptors in the muscle of the prostate and bladder neck. This relaxes the muscle so urine flows more easily.
+sideEffectsCommon:
+- dizziness when standing up
+- problems with ejaculation
+- a blocked or runny nose
+- headache
+sideEffectsSerious:
+- fainting
+- an erection lasting more than 4 hours
+- a severe skin rash
+stopping: Tamsulosin does not cause withdrawal symptoms, but your urinary symptoms are likely to return within days.
+stoppingRisk: low
+warnings:
+- Tell the eye surgeon you take it before cataract surgery.
+- Get up slowly from sitting or lying down.
+nhsSlug: tamsulosin
+lastReviewed: '2026-10-05'

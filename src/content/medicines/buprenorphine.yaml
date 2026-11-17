@@ -1,0 +1,45 @@
+name: Buprenorphine
+alsoKnownAs:
+- Subutex
+- Espranor
+- Buvidal
+- Suboxone (with naloxone)
+- Butrans
+- Transtec
+- Temgesic
+medicineType: Opioid
+forms:
+- tablets that dissolve under the tongue
+- wafers
+- skin patches
+- monthly or weekly injections
+summary: Buprenorphine is an opioid. It is used to treat opioid dependence, and as patches or tablets for moderate to severe pain.
+conditions:
+- mental-health/drug-dependence
+uses:
+- Opioid dependence, as an opioid substitution treatment
+- Moderate to severe long-term pain (patches)
+- Short-term pain relief (tablets)
+offLabel: []
+howItWorks: Buprenorphine attaches to opioid receptors in the brain but only partly switches them on. This eases withdrawal and cravings without giving the same high as heroin, and blocks the effect of other opioids. For pain, it reduces how pain signals are felt.
+sideEffectsCommon:
+- constipation
+- feeling sick
+- headache
+- sweating
+- feeling sleepy or dizzy
+- trouble sleeping
+- skin irritation under patches
+sideEffectsSerious:
+- slow or shallow breathing, or being very sleepy and hard to wake. Call 999
+- yellowing of the skin or eyes
+- severe stomach pain
+stopping: If you stop suddenly after regular use, you are likely to get opioid withdrawal symptoms, such as aching, restlessness, sweating, diarrhoea, anxiety and cravings. In dependence treatment, stopping also greatly increases the risk of relapse and fatal overdose, because your tolerance falls quickly.
+stoppingRisk: high
+warnings:
+- Never take it with alcohol, benzodiazepines or other sedatives without medical advice, as this can stop your breathing.
+- Ask your treatment service about naloxone, a medicine that can reverse an opioid overdose.
+- Keep it out of sight and reach of children. Even a small amount can be fatal to a child.
+- It is illegal to drive if your driving is impaired.
+nhsSlug: buprenorphine-for-pain
+lastReviewed: '2026-10-05'

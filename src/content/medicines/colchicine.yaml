@@ -1,0 +1,33 @@
+name: Colchicine
+alsoKnownAs: []
+medicineType: Anti-inflammatory medicine for gout
+forms:
+- tablets
+- liquid
+summary: Colchicine treats gout attacks. It is also used to prevent attacks when starting urate-lowering medicine, and to treat pericarditis.
+conditions:
+- musculoskeletal/gout
+uses:
+- Treating a gout attack
+- Preventing gout attacks when starting allopurinol or febuxostat
+- Familial Mediterranean fever
+offLabel:
+- Pericarditis (inflammation around the heart)
+- Pseudogout (calcium pyrophosphate crystal disease)
+howItWorks: Colchicine stops white blood cells from moving into the joint and reacting to uric acid crystals. This reduces inflammation, pain and swelling.
+sideEffectsCommon:
+- diarrhoea
+- feeling sick or being sick
+- stomach pain
+sideEffectsSerious:
+- severe diarrhoea or vomiting. Stop taking it
+- unusual bruising or bleeding, sore throat or high temperature
+- muscle pain or weakness, or numbness in your hands or feet
+stopping: Colchicine does not cause withdrawal symptoms. If you take it to prevent attacks, they may return after stopping.
+stoppingRisk: low
+warnings:
+- Do not take more than the prescribed dose. Too much colchicine is dangerous.
+- Avoid grapefruit and grapefruit juice.
+- It interacts with some antibiotics, such as clarithromycin, and some statins.
+nhsSlug: colchicine
+lastReviewed: '2026-10-05'

@@ -1,0 +1,40 @@
+name: Semaglutide
+alsoKnownAs:
+- Ozempic
+- Rybelsus
+- Wegovy
+medicineType: GLP-1 receptor agonist
+forms:
+- weekly injection pens
+- tablets
+summary: Semaglutide treats type 2 diabetes (Ozempic, Rybelsus) and, at a higher dose, helps with weight management (Wegovy).
+conditions:
+- metabolic-and-hormonal/type-2-diabetes
+- metabolic-and-hormonal/obesity
+- heart-and-circulation/coronary-heart-disease
+uses:
+- Type 2 diabetes (Ozempic weekly injection or Rybelsus daily tablet)
+- Weight management in people living with obesity, alongside diet and activity (Wegovy)
+- Lowering the risk of heart attacks and strokes in people with heart disease and obesity (Wegovy)
+offLabel: []
+howItWorks: Semaglutide copies a gut hormone called GLP-1. It helps the pancreas release insulin when blood sugar is high, slows down stomach emptying and acts on the brain to reduce appetite.
+sideEffectsCommon:
+- feeling sick
+- diarrhoea or constipation
+- being sick
+- stomach pain
+- burping and indigestion
+- feeling tired
+sideEffectsSerious:
+- severe stomach pain that spreads to your back, which can be a sign of an inflamed pancreas. Call 111
+- pain in the upper right tummy with a high temperature or yellow skin, which can be gallstones
+- changes in your eyesight, especially if you have diabetic eye disease
+- severe ongoing sickness or diarrhoea leading to dehydration
+stopping: Semaglutide does not cause withdrawal symptoms. Many people regain weight after stopping, and blood sugar may rise.
+stoppingRisk: low
+warnings:
+- Do not use it if you are pregnant or trying to get pregnant. Stop it at least 2 months before trying for a baby.
+- It can make the contraceptive pill less reliable if it causes sickness or diarrhoea.
+- Only buy weight-loss medicines from a registered pharmacy with a prescription. Fake pens are sold online.
+nhsSlug: semaglutide
+lastReviewed: '2026-10-05'

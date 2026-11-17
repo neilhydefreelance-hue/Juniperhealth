@@ -1,0 +1,34 @@
+name: Alfuzosin
+alsoKnownAs:
+- Xatral
+medicineType: Alpha blocker
+forms:
+- tablets
+- modified-release tablets
+summary: Alfuzosin relaxes the muscles around the prostate and bladder opening, making it easier to pee if you have an enlarged prostate.
+conditions:
+- kidney-bladder-and-reproductive/enlarged-prostate
+uses:
+- Symptoms of an enlarged prostate (benign prostatic hyperplasia), such as a weak flow or needing to pee often
+- Short-term use to help pee again after a catheter is removed (acute urinary retention)
+offLabel:
+- Helping small kidney stones to pass (medical expulsive therapy)
+howItWorks: Alfuzosin blocks alpha receptors on the smooth muscle in the prostate and the neck of the bladder. This relaxes the muscle so urine can flow more easily.
+sideEffectsCommon:
+- dizziness when standing up
+- headache
+- feeling tired
+- feeling sick
+- stomach pain or diarrhoea
+sideEffectsSerious:
+- fainting
+- chest pain
+- an erection that lasts more than 4 hours
+stopping: Alfuzosin does not cause withdrawal symptoms, but your urinary symptoms are likely to return within days of stopping.
+stoppingRisk: low
+warnings:
+- Take the first dose at bedtime, as it can make you dizzy or faint.
+- Tell the eye surgeon you take it before cataract surgery, as it can affect the operation.
+- Take care if you also take blood pressure medicines.
+nhsSlug: alfuzosin
+lastReviewed: '2026-10-05'

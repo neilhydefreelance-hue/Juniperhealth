@@ -1,0 +1,31 @@
+name: Aflibercept
+alsoKnownAs:
+- Eylea
+medicineType: Anti-VEGF eye injection
+forms:
+- injection into the eye
+availability: hospital
+summary: Aflibercept is injected into the eye by a specialist to treat wet age-related macular degeneration and some other eye conditions that cause leaky blood vessels.
+conditions:
+- brain-nerves-and-senses/macular-degeneration
+uses:
+- Wet age-related macular degeneration (wet AMD)
+- Swelling at the back of the eye caused by diabetes (diabetic macular oedema)
+- Swelling caused by a blocked vein in the eye (retinal vein occlusion)
+- Abnormal blood vessels caused by severe short-sightedness (myopic choroidal neovascularisation)
+offLabel: []
+howItWorks: In these conditions, a protein called vascular endothelial growth factor (VEGF) makes fragile new blood vessels grow and leak in the back of the eye. Aflibercept traps VEGF, which stops the vessels leaking and growing. This helps protect your sight.
+sideEffectsCommon:
+- a red or bloodshot eye
+- eye pain or discomfort
+- floaters or specks in your vision
+- blurred vision for a short time after the injection
+sideEffectsSerious:
+- eye pain that gets worse, increasing redness, sensitivity to light or worsening vision in the days after an injection, which can be signs of an infection
+- sudden loss of vision or flashing lights
+stopping: Aflibercept does not cause withdrawal symptoms. Missing or stopping injections can let the leaking come back and lead to permanent loss of sight. Your eye team will decide how often you need injections.
+stoppingRisk: medium
+warnings:
+- Go to eye casualty or call 111 straight away if your eye becomes painful or your vision gets worse after an injection.
+- You must not drive straight after an injection because your vision may be blurred.
+lastReviewed: '2026-10-05'

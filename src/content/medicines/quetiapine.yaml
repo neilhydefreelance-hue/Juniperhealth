@@ -1,0 +1,46 @@
+name: Quetiapine
+alsoKnownAs:
+- Seroquel
+- Seroquel XL
+- Biquelle
+medicineType: Atypical antipsychotic
+forms:
+- tablets
+- prolonged-release tablets
+- liquid
+availability: specialist
+summary: Quetiapine is an antipsychotic used for schizophrenia and bipolar disorder, and sometimes alongside an antidepressant for depression.
+conditions:
+- mental-health/schizophrenia
+- mental-health/bipolar-1
+- mental-health/bipolar-2
+- mental-health/depression
+uses:
+- Schizophrenia
+- Mania and depression in bipolar disorder, and preventing them
+- Depression, alongside an antidepressant (prolonged-release tablets)
+offLabel:
+- Generalised anxiety disorder
+- Agitation or psychosis in Parkinson's disease
+- Sleep problems (not recommended because of side effects)
+howItWorks: Quetiapine blocks dopamine and serotonin receptors in the brain, which can reduce psychosis and stabilise mood. It also blocks histamine, which makes it sedating.
+sideEffectsCommon:
+- feeling sleepy
+- dizziness
+- dry mouth
+- weight gain
+- constipation
+- raised cholesterol and blood sugar
+sideEffectsSerious:
+- a high temperature with stiff muscles and confusion (neuroleptic malignant syndrome). Call 999
+- uncontrolled movements of the face, tongue or body
+- thoughts of harming yourself
+- fainting or a fast heartbeat
+stopping: Stopping suddenly can cause withdrawal symptoms such as trouble sleeping, feeling sick, headache and irritability, and increases the risk of symptoms returning. Your doctor will reduce the dose over at least 1 to 2 weeks.
+stoppingRisk: high
+warnings:
+- Your weight, blood sugar and cholesterol will be checked regularly.
+- Avoid grapefruit juice.
+- Do not drive if you feel sleepy.
+nhsSlug: quetiapine
+lastReviewed: '2026-10-05'

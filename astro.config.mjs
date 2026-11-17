@@ -12,7 +12,7 @@ import node from '@astrojs/node';
 const isBuild = process.argv.includes('build') || process.argv.includes('preview');
 
 export default defineConfig({
-  site: 'https://juniperhealth.app',
+  site: 'https://juniperhealth.info',
   // Pages are built as folders (/page/). 'ignore' lets the Keystatic editor's own routes work;
   // Cloudflare adds the trailing slash to public pages (see wrangler.jsonc html_handling).
   trailingSlash: 'ignore',

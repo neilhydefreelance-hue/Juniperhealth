@@ -1,0 +1,43 @@
+name: Gabapentin
+alsoKnownAs:
+- Neurontin
+medicineType: Anticonvulsant (also used for nerve pain)
+forms:
+- capsules
+- tablets
+- liquid
+summary: Gabapentin is used for nerve pain and epilepsy. It is a controlled drug because it can be misused.
+conditions:
+- brain-nerves-and-senses/epilepsy
+- musculoskeletal/back-and-neck-pain
+- musculoskeletal/fibromyalgia
+- brain-nerves-and-senses/multiple-sclerosis
+uses:
+- Nerve pain (neuropathic pain), such as after shingles or from diabetes
+- Focal seizures in epilepsy
+offLabel:
+- Preventing migraine
+- Hot flushes
+- Restless legs syndrome
+- Alcohol withdrawal and anxiety (limited evidence)
+howItWorks: Gabapentin attaches to calcium channels on nerve cells and reduces the release of chemical messengers that pass on pain signals and seizure activity.
+sideEffectsCommon:
+- feeling sleepy
+- tired or dizzy
+- unsteadiness
+- weight gain
+- swollen hands or feet
+- blurred vision
+- dry mouth
+sideEffectsSerious:
+- slow or shallow breathing, especially if you also take opioids
+- thoughts of harming yourself
+- severe stomach pain, which can be a sign of an inflamed pancreas
+stopping: Stopping suddenly can cause withdrawal symptoms such as anxiety, trouble sleeping, feeling sick, sweating and pain, and can trigger seizures. Your doctor will reduce the dose over at least a week, often longer.
+stoppingRisk: high
+warnings:
+- It is a controlled drug. It can cause dependence and be misused.
+- Taking it with opioids, alcohol or other sedatives raises the risk of dangerous breathing problems.
+- Do not drive if it makes you sleepy or dizzy.
+nhsSlug: gabapentin
+lastReviewed: '2026-10-05'

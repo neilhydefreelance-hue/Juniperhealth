@@ -1,0 +1,33 @@
+name: Entacapone
+alsoKnownAs:
+- Comtess
+- Stalevo (with levodopa and carbidopa)
+medicineType: COMT inhibitor (Parkinson's medicine)
+forms:
+- tablets
+availability: specialist
+summary: Entacapone is taken with levodopa to make each dose last longer in Parkinson's disease.
+conditions:
+- brain-nerves-and-senses/parkinsons
+uses:
+- Parkinson's disease, alongside levodopa, when the effect of each dose wears off too early
+offLabel: []
+howItWorks: Entacapone blocks an enzyme called COMT that breaks down levodopa in the body. More levodopa reaches the brain and it lasts longer, which reduces the "wearing off" between doses.
+sideEffectsCommon:
+- harmless reddish brown pee
+- feeling sick
+- diarrhoea
+- uncontrolled movements (dyskinesia)
+- dizziness
+- trouble sleeping
+sideEffectsSerious:
+- severe or long-lasting diarrhoea
+- seeing or hearing things that are not there, or confusion
+- high temperature, stiff muscles and confusion
+- urges you cannot control, such as gambling, shopping or eating
+stopping: Stopping suddenly can make Parkinson's symptoms much worse and, rarely, cause a serious reaction with high temperature, stiff muscles and confusion. Your specialist will adjust your levodopa if it is stopped.
+stoppingRisk: high
+warnings:
+- It is always taken at the same time as each levodopa dose.
+- It can make you suddenly fall asleep. Do not drive if this happens.
+lastReviewed: '2026-10-05'

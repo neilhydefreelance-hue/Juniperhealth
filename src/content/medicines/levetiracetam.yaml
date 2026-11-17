@@ -1,0 +1,37 @@
+name: Levetiracetam
+alsoKnownAs:
+- Keppra
+- Desitrend
+medicineType: Anticonvulsant (epilepsy medicine)
+forms:
+- tablets
+- liquid
+- granules
+- injection
+summary: Levetiracetam is a widely used epilepsy medicine. It treats several types of seizure.
+conditions:
+- brain-nerves-and-senses/epilepsy
+uses:
+- Focal seizures
+- Myoclonic seizures and generalised tonic-clonic seizures, alongside other medicines
+offLabel:
+- Preventing seizures after a brain injury or brain surgery
+howItWorks: Levetiracetam binds to a protein called SV2A on nerve cells and reduces the release of chemical messengers. This calms abnormal electrical activity in the brain.
+sideEffectsCommon:
+- feeling sleepy or tired
+- headache
+- feeling dizzy
+- irritability
+- low mood or anxiety
+- loss of appetite
+sideEffectsSerious:
+- changes in mood or behaviour, such as aggression, agitation or depression
+- thoughts of harming yourself
+- a severe skin rash
+stopping: Stopping suddenly can cause seizures. Your doctor will reduce the dose slowly over weeks.
+stoppingRisk: high
+warnings:
+- Tell your doctor if you or your family notice changes in your mood or behaviour.
+- Follow DVLA rules on driving with epilepsy.
+nhsSlug: levetiracetam
+lastReviewed: '2026-10-05'

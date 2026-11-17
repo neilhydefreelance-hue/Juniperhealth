@@ -1,0 +1,36 @@
+name: Pantoprazole
+alsoKnownAs:
+- Protium
+- Pantoloc
+medicineType: Proton pump inhibitor (PPI)
+forms:
+- gastro-resistant tablets
+- injection
+availability: pharmacy
+summary: Pantoprazole reduces stomach acid. It treats heartburn, acid reflux and stomach ulcers.
+conditions:
+- digestive-and-liver/acid-reflux
+uses:
+- Heartburn and acid reflux (GORD)
+- Healing and preventing stomach and duodenal ulcers
+- Getting rid of H. pylori infection, with antibiotics
+- Protecting the stomach in people taking anti-inflammatory painkillers
+offLabel: []
+howItWorks: Pantoprazole blocks proton pumps in the stomach lining, so the stomach makes less acid.
+sideEffectsCommon:
+- headache
+- diarrhoea or constipation
+- wind
+- stomach pain
+- feeling sick
+sideEffectsSerious:
+- severe or watery diarrhoea that does not stop
+- muscle cramps or an irregular heartbeat after long use
+- a rash on sun-exposed skin with joint pain
+stopping: Stopping after long use can cause rebound acid for a few weeks. Your GP may suggest reducing gradually.
+stoppingRisk: low
+warnings:
+- See a GP if you have difficulty swallowing, unexplained weight loss or are being sick.
+- Long-term use can lower vitamin B12 and magnesium.
+nhsSlug: pantoprazole
+lastReviewed: '2026-10-05'

@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Callout from '../../components/Callout.astro';
+import Community from '../../components/Community.astro';
+import { allMedicines, officialSources, AVAILABILITY, type Medicine } from '../../lib/medicines';
+import { topicLinks, formatDate } from '../../lib/articles';
+import { abs, SITE_ID } from '../../lib/schema';
+import { SITE } from '../../data/site';
+
+export async function getStaticPaths() {
+  const medicines = await allMedicines();
+  return medicines.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props as { entry: Medicine };
+const d = entry.data;
+const url = `/medicines/${entry.id}/`;
+const guides = await topicLinks(d.conditions.map((c) => `conditions/${c}`));
+const sources = officialSources(entry);
+const stoppingTitle = {
+  low: 'Stopping this medicine',
+  medium: 'Do not stop suddenly without advice',
+  high: 'Stopping suddenly can be dangerous',
+}[d.stoppingRisk];
+
+const schema: Record<string, unknown>[] = [
+  {
+    '@type': 'MedicalWebPage',
+    '@id': `${abs(url)}#webpage`,
+    url: abs(url),
+    name: `${d.name}: uses, side effects and stopping`,
+    description: d.summary,
+    inLanguage: SITE.lang,
+    isPartOf: { '@id': SITE_ID },
+    lastReviewed: d.lastReviewed.toISOString().slice(0, 10),
+    breadcrumb: { '@id': `${abs(url)}#breadcrumb` },
+    about: {
+      '@type': 'Drug',
+      name: d.name,
+      ...(d.alsoKnownAs.length ? { alternateName: d.alsoKnownAs } : {}),
+      drugClass: { '@type': 'DrugClass', name: d.medicineType },
+      ...(guides.length ? { indication: guides.map((g) => ({ '@type': 'MedicalCondition', name: g.name, url: abs(g.href) })) } : {}),
+    },
+    citation: sources.map((s) => ({ '@type': 'CreativeWork', name: s.label, url: s.url })),
+  },
+];
+const description = `${d.name} in plain English: what it treats, off-label uses, how it works, side effects and what to know about stopping it.`;
+---
+<BaseLayout
+  title={`${d.name} uses and side effects`}
+  description={description.length <= 170 ? description : `${d.name}: what it treats, how it works, side effects and stopping it, in plain English.`}
+  crumbs={[{ name: 'Home', href: '/' }, { name: 'Medicines', href: '/medicines/' }, { name: d.name, href: url }]}
+  schema={schema}
+  modified={d.lastReviewed}
+>
+  <div class="wrap" style="padding-bottom:var(--space-3xl)">
+    <article style="max-width:var(--measure)">
+      <header class="page-head">
+        <p class="eyebrow">Medicines</p>
+        <h1>{d.name}</h1>
+        <p class="lead">{d.summary}</p>
+        <dl class="med-facts">
+          <div><dt>Type of medicine</dt><dd>{d.medicineType}</dd></div>
+          {d.alsoKnownAs.length > 0 && <div><dt>Also known as</dt><dd>{d.alsoKnownAs.join(', ')}</dd></div>}
+          {d.forms.length > 0 && <div><dt>Comes as</dt><dd>{d.forms.join(', ')}</dd></div>}
+          <div><dt>How you get it</dt><dd>{AVAILABILITY[d.availability]}</dd></div>
+        </dl>
+      </header>
+
+      <Callout type="danger" title="This is not medical advice">
+        <p>This page is general information to help you understand your medicine. <strong>Never stop, start or change a medicine without talking to your GP, prescriber or pharmacist first.</strong> Always read the leaflet that comes with your medicine.</p>
+      </Callout>
+
+      <div class="prose">
+        <h2 id="uses">What it is used for</h2>
+        <ul>
+          {d.uses.map((u) => <li>{u}</li>)}
+        </ul>
+        {guides.length > 0 && (
+          <>
+            <p>Read our guides:</p>
+            <ul class="topic-chips" aria-label="Related condition guides">
+              {guides.map((g) => <li><a href={g.href}>{g.name}</a></li>)}
+            </ul>
+          </>
+        )}
+
+        <h2 id="off-label">Off-label uses</h2>
+        <p>Doctors sometimes prescribe a medicine for a condition it is not officially licensed for. This is called <strong>off-label</strong> use. It is legal and common when there is good evidence it helps, and your doctor should explain why they are suggesting it.</p>
+        {d.offLabel.length > 0 ? (
+          <ul>
+            {d.offLabel.map((u) => <li>{u}</li>)}
+          </ul>
+        ) : (
+          <p>{d.name} is not commonly used off-label.</p>
+        )}
+
+        <h2 id="how-it-works">How it works</h2>
+        <p>{d.howItWorks}</p>
+
+        <h2 id="side-effects">Side effects</h2>
+        <p>Like all medicines, {d.name} can cause side effects, although not everyone gets them. Many are mild and ease after the first few weeks.</p>
+        {d.sideEffectsCommon.length > 0 && (
+          <>
+            <h3>Common side effects</h3>
+            <ul>
+              {d.sideEffectsCommon.map((s) => <li>{s}</li>)}
+            </ul>
+            <p>Tell your doctor or pharmacist if these bother you or do not go away.</p>
+          </>
+        )}
+        {d.sideEffectsSerious.length > 0 && (
+          <>
+            <h3>Serious side effects</h3>
+            <p>These are rare. <strong>Call 111 or contact your doctor straight away</strong> if you get:</p>
+            <ul>
+              {d.sideEffectsSerious.map((s) => <li>{s}</li>)}
+            </ul>
+            <p><strong>Call 999</strong> if you have signs of a serious allergic reaction, such as swelling of your lips, mouth, throat or tongue, or trouble breathing.</p>
+          </>
+        )}
+        <p class="small">You can report any side effect to the <a href="https://yellowcard.mhra.gov.uk/" rel="noopener">Yellow Card scheme</a>, run by the medicines regulator.</p>
+
+        <h2 id="stopping">Stopping and withdrawal</h2>
+        <Callout type={d.stoppingRisk === 'low' ? 'warn' : 'danger'} title={stoppingTitle}>
+          <p>{d.stopping}</p>
+          <p><strong>Never stop taking {d.name} without talking to your GP or prescriber first.</strong> If you want to stop, they can plan the safest way to do it.</p>
+        </Callout>
+
+        {d.warnings.length > 0 && (
+          <>
+            <h2 id="safety">Important safety information</h2>
+            <ul>
+              {d.warnings.map((w) => <li>{w}</li>)}
+            </ul>
+          </>
+        )}
+
+        <h2 id="questions">Questions about your medicine?</h2>
+        <p>A <strong>pharmacist</strong> can answer questions about your medicines for free, without an appointment. You can also ask your GP for a <strong>medication review</strong>. Check if you can get <a href="/support/health-costs/prescriptions/">free prescriptions</a>.</p>
+      </div>
+
+      <section class="sources" aria-labelledby="sources">
+        <h2 id="sources">Official information</h2>
+        <ul>
+          {sources.map((s) => <li><a href={s.url} rel="noopener">{s.label}</a></li>)}
+        </ul>
+        <p style="margin-top:var(--space-s)">Last checked {formatDate(d.lastReviewed)}. <a href="/contact/">Tell us if something looks wrong</a>.</p>
+      </section>
+
+      <Community />
+
+      <aside class="callout" style="margin-top:var(--space-xl)">
+        <p class="small">This page is general information, not medical advice, and does not list every use, side effect or interaction. Medicines affect people differently. Always follow the advice of your doctor, pharmacist or nurse and read the patient information leaflet. Never stop, start or change a medicine without talking to them first.</p>
+      </aside>
+    </article>
+  </div>
+</BaseLayout>

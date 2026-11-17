@@ -1,0 +1,35 @@
+name: Ranibizumab
+alsoKnownAs:
+- Lucentis
+- Byooviz
+- Ongavia
+- Ximluci
+medicineType: Anti-VEGF eye injection
+forms:
+- injection into the eye
+availability: hospital
+summary: Ranibizumab is injected into the eye to treat wet age-related macular degeneration and other conditions that cause leaky blood vessels in the eye.
+conditions:
+- brain-nerves-and-senses/macular-degeneration
+uses:
+- Wet age-related macular degeneration (wet AMD)
+- Diabetic macular oedema and diabetic retinopathy
+- Swelling caused by a blocked vein in the eye
+- Abnormal blood vessels caused by severe short-sightedness
+- Retinopathy of prematurity in babies
+offLabel: []
+howItWorks: Ranibizumab blocks vascular endothelial growth factor (VEGF), a protein that causes abnormal blood vessels to grow and leak at the back of the eye. This helps protect your central vision.
+sideEffectsCommon:
+- a red or bloodshot eye
+- eye pain or discomfort
+- floaters
+- blurred vision for a short time
+sideEffectsSerious:
+- increasing eye pain, redness, sensitivity to light or worsening vision after an injection, which can be signs of infection
+- flashing lights or a curtain over your vision
+stopping: There are no withdrawal symptoms, but stopping or missing injections can allow leaking to return and permanently damage your sight.
+stoppingRisk: medium
+warnings:
+- Go to eye casualty or call 111 straight away if your eye becomes painful or your vision worsens.
+- Do not drive straight after an injection.
+lastReviewed: '2026-10-05'

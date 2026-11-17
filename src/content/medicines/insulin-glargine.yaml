@@ -1,0 +1,36 @@
+name: Insulin glargine
+alsoKnownAs:
+- Lantus
+- Abasaglar
+- Semglee
+- Toujeo
+medicineType: Long-acting insulin
+forms:
+- injection pens
+- cartridges
+- vials
+summary: Insulin glargine is a background (basal) insulin, usually injected once a day to keep blood sugar steady.
+conditions:
+- metabolic-and-hormonal/type-1-diabetes
+- metabolic-and-hormonal/type-2-diabetes
+uses:
+- Type 1 diabetes, as background insulin
+- Type 2 diabetes, when other treatments are not enough
+offLabel: []
+howItWorks: Insulin glargine forms tiny crystals under the skin that dissolve slowly, releasing insulin evenly for about 24 hours.
+sideEffectsCommon:
+- low blood sugar (hypos)
+- redness or swelling where you inject
+- lumps under the skin
+- weight gain
+sideEffectsSerious:
+- a severe hypo with confusion, fits or passing out
+- swelling of the face or trouble breathing
+stopping: Stopping background insulin can quickly cause very high blood sugar and, in type 1 diabetes, diabetic ketoacidosis. Never stop without medical advice.
+stoppingRisk: high
+warnings:
+- Toujeo is a stronger version (300 units per ml) and is not dose-for-dose the same as Lantus.
+- Do not mix it with other insulins.
+nhsSlug: insulin
+bnfSlug: insulin-glargine
+lastReviewed: '2026-10-05'

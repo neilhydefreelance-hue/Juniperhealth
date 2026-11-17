@@ -1,0 +1,37 @@
+name: Bisoprolol
+alsoKnownAs:
+- Cardicor
+- Congescor
+medicineType: Beta blocker
+forms:
+- tablets
+summary: Bisoprolol is a beta blocker. It slows your heart rate and is used for heart failure, angina, atrial fibrillation and high blood pressure.
+conditions:
+- heart-and-circulation/heart-failure
+- heart-and-circulation/atrial-fibrillation
+- heart-and-circulation/coronary-heart-disease
+- heart-and-circulation/high-blood-pressure
+uses:
+- Heart failure
+- Preventing angina
+- High blood pressure
+offLabel:
+- Controlling heart rate in atrial fibrillation and other fast heart rhythms
+howItWorks: Bisoprolol blocks the effects of adrenaline on the heart. This slows the heart rate and makes each heartbeat less forceful, so the heart needs less oxygen and works more efficiently.
+sideEffectsCommon:
+- feeling tired or dizzy
+- cold hands and feet
+- headache
+- feeling sick
+- diarrhoea or constipation
+sideEffectsSerious:
+- a very slow heartbeat, fainting or feeling faint
+- shortness of breath with a cough that gets worse, wheezing, or swollen ankles
+- chest pain
+stopping: Stopping bisoprolol suddenly can make angina worse, raise your heart rate and, rarely, trigger a heart attack. Your doctor will reduce the dose slowly over 1 to 2 weeks.
+stoppingRisk: high
+warnings:
+- It can make asthma worse. Tell your doctor if you have asthma.
+- It can hide signs of low blood sugar if you have diabetes.
+nhsSlug: bisoprolol
+lastReviewed: '2026-10-05'

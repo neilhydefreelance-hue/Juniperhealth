@@ -1,0 +1,32 @@
+name: Tretinoin
+alsoKnownAs:
+- Treclin (with clindamycin)
+- Aknemycin Plus (with erythromycin)
+medicineType: Retinoid (applied to the skin)
+forms:
+- gel
+- solution
+- capsules (specialist cancer use only)
+summary: Tretinoin is a retinoid applied to the skin for acne. A capsule form is used in hospital for a rare type of leukaemia.
+conditions:
+- skin/acne
+uses:
+- Acne, usually combined with an antibiotic in a gel
+- Acute promyelocytic leukaemia (capsules, in hospital)
+offLabel:
+- Sun-damaged skin and fine lines (only on private prescription)
+howItWorks: Tretinoin is related to vitamin A. It speeds up the turnover of skin cells, which unblocks pores and stops new spots forming.
+sideEffectsCommon:
+- redness
+- dryness or peeling
+- burning or stinging
+- skin being more sensitive to sunlight
+sideEffectsSerious:
+- severe redness, swelling, blistering or crusting of the skin
+stopping: Tretinoin gel does not cause withdrawal. Acne may slowly return.
+stoppingRisk: low
+warnings:
+- Do not use it if you are pregnant or trying to get pregnant.
+- Use sunscreen and avoid sunbeds.
+- Skin may look worse for the first few weeks.
+lastReviewed: '2026-10-05'

@@ -1,0 +1,31 @@
+name: Insulin detemir
+alsoKnownAs:
+- Levemir
+medicineType: Long-acting insulin
+forms:
+- injection pens
+- cartridges
+summary: Insulin detemir is a background (basal) insulin, injected once or twice a day to keep blood sugar steady.
+conditions:
+- metabolic-and-hormonal/type-1-diabetes
+- metabolic-and-hormonal/type-2-diabetes
+uses:
+- Type 1 diabetes, as background insulin
+- Type 2 diabetes, when other treatments are not enough
+offLabel: []
+howItWorks: Insulin detemir is absorbed slowly and binds to a protein in the blood, so it works for up to about 24 hours. It controls blood sugar between meals and overnight.
+sideEffectsCommon:
+- low blood sugar (hypos)
+- redness or swelling where you inject
+- lumps under the skin
+sideEffectsSerious:
+- a severe hypo with confusion, fits or passing out
+- swelling of the face or trouble breathing
+stopping: Stopping background insulin can quickly cause very high blood sugar and, in type 1 diabetes, diabetic ketoacidosis. Never stop without medical advice.
+stoppingRisk: high
+warnings:
+- Levemir is being withdrawn in the UK. If you use it, your diabetes team should help you switch to another insulin.
+- Rotate injection sites.
+nhsSlug: insulin
+bnfSlug: insulin-detemir
+lastReviewed: '2026-10-05'

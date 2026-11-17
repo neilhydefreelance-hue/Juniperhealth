@@ -1,0 +1,34 @@
+name: Lansoprazole
+alsoKnownAs:
+- Zoton
+medicineType: Proton pump inhibitor (PPI)
+forms:
+- capsules
+- orodispersible tablets
+summary: Lansoprazole reduces stomach acid. It treats heartburn, acid reflux and stomach ulcers.
+conditions:
+- digestive-and-liver/acid-reflux
+uses:
+- Heartburn and acid reflux (GORD)
+- Healing and preventing stomach and duodenal ulcers
+- Getting rid of H. pylori infection, with antibiotics
+- Protecting the stomach in people taking anti-inflammatory painkillers
+offLabel: []
+howItWorks: Lansoprazole blocks the proton pumps in the stomach lining that release acid, so less acid is made.
+sideEffectsCommon:
+- headache
+- diarrhoea or constipation
+- feeling sick
+- stomach pain
+- wind
+sideEffectsSerious:
+- severe or watery diarrhoea that does not stop
+- muscle cramps or an irregular heartbeat after long use, which can be signs of low magnesium
+- a rash on sun-exposed skin with joint pain
+stopping: Stopping after long use can cause rebound acid, where heartburn is worse for a few weeks. Your GP may suggest stepping down slowly.
+stoppingRisk: low
+warnings:
+- See a GP if you have difficulty swallowing, weight loss or are being sick.
+- Long-term use can lower vitamin B12 and magnesium levels.
+nhsSlug: lansoprazole
+lastReviewed: '2026-10-05'

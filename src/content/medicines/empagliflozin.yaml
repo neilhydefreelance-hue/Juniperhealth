@@ -1,0 +1,36 @@
+name: Empagliflozin
+alsoKnownAs:
+- Jardiance
+- Synjardy (with metformin)
+- Glyxambi (with linagliptin)
+medicineType: SGLT2 inhibitor
+forms:
+- tablets
+summary: Empagliflozin lowers blood sugar by making you pass more sugar in your pee. It also protects the heart and kidneys.
+conditions:
+- metabolic-and-hormonal/type-2-diabetes
+- heart-and-circulation/heart-failure
+- kidney-bladder-and-reproductive/chronic-kidney-disease
+uses:
+- Type 2 diabetes
+- Heart failure
+- Chronic kidney disease
+offLabel: []
+howItWorks: Empagliflozin blocks a protein in the kidneys called SGLT2, so more sugar, salt and water leave the body in your pee. This lowers blood sugar, reduces strain on the heart and slows kidney damage.
+sideEffectsCommon:
+- thrush or other genital infections
+- urine infections
+- needing to pee more
+- feeling thirsty
+- itching
+sideEffectsSerious:
+- feeling or being sick, stomach pain, fast breathing or sleepiness, which can be signs of diabetic ketoacidosis
+- pain, redness or swelling of the genitals or the area behind them, with a high temperature
+- signs of dehydration, such as dizziness and very dark pee
+stopping: Empagliflozin does not cause withdrawal symptoms. Blood sugar may rise and the heart and kidney benefits will be lost.
+stoppingRisk: low
+warnings:
+- Follow sick day rules. Stop it if you are unwell and cannot eat or drink, and restart when you are better.
+- Stop it before major surgery, as advised by your team.
+nhsSlug: empagliflozin
+lastReviewed: '2026-10-05'

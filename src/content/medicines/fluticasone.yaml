@@ -1,0 +1,47 @@
+name: Fluticasone
+alsoKnownAs:
+- Flixotide
+- Flixonase
+- Avamys
+- Seretide (with salmeterol)
+- Relvar (with vilanterol)
+- Trelegy (triple inhaler)
+- Cutivate
+medicineType: Corticosteroid (preventer inhaler and nasal spray)
+forms:
+- inhalers
+- nasal spray
+- nasal drops
+- cream
+- ointment
+availability: pharmacy
+summary: Fluticasone is a steroid. As an inhaler it prevents asthma and COPD symptoms. As a nasal spray it treats hay fever.
+conditions:
+- respiratory-and-allergy/asthma
+- respiratory-and-allergy/copd
+- respiratory-and-allergy/hay-fever
+- skin/eczema
+uses:
+- Preventing asthma symptoms (inhalers)
+- COPD (combination inhalers)
+- Hay fever and nasal allergies (nasal spray, some available from pharmacies)
+- Nasal polyps (nasal drops)
+- Eczema and other inflamed skin conditions (cream, ointment)
+offLabel: []
+howItWorks: Fluticasone is a corticosteroid that reduces inflammation and swelling in the airways, nose or skin, so they are less sensitive to triggers.
+sideEffectsCommon:
+- hoarse voice or sore throat
+- oral thrush
+- nosebleeds or a dry nose
+- headache
+sideEffectsSerious:
+- wheezing that gets worse straight after using the inhaler
+- blurred vision or other changes in eyesight
+- with COPD inhalers, signs of a chest infection such as a high temperature and more phlegm
+stopping: Stopping does not cause withdrawal, but your asthma, COPD or allergy symptoms may come back or get worse.
+stoppingRisk: medium
+warnings:
+- Rinse your mouth after using the inhaler.
+- Use preventer inhalers every day, even when you feel well.
+nhsSlug: fluticasone-inhalers
+lastReviewed: '2026-10-05'

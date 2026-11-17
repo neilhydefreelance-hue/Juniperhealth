@@ -4,7 +4,7 @@ These steps are done once. They need the Cloudflare account and the domain.
 
 ## 1. Add the domain to Cloudflare
 
-1. Sign in to Cloudflare and choose **Add a domain**. Enter `juniperhealth.app`.
+1. Sign in to Cloudflare and choose **Add a domain**. Enter `juniperhealth.info`.
 2. Pick the **Free** plan.
 3. Cloudflare shows two **nameservers**. Log in to the company where you bought the domain and replace its nameservers with Cloudflare's.
 4. Wait for Cloudflare to say the domain is **Active** (usually under an hour).
@@ -27,15 +27,15 @@ Every change saved in Keystatic, or pushed to `main`, will now rebuild and publi
 
 ## 3. Use the real domain
 
-In the Worker's **Settings**, then **Domains and routes**, add `juniperhealth.app` and `www.juniperhealth.app`. Then add a redirect rule so `www` goes to `juniperhealth.app`.
+In the Worker's **Settings**, then **Domains and routes**, add `juniperhealth.info` and `www.juniperhealth.info`. Then add a redirect rule so `www` goes to `juniperhealth.info`.
 
-## 4. Email forwarding (hello@juniperhealth.app)
+## 4. Email forwarding (hello@juniperhealth.info)
 
 1. In the domain's dashboard, open **Email**, then **Email Routing**, and turn it on.
-2. Add a custom address `hello@juniperhealth.app` that forwards to your Gmail address.
+2. Add a custom address `hello@juniperhealth.info` that forwards to your Gmail address.
 3. Confirm the email Cloudflare sends to Gmail.
 
-To reply *from* hello@juniperhealth.app in Gmail, use Gmail's **Send mail as** setting.
+To reply *from* hello@juniperhealth.info in Gmail, use Gmail's **Send mail as** setting.
 
 ## 5. Visitor statistics (no cookies)
 
@@ -47,6 +47,6 @@ Statistics respect the opt-out switch on the cookie policy page.
 
 ## 6. Tell search engines
 
-1. **Google Search Console:** add `juniperhealth.app` as a Domain property (verify with a DNS record in Cloudflare) and submit `https://juniperhealth.app/sitemap-index.xml`.
+1. **Google Search Console:** add `juniperhealth.info` as a Domain property (verify with a DNS record in Cloudflare) and submit `https://juniperhealth.info/sitemap-index.xml`.
 2. **Bing Webmaster Tools:** import the site from Google Search Console.
 3. Test a few pages in Google's **Rich Results Test** and the **Schema Markup Validator**.

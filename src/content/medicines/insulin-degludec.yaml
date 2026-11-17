@@ -1,0 +1,32 @@
+name: Insulin degludec
+alsoKnownAs:
+- Tresiba
+- Xultophy (with liraglutide)
+medicineType: Ultra long-acting insulin
+forms:
+- injection pens
+summary: Insulin degludec is a background (basal) insulin that lasts more than 24 hours. It is usually injected once a day.
+conditions:
+- metabolic-and-hormonal/type-1-diabetes
+- metabolic-and-hormonal/type-2-diabetes
+uses:
+- Type 1 diabetes, as background insulin
+- Type 2 diabetes, when other treatments are not enough
+offLabel: []
+howItWorks: Insulin degludec forms a store under the skin that releases insulin slowly and steadily for more than 24 hours. This keeps blood sugar stable between meals and overnight.
+sideEffectsCommon:
+- low blood sugar (hypos)
+- redness or swelling where you inject
+- lumps under the skin
+- weight gain
+sideEffectsSerious:
+- a severe hypo with confusion, fits or passing out
+- swelling of the face or trouble breathing
+stopping: Stopping background insulin can quickly cause very high blood sugar and, in type 1 diabetes, diabetic ketoacidosis. Never stop without medical advice.
+stoppingRisk: high
+warnings:
+- It comes in two strengths (100 and 200 units per ml). Check you have the right one.
+- Rotate injection sites.
+nhsSlug: insulin
+bnfSlug: insulin-degludec
+lastReviewed: '2026-10-05'

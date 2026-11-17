@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Callout from '../../components/Callout.astro';
+import { allMedicines, type Medicine } from '../../lib/medicines';
+import { abs, SITE_ID } from '../../lib/schema';
+
+const medicines = await allMedicines();
+// Group A to Z by first letter.
+const letters = new Map<string, Medicine[]>();
+for (const m of medicines) {
+  const l = m.data.name[0].toUpperCase();
+  letters.set(l, [...(letters.get(l) ?? []), m]);
+}
+const searchText = (m: Medicine) => [m.data.name, ...m.data.alsoKnownAs, m.data.medicineType, ...m.data.uses].join(' ').toLowerCase();
+
+const schema = [
+  {
+    '@type': 'CollectionPage',
+    '@id': `${abs('/medicines/')}#webpage`,
+    url: abs('/medicines/'),
+    name: 'Medicines A to Z',
+    isPartOf: { '@id': SITE_ID },
+    breadcrumb: { '@id': `${abs('/medicines/')}#breadcrumb` },
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: medicines.map((m, i) => ({ '@type': 'ListItem', position: i + 1, name: m.data.name, url: abs(`/medicines/${m.id}/`) })),
+    },
+  },
+];
+---
+<BaseLayout
+  title="Medicines A to Z"
+  description="Plain-English guides to common medicines: what they treat, off-label uses, how they work, side effects and what to know before stopping."
+  crumbs={[{ name: 'Home', href: '/' }, { name: 'Medicines', href: '/medicines/' }]}
+  schema={schema}
+>
+  <div class="wrap" style="padding-bottom:var(--space-3xl)">
+    <header class="page-head">
+      <h1>Medicines A to Z</h1>
+      <p class="lead">Plain-English guides to {medicines.length} common medicines: what they treat, how they work, their side effects and what to know about stopping them.</p>
+    </header>
+
+    <div style="max-width:var(--measure)">
+      <Callout type="danger" title="This is not medical advice">
+        <p>These pages are general information only. <strong>Never stop, start or change a medicine without talking to your GP, prescriber or pharmacist first.</strong> Stopping some medicines suddenly can be dangerous.</p>
+      </Callout>
+    </div>
+
+    <div class="field condition-filter" data-filter hidden style="margin-top:var(--space-l)">
+      <label for="medicine-filter">Find a medicine</label>
+      <input id="medicine-filter" type="search" autocomplete="off" placeholder="For example, sertraline" />
+    </div>
+    <p class="small muted" data-filter-status role="status" aria-live="polite"></p>
+
+    <nav class="az-jump" aria-label="Jump to a letter">
+      <ul>
+        {[...letters.keys()].map((l) => <li><a href={`#letter-${l}`}>{l}</a></li>)}
+      </ul>
+    </nav>
+
+    <div class="prose" data-medicines>
+      {[...letters.entries()].map(([l, list]) => (
+        <section aria-labelledby={`letter-${l}`} data-letter>
+          <h2 id={`letter-${l}`}>{l}</h2>
+          <ul class="az-list med-list">
+            {list.map((m) => (
+              <li data-name={searchText(m)}>
+                <a href={`/medicines/${m.id}/`}>{m.data.name}</a>
+                <span class="small muted">{m.data.medicineType}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+
+    <div class="prose" style="margin-top:var(--space-2xl)">
+      <h2>Getting help with your medicines</h2>
+      <p>Pharmacists are experts in medicines and can help you for free, without an appointment. You can also ask your GP practice for a medication review. Find out if you can get <a href="/support/health-costs/prescriptions/">free prescriptions</a>, or <a href="/contact/">tell us which medicines you would like us to add</a>.</p>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  const box = document.querySelector<HTMLElement>('[data-filter]');
+  const input = box?.querySelector('input');
+  const items = Array.from(document.querySelectorAll<HTMLElement>('[data-medicines] li'));
+  const sections = Array.from(document.querySelectorAll<HTMLElement>('[data-letter]'));
+  const status = document.querySelector<HTMLElement>('[data-filter-status]');
+  if (box && input && status) {
+    box.hidden = false;
+    input.addEventListener('input', () => {
+      const q = input.value.trim().toLowerCase();
+      let shown = 0;
+      for (const li of items) {
+        const match = !q || (li.dataset.name ?? '').includes(q);
+        li.hidden = !match;
+        if (match) shown++;
+      }
+      for (const s of sections) s.hidden = !s.querySelector('li:not([hidden])');
+      status.textContent = q ? (shown ? `${shown} ${shown === 1 ? 'medicine' : 'medicines'} found` : 'No medicines found. Try another word.') : '';
+    });
+  }
+</script>

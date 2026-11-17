@@ -1,0 +1,34 @@
+name: Hyoscine butylbromide
+alsoKnownAs:
+- Buscopan
+medicineType: Antispasmodic
+forms:
+- tablets
+- injection
+availability: pharmacy
+summary: Hyoscine butylbromide (Buscopan) eases painful cramps in the stomach and bowel.
+conditions:
+- digestive-and-liver/ibs
+uses:
+- Stomach and bowel cramps, including in irritable bowel syndrome (IBS)
+- Period cramps
+- Bladder spasms
+offLabel:
+- Reducing noisy breathing caused by secretions at the end of life (injection)
+howItWorks: Hyoscine butylbromide blocks acetylcholine in the smooth muscle of the gut, bladder and womb. This relaxes the muscle and reduces cramping pain.
+sideEffectsCommon:
+- dry mouth
+- constipation
+- a fast heartbeat
+- blurred vision
+sideEffectsSerious:
+- eye pain with blurred vision or seeing halos
+- being unable to pee
+- severe stomach pain that does not ease
+stopping: Hyoscine butylbromide does not cause withdrawal symptoms. It is usually taken only when needed.
+stoppingRisk: low
+warnings:
+- See a GP if you have new bowel symptoms, especially if you are over 40, have blood in your poo or are losing weight.
+- It is different from hyoscine hydrobromide, which is used for travel sickness.
+nhsSlug: hyoscine-butylbromide-buscopan
+lastReviewed: '2026-10-05'

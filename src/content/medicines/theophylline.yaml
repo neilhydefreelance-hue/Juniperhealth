@@ -1,0 +1,34 @@
+name: Theophylline
+alsoKnownAs:
+- Uniphyllin Continus
+- Nuelin SA
+medicineType: Xanthine bronchodilator
+forms:
+- modified-release tablets
+- modified-release capsules
+summary: Theophylline opens the airways. It is an add-on treatment for asthma and COPD when inhalers are not enough.
+conditions:
+- respiratory-and-allergy/asthma
+- respiratory-and-allergy/copd
+uses:
+- Asthma, as an add-on treatment
+- Chronic obstructive pulmonary disease (COPD)
+offLabel: []
+howItWorks: Theophylline relaxes the muscles around the airways and may reduce inflammation, which makes breathing easier.
+sideEffectsCommon:
+- feeling sick
+- headache
+- trouble sleeping
+- a fast heartbeat
+- stomach upset
+- feeling restless
+sideEffectsSerious:
+- being sick a lot, a very fast or irregular heartbeat, or fits, which can be signs of too much theophylline. Get help straight away
+stopping: Theophylline does not cause withdrawal symptoms, but breathing may get worse.
+stoppingRisk: low
+warnings:
+- The difference between a helpful dose and a harmful dose is small. You need blood tests to check the level.
+- Smoking, illness and many medicines, including some antibiotics, change the level. Always tell your doctor and pharmacist.
+- Stay on the same brand.
+nhsSlug: theophylline
+lastReviewed: '2026-10-05'

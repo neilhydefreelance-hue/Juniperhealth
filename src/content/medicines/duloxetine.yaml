@@ -1,0 +1,44 @@
+name: Duloxetine
+alsoKnownAs:
+- Cymbalta
+- Yentreve
+medicineType: SNRI antidepressant
+forms:
+- gastro-resistant capsules
+summary: Duloxetine is an SNRI antidepressant. It is used for depression and anxiety, and also for nerve pain and stress incontinence.
+conditions:
+- mental-health/depression
+- mental-health/generalised-anxiety-disorder
+- musculoskeletal/fibromyalgia
+- kidney-bladder-and-reproductive/urinary-incontinence
+uses:
+- Depression
+- Generalised anxiety disorder
+- Diabetic nerve pain (peripheral neuropathic pain)
+- Stress urinary incontinence in women (Yentreve)
+offLabel:
+- Fibromyalgia
+- Other long-term pain, such as osteoarthritis or chronic back pain
+howItWorks: Duloxetine is a serotonin and noradrenaline reuptake inhibitor (SNRI). It increases both of these chemical messengers in the brain and spinal cord, which can improve mood and reduce how pain signals are felt. In the bladder, it strengthens the muscle that keeps the urethra closed.
+sideEffectsCommon:
+- feeling sick
+- dry mouth
+- headache
+- feeling sleepy or having trouble sleeping
+- dizziness
+- constipation
+- sweating
+- sexual problems
+sideEffectsSerious:
+- thoughts of harming yourself or ending your life
+- yellowing of the skin or eyes
+- unusual bleeding or bruising
+- confusion, high temperature, sweating and muscle twitching, which can be signs of serotonin syndrome
+stopping: Stopping suddenly often causes withdrawal symptoms, such as dizziness, feeling sick, headache, electric shock feelings, anxiety and irritability. They can be severe. Your doctor will reduce the dose slowly, usually over at least 2 to 4 weeks and often longer.
+stoppingRisk: medium
+warnings:
+- It can raise blood pressure. Your doctor may check it.
+- Do not take it with St John's wort.
+- Avoid drinking lots of alcohol, which increases the risk of liver problems.
+nhsSlug: duloxetine
+lastReviewed: '2026-10-05'

@@ -1,0 +1,33 @@
+name: Alemtuzumab
+alsoKnownAs:
+- Lemtrada
+medicineType: Disease-modifying therapy for multiple sclerosis
+forms:
+- drip into a vein (infusion)
+availability: hospital
+summary: Alemtuzumab is a very strong treatment for highly active relapsing multiple sclerosis. It is given as a drip in hospital over two short courses, a year apart.
+conditions:
+- brain-nerves-and-senses/multiple-sclerosis
+uses:
+- Highly active relapsing remitting multiple sclerosis, when other treatments have not worked or are not suitable
+offLabel: []
+howItWorks: Alemtuzumab targets a protein called CD52 on immune cells (lymphocytes). It removes many of these cells, and the immune system then slowly rebuilds itself in a way that is less likely to attack the nerves.
+sideEffectsCommon:
+- infusion reactions such as headache
+- rash
+- flushing
+- high temperature or feeling sick
+- infections such as colds and urine infections
+- tiredness
+sideEffectsSerious:
+- thyroid problems, such as weight changes, feeling hot or cold, or a fast heartbeat
+- unusual bruising, bleeding, nosebleeds or tiny red spots on the skin
+- blood in your pee, or swollen legs
+- sudden weakness, numbness, face drooping or a severe headache, which can be signs of a stroke
+stopping: Alemtuzumab is given as two courses rather than every day, so there is no withdrawal. Its effects last for years. You need monthly blood and urine tests for 4 years after your last dose to check for delayed side effects.
+stoppingRisk: low
+warnings:
+- Regular monitoring for 4 years after treatment is essential.
+- Avoid pregnancy during treatment and for 4 months after each course.
+- Use of this medicine is restricted because of rare serious side effects.
+lastReviewed: '2026-10-05'
