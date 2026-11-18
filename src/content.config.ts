@@ -108,7 +108,6 @@ const medicines = defineCollection({
     stoppingRisk: z.enum(['low', 'medium', 'high']).default('medium'),
     warnings: z.array(z.string()).default([]),
     nhsSlug: z.string().default(''),
-    bnfSlug: z.string().default(''),
     lastReviewed: z.coerce.date(),
   }),
 });

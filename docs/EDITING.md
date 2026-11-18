@@ -115,7 +115,7 @@ Online editing uses **Keystatic Cloud**, which has a free plan for small teams.
 2. Fill in each section: what it is used for, off-label uses, how it works, common and serious side effects, and stopping and withdrawal.
 3. Choose **Risk of stopping suddenly**. Use **High** for medicines that can be dangerous to stop suddenly, such as epilepsy medicines, blood thinners, insulin, steroids, beta blockers, antipsychotics and opioids.
 4. Under **Show on these condition guides**, tick the conditions it treats. The medicine is then listed on those guides automatically.
-5. Add the end of the NHS medicines web address if there is one (for example "sertraline"). The BNF and patient leaflet links are added automatically.
+5. Add the end of the NHS medicines web address if there is one (for example "sertraline"). The patient leaflet link is added automatically.
 6. Update **Last checked for accuracy**.
 
 Every medicine page shows a warning that it is not medical advice and that people must never stop a medicine without talking to their GP first. You do not need to add this yourself. Medicines are always listed A to Z.

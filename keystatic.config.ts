@@ -385,7 +385,6 @@ export default config({
         }),
         warnings: fields.array(fields.text({ label: 'Warning', multiline: true }), { label: 'Important safety information', itemLabel: (p) => p.value }),
         nhsSlug: fields.text({ label: 'NHS website address (end part only)', description: 'For example "sertraline". Leave empty if the NHS has no page.' }),
-        bnfSlug: fields.text({ label: 'BNF address (end part only)', description: 'Leave empty if it matches the web address.' }),
         lastReviewed: fields.date({ label: 'Last checked for accuracy', validation: { isRequired: true } }),
       },
     }),
