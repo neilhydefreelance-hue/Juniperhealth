@@ -25,11 +25,10 @@ export const AVAILABILITY: Record<Medicine['data']['availability'], string> = {
   specialist: 'Started by a specialist, then sometimes prescribed by a GP',
 };
 
-/** Links to the official NHS and BNF pages for a medicine. */
+/** Links to the official NHS page and patient leaflets for a medicine. */
 export function officialSources(m: Medicine): { label: string; url: string }[] {
   const out: { label: string; url: string }[] = [];
   if (m.data.nhsSlug) out.push({ label: `NHS, ${m.data.name}`, url: `https://www.nhs.uk/medicines/${m.data.nhsSlug}/` });
-  out.push({ label: `BNF (NICE), ${m.data.name}`, url: `https://bnf.nice.org.uk/drugs/${m.data.bnfSlug || m.id}/` });
   out.push({ label: 'Electronic Medicines Compendium (patient leaflets)', url: `https://www.medicines.org.uk/emc/search?q=${encodeURIComponent(m.data.name)}` });
   return out;
 }
